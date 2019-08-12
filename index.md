@@ -8,7 +8,7 @@ class: center, middle
 
 ---
 class: middle
-# Agenda
+# Outline
 1. Why beyond-Edge?
 2. Components
 3. What's Unikernel?
@@ -19,7 +19,7 @@ class: middle
 
 ---
 class: middle
-# Agenda
+# Outline
 1. **Why beyond-Edge?**
 2. Components
 3. What's Unikernel?
@@ -35,7 +35,7 @@ background-image: url(images/gravitee0.png)
 
 ---
 background-image: url(images/gravitee.png)
-## off-loading...
+## Off-loading...
 
 ---
 background-image: url(images/power.png)
@@ -48,9 +48,11 @@ background-image: url(images/tf-power.png)
 background-image: url(images/arch.png)
 ## Gap between WEB and Embedded
 
+.footnote[FIXME: Insert SoA?]
+
 ---
 class: middle
-# Agenda
+# Outline
 1. Why beyond-Edge?
 2. **Components**
 3. What's Unikernel?
@@ -65,14 +67,18 @@ class: middle
 # TinyML
 # ML Compiler
 
+.footnote[FIXME: Whey are those 3 needed?]
+
 ---
 background-image: url(https://zdnet1.cbsistatic.com/hub/i/r/2016/02/01/71e041f1-addd-4a9c-bc81-f73297f2dc6a/resize/770xauto/fffb0419c01c018b37d50605bdf341a3/dockerunikernel.jpg)
 # What's Unikernel?
 
+.footnote[FIXME: explain universality of Unikerenl]
+
 
 ---
 class: middle
-# Agenda
+# Outline
 1. Why beyond-Edge?
 2. Components
 3. What's Unikernel?
@@ -91,7 +97,7 @@ background-image: url(https://m.eet.com/media/1312718/IMAGESitunayakeChainModels
 
 ---
 class: middle
-# Agenda
+# Outline
 1. Why beyond-Edge?
 2. Components
 3. What's Unikernel?
@@ -114,7 +120,7 @@ background-image: url(images/nnvm_compiler_stack.png)
 
 ---
 class: middle
-# Agenda
+# Outline
 1. Why beyond-Edge?
 2. Components
 3. What's Unikernel?
@@ -125,6 +131,8 @@ class: middle
 
 ---
 background-image: url(https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/Plot-of-a-Subset-of-Images-from-the-MNIST-Dataset.png)
+
+.footnote[FIXME: How to bring trainig to inference]
 
 ---
 background-image: url(images/ps-sim.png)
@@ -165,7 +173,7 @@ class: center, middle
 
 ---
 class: middle
-# Agenda
+# Outline
 1. Why beyond-Edge?
 2. Components
 3. What's Unikernel?
@@ -182,7 +190,7 @@ class: middle
 
 # Challenge?
 - RISC-V?
-- TinyML altorithm?
+- TinyML algorithm?
 
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
