@@ -134,11 +134,30 @@ background-image: url(https://1436477554.rsc.cdn77.org/wp-content/uploads/2017/0
 # Hardware
 
 ---
-# ESP32 WROOVER
+background-image: url(https://docs.espressif.com/projects/esp-idf/en/latest/_images/esp-wrover-kit-block-diagram.png)
+# ESP32 WROOVER development board
+
+---
+background-image: url(https://docs.espressif.com/projects/esp-idf/en/latest/_images/esp-wrover-kit-v4.1-layout-front.png)
+
+---
+background-image: url(https://docs.espressif.com/projects/esp-idf/en/latest/_images/esp-wrover-kit-v4.1-layout-back.png)
 
 
 ---
 # Result
+Add runtime memory info
+
+## Training on x86
+
+RAM: ???? bytes
+ROM: ???? bytes
+
+## Inference ESP32
+
+RAM: ???? bytes
+ROM: ???? bytes
+
 
 ---
 class: center, middle
