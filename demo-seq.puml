@@ -1,6 +1,6 @@
 @startuml
 
-title Demo
+'title Demo
 
 actor laptop
 
