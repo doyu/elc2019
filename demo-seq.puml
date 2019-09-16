@@ -1,0 +1,18 @@
+@startuml
+
+title Demo
+
+actor laptop
+
+laptop -> MirageOS: send bitmap
+MirageOS -> TFLM: ask prediction
+activate TFLM
+TFLM -> TFLM: run inference
+MirageOS <-- TFLM: return result
+deactivate TFLM
+MirageOS -> display: show result
+
+MirageOS --> laptop: result
+
+@enduml
+

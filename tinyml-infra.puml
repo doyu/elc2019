@@ -1,0 +1,13 @@
+@startmindmap
+* TinyML\ninfra
+** ML compiler
+***_ flatbuf
+***_ quantization
+***_ fuse
+** Unikernel
+***_ Language\nspecific
+***_ <s>Posix</s>\n<s>compatible</s>
+** CoAP
+***_ Orchestration
+***_ monitoring
+@endmindmap

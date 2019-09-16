@@ -1,0 +1,20 @@
+@startuml
+skinparam pacakgeStyle rectangle
+actor laptop
+title Demo
+
+note "TCP/IP" as tcpip
+
+
+(phone\nhotspot) <..> laptop
+
+rectangle esp32 {
+        (phone\nhotspot) <..> (MirageOS/\nFreeRTOS)
+        laptop -right- tcpip: "send\nbitmap"
+        tcpip -right-> (MirageOS/\nFreeRTOS)
+        (MirageOS/\nFreeRTOS) -up-> (TFLM\nruntime): "ask\nprediction"
+        (TFLM\nruntime) -down-> (MirageOS/\nFreeRTOS): "return\nresult"
+        (MirageOS/\nFreeRTOS) -down-> (display): "show result"
+}
+
+@enduml

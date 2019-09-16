@@ -1,0 +1,43 @@
+@startuml
+
+title Parameter Server (PS)
+
+
+Worker1 -> Server : register itself
+Server <- Worker2: register itself
+
+Server -> Worker1: send a model to train
+Server -> Worker2: send a model to train
+
+loop
+
+Server -> Worker1: share new params
+Worker1 <- Worker1: load local dataset
+activate Worker1
+note left of Worker1: optimizing
+Server -> Worker2: share new params
+Worker2 -> Worker2: load local dataset
+activate Worker2
+Worker1 --> Server: return computed diff
+deactivate Worker1
+note right of Worker2: optimizing
+Worker2 --> Server: return computed diff
+deactivate Worker2
+
+== sync ==
+
+Server -> Server: synchronized workers
+
+activate Server
+alt more optimization?
+Server -> Server : calculate new params
+note over Server : loop again
+else done training
+note over Server: exit loop
+end
+deactivate Server
+end
+
+Server -> Server: pushlish a model
+
+@enduml
