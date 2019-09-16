@@ -70,10 +70,17 @@ class: middle
 .footnote[FIXME: Whey are those 3 needed?]
 
 ---
+background-image: url(images/tinyml-infra.png)
+# 3 enablers
+
+---
 background-image: url(https://zdnet1.cbsistatic.com/hub/i/r/2016/02/01/71e041f1-addd-4a9c-bc81-f73297f2dc6a/resize/770xauto/fffb0419c01c018b37d50605bdf341a3/dockerunikernel.jpg)
 # What's Unikernel?
 
 .footnote[FIXME: explain universality of Unikerenl]
+
+---
+background-image: url(images/unikernel-mindmap.png)
 
 
 ---
@@ -129,6 +136,7 @@ class: middle
 6. **Experiment**
 7. Conclusion
 
+
 ---
 background-image: url(https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/Plot-of-a-Subset-of-Images-from-the-MNIST-Dataset.png)
 
@@ -136,6 +144,17 @@ background-image: url(https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.co
 
 ---
 background-image: url(images/ps-sim.png)
+
+---
+background-image: url(images/ps-sq.png)
+
+---
+background-image: url(images/demo-uc.png)
+# Demo use case diagram
+
+---
+background-image: url(images/demo-sq.png)
+# Demo sequence diagram
 
 ---
 background-image: url(https://1436477554.rsc.cdn77.org/wp-content/uploads/2017/09/esp32-rover-kit-02.jpg)

@@ -1,4 +1,5 @@
 all: png
+	mv *.png images/
 
 utxt: $(patsubst %.puml,%.utxt,$(shell ls *.puml))
 
