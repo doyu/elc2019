@@ -1,8 +1,14 @@
 @startuml
-
-'title Demo
+scale 1.5
+title Inference Sequence
 
 actor laptop
+
+box "ESP32"
+participant MirageOS
+participant TFLM
+participant display
+end box
 
 laptop -> MirageOS: send bitmap
 MirageOS -> TFLM: ask prediction

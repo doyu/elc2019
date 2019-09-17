@@ -1,0 +1,17 @@
+@startuml
+title Demo Sequence
+|laptop|
+start
+|#AntiqueWhite|KVM|
+:train a model;
+:generate cgraph;
+|laptop|
+:convert cgraph;
+:compile cgraph;
+:build runtime\nwith cgraph;
+:build unikernel\nwith runtime;
+|ESP32 Xtensa|
+:run inference;
+:show result;
+stop
+@enduml

@@ -3,6 +3,9 @@ class: center, middle
 # on
 # Unikernel for IoT
 
+TODO
+What's cgraph?
+
 
 .footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 30th/OCT/2019]
 
@@ -62,14 +65,6 @@ class: middle
 7. Conclusion
 
 ---
-class: middle
-# Unikernel
-# TinyML
-# ML Compiler
-
-.footnote[FIXME: Whey are those 3 needed?]
-
----
 background-image: url(images/tinyml-infra.png)
 # 3 enablers
 
@@ -81,7 +76,7 @@ background-image: url(https://zdnet1.cbsistatic.com/hub/i/r/2016/02/01/71e041f1-
 
 ---
 background-image: url(images/unikernel-mindmap.png)
-
+#Type of Unikernel
 
 ---
 class: middle
@@ -136,6 +131,8 @@ class: middle
 6. **Experiment**
 7. Conclusion
 
+---
+background-image: url(images/demo-ac.png)
 
 ---
 background-image: url(https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/Plot-of-a-Subset-of-Images-from-the-MNIST-Dataset.png)
@@ -144,32 +141,20 @@ background-image: url(https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.co
 
 ---
 background-image: url(images/ps-sim.png)
+## Training
 
 ---
 background-image: url(images/ps-sq.png)
 
 ---
 background-image: url(images/demo-uc.png)
-# Demo use case diagram
 
 ---
 background-image: url(images/demo-sq.png)
-# Demo sequence diagram
 
 ---
-background-image: url(https://1436477554.rsc.cdn77.org/wp-content/uploads/2017/09/esp32-rover-kit-02.jpg)
-# Hardware
-
----
-background-image: url(https://docs.espressif.com/projects/esp-idf/en/latest/_images/esp-wrover-kit-block-diagram.png)
-# ESP32 WROOVER development board
-
----
-background-image: url(https://docs.espressif.com/projects/esp-idf/en/latest/_images/esp-wrover-kit-v4.1-layout-front.png)
-
----
-background-image: url(https://docs.espressif.com/projects/esp-idf/en/latest/_images/esp-wrover-kit-v4.1-layout-back.png)
-
+background-image: url(images/esp32-wrover.png)
+#### ESP32 WROVER KIT
 
 ---
 # Result

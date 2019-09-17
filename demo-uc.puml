@@ -1,7 +1,8 @@
 @startuml
+scale 1.2
 skinparam pacakgeStyle rectangle
 actor laptop
-'title Demo
+title Inference Usecase
 
 note "TCP/IP" as tcpip
 

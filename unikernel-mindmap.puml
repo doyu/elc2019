@@ -1,13 +1,14 @@
 @startmindmap
+scale 2.0
 + Unikernel
--- Posix\ncompatible
----_ OSv
----_ Rumprun
----_ includeOS
----_ Graphene
----_ ClickOS
----_ Nanos
-++ Language\nspecific
+++ posix\ncompatible
++++_ OSv
++++_ Rumprun
++++_ includeOS
++++_ Graphene
++++_ ClickOS
++++_ Nanos
+++ language\nspecific
 +++_ MirageOS\n(OCaml)
 +++_ HaLVM\n(Haskell)
 +++_ LING\n(Erlang)
