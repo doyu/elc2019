@@ -3,10 +3,6 @@ class: center, middle
 # on
 # Unikernel for IoT
 
-TODO
-What's cgraph?
-
-
 .footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 19th/SEP/2019]
 
 ---
@@ -43,11 +39,9 @@ background-image: url(images/ecosystem_005.png)
 background-image: url(images/ecosystem_006.png)
 ---
 background-image: url(images/ecosystem_007.png)
-
 ---
 background-image: url(images/summary-problem.png)
 # Summary
-
 ---
 class: middle
 # Outline
@@ -56,15 +50,11 @@ class: middle
 3. 3 enablers
 4. PoC
 5. Summary
-
-
 ---
 background-image: url(images/ecosystem_008.png)
-
 ---
 background-image: url(images/summary-proposal.png)
 # Summary
-
 ---
 class: middle
 # Outline
@@ -73,11 +63,9 @@ class: middle
 3. **3 enablers**
 4. PoC
 5. Summary
-
 ---
 background-image: url(images/tinyml-infra.png)
 # 3 enablers
-
 ---
 class: middle
 # Outline
@@ -86,29 +74,21 @@ class: middle
 3. **3 enablers / Unikernel**
 4. PoC
 5. Summary
-
-
 ---
 background-image: url(https://zdnet1.cbsistatic.com/hub/i/r/2016/02/01/71e041f1-addd-4a9c-bc81-f73297f2dc6a/resize/770xauto/fffb0419c01c018b37d50605bdf341a3/dockerunikernel.jpg)
 #Unikernel
-
 ---
 background-image: url(https://xenproject.org/wp-content/uploads/sites/79/2015/08/anyunirumpkernel.png)
 # library Operating System (libOS)
-
 ---
 background-image: url(http://3.bp.blogspot.com/--jGFfze1gFw/VOXPZW6n5EI/AAAAAAAAFvA/efbK1sQbhEw/s1600/Selection_186.png)
 ## Internal
-
 ---
 background-image: url(images/unikernel-mindmap.png)
 #Type of Unikernel
-
 ---
 background-image: url(images/summary-unikernel.png)
 # Summary
-
-
 ---
 class: middle
 # Outline
@@ -117,82 +97,57 @@ class: middle
 3. **3 enablers / ML compiler**
 4. PoC
 5. Summary
-
----
-background-image: url(images/ruuvitag.png)
-
----
-background-image: url(https://m.eet.com/media/1312718/IMAGESitunayakeChainModels.JPG)
-# Cascading
-
----
-class: middle
-# Outline
-1. Why beyond-Edge?
-2. Components
-3. What's Unikernel?
-4. What's TinyML?
-5. **What's ML compiler?**
-6. PoC
-7. Conclusion
-
 ---
 background-image: url(https://miro.medium.com/max/700/1*dYjDEI0mLpsCOySKUuX1VA.png)
 # ML framework ==
 ## ML runtime
-
 ---
 background-image: url(https://image.slidesharecdn.com/mlirintensorflow-190713054903/95/a-sneak-peek-of-mlir-in-tensorflow-2-638.jpg?cb=1562997187)
-
 ---
 background-image: url(images/nnvm_compiler_stack.png)
 # Unified IR
-
+---
+# Computational graph (cgraph)
+---
+# ML Runtime (inference)
+---
+# Summary
 ---
 class: middle
 # Outline
-1. Why beyond-Edge?
-2. Components
-3. What's Unikernel?
-4. What's TinyML?
-5. What's ML compiler?
-6. **PoC**
-7. Conclusion
-
+1. Problem
+2. Proposal
+3. 3 enablers
+4. **PoC**
+5. Summary
 ---
 background-image: url(https://miro.medium.com/max/2200/1*XdCMCaHPt-pqtEibUfAnNw.png)
 ## **MNIST**: Handwriting digits recognition
 ### 60K images for training, 10K for testing
-
 ???
 .footnote[https://towardsdatascience.com/image-classification-in-10-minutes-with-mnist-dataset-54c35b77a38d]
 ---
 background-image: url(images/demo-sq0.png)
-
 ---
 background-image: url(images/esp32-wrover.png)
 #### ESP32 WROVER KIT
-
 ---
 background-image: url(images/demo-ac.png)
-
 ---
 background-image: url(images/training-uc.png)
-
 ---
 background-image: url(images/ps-sq.png)
-
 ---
 background-image: url(images/convert-uc.png)
-
 ---
 background-image: url(images/demo-uc.png)
-
 ---
 background-image: url(images/demo-sq.png)
-
 ---
-# Result
+class: center, middle
+# Demo
+---
+# Demo Summary
 Add runtime memory info
 
 ## Training on x86
@@ -204,23 +159,14 @@ ROM: ???? bytes
 
 RAM: ???? bytes
 ROM: ???? bytes
-
-
----
-class: center, middle
-# PoC
-
 ---
 class: middle
 # Outline
-1. Why beyond-Edge?
-2. Components
-3. What's Unikernel?
-4. What's TinyML?
-5. What's ML compiler?
-6. PoC
-7. **Conclusion**
-
+1. Problem
+2. Proposal
+3. 3 enablers
+4. PoC
+5. **Summary**
 ---
 # What I got:
 - Unikernel can bring unified development experience between Cloud, Edge and device.
@@ -232,12 +178,14 @@ class: middle
 - TinyML algorithm?
 
 ---
+background-image: url(images/elc.png)
+
+---
+class: center, middle
+# Send comments to [hiroshi.doyu@ericsson.com](hiroshi.doyu@ericsson.com)
+# &&
+.bottom[![bottom-aligned image](images/menti.png)]
+---
+
+
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
-
----
-background-image: url(images/power.png)
-## Connectivity consumes more than ML
-
----
-background-image: url(images/tf-power.png)
-
