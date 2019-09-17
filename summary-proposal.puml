@@ -5,6 +5,8 @@ scale 2.0
 *** Squash a ML model
 *** Tailor made runtime
 ****_ per model
-*** Build a nano service image
 ****_ per HW(A)
+*** Build nano service images
+****_ per HW(A)
+*** Orchestration
 @endmindmap

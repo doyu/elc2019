@@ -248,8 +248,8 @@ storage web {
 
 storage TinyMLaaS {
         cloud SaaS {
-                cloud Orchestration
-                cloud Build
+                (build)
+                (model)
         }
 }
 

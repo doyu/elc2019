@@ -66,40 +66,57 @@ background-image: url(images/summary-proposal.png)
 # Summary
 
 ---
+class: middle
+# Outline
+1. Problem
+2. Proposal
+3. **3 enablers**
+4. PoC
+5. Summary
+
+---
 background-image: url(images/tinyml-infra.png)
 # 3 enablers
 
 ---
-background-image: url(images/power.png)
-## Connectivity consumes more than ML
-
----
-background-image: url(images/tf-power.png)
-
-
+class: middle
+# Outline
+1. Problem
+2. Proposal
+3. **3 enablers / Unikernel**
+4. PoC
+5. Summary
 
 
 ---
 background-image: url(https://zdnet1.cbsistatic.com/hub/i/r/2016/02/01/71e041f1-addd-4a9c-bc81-f73297f2dc6a/resize/770xauto/fffb0419c01c018b37d50605bdf341a3/dockerunikernel.jpg)
-# What's Unikernel?
+#Unikernel
 
-.footnote[FIXME: explain universality of Unikerenl]
+---
+background-image: url(https://xenproject.org/wp-content/uploads/sites/79/2015/08/anyunirumpkernel.png)
+# library Operating System (libOS)
+
+---
+background-image: url(http://3.bp.blogspot.com/--jGFfze1gFw/VOXPZW6n5EI/AAAAAAAAFvA/efbK1sQbhEw/s1600/Selection_186.png)
+## Internal
 
 ---
 background-image: url(images/unikernel-mindmap.png)
 #Type of Unikernel
 
 ---
+background-image: url(images/summary-unikernel.png)
+# Summary
+
+
+---
 class: middle
 # Outline
-1. Why beyond-Edge?
-2. Components
-3. What's Unikernel?
-4. **What's TinyML?**
-5. What's ML compiler?
-6. PoC
-7. Conclusion
-
+1. Problem
+2. Proposal
+3. **3 enablers / ML compiler**
+4. PoC
+5. Summary
 
 ---
 background-image: url(images/ruuvitag.png)
@@ -216,3 +233,11 @@ class: middle
 
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
+
+---
+background-image: url(images/power.png)
+## Connectivity consumes more than ML
+
+---
+background-image: url(images/tf-power.png)
+
