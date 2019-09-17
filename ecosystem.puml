@@ -196,7 +196,7 @@ device2 -down-> device3 : return
 device2 <-down- device3 : request
 
 newpage
-title No ML (inference) on embedded
+title ML environment
 
 storage web {
         cloud cloud {
@@ -207,7 +207,7 @@ storage web {
         cloud edge
 }
 
-note right of cloud : variety of python based ML frameworks
+note right of cloud : variety of python based\nML frameworks
 
 storage embedded {
         node device1
@@ -216,6 +216,51 @@ storage embedded {
 }
 
 note right of embedded : <s>python ML</s>\n<s>ML (inference)</s>\nNo common ML runtime
+
+AWS <-- edge : request
+AWS --> edge : return
+
+edge <- device1 : request
+edge -down-> device1 : return
+edge <- device2 : request
+edge -down-> device2 : return
+
+
+device1 -> device2 : return
+device1 <- device2 : request
+
+device1 -down-> device3 : return
+device1 <-down- device3 : request
+device2 -down-> device3 : return
+device2 <-down- device3 : request
+
+newpage
+title Proposal
+
+storage web {
+        cloud cloud {
+                cloud AWS
+                cloud Azure
+                cloud GCP
+        }
+        cloud edge
+}
+
+storage TinyMLaaS {
+        cloud SaaS {
+                cloud Orchestration
+                cloud Build
+        }
+}
+
+storage embedded {
+        node device1
+        node device2
+        node device3
+}
+
+web <-right- TinyMLaaS
+embedded <-up- TinyMLaaS
 
 AWS <-- edge : request
 AWS --> edge : return

@@ -7,29 +7,25 @@ TODO
 What's cgraph?
 
 
-.footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 30th/OCT/2019]
+.footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 19th/SEP/2019]
 
 ---
 class: middle
 # Outline
-1. Why beyond-Edge?
-2. Components
-3. What's Unikernel?
-4. What's TinyML?
-5. What's ML compiler?
-6. PoC
-7. Conclusion
+1. Problem
+2. Proposal
+3. 3 enablers
+4. PoC
+5. Summary
 
 ---
 class: middle
 # Outline
-1. **Why beyond-Edge?**
-2. Components
-3. What's Unikernel?
-4. What's TinyML?
-5. What's ML compiler?
-6. PoC
-7. Conclusion
+1. **Problem**
+2. Proposal
+3. 3 enablers
+4. PoC
+5. Summary
 
 ---
 background-image: url(images/ecosystem.png)
@@ -49,26 +45,35 @@ background-image: url(images/ecosystem_006.png)
 background-image: url(images/ecosystem_007.png)
 
 ---
+background-image: url(images/summary-problem.png)
+# Summary
+
+---
+class: middle
+# Outline
+1. Problem
+2. **Proposal**
+3. 3 enablers
+4. PoC
+5. Summary
+
+
+---
+background-image: url(images/ecosystem_008.png)
+
+---
+background-image: url(images/tinyml-infra.png)
+# 3 enablers
+
+---
 background-image: url(images/power.png)
 ## Connectivity consumes more than ML
 
 ---
 background-image: url(images/tf-power.png)
 
----
-class: middle
-# Outline
-1. Why beyond-Edge?
-2. **Components**
-3. What's Unikernel?
-4. What's TinyML?
-5. What's ML compiler?
-6. PoC
-7. Conclusion
 
----
-background-image: url(images/tinyml-infra.png)
-# 3 enablers
+
 
 ---
 background-image: url(https://zdnet1.cbsistatic.com/hub/i/r/2016/02/01/71e041f1-addd-4a9c-bc81-f73297f2dc6a/resize/770xauto/fffb0419c01c018b37d50605bdf341a3/dockerunikernel.jpg)
