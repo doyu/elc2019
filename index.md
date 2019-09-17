@@ -17,7 +17,7 @@ class: middle
 3. What's Unikernel?
 4. What's TinyML?
 5. What's ML compiler?
-6. Experiment
+6. PoC
 7. Conclusion
 
 ---
@@ -28,7 +28,7 @@ class: middle
 3. What's Unikernel?
 4. What's TinyML?
 5. What's ML compiler?
-6. Experiment
+6. PoC
 7. Conclusion
 
 
@@ -61,7 +61,7 @@ class: middle
 3. What's Unikernel?
 4. What's TinyML?
 5. What's ML compiler?
-6. Experiment
+6. PoC
 7. Conclusion
 
 ---
@@ -86,7 +86,7 @@ class: middle
 3. What's Unikernel?
 4. **What's TinyML?**
 5. What's ML compiler?
-6. Experiment
+6. PoC
 7. Conclusion
 
 
@@ -105,7 +105,7 @@ class: middle
 3. What's Unikernel?
 4. What's TinyML?
 5. **What's ML compiler?**
-6. Experiment
+6. PoC
 7. Conclusion
 
 ---
@@ -128,11 +128,8 @@ class: middle
 3. What's Unikernel?
 4. What's TinyML?
 5. What's ML compiler?
-6. **Experiment**
+6. **PoC**
 7. Conclusion
-
----
-background-image: url(images/demo-ac.png)
 
 ---
 background-image: url(https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/Plot-of-a-Subset-of-Images-from-the-MNIST-Dataset.png)
@@ -140,11 +137,19 @@ background-image: url(https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.co
 .footnote[FIXME: How to bring trainig to inference]
 
 ---
-background-image: url(images/training-uc.png)
+background-image: url(images/demo-sq0.png)
 
+---
+background-image: url(images/demo-ac.png)
+
+---
+background-image: url(images/training-uc.png)
 
 ---
 background-image: url(images/ps-sq.png)
+
+---
+background-image: url(images/convert-uc.png)
 
 ---
 background-image: url(images/demo-uc.png)
@@ -173,7 +178,7 @@ ROM: ???? bytes
 
 ---
 class: center, middle
-# Demo
+# PoC
 
 ---
 class: middle
@@ -183,7 +188,7 @@ class: middle
 3. What's Unikernel?
 4. What's TinyML?
 5. What's ML compiler?
-6. Experiment
+6. PoC
 7. **Conclusion**
 
 ---

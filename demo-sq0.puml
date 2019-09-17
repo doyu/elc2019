@@ -1,0 +1,18 @@
+@startmindmap
+scale 2.0
+title Demo outline
++ demo
+++ training
++++_ OCaml Owl
++++_ MirageOS
+++ compile
++++_ cgraph
+++++_ Owl
+++++_ TF
+++++_ TF Lite
+++++_ TF Lite for micro
++++_ TFLM runtime
+++ inference
++++_ MirageOS
++++_ TFLite micro runtime
+@endmindmap

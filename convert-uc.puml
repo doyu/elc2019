@@ -1,0 +1,23 @@
+@startuml
+title ML compiler: computation graph conversion
+
+database model
+database data
+database Owl_cgraph
+database TF_cgraph
+database TFLite_cgraph
+
+Owl_cgraph -down-> TF_cgraph : conversion
+TF_cgraph -down-> TFLite_cgraph : optimization
+TFLite_cgraph -down-> (TFL micro\nruntime) : built-in
+(TFL micro\nruntime) -right-> (MirageOS) : built-in
+
+model -down-> (OCaml\nOwl)
+data -down-> (OCaml\nOwl) : training
+(OCaml\nOwl) -> Owl_cgraph : generated
+(OCaml\nOwl) <- Owl_cgraph
+(OCaml\nOwl) -> TF_cgraph : conversion
+(TFLite) <- TF_cgraph
+(TFLite) -> TFLite_cgraph : conversion
+
+@enduml
