@@ -62,6 +62,10 @@ class: middle
 background-image: url(images/ecosystem_008.png)
 
 ---
+background-image: url(images/summary-proposal.png)
+# Summary
+
+---
 background-image: url(images/tinyml-infra.png)
 # 3 enablers
 
