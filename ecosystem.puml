@@ -196,7 +196,7 @@ device2 -down-> device3 : return
 device2 <-down- device3 : request
 
 newpage
-title unified framework?
+title No ML (inference) on embedded
 
 storage web {
         cloud cloud {
@@ -207,18 +207,15 @@ storage web {
         cloud edge
 }
 
-storage unified {
-        cloud <- (framework)
-        edge <- (framework)
-        device2 <- (framework)
-        embedded <- (framework)
-}
+note right of cloud : variety of python based ML frameworks
 
 storage embedded {
         node device1
         node device2
         node device3
 }
+
+note right of embedded : <s>python ML</s>\n<s>ML (inference)</s>\nNo common ML runtime
 
 AWS <-- edge : request
 AWS --> edge : return
@@ -236,5 +233,6 @@ device1 -down-> device3 : return
 device1 <-down- device3 : request
 device2 -down-> device3 : return
 device2 <-down- device3 : request
+
 
 @enduml
