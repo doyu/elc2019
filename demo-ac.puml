@@ -1,16 +1,16 @@
 @startuml
 title Demo Sequence
-|laptop|
+|TF Lite\nlaptop|
 start
-|#AntiqueWhite|KVM|
+|#AntiqueWhite|OCaml Owl\nMirageOS\nKVM|
 :train a model;
 :generate cgraph;
-|laptop|
 :convert cgraph;
+|TF Lite\nlaptop|
 :compile cgraph;
 :build runtime\nwith cgraph;
 :build unikernel\nwith runtime;
-|ESP32 Xtensa|
+|MirageOS\nFreeRTOS\nESP32 Xtensa|
 :run inference;
 :show result;
 stop
