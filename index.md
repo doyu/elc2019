@@ -140,8 +140,8 @@ background-image: url(https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.co
 .footnote[FIXME: How to bring trainig to inference]
 
 ---
-background-image: url(images/ps-sim.png)
-## Training
+background-image: url(images/training-uc.png)
+
 
 ---
 background-image: url(images/ps-sq.png)

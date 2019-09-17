@@ -1,0 +1,35 @@
+@startuml
+title Training:\nFederated Learning on host\nParameter Server (PS)
+
+rectangle KVM {
+
+database data1
+database data2
+database data3
+
+(Server\n<<model>>) -> (Worker1\n<<model>>) : dispatch
+(Server\n<<model>>) -> (Worker2\n<<model>>)
+(Server\n<<model>>) -> (Worker3\n<<model>>)
+
+
+(Worker1\n<<model>>) --> (Server\n<<model>>) : return
+(Worker2\n<<model>>) --> (Server\n<<model>>)
+(Worker3\n<<model>>) --> (Server\n<<model>>)
+
+data1 -> (Worker1\n<<model>>)
+data2 -> (Worker2\n<<model>>)
+data3 -> (Worker3\n<<model>>)
+
+(Server\n<<model>>) .. (/dev/tap10\n192.168.0.10)
+(Worker1\n<<model>>) .. (/dev/tap1\n192.168.0.1)
+(Worker2\n<<model>>) .. (/dev/tap2\n192.168.0.2)
+(Worker3\n<<model>>) .. (/dev/tap3\n192.168.0.3)
+
+(/dev/tap1\n192.168.0.1)..(br0\n192.168.0.100)
+(/dev/tap2\n192.168.0.2)..(br0\n192.168.0.100)
+(/dev/tap3\n192.168.0.3)..(br0\n192.168.0.100)
+(/dev/tap10\n192.168.0.10)..(br0\n192.168.0.100)
+
+}
+(br0\n192.168.0.100)..(eth0)
+@enduml
