@@ -102,8 +102,6 @@ background-image: url(https://miro.medium.com/max/700/1*dYjDEI0mLpsCOySKUuX1VA.p
 # ML framework ==
 ## ML runtime
 ---
-background-image: url(https://image.slidesharecdn.com/mlirintensorflow-190713054903/95/a-sneak-peek-of-mlir-in-tensorflow-2-638.jpg?cb=1562997187)
----
 background-image: url(images/nnvm_compiler_stack.png)
 # Unified IR
 ---
