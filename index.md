@@ -111,6 +111,9 @@ background-image: url(images/nnvm_compiler_stack.png)
 ---
 # Summary
 ---
+background-image: url(images/tinyml-infra.png)
+# Summary
+---
 class: middle
 # Outline
 1. Problem
