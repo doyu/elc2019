@@ -43,6 +43,10 @@ background-image: url(images/ecosystem_003.png)
 background-image: url(images/ecosystem_004.png)
 ---
 background-image: url(images/ecosystem_005.png)
+---
+background-image: url(images/ecosystem_006.png)
+---
+background-image: url(images/ecosystem_007.png)
 
 ---
 background-image: url(images/power.png)

@@ -2,10 +2,15 @@
 title PoC sequence
 |TF Lite\nlaptop|
 start
+if (Federated Learning?) then
+|TF Lite\nlaptop|
+:train with Keras;
+else
 |#AntiqueWhite|OCaml Owl\nMirageOS\nKVM|
 :train a model;
 :generate cgraph;
 :convert cgraph;
+endif
 |TF Lite\nlaptop|
 :compile cgraph;
 :build runtime\nwith cgraph;
