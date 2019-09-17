@@ -1,18 +1,20 @@
 @startmindmap
 scale 2.0
-title Demo outline
-+ demo
+title PoC outline
++ PoC
 ++ training
++++_ Federated Learning (FL)
 +++_ OCaml Owl
 +++_ MirageOS
 ++ compile
 +++_ cgraph
 ++++_ Owl
-++++_ TF
-++++_ TF Lite
-++++_ TF Lite for micro
+++++_ TensorFlow (TF)
+++++_ TF Lite (TFL)
+++++_ TFL for micro (TFLM)
 +++_ TFLM runtime
 ++ inference
++++_ ESP32 devkit
 +++_ MirageOS
-+++_ TFLite micro runtime
++++_ TFLM runtime
 @endmindmap

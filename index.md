@@ -31,14 +31,18 @@ class: middle
 6. PoC
 7. Conclusion
 
-
 ---
-background-image: url(images/gravitee0.png)
-## Traditionally...
-
+background-image: url(images/ecosystem.png)
 ---
-background-image: url(images/gravitee.png)
-## Off-loading...
+background-image: url(images/ecosystem_001.png)
+---
+background-image: url(images/ecosystem_002.png)
+---
+background-image: url(images/ecosystem_003.png)
+---
+background-image: url(images/ecosystem_004.png)
+---
+background-image: url(images/ecosystem_005.png)
 
 ---
 background-image: url(images/power.png)
@@ -46,12 +50,6 @@ background-image: url(images/power.png)
 
 ---
 background-image: url(images/tf-power.png)
-
----
-background-image: url(images/arch.png)
-## Gap between WEB and Embedded
-
-.footnote[FIXME: Insert SoA?]
 
 ---
 class: middle
@@ -132,12 +130,18 @@ class: middle
 7. Conclusion
 
 ---
-background-image: url(https://3qeqpr26caki16dnhd19sv6by6v-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/Plot-of-a-Subset-of-Images-from-the-MNIST-Dataset.png)
+background-image: url(https://miro.medium.com/max/2200/1*XdCMCaHPt-pqtEibUfAnNw.png)
+## **MNIST**: Handwriting digits recognition
+### 60K images for training, 10K for testing
 
-.footnote[FIXME: How to bring trainig to inference]
-
+???
+.footnote[https://towardsdatascience.com/image-classification-in-10-minutes-with-mnist-dataset-54c35b77a38d]
 ---
 background-image: url(images/demo-sq0.png)
+
+---
+background-image: url(images/esp32-wrover.png)
+#### ESP32 WROVER KIT
 
 ---
 background-image: url(images/demo-ac.png)
@@ -156,10 +160,6 @@ background-image: url(images/demo-uc.png)
 
 ---
 background-image: url(images/demo-sq.png)
-
----
-background-image: url(images/esp32-wrover.png)
-#### ESP32 WROVER KIT
 
 ---
 # Result

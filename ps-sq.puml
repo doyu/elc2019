@@ -1,6 +1,6 @@
 @startuml
 
-title Training: Parameter Server (PS) Sequence
+title Training: Parameter Server(PS) sequence
 
 
 Worker1 -> Server : register itself

@@ -1,0 +1,159 @@
+@startuml
+
+title traditionally
+
+cloud cloud {
+        cloud AWS
+        cloud Azure
+        cloud GCP
+}
+
+node device1
+node device2
+
+AWS <---- device1 : request
+AWS ----> device1 : return
+AWS <---- device2 : request
+AWS ----> device2 : return
+
+newpage
+title now
+
+cloud cloud {
+        cloud AWS
+        cloud Azure
+        cloud GCP
+}
+cloud edge
+node device1
+node device2
+
+AWS <---- edge : request
+AWS ----> edge : return
+
+edge <- device1 : request
+edge -down-> device1 : return
+edge <- device2 : request
+edge -down-> device2 : return
+
+newpage
+title privacy
+
+cloud cloud {
+        cloud AWS
+        cloud Azure
+        cloud GCP
+}
+cloud edge
+
+storage On-premises {
+        node device1
+        database privacy
+}
+
+AWS <---- edge : request
+AWS ----> edge : return
+
+edge <- device1 : request
+edge -down-> device1 : return
+device1 <- privacy : request
+device1 -> privacy : return
+
+newpage
+title future
+
+cloud cloud {
+        cloud AWS
+        cloud Azure
+        cloud GCP
+}
+cloud edge
+node device1
+node device2
+node device3
+
+AWS <---- edge : request
+AWS ----> edge : return
+
+edge <- device1 : request
+edge -down-> device1 : return
+edge <- device2 : request
+edge -down-> device2 : return
+
+device1 -> device2 : return
+device1 <- device2 : request
+
+device1 -down-> device3 : return
+device1 <-down- device3 : request
+device2 -down-> device3 : return
+device2 <-down- device3 : request
+
+newpage
+title Web experience
+
+storage web {
+        cloud cloud {
+                cloud AWS
+                cloud Azure
+                cloud GCP
+        }
+        cloud edge
+}
+
+node device1
+node device2
+node device3
+
+AWS <-- edge : request
+AWS --> edge : return
+
+edge <- device1 : request
+edge -down-> device1 : return
+edge <- device2 : request
+edge -down-> device2 : return
+
+
+device1 -> device2 : return
+device1 <- device2 : request
+
+device1 -down-> device3 : return
+device1 <-down- device3 : request
+device2 -down-> device3 : return
+device2 <-down- device3 : request
+
+newpage
+title Gap between web and embedded
+
+storage web {
+        cloud cloud {
+                cloud AWS
+                cloud Azure
+                cloud GCP
+        }
+        cloud edge
+}
+
+storage embedded {
+        node device1
+        node device2
+        node device3
+}
+
+AWS <-- edge : request
+AWS --> edge : return
+
+edge <- device1 : request
+edge -down-> device1 : return
+edge <- device2 : request
+edge -down-> device2 : return
+
+
+device1 -> device2 : return
+device1 <- device2 : request
+
+device1 -down-> device3 : return
+device1 <-down- device3 : request
+device2 -down-> device3 : return
+device2 <-down- device3 : request
+
+@enduml

@@ -1,5 +1,5 @@
 @startuml
-title Demo Sequence
+title PoC sequence
 |TF Lite\nlaptop|
 start
 |#AntiqueWhite|OCaml Owl\nMirageOS\nKVM|
