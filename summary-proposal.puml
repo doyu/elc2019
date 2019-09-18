@@ -1,6 +1,6 @@
 @startmindmap
 scale 1.5
-* Proposal\n\nTinyML as-a-Service\nTinMLaaS
+* TinyML as-a-Service\n(TinMLaaS)
 ** Squash a ML model
 ** Tailor made runtime
 ***_ per model
