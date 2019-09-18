@@ -87,6 +87,9 @@ background-image: url(http://3.bp.blogspot.com/--jGFfze1gFw/VOXPZW6n5EI/AAAAAAAA
 background-image: url(images/unikernel-mindmap.png)
 #Type of Unikernel
 ---
+# Ocaml
+.bottom[![bottom-aligned image](images/ocaml.png)]
+---
 background-image: url(images/summary-unikernel.png)
 # Summary
 ---
