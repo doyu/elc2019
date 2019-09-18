@@ -175,7 +175,8 @@ class: middle
  - Inference on Unikernel on microcontroller
 
 # Next
-- Try **-lto**, link time optimization
+- Squeeze more :)
+ - Try **-lto**, link time optimization
 - CoAP based orchestration
 - Try with more complicated model
 - HWA suppport
