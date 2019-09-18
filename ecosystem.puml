@@ -37,7 +37,7 @@ edge <- device2 : request
 edge -down-> device2 : return
 
 newpage
-title privacy
+title issues
 
 cloud cloud {
         cloud AWS
@@ -51,11 +51,14 @@ storage On-premises {
         database privacy
 }
 
+note "Privacy\nBandwidth\nLatency\nReliability" as Issues
+
+
 AWS <---- edge : request
 AWS ----> edge : return
 
-edge <- device1 : request
-edge -down-> device1 : return
+edge <.. Issues
+Issues ..> device1
 device1 <- privacy : request
 device1 -> privacy : return
 
@@ -75,10 +78,8 @@ node device3
 AWS <---- edge : request
 AWS ----> edge : return
 
-edge <- device1 : request
-edge -down-> device1 : return
-edge <- device2 : request
-edge -down-> device2 : return
+edge <.down.> device1
+edge .down.> device2
 
 device1 -> device2 : return
 device1 <- device2 : request

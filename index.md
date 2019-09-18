@@ -31,6 +31,11 @@ background-image: url(images/ecosystem_001.png)
 background-image: url(images/ecosystem_002.png)
 ---
 background-image: url(images/ecosystem_003.png)
+???
+Privacy: Avoid sending all raw data to be stored and processed on cloud servers.
+Bandwidth: Reduce costs associated with transmitting all raw data to cloud services.
+Latency: Reaction time is critical and cannot be dependent on a cloud connection.
+Reliability: The ability to operate even when the cloud connection is interrupted.
 ---
 background-image: url(images/ecosystem_004.png)
 ---

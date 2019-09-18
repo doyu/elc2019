@@ -1,8 +1,15 @@
 @startmindmap
 scale 1.5
 * Problem
-** Gap between Cloud/Web and Embedded experience
-** Diversity of Embedded development
-** Too heavy ML environment on Cloud
-** No ML in place in IoT
+** issues
+***_ Privacy
+***_ Bandwith
+***_ Latency
+***_ Reliability
+** gap between web & embedded
+***_ diversity of embedded
+** heavy ML
+***_ runtime
+***_ model
+
 @endmindmap
