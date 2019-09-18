@@ -41,8 +41,8 @@ Reliability: The ability to operate even when the cloud connection is interrupte
 ---
 background-image: url(images/realtime.png)
 # when **latency** matter?
+.footnote[Stolen from Edgar's slide;)]
 ???
-
 ---
 background-image: url(images/ecosystem_003.png)
 ???
@@ -72,6 +72,7 @@ in web, there are variety of python based frameworks,
 in embedded, python based frameworks are too heavy.
 ---
 background-image: url(images/summary-problem.png)
+# Summary: Problem
 ---
 class: middle
 # Outline
@@ -89,7 +90,7 @@ TinyML as-a-Service
 which customize ML for embedded usecase.
 ---
 background-image: url(images/summary-proposal.png)
-# Proposal
+# Summary: Proposal
 ---
 class: middle
 # Outline
