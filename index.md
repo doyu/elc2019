@@ -40,7 +40,7 @@ Latency: Reaction time is critical and cannot be dependent on a cloud connection
 Reliability: The ability to operate even when the cloud connection is interrupted.
 ---
 background-image: url(images/realtime.png)
-# when latency matter?
+# when **latency** matter?
 ???
 
 ---
@@ -83,8 +83,8 @@ class: middle
 ---
 background-image: url(images/ecosystem_008.png)
 ???
-FIXME: TinyML definition
-FIXME: TinyMLaaS definition
+TinyML: DNN on ultra-low power systems
+TinyMLaaS: build && orchestration of TinyML
 TinyML as-a-Service
 which customize ML for embedded usecase.
 ---
@@ -162,6 +162,8 @@ Compiler generates optimized code per backend.
 ---
 background-image: url(images/cgraph.png)
 ## Computational graph (cgraph)
+serialization: protobuf, flatbuf
+JSON <-> binary representation
 ---
 background-image: url(http://136.225.130.103:8080/tflm/main_8cc_a655610549cf9e5304cd47ecae379d99f_cgraph.png)
 # ML Runtime (inference)
@@ -169,12 +171,12 @@ background-image: url(http://136.225.130.103:8080/tflm/main_8cc_a655610549cf9e53
 background-image: url(images/summary-mlcompiler.png)
 # Summary: ML compiler
 ???
-FIXME: protobuf, flatbuf
 ---
 background-image: url(images/summary-3enablers.png)
 # Summary: 3 Enablers
 ???
-FIXME: CoAP briefing
+CoAP is Constraint Application Protocol.
+Concept: Bring web to IoT as M2M communication.
 ---
 class: middle
 # Outline
@@ -202,10 +204,11 @@ background-image: url(images/training-uc.png)
 background-image: url(images/ps-sq.png)
 ---
 background-image: url(images/convert-uc.png)
+???
+TFLM runtime is called via OCaml FFI.
+FFI=Foreign Function Interface
 ---
 background-image: url(images/demo-uc.png)
-???
-FIXME: FFI?
 ---
 background-image: url(images/demo-sq.png)
 ---
