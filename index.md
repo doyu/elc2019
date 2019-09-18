@@ -39,6 +39,11 @@ Bandwidth: Reduce costs associated with transmitting all raw data to cloud servi
 Latency: Reaction time is critical and cannot be dependent on a cloud connection.
 Reliability: The ability to operate even when the cloud connection is interrupted.
 ---
+background-image: url(images/realtime.png)
+# when latency matter?
+???
+
+---
 background-image: url(images/ecosystem_003.png)
 ???
 Devices should compute by themselves.
@@ -78,6 +83,8 @@ class: middle
 ---
 background-image: url(images/ecosystem_008.png)
 ???
+FIXME: TinyML definition
+FIXME: TinyMLaaS definition
 TinyML as-a-Service
 which customize ML for embedded usecase.
 ---
@@ -130,7 +137,7 @@ Safer not to use C
 Just feeling of abstructed API
 ---
 background-image: url(images/summary-unikernel.png)
-# Summary
+# Summary: Unikernel
 ---
 # Outline
 1. Problem
@@ -161,9 +168,13 @@ background-image: url(http://136.225.130.103:8080/tflm/main_8cc_a655610549cf9e53
 ---
 background-image: url(images/summary-mlcompiler.png)
 # Summary: ML compiler
+???
+FIXME: protobuf, flatbuf
 ---
 background-image: url(images/summary-3enablers.png)
 # Summary: 3 Enablers
+???
+FIXME: CoAP briefing
 ---
 class: middle
 # Outline
@@ -193,6 +204,8 @@ background-image: url(images/ps-sq.png)
 background-image: url(images/convert-uc.png)
 ---
 background-image: url(images/demo-uc.png)
+???
+FIXME: FFI?
 ---
 background-image: url(images/demo-sq.png)
 ---

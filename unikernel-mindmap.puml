@@ -1,17 +1,18 @@
+
 @startmindmap
 scale 1.5
-- Unikernel\nType
--- posix\ncompatible
----_ OSv
----_ Rumprun
----_ includeOS
----_ Graphene
----_ ClickOS
----_ Nanos
-++ language\nspecific
-+++_ MirageOS\n(OCaml)
-+++_ HaLVM\n(Haskell)
-+++_ LING\n(Erlang)
-+++_ Runtime.js\n(JS)
+* Unikernel\nType
+** posix\ncompatible
+***_ OSv
+***_ Rumprun
+***_ includeOS
+***_ Graphene
+***_ ClickOS
+***_ Nanos
+** language\nspecific
+***_ MirageOS\n(OCaml)
+***_ HaLVM\n(Haskell)
+***_ LING\n(Erlang)
+***_ Runtime.js\n(JS)
 
 @endmindmap
