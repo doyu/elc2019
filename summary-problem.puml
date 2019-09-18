@@ -6,8 +6,8 @@ scale 1.5
 ***_ Bandwith
 ***_ Latency
 ***_ Reliability
-** gap between web & embedded
-***_ diversity of embedded
+** gap: web vs embedded
+***_ diversity of\nembedded
 ** heavy ML
 ***_ runtime
 ***_ model
