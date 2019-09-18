@@ -10,7 +10,7 @@ class: middle
 # Outline
 1. Problem
 2. Proposal
-3. 3 enablers
+3. 3 Enablers
 4. PoC
 5. Summary
 
@@ -19,7 +19,7 @@ class: middle
 # Outline
 1. **Problem**
 2. Proposal
-3. 3 enablers
+3. 3 Enablers
 4. PoC
 5. Summary
 
@@ -47,7 +47,7 @@ class: middle
 # Outline
 1. Problem
 2. **Proposal**
-3. 3 enablers
+3. 3 Enablers
 4. PoC
 5. Summary
 ---
@@ -60,18 +60,18 @@ class: middle
 # Outline
 1. Problem
 2. Proposal
-3. **3 enablers**
+3. **3 Enablers**
 4. PoC
 5. Summary
 ---
 background-image: url(images/tinyml-infra.png)
-# 3 enablers
+# 3 Enablers
 ---
 class: middle
 # Outline
 1. Problem
 2. Proposal
-3. **3 enablers / Unikernel**
+3. **3 Enablers / Unikernel**
 4. PoC
 5. Summary
 ---
@@ -94,7 +94,7 @@ class: middle
 # Outline
 1. Problem
 2. Proposal
-3. **3 enablers / ML compiler**
+3. **3 Enablers / ML compiler**
 4. PoC
 5. Summary
 ---
@@ -105,8 +105,10 @@ background-image: url(https://miro.medium.com/max/700/1*dYjDEI0mLpsCOySKUuX1VA.p
 background-image: url(images/nnvm_compiler_stack.png)
 # Unified IR
 ---
+background-image: url(http://www.deepideas.net/wp-content/uploads/2017/08/affine_transformation.png)
 # Computational graph (cgraph)
 ---
+background-image: url(http://136.225.130.103:8080/tflm/main_8cc_a655610549cf9e5304cd47ecae379d99f_cgraph.png)
 # ML Runtime (inference)
 ---
 # Summary
@@ -118,7 +120,7 @@ class: middle
 # Outline
 1. Problem
 2. Proposal
-3. 3 enablers
+3. 3 Enablers
 4. **PoC**
 5. Summary
 ---
@@ -165,7 +167,7 @@ class: middle
 # Outline
 1. Problem
 2. Proposal
-3. 3 enablers
+3. 3 Enablers
 4. PoC
 5. **Summary**
 ---

@@ -1,12 +1,11 @@
 @startmindmap
 scale 1.5
-* Proposal
-** TinyML as-a-Service
-*** Squash a ML model
-*** Tailor made runtime
-****_ per model
-****_ per HW(A)
-*** Build nano service images
-****_ per HW(A)
-*** Orchestration
+* Proposal\n\nTinyML as-a-Service
+** Squash a ML model
+** Tailor made runtime
+***_ per model
+***_ per HW(A)
+** Build nano service images
+***_ per HW(A)
+** Orchestration
 @endmindmap
