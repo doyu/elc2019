@@ -1,5 +1,6 @@
 @startmindmap
 scale 1.5
+
 * TinyML\naaS
 ** Unikernel
 ***_ <s>posix</s>\n<s>compatible</s>
@@ -13,4 +14,5 @@ scale 1.5
 ***_ FOTA update
 ***_ orchestration
 ***_ monitoring
+
 @endmindmap

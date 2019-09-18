@@ -1,0 +1,15 @@
+@startmindmap
+scale 1.5
+
+* TinyML\naaS
+** Unikernel
+***_ thin wrapper of RTOS
+***_ unified interface of service
+** ML compiler
+***_ small model
+***_ small runtime
+***_ HWA optimization
+** CoAP
+***_ <s>orchestration</s> => Not explained
+
+@endmindmap

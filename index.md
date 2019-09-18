@@ -67,13 +67,14 @@ class: middle
 background-image: url(images/tinyml-infra.png)
 # 3 Enablers
 ---
-class: middle
 # Outline
 1. Problem
 2. Proposal
 3. **3 Enablers / Unikernel**
 4. PoC
 5. Summary
+
+.bottom[![bottom-aligned image](images/tinyml-infra.png)]
 ---
 background-image: url(https://zdnet1.cbsistatic.com/hub/i/r/2016/02/01/71e041f1-addd-4a9c-bc81-f73297f2dc6a/resize/770xauto/fffb0419c01c018b37d50605bdf341a3/dockerunikernel.jpg)
 #Unikernel
@@ -93,13 +94,14 @@ background-image: url(images/unikernel-mindmap.png)
 background-image: url(images/summary-unikernel.png)
 # Summary
 ---
-class: middle
 # Outline
 1. Problem
 2. Proposal
 3. **3 Enablers / ML compiler**
 4. PoC
 5. Summary
+
+.bottom[![bottom-aligned image](images/tinyml-infra.png)]
 ---
 background-image: url(https://miro.medium.com/max/700/1*dYjDEI0mLpsCOySKUuX1VA.png)
 # ML framework ==
@@ -114,10 +116,11 @@ background-image: url(http://www.deepideas.net/wp-content/uploads/2017/08/affine
 background-image: url(http://136.225.130.103:8080/tflm/main_8cc_a655610549cf9e5304cd47ecae379d99f_cgraph.png)
 # ML Runtime (inference)
 ---
-# Summary
+background-image: url(images/summary-mlcompiler.png)
+# Summary: ML compiler
 ---
-background-image: url(images/tinyml-infra.png)
-# Summary
+background-image: url(images/summary-3enablers.png)
+# Summary: 3 Enablers
 ---
 class: middle
 # Outline
@@ -153,18 +156,9 @@ background-image: url(images/demo-sq.png)
 class: center, middle
 # [Demo](https://play.ericsson.net/media/t/1_m56q17x5)
 ---
-# Demo Summary
-Add runtime memory info
+background-image: url(images/size-comp.png)
+# Result
 
-## Training on x86
-
-RAM: ???? bytes
-ROM: ???? bytes
-
-## Inference ESP32
-
-RAM: ???? bytes
-ROM: ???? bytes
 ---
 class: middle
 # Outline
@@ -174,14 +168,17 @@ class: middle
 4. PoC
 5. **Summary**
 ---
-# What I got:
-- Unikernel can bring unified development experience between Cloud, Edge and device.
-- Inference running on Tiny device
-- More sophistocated environment is needed.
+class: middle
+# Done
+- Demonstrated possibility of End-to-End **TinyMLaaS**
+ - Distributed training on Unikernels
+ - Inference on Unikernel on microcontroller
 
-# Challenge?
-- RISC-V?
-- TinyML algorithm?
+# Next
+- Try **-lto**, link time optimization
+- CoAP based orchestration
+- Try with more complicated model
+- HWA suppport
 
 ---
 background-image: url(images/elc.png)
