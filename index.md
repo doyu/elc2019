@@ -148,7 +148,7 @@ background-image: url(images/demo-uc.png)
 background-image: url(images/demo-sq.png)
 ---
 class: center, middle
-# Demo
+# [Demo](https://play.ericsson.net/media/t/1_m56q17x5)
 ---
 # Demo Summary
 Add runtime memory info
