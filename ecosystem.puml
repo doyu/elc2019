@@ -88,6 +88,9 @@ device1 -down-> device3 : return
 device1 <-down- device3 : request
 device2 -down-> device3 : return
 device2 <-down- device3 : request
+device2 -> device2
+device2 <- device2 : in place
+
 
 newpage
 title Web experience
@@ -208,7 +211,11 @@ storage web {
         cloud edge
 }
 
-note right of cloud : variety of python based\nML frameworks
+note right of cloud
+variety of python ML frameworks
+heavy training
+inference
+end note
 
 storage embedded {
         node device1
@@ -216,7 +223,11 @@ storage embedded {
         node device3
 }
 
-note right of embedded : <s>python ML</s>\n<s>ML (inference)</s>\nNo common ML runtime
+note right of embedded
+<s>python ML runtime</s>
+<s>training</s>
+inference in place?
+end note
 
 AWS <-- edge : request
 AWS --> edge : return
@@ -236,7 +247,7 @@ device2 -down-> device3 : return
 device2 <-down- device3 : request
 
 newpage
-title Proposal
+title Proposal: TinyML as-a-Service
 
 storage web {
         cloud cloud {
@@ -260,8 +271,8 @@ storage embedded {
         node device3
 }
 
-web <-right- TinyMLaaS
-embedded <-up- TinyMLaaS
+cloud <-right- TinyMLaaS
+device2 <-up- TinyMLaaS : customized image\nper device\nper model
 
 AWS <-- edge : request
 AWS --> edge : return

@@ -47,7 +47,7 @@ Latency: Reaction time is critical and cannot be dependent on a cloud connection
 Reliability: The ability to operate even when the cloud connection is interrupted.
 ---
 background-image: url(images/realtime.png)
-# when **latency** matter?
+## when **Latency** && **Reliability** matter?
 .footnote[Stolen from Edgar's slide;)]
 ???
 ---
