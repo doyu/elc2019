@@ -48,7 +48,7 @@ Reliability: The ability to operate even when the cloud connection is interrupte
 ---
 background-image: url(images/realtime.png)
 ## when **Latency** && **Reliability** matter?
-.footnote[Stolen from Edgar's slide;)]
+.footnote[Stolen from Edgar's slide]
 ???
 ---
 background-image: url(images/ecosystem_003.png)
@@ -241,13 +241,13 @@ class: center,middle
 # Done
 ### Demonstrated End-to-End TinyML as-a-Service (TinyMLaaS)
 # Next
-### Let's put TinyMLaaS in use in E/// smart factory in Nanjing,China
+### Implement CoAP based orchestration
 ---
 class: center,middle
 # Done
 ### Demonstrated End-to-End TinyML as-a-Service (TinyMLaaS)
 # Next
-### Let's put TinyMLaaS in use in E/// smart factory in Nanjing,China
+### Implement CoAP based orchestration
 .footnote[...and "intersection of 3 buzz words"]
 ---
 background-image: url(images/title.png)
