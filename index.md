@@ -225,6 +225,18 @@ background-image: url(images/demo-sq.png)
 class: center, middle
 # [Demo](https://play.ericsson.net/media/t/1_m56q17x5)
 ---
+class: center, middle
+<video width="560" height="420" controls>
+    <source src="mnist.webm" type="video/webm">
+</video>
+# [MNIST inference on ESP32](https://play.ericsson.net/media/t/1_m56q17x5)
+---
+class: center, middle
+<video width="560" height="420" controls>
+    <source src="fmnist.mp4" type="video/mp4">
+</video>
+# [Fashion MNIST from Zalando](https://play.ericsson.net/media/t/0_tdu20gt3)
+---
 background-image: url(images/size-comp.png)
 # Result
 
