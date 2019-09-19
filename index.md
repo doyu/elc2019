@@ -5,13 +5,20 @@ class: center, middle
 
 .footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 19th/SEP/2019]
 ---
+background-image: url(images/title.png)
+_Intersection of 3 buzz words!!_
+???
+As you might have noticed,
+title is the intersection of 3 buzz words.
+This is the today's take away.
+---
 class: middle
 # Outline
 1. Problem
 2. Proposal
 3. 3 Enablers
 4. PoC
-5. Summary
+5. Takeaway
 ---
 class: middle
 # Outline
@@ -19,7 +26,7 @@ class: middle
 2. Proposal
 3. 3 Enablers
 4. PoC
-5. Summary
+5. Takeaway
 ---
 background-image: url(images/ecosystem.png)
 ???
@@ -80,7 +87,7 @@ class: middle
 2. **Proposal**
 3. 3 Enablers
 4. PoC
-5. Summary
+5. Takeaway
 ---
 background-image: url(images/ecosystem_008.png)
 ???
@@ -98,7 +105,7 @@ class: middle
 2. Proposal
 3. **3 Enablers**
 4. PoC
-5. Summary
+5. Takeaway
 ---
 background-image: url(images/tinyml-infra.png)
 # 3 Enablers
@@ -108,7 +115,7 @@ background-image: url(images/tinyml-infra.png)
 2. Proposal
 3. **3 Enablers / Unikernel**
 4. PoC
-5. Summary
+5. Takeaway
 
 .bottom[![bottom-aligned image](images/tinyml-infra.png)]
 ---
@@ -145,7 +152,7 @@ background-image: url(images/summary-unikernel.png)
 2. Proposal
 3. **3 Enablers / ML compiler**
 4. PoC
-5. Summary
+5. Takeaway
 
 .bottom[![bottom-aligned image](images/tinyml-infra.png)]
 ---
@@ -156,19 +163,20 @@ background-image: url(https://miro.medium.com/max/700/1*dYjDEI0mLpsCOySKUuX1VA.p
 background-image: url(images/nnvm_compiler_stack.png)
 # Unified IR
 ???
-each has its own computation graph.
+each has its own computational graph.
 ONNX is considered as standard exchange format between frameworks.
 Data scientists find the best algorithm.
 Compiler generates optimized code per backend.
 ---
 background-image: url(images/cgraph.png)
 ## Computational graph (cgraph)
+.footnote[serialization: protobuf, flatbuf]
 ???
-serialization: protobuf, flatbuf
 JSON <-> binary representation
 ---
 background-image: url(http://136.225.130.103:8080/tflm/main_8cc_a655610549cf9e5304cd47ecae379d99f_cgraph.png)
 # ML Runtime (inference)
+.footnote[model ops == runtime ops]
 ---
 background-image: url(images/summary-mlcompiler.png)
 # Summary: ML compiler
@@ -186,7 +194,7 @@ class: middle
 2. Proposal
 3. 3 Enablers
 4. **PoC**
-5. Summary
+5. Takeaway
 ---
 background-image: url(https://miro.medium.com/max/2200/1*XdCMCaHPt-pqtEibUfAnNw.png)
 ## **MNIST**: Handwriting digits recognition
@@ -227,30 +235,24 @@ class: middle
 2. Proposal
 3. 3 Enablers
 4. PoC
-5. **Summary**
+5. **Takeaway**
 ---
-class: middle
+class: center,middle
 # Done
-- Demonstrated possibility of End-to-End **TinyMLaaS**
- - Distributed training on Unikernels
- - Inference on Unikernel on microcontroller
-
+### Demonstrated End-to-End TinyML as-a-Service (TinyMLaaS)
 # Next
-- Squeeze more :)
- - Try **-lto**, link time optimization
-- CoAP based orchestration
-- Try with more complicated model
-- HWA suppport
+### Put TinyMLaaS in use in E/// smart factory in Nanjing,China
 
+.footnote[...and "intersection of 3 buzz words"]
+---
+background-image: url(images/title.png)
+_Intersection of 3 buzz words!!_
 ---
 background-image: url(images/elc.png)
-
 ---
 class: center, middle
 # Send comments to [hiroshi.doyu@ericsson.com](hiroshi.doyu@ericsson.com)
 # &&
 .bottom[![bottom-aligned image](images/menti.png)]
 ---
-
-
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
