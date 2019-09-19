@@ -227,7 +227,7 @@ class: center, middle
 ---
 class: center, middle
 <video width="560" height="420" controls>
-    <source src="mnist.webm" type="video/webm">
+    <source src="mnist.mp4" type="video/mp4">
 </video>
 # [MNIST inference on ESP32](https://play.ericsson.net/media/t/1_m56q17x5)
 ---
