@@ -241,8 +241,13 @@ class: center,middle
 # Done
 ### Demonstrated End-to-End TinyML as-a-Service (TinyMLaaS)
 # Next
-### Put TinyMLaaS in use in E/// smart factory in Nanjing,China
-
+### Let's put TinyMLaaS in use in E/// smart factory in Nanjing,China
+---
+class: center,middle
+# Done
+### Demonstrated End-to-End TinyML as-a-Service (TinyMLaaS)
+# Next
+### Let's put TinyMLaaS in use in E/// smart factory in Nanjing,China
 .footnote[...and "intersection of 3 buzz words"]
 ---
 background-image: url(images/title.png)
