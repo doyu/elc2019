@@ -96,6 +96,9 @@ TinyMLaaS: build && orchestration of TinyML
 TinyML as-a-Service
 which customize ML for embedded usecase.
 ---
+background-image: url(images/pizzaonline.png)
+.footnote[_Customize your flavours!! ML model, CPU, RAM, ROM, RTOS.....online_]
+---
 background-image: url(images/summary-proposal.png)
 # Summary: Proposal
 ---
