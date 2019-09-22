@@ -230,13 +230,13 @@ class: center, middle
 ---
 class: center, middle
 <video width="560" height="420" controls>
-    <source src="mnist.mp4" type="video/mp4">
+    <source src="http://136.225.130.103:8080/elc2019/mnist.mp4" type="video/mp4">
 </video>
 # [MNIST inference on ESP32](https://play.ericsson.net/media/t/1_m56q17x5)
 ---
 class: center, middle
 <video width="560" height="420" controls>
-    <source src="fmnist.mp4" type="video/mp4">
+    <source src="http://136.225.130.103:8080/elc2019/fmnist.mp4" type="video/mp4">
 </video>
 # [Fashion MNIST from Zalando](https://play.ericsson.net/media/t/0_tdu20gt3)
 ---
