@@ -37,7 +37,7 @@ edge <- device2 : request
 edge -down-> device2 : return
 
 newpage
-title issues
+title Edge Issues
 
 cloud cloud {
         cloud AWS
@@ -45,22 +45,30 @@ cloud cloud {
         cloud GCP
 }
 cloud edge
+note left
+Privacy
+Bandwidth
+Latency
+Reliability
+Energy
+end note
 
-storage On-premises {
-        node device1
+rectangle On-premises {
+        collections device
+        database battery
         database privacy
 }
-
-note "Privacy\nBandwidth\nLatency\nReliability" as Issues
 
 
 AWS <---- edge : request
 AWS ----> edge : return
 
-edge <.. Issues
-Issues ..> device1
-device1 <- privacy : request
-device1 -> privacy : return
+edge <.down. device : request
+edge .down.> device : return
+
+device <- privacy : request
+battery .> device : power
+
 
 newpage
 title future
@@ -71,31 +79,28 @@ cloud cloud {
         cloud GCP
 }
 cloud edge
-node device1
-node device2
-node device3
+rectangle On-premises {
+        node device1
+        node device2
+        node device3
+}
 
 AWS <---- edge : request
 AWS ----> edge : return
 
 edge <.down.> device1
-edge .down.> device2
+edge <.down.> device2
 
-device1 -> device2 : return
-device1 <- device2 : request
-
-device1 -down-> device3 : return
-device1 <-down- device3 : request
-device2 -down-> device3 : return
-device2 <-down- device3 : request
-device2 -> device2
-device2 <- device2 : in place
+device1 <-> device2
+device1 <-down-> device3
+device2 <-down-> device3 : offloading
+device3 <-> device3 : in place
 
 
 newpage
 title Web experience
 
-storage web {
+cloud "Web/linux\n" #5DADE2 {
         cloud cloud {
                 cloud AWS
                 cloud Azure
@@ -104,40 +109,7 @@ storage web {
         cloud edge
 }
 
-node device1
-node device2
-node device3
-
-AWS <-- edge : request
-AWS --> edge : return
-
-edge <- device1 : request
-edge -down-> device1 : return
-edge <- device2 : request
-edge -down-> device2 : return
-
-
-device1 -> device2 : return
-device1 <- device2 : request
-
-device1 -down-> device3 : return
-device1 <-down- device3 : request
-device2 -down-> device3 : return
-device2 <-down- device3 : request
-
-newpage
-title Gap between web and embedded
-
-storage web {
-        cloud cloud {
-                cloud AWS
-                cloud Azure
-                cloud GCP
-        }
-        cloud edge
-}
-
-storage embedded {
+rectangle on-premises {
         node device1
         node device2
         node device3
@@ -146,24 +118,47 @@ storage embedded {
 AWS <-- edge : request
 AWS --> edge : return
 
-edge <- device1 : request
-edge -down-> device1 : return
-edge <- device2 : request
-edge -down-> device2 : return
+edge <.down.> device1
+edge <.down.> device2
 
+device1 <-> device2
 
-device1 -> device2 : return
-device1 <- device2 : request
-
-device1 -down-> device3 : return
-device1 <-down- device3 : request
-device2 -down-> device3 : return
-device2 <-down- device3 : request
+device1 <-down-> device3
+device2 <-down-> device3
 
 newpage
 title Gap between web and embedded
 
-storage web {
+cloud "Web/linux\n" #5DADE2 {
+        cloud cloud {
+                cloud AWS
+                cloud Azure
+                cloud GCP
+        }
+        cloud edge
+}
+
+AWS <-- edge : request
+AWS --> edge : return
+
+rectangle "On-premises/\nEmbedded" #F39C12 {
+        node device1
+        node device2
+        node device3
+}
+
+edge <.down.> device1
+edge <.down.> device2
+device1 <-> device2
+device1 <-down-> device3
+device2 <-down-> device3 : offloading
+device3 <-> device3 : in place
+
+
+newpage
+title Gap between Web and Embedded
+
+cloud "Web/linux\n" #5DADE2 {
         cloud cloud {
                 cloud AWS
                 cloud Azure
@@ -174,35 +169,28 @@ storage web {
 
 note right of cloud : Container based microservices\non-demand service orchestration
 
-storage embedded {
+rectangle Embedded #F39C12 {
         node device1
         node device2
         node device3
 }
 
-note right of embedded : variety of RTOSes\nFixed services\nno orchestration
+note right of Embedded : variety of RTOSes\nFixed services\nno orchestration
 
 AWS <-- edge : request
 AWS --> edge : return
 
-edge <- device1 : request
-edge -down-> device1 : return
-edge <- device2 : request
-edge -down-> device2 : return
-
-
-device1 -> device2 : return
-device1 <- device2 : request
-
-device1 -down-> device3 : return
-device1 <-down- device3 : request
-device2 -down-> device3 : return
-device2 <-down- device3 : request
+edge <.down.> device1
+edge <.down.> device2
+device1 <-left-> device2
+device1 <-down-> device3
+device2 <-down-> device3 : offloading
+device3 <-> device3 : in place
 
 newpage
 title ML environment
 
-storage web {
+cloud "Web/linux\n" #5DADE2 {
         cloud cloud {
                 cloud AWS
                 cloud Azure
@@ -213,43 +201,36 @@ storage web {
 
 note right of cloud
 variety of python ML frameworks
-heavy training
-inference
+heavy training & inference
+multi-node GPUs
 end note
 
-storage embedded {
+rectangle Embedded #F39C12 {
         node device1
         node device2
         node device3
 }
 
-note right of embedded
+note right of Embedded
 <s>python ML runtime</s>
 <s>training</s>
-inference in place?
+Any inference in place?
 end note
 
 AWS <-- edge : request
 AWS --> edge : return
 
-edge <- device1 : request
-edge -down-> device1 : return
-edge <- device2 : request
-edge -down-> device2 : return
-
-
-device1 -> device2 : return
-device1 <- device2 : request
-
-device1 -down-> device3 : return
-device1 <-down- device3 : request
-device2 -down-> device3 : return
-device2 <-down- device3 : request
+edge <.down.> device1
+edge <.down.> device2
+device1 <-left-> device2
+device1 <-down-> device3
+device2 <-down-> device3 : offloading
+device3 <-> device3 : in place
 
 newpage
-title Proposal: TinyML as-a-Service
+title Current
 
-storage web {
+cloud "Web/linux\n" #5DADE2 {
         cloud cloud {
                 cloud AWS
                 cloud Azure
@@ -258,38 +239,59 @@ storage web {
         cloud edge
 }
 
-storage TinyMLaaS {
-        cloud SaaS {
-                (build)
-                (model)
-        }
-}
-
-storage embedded {
+rectangle Embedded #F39C12 {
         node device1
         node device2
         node device3
 }
 
-cloud <-right- TinyMLaaS
-device2 <-up- TinyMLaaS : customized image\nper device\nper model
+AWS <-- edge : request
+AWS --> edge : return
+
+edge <.down.> device1
+edge <.down.> device2
+device1 <-left-> device2
+device1 <-down-> device3
+device2 <-down-> device3 : offloading
+device3 <-> device3 : in place
+
+newpage
+title Proposal: TinyML as-a-Service
+
+cloud "Web/linux\n" #5DADE2 {
+        cloud cloud {
+                cloud AWS
+                cloud Azure
+                cloud GCP
+        }
+        cloud edge
+}
+
+cloud "TinyML\nas-a-Service\n" #F012F3 {
+        database SaaS {
+                ("build\nService")
+        }
+        collections "model\nZoo" as zoo
+}
+
+rectangle Embedded #F39C12 {
+        node device1
+        node device2
+        node device3
+}
+
+
+device2 <-up- SaaS : customized image\nper device\nper model
 
 AWS <-- edge : request
 AWS --> edge : return
 
-edge <- device1 : request
-edge -down-> device1 : return
-edge <- device2 : request
-edge -down-> device2 : return
-
-
-device1 -> device2 : return
-device1 <- device2 : request
-
-device1 -down-> device3 : return
-device1 <-down- device3 : request
-device2 -down-> device3 : return
-device2 <-down- device3 : request
-
+edge <.down.> device1
+edge <.down.> device2
+device1 <-left-> device2
+device1 <-down-> device3
+device2 <-down-> device3 : offloading
+device3 <-> device3 : in place
+device2 <-> device2 : ML in place
 
 @enduml

@@ -1,14 +1,15 @@
 @startmindmap
 scale 1.5
-* Problem
-** issues
+* Edge\nProblems
+** 5 issues
 ***_ Privacy
 ***_ Bandwith
 ***_ Latency
 ***_ Reliability
-** gap: web vs embedded
+***_ Energy
+** Web vs Embedded
 ***_ diversity of\nembedded
-** heavy ML
+** Heavy ML
 ***_ runtime
 ***_ model
 

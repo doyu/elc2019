@@ -3,8 +3,9 @@ class: center, middle
 # on
 # Unikernel for IoT
 
-.footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 19th/SEP/2019]
----
+.footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 11th/OCT/2019]
+
+???
 background-image: url(images/title.png)
 _Intersection of 3 buzz words!!_
 ???
@@ -14,19 +15,19 @@ This is the today's take away.
 ---
 class: middle
 # Outline
-1. Problem
-2. Proposal
-3. 3 Enablers
-4. PoC
-5. Takeaway
+1. Edge Problems
+2. Our Proposal
+3. Three Enablers
+4. Proof of Concept
+5. Foreseen Opportunities
 ---
 class: middle
 # Outline
-1. **Problem**
-2. Proposal
-3. 3 Enablers
-4. PoC
-5. Takeaway
+1. **Edge Problems**
+2. Our Proposal
+3. Three Enablers
+4. Proof of Concept
+5. Foreseen Opportunities
 ---
 background-image: url(images/ecosystem.png)
 ???
@@ -45,7 +46,7 @@ Privacy: Avoid sending all raw data to be stored and processed on cloud servers.
 Bandwidth: Reduce costs associated with transmitting all raw data to cloud services.
 Latency: Reaction time is critical and cannot be dependent on a cloud connection.
 Reliability: The ability to operate even when the cloud connection is interrupted.
----
+???
 background-image: url(images/realtime.png)
 ## when **Latency** && **Reliability** matter?
 .footnote[Stolen from Edgar's slide]
@@ -79,46 +80,48 @@ in web, there are variety of python based frameworks,
 in embedded, python based frameworks are too heavy.
 ---
 background-image: url(images/summary-problem.png)
-# Summary: Problem
+# Summary: Edge Problems
 ---
 class: middle
 # Outline
-1. Problem
-2. **Proposal**
-3. 3 Enablers
-4. PoC
-5. Takeaway
+1. Edge Problems
+2. **Our Proposal**
+3. Three Enablers
+4. Proof of Concept
+5. Foreseen Opportunities
+---
+background-image: url(images/pizzaonline.png)
+.footnote[_Customize your flavours!! ML model, CPU, RAM, ROM, RTOS.....online_]
 ---
 background-image: url(images/ecosystem_008.png)
+---
+background-image: url(images/ecosystem_009.png)
 ???
 TinyML: DNN on ultra-low power systems
 TinyMLaaS: build && orchestration of TinyML
 TinyML as-a-Service
 which customize ML for embedded usecase.
 ---
-background-image: url(images/pizzaonline.png)
-.footnote[_Customize your flavours!! ML model, CPU, RAM, ROM, RTOS.....online_]
----
 background-image: url(images/summary-proposal.png)
-# Summary: Proposal
+# Summary: Our Proposal
 ---
 class: middle
 # Outline
-1. Problem
-2. Proposal
-3. **3 Enablers**
-4. PoC
-5. Takeaway
+1. Edge Problems
+2. Our Proposal
+3. **Three Enablers**
+4. Proof of Concept
+5. Foreseen Opportunities
 ---
 background-image: url(images/tinyml-infra.png)
-# 3 Enablers
+# Three Enablers
 ---
 # Outline
-1. Problem
-2. Proposal
-3. **3 Enablers / Unikernel**
-4. PoC
-5. Takeaway
+1. Edge Problems
+2. Our Proposal
+3. **Three Enablers / Unikernel**
+4. Proof of Concept
+5. Foreseen Opportunities
 
 .bottom[![bottom-aligned image](images/tinyml-infra.png)]
 ---
@@ -151,11 +154,11 @@ background-image: url(images/summary-unikernel.png)
 # Summary: Unikernel
 ---
 # Outline
-1. Problem
-2. Proposal
-3. **3 Enablers / ML compiler**
-4. PoC
-5. Takeaway
+1. Edge Problems
+2. Our Proposal
+3. **Three Enablers / ML compiler**
+4. Proof of Concept
+5. Foreseen Opportunities
 
 .bottom[![bottom-aligned image](images/tinyml-infra.png)]
 ---
@@ -186,18 +189,18 @@ background-image: url(images/summary-mlcompiler.png)
 ???
 ---
 background-image: url(images/summary-3enablers.png)
-# Summary: 3 Enablers
+# Summary: Three Enablers
 ???
 CoAP is Constraint Application Protocol.
 Concept: Bring web to IoT as M2M communication.
 ---
 class: middle
 # Outline
-1. Problem
-2. Proposal
-3. 3 Enablers
-4. **PoC**
-5. Takeaway
+1. Edge Problems
+2. Our Proposal
+3. Three Enablers
+4. **Proof of Concept**
+5. Foreseen Opportunities
 ---
 background-image: url(https://miro.medium.com/max/2200/1*XdCMCaHPt-pqtEibUfAnNw.png)
 ## **MNIST**: Handwriting digits recognition
@@ -246,11 +249,11 @@ background-image: url(images/size-comp.png)
 ---
 class: middle
 # Outline
-1. Problem
-2. Proposal
-3. 3 Enablers
-4. PoC
-5. **Takeaway**
+1. Edge Problems
+2. Our Proposal
+3. Three Enablers
+4. Proof of Concept
+5. **Foreseen Opportunities**
 ---
 class: center,middle
 # Done
