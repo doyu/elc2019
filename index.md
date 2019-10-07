@@ -90,8 +90,13 @@ class: middle
 4. Proof of Concept
 5. Foreseen Opportunities
 ---
-background-image: url(images/pizzaonline.png)
-.footnote[_Customize your flavours!! ML model, CPU, RAM, ROM, RTOS.....online_]
+# Automate customization for your flavour
+- model / runtime
+- RAM / ROM / CPU
+- RTOS
+- connectivity
+
+.right[![](images/pizzaonline.png)]
 ---
 background-image: url(images/ecosystem_008.png)
 ---
@@ -103,7 +108,7 @@ TinyML as-a-Service
 which customize ML for embedded usecase.
 ---
 background-image: url(images/summary-proposal.png)
-# Summary: Our Proposal
+# Our Proposal
 ---
 class: middle
 # Outline

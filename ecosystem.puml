@@ -182,7 +182,7 @@ AWS --> edge : return
 
 edge <.down.> device1
 edge <.down.> device2
-device1 <-left-> device2
+device1 <-right-> device2
 device1 <-down-> device3
 device2 <-down-> device3 : offloading
 device3 <-> device3 : in place
@@ -222,7 +222,7 @@ AWS --> edge : return
 
 edge <.down.> device1
 edge <.down.> device2
-device1 <-left-> device2
+device1 <-right-> device2
 device1 <-down-> device3
 device2 <-down-> device3 : offloading
 device3 <-> device3 : in place
@@ -250,7 +250,7 @@ AWS --> edge : return
 
 edge <.down.> device1
 edge <.down.> device2
-device1 <-left-> device2
+device1 <-right-> device2
 device1 <-down-> device3
 device2 <-down-> device3 : offloading
 device3 <-> device3 : in place
@@ -267,12 +267,17 @@ cloud "Web/linux\n" #5DADE2 {
         cloud edge
 }
 
-cloud "TinyML\nas-a-Service\n" #F012F3 {
-        database SaaS {
-                ("build\nService")
-        }
-        collections "model\nZoo" as zoo
+database Zoo {
+        collections "model"
 }
+
+cloud "TinyMLaaS\n" #F012F3 {
+        folder SaaS {
+                ("Build\nService") as TBS
+        }
+}
+
+TBS <-up- Zoo : downloading
 
 rectangle Embedded #F39C12 {
         node device1
@@ -281,14 +286,17 @@ rectangle Embedded #F39C12 {
 }
 
 
-device2 <-up- SaaS : customized image\nper device\nper model
+note "image\nruntime" as download
+TBS -down- download : downloading
+device2 -up-> SaaS : info
+device2 <-up- download
 
 AWS <-- edge : request
 AWS --> edge : return
 
 edge <.down.> device1
 edge <.down.> device2
-device1 <-left-> device2
+device1 <-right-> device2
 device1 <-down-> device3
 device2 <-down-> device3 : offloading
 device3 <-> device3 : in place
