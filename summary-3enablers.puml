@@ -2,13 +2,15 @@
 
 * TinyML\naaS
 ** Unikernel
-***_ Thin wrapper of RTOS
-***_ Unified interface of service
+***_ Thin wrapper of RTOSes
+***_ Unified (hyper)calls
 ** ML compiler
 ***_ Small model
 ***_ Small runtime
 ***_ HWA optimization
 ** CoAP
+***_ FOTA update
+***_ Monitoring
 ***_ Orchestration
 
 @endmindmap

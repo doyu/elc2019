@@ -92,7 +92,7 @@ class: middle
 ---
 background-image: url(images/ecosystem_008.png)
 ---
-# Automate customization for your flavour
+# Automate customization per:
 - model / runtime
 - RAM / ROM / CPU
 - RTOS
