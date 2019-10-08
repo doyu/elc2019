@@ -133,16 +133,19 @@ background-image: url(images/tinyml-infra.png)
 ---
 background-image: url(https://zdnet1.cbsistatic.com/hub/i/r/2016/02/01/71e041f1-addd-4a9c-bc81-f73297f2dc6a/resize/770xauto/fffb0419c01c018b37d50605bdf341a3/dockerunikernel.jpg)
 #Unikernel
+.footnote[http://unikernel.org/files/2014-cacm-unikernels.pdf]
 ???
 smaller than VM && Container
 ---
 background-image: url(https://xenproject.org/wp-content/uploads/sites/79/2015/08/anyunirumpkernel.png)
 # library Operating System (libOS)
+.footnote[https://xenproject.org/wp-content/uploads/sites/79/2015/08/anyunirumpkernel.png]
 ???
 specialization
 ---
 ## Internal
 ![bottom-aligned image](images/Selection_186.png)
+.footnote[http://rumpkernel.org/]
 ???
 hypercall implementation could adapt different backend easily
 ---
