@@ -1,5 +1,4 @@
 @startuml
-scale 1.2
 skinparam pacakgeStyle rectangle
 actor laptop
 title Inference Usecase

@@ -90,6 +90,8 @@ class: middle
 4. Proof of Concept
 5. Foreseen Opportunities
 ---
+background-image: url(images/ecosystem_008.png)
+---
 # Automate customization for your flavour
 - model / runtime
 - RAM / ROM / CPU
@@ -97,8 +99,6 @@ class: middle
 - connectivity
 
 .right[![](images/pizzaonline.png)]
----
-background-image: url(images/ecosystem_008.png)
 ---
 background-image: url(images/ecosystem_009.png)
 ???
@@ -124,11 +124,12 @@ background-image: url(images/tinyml-infra.png)
 # Outline
 1. Edge Problems
 2. Our Proposal
-3. **Three Enablers / Unikernel**
+3. **Three Enablers**
+ - **Unikernel**
 4. Proof of Concept
 5. Foreseen Opportunities
 
-.bottom[![bottom-aligned image](images/tinyml-infra.png)]
+.right[![bottom-aligned image](images/tinyml-infra.png)]
 ---
 background-image: url(https://zdnet1.cbsistatic.com/hub/i/r/2016/02/01/71e041f1-addd-4a9c-bc81-f73297f2dc6a/resize/770xauto/fffb0419c01c018b37d50605bdf341a3/dockerunikernel.jpg)
 #Unikernel
@@ -140,8 +141,8 @@ background-image: url(https://xenproject.org/wp-content/uploads/sites/79/2015/08
 ???
 specialization
 ---
-background-image: url(http://3.bp.blogspot.com/--jGFfze1gFw/VOXPZW6n5EI/AAAAAAAAFvA/efbK1sQbhEw/s1600/Selection_186.png)
 ## Internal
+![bottom-aligned image](images/Selection_186.png)
 ???
 hypercall implementation could adapt different backend easily
 ---
@@ -155,17 +156,20 @@ Safer not to use C
 ???
 Just feeling of abstructed API
 ---
-background-image: url(images/summary-unikernel.png)
 # Summary: Unikernel
+.top[![](images/summary-unikernel.png)]
+## Can be a thin **wrapper** of various RTOSes?
+
 ---
 # Outline
 1. Edge Problems
 2. Our Proposal
-3. **Three Enablers / ML compiler**
+3. **Three Enablers**
+ - **ML compiler**
 4. Proof of Concept
 5. Foreseen Opportunities
 
-.bottom[![bottom-aligned image](images/tinyml-infra.png)]
+.right[![bottom-aligned image](images/tinyml-infra.png)]
 ---
 background-image: url(https://miro.medium.com/max/700/1*dYjDEI0mLpsCOySKUuX1VA.png)
 # ML framework ==
@@ -222,6 +226,12 @@ background-image: url(images/demo-ac.png)
 ---
 background-image: url(images/training-uc.png)
 ---
+background-image: url(images/training-uc_001.png)
+---
+background-image: url(images/training-uc_002.png)
+---
+background-image: url(images/training-uc_003.png)
+---
 background-image: url(images/ps-sq.png)
 ---
 background-image: url(images/convert-uc.png)
@@ -266,21 +276,6 @@ class: center,middle
 # Next
 ### Implement CoAP based orchestration
 ---
-class: center,middle
-# Done
-### Demonstrated End-to-End TinyML as-a-Service (TinyMLaaS)
-# Next
-### Implement CoAP based orchestration
-.footnote[...and "intersection of 3 buzz words"]
----
-background-image: url(images/title.png)
-_Intersection of 3 buzz words!!_
----
 background-image: url(images/elc.png)
----
-class: center, middle
-# Send comments to [hiroshi.doyu@ericsson.com](hiroshi.doyu@ericsson.com)
-# &&
-.bottom[![bottom-aligned image](images/menti.png)]
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)

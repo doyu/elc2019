@@ -1,5 +1,4 @@
 @startuml
-scale 1.5
 title Inference Sequence
 
 actor laptop

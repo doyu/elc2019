@@ -1,13 +1,28 @@
 @startuml
-title Training:\nFederated Learning on host\nParameter Server (PS)
+title Training:\nParameter Server (PS)
+
+file "trained\nmodel" as trained_model
+collections data
+
+data -> (Server\n<<model>>)
+(Server\n<<model>>) -> (Worker1\n<<model>>) : dispatch
+(Server\n<<model>>) -> (Worker2\n<<model>>)
+(Server\n<<model>>) -> (Worker3\n<<model>>)
+
+(Worker1\n<<model>>) --> (Server\n<<model>>) : return
+(Worker2\n<<model>>) --> (Server\n<<model>>)
+(Worker3\n<<model>>) --> (Server\n<<model>>)
 
 
-rectangle KVM {
+(Server\n<<model>>) ---> trained_model : generating
 
-database trained_model
-database data1
-database data2
-database data3
+newpage
+title Training:\nFederated Learning (FL)
+
+file "trained\nmodel" as trained_model
+collections "local\ndata1" as data1
+collections "local\ndata2" as data2
+collections "local\ndata3" as data3
 
 (Server\n<<model>>) -> (Worker1\n<<model>>) : dispatch
 (Server\n<<model>>) -> (Worker2\n<<model>>)
@@ -21,7 +36,79 @@ data1 -> (Worker1\n<<model>>)
 data2 -> (Worker2\n<<model>>)
 data3 -> (Worker3\n<<model>>)
 
-(Server\n<<model>>) ---> trained_model
+(Server\n<<model>>) ---> trained_model : generating
+
+newpage
+title Training:\nFederated Learning (FL)
+
+cloud Edge {
+        (Server\n<<model>>)
+}
+
+rectangle "on-premises1" {
+        collections "local\ndata1" as data1
+        (Worker1\n<<model>>)
+}
+rectangle "on-premises2" {
+        collections "local\ndata2" as data2
+        (Worker2\n<<model>>)
+}
+rectangle "on-premises3" {
+        collections "local\ndata3" as data3
+        (Worker3\n<<model>>)
+}
+
+(Server\n<<model>>) -down-> (Worker1\n<<model>>) : dispatch
+(Server\n<<model>>) -down-> (Worker2\n<<model>>)
+(Server\n<<model>>) -down-> (Worker3\n<<model>>)
+
+(Worker1\n<<model>>) -up-> (Server\n<<model>>) : return
+(Worker2\n<<model>>) -up-> (Server\n<<model>>)
+(Worker3\n<<model>>) -up-> (Server\n<<model>>)
+
+data1 -> (Worker1\n<<model>>)
+data2 -> (Worker2\n<<model>>)
+data3 -> (Worker3\n<<model>>)
+
+file "trained\nmodel" as trained_model
+(Server\n<<model>>) ---> trained_model : generating
+
+newpage
+title Training:\nFL on KVM
+
+rectangle KVM {
+
+cloud Edge {
+        (Server\n<<model>>)
+}
+
+rectangle "on-premises1" {
+        collections "local\ndata1" as data1
+        (Worker1\n<<model>>)
+}
+rectangle "on-premises2" {
+        collections "local\ndata2" as data2
+        (Worker2\n<<model>>)
+}
+rectangle "on-premises3" {
+        collections "local\ndata3" as data3
+        (Worker3\n<<model>>)
+}
+
+(Server\n<<model>>) -down-> (Worker1\n<<model>>) : dispatch
+(Server\n<<model>>) -down-> (Worker2\n<<model>>)
+(Server\n<<model>>) -down-> (Worker3\n<<model>>)
+
+(Worker1\n<<model>>) -up-> (Server\n<<model>>) : return
+(Worker2\n<<model>>) -up-> (Server\n<<model>>)
+(Worker3\n<<model>>) -up-> (Server\n<<model>>)
+
+data1 -> (Worker1\n<<model>>)
+data2 -> (Worker2\n<<model>>)
+data3 -> (Worker3\n<<model>>)
+
+file "trained\nmodel" as trained_model
+(Server\n<<model>>) ---> trained_model : generating
 
 (Server\n<<model>>) .. (/dev/tap10\n192.168.0.10)
 (Worker1\n<<model>>) .. (/dev/tap1\n192.168.0.1)
@@ -35,5 +122,6 @@ data3 -> (Worker3\n<<model>>)
 
 }
 (br0\n192.168.0.100)..(eth0)
+
 
 @enduml

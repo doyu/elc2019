@@ -1,11 +1,18 @@
 @startmindmap
-scale 1.5
 * TinyML as-a-Service\n(TinMLaaS)
+** Find a ML model
+***_ model Zoo
+***_ distributed training
 ** Squash a ML model
+***_ fuse ops
+***_ quantization
 ** Tailor made runtime
 ***_ per model
 ***_ per HW(A)
-** Build nano service images
-***_ per HW(A)
-** Orchestration
+** Build a service image
+***_ runtime
+***_ model
+** Deploy a service image
+***_ on demand
+***_ device orchestration
 @endmindmap

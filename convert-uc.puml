@@ -3,9 +3,9 @@ title ML compiler: computation graph conversion
 
 database model
 database data
-database Owl_cgraph
-database TF_cgraph
-database TFLite_cgraph
+file Owl_cgraph
+file TF_cgraph
+file TFLite_cgraph
 
 Owl_cgraph -down-> TF_cgraph : conversion
 Owl_cgraph .> (ONNX)

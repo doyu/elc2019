@@ -45,12 +45,12 @@ cloud cloud {
         cloud GCP
 }
 cloud edge
-note left
-Privacy
-Bandwidth
-Latency
-Reliability
-Energy
+
+note left of edge
+        Privacy
+        Bandwidth
+        Latency
+        Reliability
 end note
 
 rectangle On-premises {
@@ -59,6 +59,7 @@ rectangle On-premises {
         database privacy
 }
 
+note right of device : Energy
 
 AWS <---- edge : request
 AWS ----> edge : return
@@ -66,8 +67,10 @@ AWS ----> edge : return
 edge <.down. device : request
 edge .down.> device : return
 
-device <- privacy : request
-battery .> device : power
+device -down-> privacy : request
+device <- privacy : data
+battery .up.> device : power
+
 
 
 newpage
@@ -273,7 +276,7 @@ database Zoo {
 
 cloud "TinyMLaaS\n" #F012F3 {
         folder SaaS {
-                ("Build\nService") as TBS
+                (Build\nService) as TBS
         }
 }
 
@@ -286,7 +289,8 @@ rectangle Embedded #F39C12 {
 }
 
 
-note "image\nruntime" as download
+file "image\nruntime" as download
+
 TBS -down- download : downloading
 device2 -up-> SaaS : info
 device2 <-up- download

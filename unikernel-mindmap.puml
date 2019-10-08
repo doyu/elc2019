@@ -1,6 +1,5 @@
 
 @startmindmap
-scale 1.5
 * Unikernel\nType
 ** posix\ncompatible
 ***_ OSv

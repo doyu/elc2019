@@ -1,5 +1,4 @@
 @startmindmap
-scale 1.5
 * ML compiler
 ** Input: cgraph of ML model
 ***_ <s>protobuf</s> => flatbuf
