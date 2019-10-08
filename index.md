@@ -126,6 +126,8 @@ background-image: url(images/tinyml-infra.png)
 2. Our Proposal
 3. **Three Enablers**
  - **Unikernel**
+ - ML compiler
+ - CoAP
 4. Proof of Concept
 5. Foreseen Opportunities
 
@@ -144,7 +146,8 @@ background-image: url(https://xenproject.org/wp-content/uploads/sites/79/2015/08
 specialization
 ---
 ## Internal
-![bottom-aligned image](images/Selection_186.png)
+.top[![bottom-aligned image](images/Selection_186.png)]
+
 .footnote[http://rumpkernel.org/]
 ???
 hypercall implementation could adapt different backend easily
@@ -168,7 +171,9 @@ Just feeling of abstructed API
 1. Edge Problems
 2. Our Proposal
 3. **Three Enablers**
+ - Unikernel
  - **ML compiler**
+ - CoAP
 4. Proof of Concept
 5. Foreseen Opportunities
 
@@ -199,6 +204,22 @@ background-image: url(http://136.225.130.103:8080/tflm/main_8cc_a655610549cf9e53
 background-image: url(images/summary-mlcompiler.png)
 # Summary: ML compiler
 ???
+---
+# Outline
+1. Edge Problems
+2. Our Proposal
+3. **Three Enablers**
+ - Unikernel
+ - ML compiler
+ - **CoAP**
+4. Proof of Concept
+5. Foreseen Opportunities
+
+.right[![bottom-aligned image](images/tinyml-infra.png)]
+---
+background-image: url(images/coap.png)
+### CoAP
+.footnote[https://jaime.win/slides/IPSO2019.pdf]
 ---
 background-image: url(images/summary-3enablers.png)
 # Summary: Three Enablers

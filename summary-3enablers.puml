@@ -2,13 +2,13 @@
 
 * TinyML\naaS
 ** Unikernel
-***_ thin wrapper of RTOS
-***_ unified interface of service
+***_ Thin wrapper of RTOS
+***_ Unified interface of service
 ** ML compiler
-***_ small model
-***_ small runtime
+***_ Small model
+***_ Small runtime
 ***_ HWA optimization
 ** CoAP
-***_ <s>orchestration</s> => Not explained
+***_ Orchestration
 
 @endmindmap
