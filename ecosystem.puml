@@ -1,6 +1,6 @@
 @startuml
 
-title traditionally
+title Traditionally
 
 cloud cloud {
         cloud AWS
@@ -17,7 +17,7 @@ AWS <---- device2 : request
 AWS ----> device2 : return
 
 newpage
-title now
+title Currently (1/2)
 
 cloud cloud {
         cloud AWS
@@ -28,8 +28,8 @@ cloud edge
 node device1
 node device2
 
-AWS <---- edge : request
-AWS ----> edge : return
+AWS <-down- edge : request
+AWS -down-> edge : return
 
 edge <- device1 : request
 edge -down-> device1 : return
@@ -37,7 +37,7 @@ edge <- device2 : request
 edge -down-> device2 : return
 
 newpage
-title Edge Issues
+title Currently (2/2)
 
 cloud cloud {
         cloud AWS
@@ -53,7 +53,7 @@ note left of edge
         Reliability
 end note
 
-rectangle On-premises {
+rectangle on_prem {
         collections devices
         database battery
         database privacy
@@ -61,8 +61,8 @@ rectangle On-premises {
 
 note right of devices : Energy
 
-AWS <---- edge : request
-AWS ----> edge : return
+AWS <-down- edge : request
+AWS -down-> edge : return
 
 edge <.down. devices : request
 edge .down.> devices : return
@@ -74,7 +74,7 @@ battery .up.> devices : power
 
 
 newpage
-title future
+title Future
 
 cloud cloud {
         cloud AWS
@@ -82,14 +82,25 @@ cloud cloud {
         cloud GCP
 }
 cloud edge
-rectangle On-premises {
+'note right of edge
+'computing expanding
+'more downwards
+'end note
+
+rectangle on_prem {
         node device1
         node device2
         node device3
 }
 
-AWS <---- edge : request
-AWS ----> edge : return
+'note right of on_prem
+'        more in-place execution
+'        collaborate if not in-place
+'        more on-demand
+'end note
+
+AWS <-down- edge : request
+AWS -down-> edge : return
 
 edge <.down.> device1
 edge <.down.> device2
@@ -112,14 +123,20 @@ cloud "Web/linux\n" #5DADE2 {
         cloud edge
 }
 
+note right of cloud
+Linux based
+Container based microservices
+on-demand service orchestration
+end note
+
 rectangle on-premises {
         node device1
         node device2
         node device3
 }
 
-AWS <-- edge : request
-AWS --> edge : return
+AWS <-down- edge : request
+AWS -> edge : return
 
 edge <.down.> device1
 edge <.down.> device2
@@ -130,9 +147,9 @@ device1 <-down-> device3
 device2 <-down-> device3
 
 newpage
-title Gap between web and embedded
+title Embedded experience
 
-cloud "Web/linux\n" #5DADE2 {
+cloud "Web/linux\n" {
         cloud cloud {
                 cloud AWS
                 cloud Azure
@@ -141,10 +158,10 @@ cloud "Web/linux\n" #5DADE2 {
         cloud edge
 }
 
-AWS <-- edge : request
-AWS --> edge : return
+AWS <-down- edge : request
+AWS -> edge : return
 
-rectangle "On-premises/\nEmbedded" #F39C12 {
+rectangle "on_prem/\nEmbedded" #F39C12 {
         node device1
         node device2
         node device3
@@ -157,6 +174,12 @@ device1 <-down-> device3
 device2 <-down-> device3 : offloading
 device3 <-> device3 : in place
 
+note right of device2
+Linux may not be too big?
+variety of RTOSes
+Fixed services
+no orchestration
+end note
 
 newpage
 title Gap between Web and Embedded
@@ -170,7 +193,11 @@ cloud "Web/linux\n" #5DADE2 {
         cloud edge
 }
 
-note right of cloud : Container based microservices\non-demand service orchestration
+note right of cloud
+Linux based
+Container based microservices
+on-demand service orchestration
+end note
 
 rectangle Embedded #F39C12 {
         node device1
@@ -178,10 +205,15 @@ rectangle Embedded #F39C12 {
         node device3
 }
 
-note right of Embedded : variety of RTOSes\nFixed services\nno orchestration
+note right of Embedded
+Linux may not be too big?
+variety of RTOSes
+Fixed services
+no orchestration
+end note
 
-AWS <-- edge : request
-AWS --> edge : return
+AWS <-down- edge : request
+AWS -> edge : return
 
 edge <.down.> device1
 edge <.down.> device2
@@ -208,6 +240,11 @@ heavy training & inference
 multi-node GPUs
 end note
 
+note right of edge
+Infrence is OK,
+but training?
+end note
+
 rectangle Embedded #F39C12 {
         node device1
         node device2
@@ -220,8 +257,8 @@ note right of Embedded
 Any inference in place?
 end note
 
-AWS <-- edge : request
-AWS --> edge : return
+AWS <-down- edge : request
+AWS -> edge : return
 
 edge <.down.> device1
 edge <.down.> device2
@@ -248,8 +285,8 @@ rectangle Embedded #F39C12 {
         node device3
 }
 
-AWS <-- edge : request
-AWS --> edge : return
+AWS <-down- edge : request
+AWS -> edge : return
 
 edge <.down.> device1
 edge <.down.> device2
@@ -295,8 +332,8 @@ TBS -down- download : downloading
 device2 -up-> SaaS : info
 device2 <-up- download
 
-AWS <-- edge : request
-AWS --> edge : return
+AWS <-down- edge : request
+AWS -> edge : return
 
 edge <.down.> device1
 edge <.down.> device2

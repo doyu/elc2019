@@ -24,6 +24,10 @@ class: middle
 class: middle
 # Outline
 1. **Edge Problems**
+   - Current
+   - Future
+   - Gap: Web vs Embedded
+   - ML environment
 2. Our Proposal
 3. Three Enablers
 4. Proof of Concept
