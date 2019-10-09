@@ -220,6 +220,8 @@ background-image: url(images/summary-mlcompiler.png)
 background-image: url(images/coap.png)
 ### CoAP
 .footnote[https://jaime.win/slides/IPSO2019.pdf]
+???
+poor man's RESTful API
 ---
 background-image: url(images/summary-3enablers.png)
 # Summary: Three Enablers
@@ -258,10 +260,16 @@ background-image: url(images/training-uc_003.png)
 ---
 background-image: url(images/ps-sq.png)
 ---
+# FIXME: size of model & executable
+
+---
 background-image: url(images/convert-uc.png)
 ???
 TFLM runtime is called via OCaml FFI.
 FFI=Foreign Function Interface
+---
+# FIXME: size of model & image before/after
+
 ---
 background-image: url(images/demo-uc.png)
 ---
