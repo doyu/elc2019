@@ -1,17 +1,17 @@
 class: center, middle
-# **Distributed Machine Learning**
-# **on**
-# **Unikernel for IoT**
-### _TinyML as-a-Service_
+# Distributed Machine Learning
+# on
+# Unikernel for IoT
+
+#### TinyML as-a-Service
 .footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 11th/OCT/2019]
 
 ???
-background-image: url(images/title.png)
-_Intersection of 3 buzz words!!_
-???
-As you might have noticed,
-title is the intersection of 3 buzz words.
-This is the today's take away.
+- How I tried to bring:
+ - ML training & inference
+ - in IoT environment.
+- Some of them succeeded.
+- Some didn't.
 ---
 class: middle
 # Outline
@@ -20,6 +20,13 @@ class: middle
 3. Three Enablers
 4. Proof of Concept
 5. Foreseen Opportunities
+???
+- At first, I will define IoT problems ML faces.
+- Sencodary, I will introduce our proposal
+ - against the problem we defined.
+- Then, 3 enblers construct our proposal.
+- Introduce Our proof of concept.
+- Discuss further possibilities.
 ---
 class: middle
 # Outline
@@ -28,6 +35,8 @@ class: middle
 3. Three Enablers
 4. Proof of Concept
 5. Foreseen Opportunities
+???
+- Let's start with "IoT problems".
 ---
 class: middle
 # Outline
@@ -39,64 +48,123 @@ class: middle
 3. Three Enablers
 4. Proof of Concept
 5. Foreseen Opportunities
+???
+I will take a look a this problem from 3 aspects.
++ **Edge Computing**
++ **Web vs Embedded**
++ **ML environment**
+---
+class: middle
+# Outline
+1. IoT Problems
+   + **Edge Computing**
+   + Web vs Embedded
+   + ML environment
+2. Our Proposal
+3. Three Enablers
+4. Proof of Concept
+5. Foreseen Opportunities
 ---
 background-image: url(images/ecosystem.png)
 ???
-Traditionally devices communicate directly with Cloud services.
-It was simple.
+Traditionally,
+- IoT devices communicate,
+- directly with Cloud services.
+- It was simple.
 ---
 background-image: url(images/ecosystem_001.png)
 ???
-Cloud is expanding towards Edge.
-This solves latency issue.
+- IoT is expanding.
+- Scalability matters.
+- Cloud may be too far & too slow.
 ---
-class: middle
-- Privacy
-- Bandwidth
-- Latency
-- Reliability
-.right[![](images/ecosystem_002.png)]
-- Energy
-
-
+background-image: url(images/ecosystem_002.png)
 ???
-Still other issues:
+Let's introduce Edge computing:
+- Cloud is expanding towards more Edge.
+- This solved latency issue.
+- But not yet perfect.
+---
+background-image: url(images/ecosystem_003.png)
+???
+There's some boudary.
+- On-premises
+ - where devices reside,
+ - where data is generated.
+---
+background-image: url(images/ecosystem_004.png)
+???
 Privacy: Avoid sending all raw data to be stored and processed on cloud servers.
 Bandwidth: Reduce costs associated with transmitting all raw data to cloud services.
 Latency: Reaction time is critical and cannot be dependent on a cloud connection.
 Reliability: The ability to operate even when the cloud connection is interrupted.
-???
-background-image: url(images/realtime.png)
-## when **Latency** && **Reliability** matter?
-.footnote[Stolen from Edgar's slide]
-???
----
-background-image: url(images/ecosystem_003.png)
-???
-Devices should compute by themselves.
-Or help each other.
----
-background-image: url(images/ecosystem_004.png)
-???
-In Cloud and Edge,
-Linux runs && web development is used.
 ---
 background-image: url(images/ecosystem_005.png)
 ???
-In embedded,
-there are variety of HWs && RTOS.
-They are totally different from web development.
+- Easy to mange battery powered devices.
+- trasmitting data consumes more energy than computation.
+- processing data in place is better.
 ---
 background-image: url(images/ecosystem_006.png)
 ???
-In Web, container based solution
-In Embedded, no unified solution
+5 Edge problems
 ---
 background-image: url(images/ecosystem_007.png)
+???
+- Devices should compute in place.
+- Neighbours should help each otehr.
+---
+class: middle
+# Outline
+1. IoT Problems
+   + Edge Computing
+   + **Web vs Embedded**
+   + ML environment
+2. Our Proposal
+3. Three Enablers
+4. Proof of Concept
+5. Foreseen Opportunities
+---
+background-image: url(images/ecosystem_008.png)
+???
+In Cloud and Edge,
+- where Linux runs && web development is used.
+- Linux container
+- microservies are dynamically deployed
+- including Edge servers
+- x86_64 / ARM64
+- GB RAM / TB storage
+---
+background-image: url(images/ecosystem_009.png)
+???
+OTOH, in embedded,
+- there are variety of MCUs
+- there are variety of RTOSes.
+- 500kB SRAM / 2MB FLASH
+- Linux cannot run on 1MB RAM.
+---
+background-image: url(images/ecosystem_010.png)
+???
+Embedded is totally different from Web.
+---
+class: middle
+# Outline
+1. IoT Problems
+   + Edge Computing
+   + Web vs Embedded
+   + **ML environment**
+2. Our Proposal
+3. Three Enablers
+4. Proof of Concept
+5. Foreseen Opportunities
+---
+background-image: url(images/ecosystem_011.png)
 ???
 From ML perspective,
 in web, there are variety of python based frameworks,
 in embedded, python based frameworks are too heavy.
+---
+background-image: url(images/ecosystem_012.png)
 ---
 background-image: url(images/summary-problem.png)
 # Summary: IoT Problems
@@ -109,7 +177,12 @@ class: middle
 4. Proof of Concept
 5. Foreseen Opportunities
 ---
-background-image: url(images/ecosystem_008.png)
+background-image: url(images/ecosystem_012.png)
+???
+- Cloud does training
+- generates model.
+- model is too big for IoT.
+- (Cloud) runtime is too big for IoT.
 ---
 # Squeeze ML for
 - model / runtime
@@ -119,12 +192,12 @@ background-image: url(images/ecosystem_008.png)
 
 .right[![](images/pizzaonline.png)]
 ---
-background-image: url(images/ecosystem_009.png)
+background-image: url(images/ecosystem_013.png)
 ???
-TinyML: DNN on ultra-low power systems
-TinyMLaaS: build && orchestration of TinyML
-TinyML as-a-Service
-which customize ML for embedded usecase.
+Squeeze
+- model
+- runtime
+- wrap RTOS image
 ---
 background-image: url(images/summary-proposal.png)
 Our Proposal

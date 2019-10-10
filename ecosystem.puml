@@ -8,6 +8,21 @@ cloud cloud {
         cloud GCP
 }
 
+node device
+
+AWS <-down- device : request
+AWS -> device : return
+
+'======================================================
+newpage
+title Scalability
+
+cloud cloud {
+        cloud AWS
+        cloud Azure
+        cloud GCP
+}
+
 node device1
 node device2
 
@@ -16,6 +31,7 @@ AWS ----> device1 : return
 AWS <---- device2 : request
 AWS ----> device2 : return
 
+'======================================================
 newpage
 title Currently
 
@@ -36,8 +52,84 @@ edge -down-> device1 : return
 edge <- device2 : request
 edge -down-> device2 : return
 
+'======================================================
 newpage
-title Edge computing
+title On premises
+
+cloud cloud {
+        cloud AWS
+        cloud Azure
+        cloud GCP
+}
+cloud edge
+rectangle on_prem {
+	node device1
+	node device2
+}
+
+AWS <-down- edge : request
+AWS -down-> edge : return
+
+edge <- device1 : request
+edge -down-> device1 : return
+edge <- device2 : request
+edge -down-> device2 : return
+
+'======================================================
+newpage
+title Data
+cloud cloud {
+        cloud AWS
+        cloud Azure
+        cloud GCP
+}
+cloud edge
+
+rectangle on_prem {
+        collections devices
+        database privacy
+
+        devices -> privacy : request
+        devices <- privacy : data
+}
+
+'note right of devices : Energy
+
+AWS <-down- edge : request
+AWS -down-> edge : return
+
+edge <.down. devices : request
+edge .down.> devices : return
+
+'======================================================
+newpage
+title Engergy
+cloud cloud {
+        cloud AWS
+        cloud Azure
+        cloud GCP
+}
+cloud edge
+
+rectangle on_prem {
+        collections devices
+        database battery
+
+        battery .> devices : power
+}
+
+'note right of devices : Energy
+
+AWS <-down- edge : request
+AWS -down-> edge : return
+
+edge <.down. devices : request
+edge .down.> devices : return
+
+'======================================================
+newpage
+skinparam legendFontSize 18
+title Edge computing problems
 cloud cloud {
         cloud AWS
         cloud Azure
@@ -49,6 +141,10 @@ rectangle on_prem {
         collections devices
         database battery
         database privacy
+
+        devices -> privacy : request
+        devices <- privacy : data
+        battery .> devices : power
 }
 
 'note right of devices : Energy
@@ -59,12 +155,15 @@ AWS -down-> edge : return
 edge <.down. devices : request
 edge .down.> devices : return
 
-devices -> privacy : request
-devices <- privacy : data
-battery .> devices : power
+legend
+Privacy
+Bandwidth
+Latency
+Reliability
+**Energy**
+end legend
 
-
-
+'======================================================
 newpage
 title Future
 
@@ -83,7 +182,12 @@ rectangle on_prem {
         (device1)
         (device2)
         collections devices
+        database battery
+
+	battery .> devices
 }
+
+
 
 'note right of on_prem
 '        more in-place execution
@@ -103,6 +207,7 @@ device2 <-down-> devices : offloading
 devices <-> devices : in place
 
 
+'======================================================
 newpage
 title Web experience
 
@@ -125,6 +230,9 @@ rectangle on-premises {
         (device1)
         (device2)
         collections devices
+        database battery
+
+	battery .> devices
 }
 
 AWS <-down- edge : request
@@ -138,6 +246,7 @@ device1 <-> device2
 device1 <-down-> devices
 device2 <-down-> devices
 
+'======================================================
 newpage
 title Embedded experience
 
@@ -157,7 +266,11 @@ rectangle "on_prem/\nEmbedded" #99f1ff {
         (device1)
         (device2)
         collections devices
+        database battery
+
+	battery .> devices
 }
+
 
 edge <.down.> device1
 edge <.down.> device2
@@ -173,6 +286,7 @@ devices <-> devices : in place
 'no orchestration
 'end note
 
+'======================================================
 newpage
 skinparam noteFontSize 18
 title Gap between Web and Embedded
@@ -192,6 +306,9 @@ rectangle Embedded #99f1ff {
         (device1)
         (device2)
         collections devices
+        database battery
+
+	battery .> devices
 }
 note "RTOSes\nFirmware\nMCUs\nSRAM\nFLASH" as embeddednote
 Embedded .. embeddednote
@@ -207,6 +324,7 @@ device1 <-down-> devices
 device2 <-down-> devices : offloading
 devices <-> devices : in place
 
+'======================================================
 newpage
 skinparam noteFontSize 18
 title ML environment
@@ -221,9 +339,9 @@ cloud "Web/linux\n" #eeeeee {
 }
 
 note right of cloud
-python ML frameworks
+python
 heavy training
-multi-node GPUs
+GPUs
 end note
 
 'note right of edge
@@ -235,6 +353,9 @@ rectangle Embedded #99f1ff {
         (device1)
         (device2)
         collections devices
+        database battery
+
+	battery .> devices
 }
 
 note right of Embedded
@@ -253,6 +374,7 @@ device1 <-down-> devices
 device2 <-down-> devices : offloading
 devices <-> devices : in place
 
+'======================================================
 newpage
 skinparam noteFontSize 18
 title Problem
@@ -266,15 +388,26 @@ cloud Web #eeeeee {
         cloud edge
 }
 
+database Zoo {
+        collections "model"
+}
+AWS <.> model
+
 rectangle Embedded #99f1ff {
         (device1)
         (device2)
         collections devices
+        database battery
+
+	battery .> devices
 }
 note right of Embedded
 No Linux
 No ML
 end note
+
+
+model .> device2 : NOK
 
 AWS <-down- edge : request
 AWS -> edge : return
@@ -286,6 +419,7 @@ device1 <-down-> devices
 device2 <-down-> devices : offloading
 devices <-> devices : in place
 
+'======================================================
 newpage
 title Proposal: TinyML as-a-Service
 
@@ -314,6 +448,9 @@ rectangle Embedded #99f1ff {
         (device1)
         (device2)
         collections devices
+        database battery
+
+	battery .> devices
 }
 
 
