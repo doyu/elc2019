@@ -287,7 +287,7 @@ class: middle
 background-image: url(https://miro.medium.com/max/700/1*dYjDEI0mLpsCOySKUuX1VA.png)
 # ML framework ==
 ## ML runtime +
-back probagation
+back propagation
 .footnote[https://devopedia.org/deep-learning-frameworks]
 ---
 background-image: url(images/nnvm_compiler_stack.png)
@@ -326,7 +326,6 @@ background-image: url(images/summary-mlcompiler.png)
 .right[![](images/summary-3enablers.png)]
 ---
 background-image: url(images/coap.png)
-### CoAP
 .footnote[https://jaime.win/slides/IPSO2019.pdf]
 ???
 poor man's RESTful API
@@ -387,9 +386,6 @@ background-image: url(images/training-uc_003.png)
 ---
 background-image: url(images/ps-sq.png)
 ---
-# FIXME: size of model & executable
-
----
 class: middle
 # Outline
 1. IoT Problems
@@ -406,9 +402,6 @@ background-image: url(images/convert-uc.png)
 ???
 TFLM runtime is called via OCaml FFI.
 FFI=Foreign Function Interface
----
-# FIXME: size of model & image before/after
-
 ---
 class: middle
 # Outline
@@ -454,7 +447,7 @@ class: middle
 5. **Foreseen Opportunities**
 ---
 # Done
-+ Demonstrated End-to-End TinyML as-a-Service
++ Demonstrated End-to-End **TinyML as-a-Service**
 
 # Next
 + Add **frontend**, as-a-Service
