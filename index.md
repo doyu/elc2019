@@ -1,8 +1,8 @@
 class: center, middle
-# Distributed Machine Learning
-# on
-# Unikernel for IoT
-
+# **Distributed Machine Learning**
+# **on**
+# **Unikernel for IoT**
+### _TinyML as-a-Service_
 .footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 11th/OCT/2019]
 
 ???
@@ -15,7 +15,7 @@ This is the today's take away.
 ---
 class: middle
 # Outline
-1. Edge Problems
+1. IoT Problems
 2. Our Proposal
 3. Three Enablers
 4. Proof of Concept
@@ -23,11 +23,18 @@ class: middle
 ---
 class: middle
 # Outline
-1. **Edge Problems**
-   - Current
-   - Future
-   - Gap: Web vs Embedded
-   - ML environment
+1. **IoT Problems**
+2. Our Proposal
+3. Three Enablers
+4. Proof of Concept
+5. Foreseen Opportunities
+---
+class: middle
+# Outline
+1. IoT Problems
+   + **Edge Computing**
+   + **Web vs Embedded**
+   + **ML environment**
 2. Our Proposal
 3. Three Enablers
 4. Proof of Concept
@@ -43,7 +50,15 @@ background-image: url(images/ecosystem_001.png)
 Cloud is expanding towards Edge.
 This solves latency issue.
 ---
-background-image: url(images/ecosystem_002.png)
+class: middle
+- Privacy
+- Bandwidth
+- Latency
+- Reliability
+.right[![](images/ecosystem_002.png)]
+- Energy
+
+
 ???
 Still other issues:
 Privacy: Avoid sending all raw data to be stored and processed on cloud servers.
@@ -84,11 +99,11 @@ in web, there are variety of python based frameworks,
 in embedded, python based frameworks are too heavy.
 ---
 background-image: url(images/summary-problem.png)
-# Summary: Edge Problems
+# Summary: IoT Problems
 ---
 class: middle
 # Outline
-1. Edge Problems
+1. IoT Problems
 2. **Our Proposal**
 3. Three Enablers
 4. Proof of Concept
@@ -96,9 +111,9 @@ class: middle
 ---
 background-image: url(images/ecosystem_008.png)
 ---
-# Automate customization per:
+# Squeeze ML for
 - model / runtime
-- RAM / ROM / CPU
+- RAM / ROM / MCU
 - RTOS
 - connectivity
 
@@ -112,21 +127,22 @@ TinyML as-a-Service
 which customize ML for embedded usecase.
 ---
 background-image: url(images/summary-proposal.png)
-# Our Proposal
+Our Proposal
+# TinyML as-a-Service
 ---
 class: middle
 # Outline
-1. Edge Problems
+1. IoT Problems
 2. Our Proposal
 3. **Three Enablers**
+ - Unikernel
+ - ML compiler
+ - CoAP
 4. Proof of Concept
 5. Foreseen Opportunities
 ---
-background-image: url(images/tinyml-infra.png)
-# Three Enablers
----
 # Outline
-1. Edge Problems
+1. IoT Problems
 2. Our Proposal
 3. **Three Enablers**
  - **Unikernel**
@@ -134,7 +150,6 @@ background-image: url(images/tinyml-infra.png)
  - CoAP
 4. Proof of Concept
 5. Foreseen Opportunities
-
 .right[![bottom-aligned image](images/tinyml-infra.png)]
 ---
 background-image: url(https://zdnet1.cbsistatic.com/hub/i/r/2016/02/01/71e041f1-addd-4a9c-bc81-f73297f2dc6a/resize/770xauto/fffb0419c01c018b37d50605bdf341a3/dockerunikernel.jpg)
@@ -166,13 +181,14 @@ Safer not to use C
 ???
 Just feeling of abstructed API
 ---
+class: middle
 # Summary: Unikernel
 .top[![](images/summary-unikernel.png)]
-## Can be a thin **wrapper** of various RTOSes?
+## Can be a thin **wrapper** over various RTOSes?
 
 ---
 # Outline
-1. Edge Problems
+1. IoT Problems
 2. Our Proposal
 3. **Three Enablers**
  - Unikernel
@@ -185,10 +201,13 @@ Just feeling of abstructed API
 ---
 background-image: url(https://miro.medium.com/max/700/1*dYjDEI0mLpsCOySKUuX1VA.png)
 # ML framework ==
-## ML runtime
+## ML runtime +
+back probagation
+.footnote[https://devopedia.org/deep-learning-frameworks]
 ---
 background-image: url(images/nnvm_compiler_stack.png)
 # Unified IR
+.footnote[https://tvm.ai]
 ???
 each has its own computational graph.
 ONNX is considered as standard exchange format between frameworks.
@@ -210,7 +229,7 @@ background-image: url(images/summary-mlcompiler.png)
 ???
 ---
 # Outline
-1. Edge Problems
+1. IoT Problems
 2. Our Proposal
 3. **Three Enablers**
  - Unikernel
@@ -219,7 +238,7 @@ background-image: url(images/summary-mlcompiler.png)
 4. Proof of Concept
 5. Foreseen Opportunities
 
-.right[![bottom-aligned image](images/tinyml-infra.png)]
+.right[![](images/tinyml-infra.png)]
 ---
 background-image: url(images/coap.png)
 ### CoAP
@@ -235,11 +254,20 @@ Concept: Bring web to IoT as M2M communication.
 ---
 class: middle
 # Outline
-1. Edge Problems
+1. IoT Problems
 2. Our Proposal
 3. Three Enablers
 4. **Proof of Concept**
 5. Foreseen Opportunities
+---
+class: middle
+# Outline
+1. IoT Problems
+2. Our Proposal
+3. Three Enablers
+4. **Proof of Concept**
+5. Foreseen Opportunities
+.right[![](images/demo-sq0.png)]
 ---
 background-image: url(https://miro.medium.com/max/2200/1*XdCMCaHPt-pqtEibUfAnNw.png)
 ## **MNIST**: Handwriting digits recognition
@@ -247,12 +275,22 @@ background-image: url(https://miro.medium.com/max/2200/1*XdCMCaHPt-pqtEibUfAnNw.
 ???
 .footnote[https://towardsdatascience.com/image-classification-in-10-minutes-with-mnist-dataset-54c35b77a38d]
 ---
-background-image: url(images/demo-sq0.png)
----
 background-image: url(images/esp32-wrover.png)
 #### ESP32 WROVER KIT
 ---
 background-image: url(images/demo-ac.png)
+---
+class: middle
+# Outline
+1. IoT Problems
+2. Our Proposal
+3. Three Enablers
+4. **Proof of Concept**
+ + **tarining**
+ + compile
+ + inference
+5. Foreseen Opportunities
+.right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/training-uc.png)
 ---
@@ -267,6 +305,18 @@ background-image: url(images/ps-sq.png)
 # FIXME: size of model & executable
 
 ---
+class: middle
+# Outline
+1. IoT Problems
+2. Our Proposal
+3. Three Enablers
+4. **Proof of Concept**
+ + tarining
+ + **compile**
+ + inference
+5. Foreseen Opportunities
+.right[![](images/demo-sq0.png)]
+---
 background-image: url(images/convert-uc.png)
 ???
 TFLM runtime is called via OCaml FFI.
@@ -274,6 +324,18 @@ FFI=Foreign Function Interface
 ---
 # FIXME: size of model & image before/after
 
+---
+class: middle
+# Outline
+1. IoT Problems
+2. Our Proposal
+3. Three Enablers
+4. **Proof of Concept**
+ + tarining
+ + compile
+ + **inference**
+5. Foreseen Opportunities
+.right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/demo-uc.png)
 ---
@@ -300,17 +362,25 @@ background-image: url(images/size-comp.png)
 ---
 class: middle
 # Outline
-1. Edge Problems
+1. IoT Problems
 2. Our Proposal
 3. Three Enablers
 4. Proof of Concept
 5. **Foreseen Opportunities**
 ---
-class: center,middle
 # Done
-### Demonstrated End-to-End TinyML as-a-Service (TinyMLaaS)
++ Demonstrated End-to-End TinyML as-a-Service
+
 # Next
-### Implement CoAP based orchestration
++ Add **frontend**, as-a-Service
++ Supprt **other** MCUs
++ Support **complicated** models
+ + Object recognition?
++ Add **orchestration** with CoAP
++ (Distributed) training **on MCU**?
++ **Distributed** inference (on MCU)?
+
+# Any suggestions?
 ---
 background-image: url(images/elc.png)
 ---
