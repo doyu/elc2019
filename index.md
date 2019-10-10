@@ -125,6 +125,8 @@ class: middle
 4. Proof of Concept
 5. Foreseen Opportunities
 ---
+background-image: url(images/ecosystem_007.png)
+---
 background-image: url(images/ecosystem_008.png)
 ???
 In Cloud and Edge,
@@ -184,11 +186,11 @@ background-image: url(images/ecosystem_012.png)
 - model is too big for IoT.
 - (Cloud) runtime is too big for IoT.
 ---
-# Squeeze ML for
-- model / runtime
-- RAM / ROM / MCU
-- RTOS
-- connectivity
+# Squeeze ML
+model & runtime
+- per RAM / ROM / MCU
+- per RTOS
+- per connectivity
 
 .right[![](images/pizzaonline.png)]
 ---
@@ -208,12 +210,22 @@ class: middle
 1. IoT Problems
 2. Our Proposal
 3. **Three Enablers**
- - Unikernel
- - ML compiler
- - CoAP
 4. Proof of Concept
 5. Foreseen Opportunities
 ---
+class: middle
+# Outline
+1. IoT Problems
+2. Our Proposal
+3. **Three Enablers**
+ - **Unikernel**
+ - **ML compiler**
+ - **CoAP**
+4. Proof of Concept
+5. Foreseen Opportunities
+.right[![](images/summary-3enablers.png)]
+---
+class: middle
 # Outline
 1. IoT Problems
 2. Our Proposal
@@ -223,7 +235,7 @@ class: middle
  - CoAP
 4. Proof of Concept
 5. Foreseen Opportunities
-.right[![bottom-aligned image](images/tinyml-infra.png)]
+.right[![](images/summary-3enablers.png)]
 ---
 background-image: url(https://zdnet1.cbsistatic.com/hub/i/r/2016/02/01/71e041f1-addd-4a9c-bc81-f73297f2dc6a/resize/770xauto/fffb0419c01c018b37d50605bdf341a3/dockerunikernel.jpg)
 #Unikernel
@@ -238,7 +250,7 @@ background-image: url(https://xenproject.org/wp-content/uploads/sites/79/2015/08
 specialization
 ---
 ## Internal
-.top[![bottom-aligned image](images/Selection_186.png)]
+.top[![](images/Selection_186.png)]
 
 .footnote[http://rumpkernel.org/]
 ???
@@ -250,7 +262,7 @@ background-image: url(images/unikernel-mindmap.png)
 Safer not to use C
 ---
 # Ocaml
-.bottom[![bottom-aligned image](images/ocaml.png)]
+.bottom[![](images/ocaml.png)]
 ???
 Just feeling of abstructed API
 ---
@@ -270,7 +282,7 @@ class: middle
 4. Proof of Concept
 5. Foreseen Opportunities
 
-.right[![bottom-aligned image](images/tinyml-infra.png)]
+.right[![](images/summary-3enablers.png)]
 ---
 background-image: url(https://miro.medium.com/max/700/1*dYjDEI0mLpsCOySKUuX1VA.png)
 # ML framework ==
@@ -311,7 +323,7 @@ background-image: url(images/summary-mlcompiler.png)
 4. Proof of Concept
 5. Foreseen Opportunities
 
-.right[![](images/tinyml-infra.png)]
+.right[![](images/summary-3enablers.png)]
 ---
 background-image: url(images/coap.png)
 ### CoAP
