@@ -514,19 +514,15 @@ class: middle
 4. Proof of Concept
 5. **Foreseen Opportunities**
 ---
-# Done
-+ Demonstrated End-to-End **TinyML as-a-Service**
-
-# Next
+Demonstrated End-to-End **TinyML as-a-Service**
+### Next
 + Add **frontend**, as-a-Service
-+ Supprt **other** MCUs
-+ Support **complicated** models
- + Object recognition?
++ Supprt **other** MCUs & **complicated** models
 + Add **orchestration** with CoAP
 + (Distributed) training **on MCU**?
-+ <span class="red">**Distributed** inference (on MCU)?</span>
-
-# Any suggestions?
++ <span class="red">**Distributed** inference (on MCU?)</span>
+.right[![](images/chainmodels.png)]
+## Any suggestions?
 ---
 background-image: url(images/elc.png)
 ---
