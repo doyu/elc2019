@@ -20,10 +20,10 @@ class: middle
 3. Three Enablers
 4. Proof of Concept
 5. Foreseen Opportunities
-# FIXME, demo comes first
-1st, TinyML
-2nd, env
-3rd, demo
+#<span class="red">FIXME:</span>  demo comes first
+1st:explain TinyML,
+2nd:explain device,
+3rd:run demo
 ...
 ???
 - At first, I will define IoT problems ML faces.
@@ -99,7 +99,7 @@ There's some boudary.
 . /usr/bin/byobu-reconnect-sockets
 ---
 background-image: url(images/ecosystem_004.png)
-#FIXME: squash into the following
+#<span class="red">FIXME:</span>  squash into the following
 ???
 - Privacy
  - customer doesn't want raw data leaving beyond their premises.
@@ -111,7 +111,7 @@ background-image: url(images/ecosystem_004.png)
  - cars & ships can go beyond cellur coverage.
 ---
 background-image: url(images/ecosystem_005.png)
-#FIXME: squash into the following
+#<span class="red">FIXME:</span>  squash into the following
 ???
 - Without power cable,
  - it's easy to mange battery powered devices.
@@ -152,7 +152,7 @@ There are 3 areas:
 - Embedded
 ---
 background-image: url(images/ecosystem_008.png)
-#FIXME: squash into the following
+#<span class="red">FIXME:</span>  squash into the following
 ???
 In Cloud and Edge belong to web development.
 - where Linux runs
@@ -163,7 +163,7 @@ In Cloud and Edge belong to web development.
 - GB RAM / TB storage
 ---
 background-image: url(images/ecosystem_009.png)
-#FIXME: squash into the following
+#<span class="red">FIXME:</span>  squash into the following
 ???
 OTOH, in embedded,
 - there are variety of MCUs
@@ -190,7 +190,7 @@ class: middle
 Next, let's look at ML environment.
 ---
 background-image: url(images/ecosystem_011.png)
-#FIXME: squash into the following
+#<span class="red">FIXME:</span>  squash into the following
 ???
 From ML perspective,
 - in Web,
@@ -236,7 +236,7 @@ model & runtime
 - Like online piza order
 ---
 background-image: url(images/ecosystem_013.png)
-#FIXME: OS_image in Yellow?
+#<span class="red">FIXME:</span>  OS_image in Yellow?
 ???
 TinyML as-a-Service squeezes:
 - model
@@ -295,14 +295,14 @@ specialization
 ---
 ## Internal
 .top[![](images/Selection_186.png)]
-#FIXME: simpler?
+#<span class="red">FIXME:</span>  simpler?
 .footnote[http://rumpkernel.org/]
 ???
 hypercall implementation could adapt different backend easily
 ---
 background-image: url(images/unikernel-mindmap.png)
 #Type of Unikernel
-#FIXME: ClickOS posix?
+#<span class="red">FIXME:</span>  ClickOS posix?
 ???
 - Safer not to use C
 - language specific could be smaller
@@ -336,7 +336,7 @@ background-image: url(https://miro.medium.com/max/700/1*dYjDEI0mLpsCOySKUuX1VA.p
 ## ML runtime +
 back propagation
 
-#FIXME: explain training & inference?
+#<span class="red">FIXME:</span>  explain training & inference?
 .footnote[https://devopedia.org/deep-learning-frameworks]
 ???
 - many ML frameworks
@@ -359,7 +359,7 @@ background-image: url(images/cgraph.png)
 - JSON <-> binary representation
 ---
 # generate smaller Runtime
-- A general purpose runtime is too big. (FIXME: size info)
+- A general purpose runtime is too big. (#<span class="red">FIXME:</span>  size info)
  - all ops built-in
 - A model is optimized per some HWAs.
  - not all HWAs
@@ -367,7 +367,7 @@ background-image: url(images/cgraph.png)
  - which a model uses.
   - inspect a model ops
   - build only those ops in
-#FIXME: insert ops selection fig
+#<span class="red">FIXME:</span>  insert ops selection fig
 ---
 background-image: url(images/summary-mlcompiler.png)
 # Summary: ML compiler
@@ -469,7 +469,7 @@ background-image: url(images/training-uc_003.png)
  - Gave to run on MCU
 ---
 background-image: url(images/ps-sq.png)
-#FIXME: move to Appendix
+#<span class="red">FIXME:</span>  move to Appendix
 ???
 skip
 ---
@@ -514,12 +514,14 @@ class: center, middle
     <source src="http://136.225.130.103:8080/elc2019/mnist.mp4" type="video/mp4">
 </video>
 # [MNIST inference on ESP32](https://play.ericsson.net/media/t/1_m56q17x5)
+.footnote[https://youtu.be/6tJVtMrYGzA]
 ---
 class: center, middle
 <video width="560" height="420" controls>
     <source src="http://136.225.130.103:8080/elc2019/fmnist.mp4" type="video/mp4">
 </video>
 # [Fashion MNIST from Zalando](https://play.ericsson.net/media/t/0_tdu20gt3)
+.footnote[https://youtu.be/nl9rATQGB8Y]
 ---
 background-image: url(images/size-comp.png)
 # Result
