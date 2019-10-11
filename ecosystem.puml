@@ -103,7 +103,7 @@ edge .down.> devices : return
 
 '======================================================
 newpage
-title Engergy
+title Energy
 cloud cloud {
         cloud AWS
         cloud Azure
