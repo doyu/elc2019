@@ -342,9 +342,10 @@ background-image: url(images/cgraph.png)
 - flow of operators with type info
 - JSON <-> binary representation
 ---
-background-image: url(http://136.225.130.103:8080/tflm/main_8cc_a655610549cf9e5304cd47ecae379d99f_cgraph.png)
 # ML Runtime (inference)
-.footnote[model ops == runtime ops]
+# model ops == runtime ops
+
+FIXME
 ---
 background-image: url(images/summary-mlcompiler.png)
 # Summary: ML compiler
@@ -390,11 +391,11 @@ class: middle
 5. Foreseen Opportunities
 .right[![](images/demo-sq0.png)]
 ---
-background-image: url(https://miro.medium.com/max/2200/1*XdCMCaHPt-pqtEibUfAnNw.png)
+background-image: url(images/mnist.png)
 ## **MNIST**: Handwriting digits recognition
 ### 60K images for training, 10K for testing
+.footnote[https://www.katacoda.com/basiafusinska/courses/tensorflow-getting-started/tensorflow-mnist-beginner]
 ???
-.footnote[https://towardsdatascience.com/image-classification-in-10-minutes-with-mnist-dataset-54c35b77a38d]
 ---
 background-image: url(images/esp32-wrover.png)
 #### ESP32 WROVER KIT
@@ -519,7 +520,7 @@ class: middle
  + Object recognition?
 + Add **orchestration** with CoAP
 + (Distributed) training **on MCU**?
-+ **Distributed** inference (on MCU)?
++ <span class="red">**Distributed** inference (on MCU)?</span>
 
 # Any suggestions?
 ---
