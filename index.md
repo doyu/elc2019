@@ -342,10 +342,15 @@ background-image: url(images/cgraph.png)
 - flow of operators with type info
 - JSON <-> binary representation
 ---
-# ML Runtime (inference)
-# model ops == runtime ops
-
-FIXME
+# generate smaller Runtime
+- A general purpose runtime is too big.
+ - all ops built-in
+- A model is optimized per some HWAs.
+ - not all HWAs
+- A runtime should have only ops
+ - which a model uses.
+  - inspect a model ops
+  - build only those ops in
 ---
 background-image: url(images/summary-mlcompiler.png)
 # Summary: ML compiler
@@ -463,7 +468,6 @@ class: middle
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/convert-uc.png)
-.footnote[FIXME: add model size at each stage]
 ???
 - TFLM runtime is called via OCaml FFI.
  - FFI=Foreign Function Interface
