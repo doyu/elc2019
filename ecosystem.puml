@@ -455,7 +455,7 @@ rectangle Embedded #99f1ff {
 
 
 folder OS_image {
-        file image
+        file model
         file runtime
 }
 
