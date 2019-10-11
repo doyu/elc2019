@@ -455,11 +455,11 @@ rectangle Embedded #99f1ff {
 
 
 folder OS_image {
-        file "custom\nmodel"
-        file "custom\nruntime"
+        file "custom\nmodel" as cmodel
+        file "custom\nruntime" as cruntime
 }
 
-image . runtime
+cmodel <.> cruntime
 TBS -down- OS_image : downloading
 device2 -up-> SaaS : info
 device2 <-up- OS_image
