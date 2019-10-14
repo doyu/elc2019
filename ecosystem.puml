@@ -398,17 +398,16 @@ cloud Web #eeeeee {
                 cloud GCP
         }
         cloud edge
+	database Zoo {
+	        collections "model"
+		AWS -> model
+	}
 }
 note right of Web
 python
 heavy training
 GPUs
 end note
-
-database Zoo {
-        collections "model"
-}
-AWS -> model
 
 rectangle Embedded #99f1ff {
         (device1)
@@ -455,12 +454,12 @@ cloud Web #eeeeee {
                 cloud GCP
         }
         cloud edge
+	database Zoo {
+	        collections "model"
+		AWS -> model
+	}
 }
 
-database Zoo {
-        collections "model"
-}
-AWS -> model
 
 rectangle Embedded #99f1ff {
         (device1)
@@ -495,14 +494,14 @@ cloud "Web/linux\n" #eeeeee {
                 cloud GCP
         }
         cloud edge
+	database Zoo {
+	        collections "model"
+		AWS -> model
+	}
 }
 
-database Zoo {
-        collections "model"
-	AWS -> model
-}
 
-cloud "TinyMLaaS\n" #FFF44F {
+cloud "\nTinyMLaaS\n" #FFF44F {
         folder SaaS {
                 (Build\nService) as TBS
         	file "OS image" as osimage
