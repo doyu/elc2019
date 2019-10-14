@@ -304,6 +304,7 @@ specialization
 ---
 ## Internal
 .top[![](images/Selection_186.png)]
+
 .footnote[http://rumpkernel.org/]
 ???
 hypercall implementation could adapt different backend easily
@@ -311,7 +312,6 @@ hypercall implementation could adapt different backend easily
 ---
 background-image: url(images/unikernel-mindmap.png)
 #Type of Unikernel
-#<span class="red">FIXME:</span>  ClickOS posix?
 ???
 - Safer not to use C
 - language specific could be smaller
