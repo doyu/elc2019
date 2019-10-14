@@ -340,12 +340,16 @@ class: middle
 
 .right[![](images/summary-3enablers.png)]
 ---
+background-image: url(https://ucbrise.github.io/cs294-rise-fa16/assets/images/ml-lifecycle.jpg)
+# 2 ML phases:
+
+.footnote[https://ucbrise.github.io/cs294-rise-fa16/prediction_serving.html]
+---
 background-image: url(https://miro.medium.com/max/700/1*dYjDEI0mLpsCOySKUuX1VA.png)
 # ML framework ==
 ## ML runtime +
 back propagation
 
-#<span class="red">FIXME:</span>  explain training & inference?
 .footnote[https://devopedia.org/deep-learning-frameworks]
 ???
 - many ML frameworks
