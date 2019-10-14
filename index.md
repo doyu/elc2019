@@ -6,7 +6,7 @@ Bring ML onto microcontollers seamlessly
 ???
 # Distributed Machine Learning
 # on
-# (Unikernel for IoT)
+# Unikernel for IoT
 
 #### TinyML as-a-Service
 .footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 17th/OCT/2019]
@@ -379,7 +379,8 @@ background-image: url(images/cgraph.png)
  - which a model uses.
   - inspect a model ops
   - build only those ops in
-#<span class="red">FIXME:</span>  insert ops selection fig
+
+.footnote[<span class="red">FIXME:</span>  insert ops selection fig]
 ---
 background-image: url(images/summary-mlcompiler.png)
 # Summary: ML compiler
@@ -494,7 +495,8 @@ class: middle
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/convert-uc.png)
-#FIXME: size of cgraphs
+
+.footnote[FIXME: size of cgraphs]
 ???
 - TFLM runtime is called via OCaml FFI.
  - FFI=Foreign Function Interface
