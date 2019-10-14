@@ -134,7 +134,6 @@ To summarize
 - 5 Edge problems
 ---
 background-image: url(images/ecosystem_007.png)
-FIXME: better fig to explain collaboration
 ???
 - Devices should compute in place.
  - Good for battery powered IoT devices.
