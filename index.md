@@ -1,6 +1,6 @@
 class: center, middle
-# TinyML as-a-Service
-bring ML onto microcontollers seamlessly
+# **TinyML** as-a-Service
+Bring ML onto microcontollers seamlessly
 
 .footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 17th/OCT/2019]
 ???
@@ -17,6 +17,17 @@ bring ML onto microcontollers seamlessly
 - Some of them succeeded.
 - Some didn't.
 ---
+background-image: url(images/demo-uc_001.png)
+???
+
+---
+class: center, middle
+<video width="560" height="420" controls>
+    <source src="mnist.mp4" type="video/mp4">
+</video>
+# [MNIST inference on ESP32](https://play.ericsson.net/media/t/1_m56q17x5)
+.footnote[]
+---
 class: middle
 # Outline
 1. IoT Problems
@@ -24,10 +35,6 @@ class: middle
 3. Three Enablers
 4. Proof of Concept
 5. Foreseen Opportunities
-#<span class="red">FIXME:</span>  demo comes first
-1st:explain TinyML,
-2nd:explain device,
-3rd:run demo
 ...
 ???
 - At first, I will define IoT problems ML faces.
@@ -100,8 +107,7 @@ There's some boudary.
 - On-premises
  - where devices reside,
  - where data is generated.
-. /usr/bin/byobu-reconnect-sockets
----
+???
 background-image: url(images/ecosystem_004.png)
 #<span class="red">FIXME:</span>  squash into the following
 ???
@@ -113,7 +119,7 @@ background-image: url(images/ecosystem_004.png)
  - autonomous driving is a good example.
 - Reliability
  - cars & ships can go beyond cellur coverage.
----
+???
 background-image: url(images/ecosystem_005.png)
 #<span class="red">FIXME:</span>  squash into the following
 ???
@@ -507,18 +513,8 @@ background-image: url(images/demo-uc.png)
 background-image: url(images/demo-sq.png)
 ---
 class: center, middle
-# [Demo](https://play.ericsson.net/media/t/1_m56q17x5)
----
-class: center, middle
 <video width="560" height="420" controls>
-    <source src="http://136.225.130.103:8080/elc2019/mnist.mp4" type="video/mp4">
-</video>
-# [MNIST inference on ESP32](https://play.ericsson.net/media/t/1_m56q17x5)
-.footnote[https://youtu.be/6tJVtMrYGzA]
----
-class: center, middle
-<video width="560" height="420" controls>
-    <source src="http://136.225.130.103:8080/elc2019/fmnist.mp4" type="video/mp4">
+    <source src="fmnist.mp4" type="video/mp4">
 </video>
 # [Fashion MNIST from Zalando](https://play.ericsson.net/media/t/0_tdu20gt3)
 .footnote[https://youtu.be/nl9rATQGB8Y]

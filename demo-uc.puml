@@ -1,20 +1,51 @@
 @startuml
-skinparam pacakgeStyle rectangle
-actor laptop
 title Inference Usecase
+
+actor client
 
 note "TCP/IP" as tcpip
 
+(WiFi\nAccess\nPoint) <..> client
 
-(phone\nhotspot) <..> laptop
-
-rectangle esp32 {
-        (phone\nhotspot) <..> (MirageOS/\nFreeRTOS)
-        laptop -right- tcpip: "send\nbitmap"
+rectangle ESP32 {
+        (WiFi\nAccess\nPoint) <..> (MirageOS/\nFreeRTOS)
+        client -right- tcpip: "send\nbitmap"
         tcpip -right-> (MirageOS/\nFreeRTOS)
         (MirageOS/\nFreeRTOS) -up-> (TFLM\nruntime): "ask\nprediction"
         (TFLM\nruntime) -down-> (MirageOS/\nFreeRTOS): "return\nresult"
-        (MirageOS/\nFreeRTOS) -down-> (display): "show result"
 }
+(MirageOS/\nFreeRTOS) -down-> (display): "show result"
+
+newpage
+title PoC demo\nML inference on MCU
+skinparam legendFontSize 18
+
+actor laptop
+note "TCP/IP" as tcpip
+laptop  <.up.> (WiFi\nAccess\nPoint)
+laptop -right- tcpip: "send\nbitmap"
+
+rectangle ESP32 {
+        rectangle ML {
+                file model
+                (runtime)
+                model . runtime
+        }
+        (Unikernel)
+        (WiFi\nAccess\nPoint) <.down.> (Unikernel)
+        (Unikernel) -up-> (runtime): "ask\nprediction"
+        (runtime) -down-> (Unikernel): "return\nresult"
+}
+
+legend
+MCU: ESP32
+ARCH: Xtensa 32bit
+RAM: 520KB SRAM
+ROM: 4MB FLASH
+160MHz / 600 DMIPS
+end legend
+
+tcpip -right-> (Unikernel)
+(Unikernel) -down-> (display): "show result"
 
 @enduml
