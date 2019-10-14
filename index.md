@@ -174,6 +174,8 @@ This is about
 ---
 background-image: url(images/ecosystem_007.png)
 ## 3 areas
+
+.footnote[IoT **on-prem**ises == Embedded]
 ???
 # There are 3 areas:
 - Cloud
