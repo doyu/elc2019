@@ -173,6 +173,7 @@ This is about
 - development environment.
 ---
 background-image: url(images/ecosystem_007.png)
+## 3 areas
 ???
 # There are 3 areas:
 - Cloud
