@@ -543,12 +543,13 @@ class: middle
 ---
 Demonstrated End-to-End **TinyML as-a-Service**
 ### Next
-+ Add **frontend**, as-a-Service
-+ Supprt **other** MCUs & **complicated** models
-+ Add **orchestration** with CoAP
-+ (Distributed) training **on MCU**?
-+ <span class="red">**Distributed** inference (on MCU?)</span>
++ Add **frontend**(as-a-Service)?
++ Supprt **other** MCUs && more **complicated** models?
++ Add **orchestration** with CoAP?
++ (Distributed) training **on MCU**???
++ <span class="red">**Distributed** inference (on MCU?) on demand?</span>
 .right[![](images/chainmodels.png)]
+
 ## Any suggestions?
 ---
 background-image: url(images/elc.png)
