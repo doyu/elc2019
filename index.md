@@ -19,14 +19,32 @@ Bring ML onto microcontollers seamlessly
 ---
 background-image: url(images/demo.png)
 ???
+# MNIST
+- ML hello world
+- handwriting digit recognition
 
+# ESP32
+- microcontroller
+- backside LCD
+- 520KB RAM
+- 4MB FLASH ROM
+
+# DEMO
+- Connected via WiFi
+- send a bitmap
+- classify into a digit
 ---
 class: center, middle
 <video width="560" height="420" controls>
     <source src="mnist.mp4" type="video/mp4">
 </video>
 # [MNIST inference on ESP32](https://play.ericsson.net/media/t/1_m56q17x5)
-.footnote[]
+
+.footnote[https://youtu.be/6tJVtMrYGzA]
+???
+# Left upper: device console
+# Left bottom: my laptop, sending a bitmap
+# Right side: device screen
 ---
 class: middle
 # Outline
@@ -155,35 +173,31 @@ This is about
 ---
 background-image: url(images/ecosystem_007.png)
 ???
-There are 3 areas:
+# There are 3 areas:
 - Cloud
 - Edge
 - Embedded
+
+# Edge belongs to Cloud
+---
+background-image: url(images/ecosystem_010.png)
 ???
-background-image: url(images/ecosystem_008.png)
-squashed into the following
-???
-In Cloud and Edge belong to web development.
-- where Linux runs
-- Linux container
+# In Cloud and Edge belong to web development.
+- Linux runs
+- Container
 - microservies are dynamically deployed
 - including Edge servers
 - x86_64 / ARM64
 - GB RAM / TB storage
-???
-background-image: url(images/ecosystem_009.png)
-squashed into the following
-???
-OTOH, in embedded,
+
+# In Embedded
 - there are variety of MCUs
 - there are variety of RTOSes.
 - 500kB SRAM / 2MB FLASH
 - Linux cannot run on 1MB RAM.
----
-background-image: url(images/ecosystem_010.png)
-???
-- Embedded is totally different from Web.
-- There are many dirversities in Embedded.
+
+## Embedded is totally different from Web.
+## There are many dirversities in Embedded.
 ---
 class: middle
 # Outline
@@ -197,21 +211,18 @@ class: middle
 5. Foreseen Opportunities
 ???
 Next, let's look at ML environment.
-???
-background-image: url(images/ecosystem_011.png)
-squash into the following
-???
-From ML perspective,
-- in Web,
- - there are variety of python based frameworks,
-- in embedded,
- - python based frameworks are too heavy.
 ---
 background-image: url(images/ecosystem_012.png)
 ???
+# From ML perspective,
+
+## In Web,
+- there are variety of python based frameworks,
 - Cloud can train a ML model.
 - Cloud can store a trained model in model Zoo.
-- But Embeded cannot use this model,
+
+## In embedded,
+- python based frameworks are too heavy.
 - Mainly because of no linux, no ML runtime.
 ---
 background-image: url(images/summary-problem.png)
