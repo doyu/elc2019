@@ -300,8 +300,8 @@ cloud Web #eeeeee {
                 cloud GCP
         }
         cloud edge
-	AWS <-down- edge : request
-	AWS -> edge : return
+	AWS <-down- edge
+	AWS -> edge
 }
 note right of cloud
 Linux
@@ -376,8 +376,8 @@ note right of Embedded
 Any inference in place?
 end note
 
-AWS <-down- edge : request
-AWS -> edge : return
+AWS <-down- edge
+AWS -> edge
 
 edge <.down.> device1
 edge <.down.> device2
@@ -408,7 +408,7 @@ end note
 database Zoo {
         collections "model"
 }
-AWS <.> model
+AWS -> model
 
 rectangle Embedded #99f1ff {
         (device1)
@@ -433,8 +433,8 @@ end note
 
 model .> device2 : NOK
 
-AWS <-down- edge : request
-AWS -> edge : return
+AWS <-down- edge
+AWS -> edge
 
 edge <.down.> device1
 edge <.down.> device2
@@ -460,7 +460,7 @@ cloud Web #eeeeee {
 database Zoo {
         collections "model"
 }
-AWS <.> model
+AWS -> model
 
 rectangle Embedded #99f1ff {
         (device1)
@@ -474,8 +474,8 @@ rectangle Embedded #99f1ff {
 
 model .> device2 : NOK
 
-AWS <-down- edge : request
-AWS -> edge : return
+AWS <-down- edge
+AWS -> edge
 
 edge <.down.> device1
 edge <.down.> device2
@@ -499,6 +499,7 @@ cloud "Web/linux\n" #eeeeee {
 
 database Zoo {
         collections "model"
+	AWS -> model
 }
 
 cloud "TinyMLaaS\n" #FFF44F {
@@ -510,7 +511,6 @@ cloud "TinyMLaaS\n" #FFF44F {
 }
 
 TBS <-up- model : downloading
-AWS .> model
 rectangle Embedded #99f1ff {
         (device1)
         (device2)
@@ -528,11 +528,11 @@ file OS_image #FFF44F {
 
 cmodel <.> cruntime
 osimage -down- OS_image : downloading
-device2 -up-> SaaS : info
+device2 .up.> SaaS : info
 device2 <-up- OS_image : installing
 
-AWS <-down- edge : request
-AWS -> edge : return
+AWS <-down- edge
+AWS -> edge
 
 edge <.down.> device1
 edge <.down.> device2
