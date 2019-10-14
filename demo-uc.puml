@@ -17,16 +17,17 @@ rectangle ESP32 {
 (MirageOS/\nFreeRTOS) -down-> (display): "show result"
 
 newpage
-title PoC demo\nML inference on MCU
-skinparam legendFontSize 18
+skinparam TitleFontSize 24
+skinparam legendFontSize 20
+title \nPoC DEMO\nML inference on MCU
 
 actor laptop
 note "TCP/IP" as tcpip
 laptop  <.up.> (WiFi\nAccess\nPoint)
 laptop -right- tcpip: "send\nbitmap"
 
-rectangle ESP32 {
-        rectangle ML {
+rectangle ESP32 #b8cecd {
+        rectangle ML #ff7373 {
                 file model
                 (runtime)
                 model . runtime

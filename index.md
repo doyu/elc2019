@@ -17,7 +17,7 @@ Bring ML onto microcontollers seamlessly
 - Some of them succeeded.
 - Some didn't.
 ---
-background-image: url(images/demo-uc_001.png)
+background-image: url(images/demo.png)
 ???
 
 ---
