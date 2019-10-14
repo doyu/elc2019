@@ -1,12 +1,16 @@
 class: center, middle
+# TinyML as-a-Service
+bring ML onto microcontollers seamlessly
+
+.footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 17th/OCT/2019]
+???
 # Distributed Machine Learning
 # on
-# Unikernel for IoT
+# (Unikernel for IoT)
 
 #### TinyML as-a-Service
-.footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 11th/OCT/2019]
+.footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 17th/OCT/2019]
 
-???
 - How I tried to bring:
  - ML training & inference
  - in IoT environment.
