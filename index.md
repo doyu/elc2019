@@ -17,8 +17,9 @@ Bring ML onto microcontollers seamlessly
 - Some of them succeeded.
 - Some didn't.
 ---
-background-image: url(images/screenshot.png)
-### Demo
+class: center, middle
+### ML on microcontroller
+![](images/screenshot.png)
 ---
 background-image: url(images/demo.png)
 ???
