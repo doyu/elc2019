@@ -460,6 +460,7 @@ background-image: url(images/training-uc_001.png)
 - it's a federated learning.
 ---
 background-image: url(images/training-uc_002.png)
+.footnote[[sequence diagram](#training_sq)]
 ???
 - local raw data isn't leaked beyond premises.
 ---
@@ -471,11 +472,6 @@ background-image: url(images/training-uc_003.png)
 - 3 workers
 - Needed 100+MB RAM
  - Gave to run on MCU
----
-background-image: url(images/ps-sq.png)
-#<span class="red">FIXME:</span>  move to Appendix
-???
-skip
 ---
 class: middle
 # Outline
@@ -549,5 +545,11 @@ Demonstrated End-to-End **TinyML as-a-Service**
 ## Any suggestions?
 ---
 background-image: url(images/elc.png)
+---
+class: center, middle
+Appendix
+---
+name: training_sq
+background-image: url(images/ps-sq.png)
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
