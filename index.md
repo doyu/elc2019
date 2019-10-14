@@ -28,6 +28,7 @@ background-image: url(images/demo.png)
 - backside LCD
 - 520KB RAM
 - 4MB FLASH ROM
+- Linux cannot fit in but Unikernl can.
 
 # DEMO
 - Connected via WiFi
