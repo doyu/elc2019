@@ -377,6 +377,62 @@ devices <-> devices : in place
 '======================================================
 newpage
 skinparam noteFontSize 18
+title ML Problem
+
+cloud Web #eeeeee {
+        cloud cloud {
+                cloud AWS
+                cloud Azure
+                cloud GCP
+        }
+        cloud edge
+}
+note right of Web
+python
+heavy training
+GPUs
+end note
+
+database Zoo {
+        collections "model"
+}
+AWS <.> model
+
+rectangle Embedded #99f1ff {
+        (device1)
+        (device2)
+        collections devices
+        database battery
+
+	battery .> devices
+}
+note right of Embedded
+No Linux
+No ML
+end note
+
+'note left of Embedded
+'<s>python ML runtime</s>
+'<s>training</s>
+'Any inference in place?
+'end note
+
+
+model .> device2 : NOK
+
+AWS <-down- edge : request
+AWS -> edge : return
+
+edge <.down.> device1
+edge <.down.> device2
+device1 <-right-> device2
+device1 <-down-> devices
+device2 <-down-> devices : offloading
+devices <-> devices : in place
+
+'======================================================
+newpage
+skinparam noteFontSize 18
 title Problem
 
 cloud Web #eeeeee {
@@ -401,11 +457,6 @@ rectangle Embedded #99f1ff {
 
 	battery .> devices
 }
-note right of Embedded
-No Linux
-No ML
-end note
-
 
 model .> device2 : NOK
 
@@ -454,7 +505,7 @@ rectangle Embedded #99f1ff {
 }
 
 
-folder OS_image {
+folder OS_image #FFF44F {
         file "custom\nmodel" as cmodel
         file "custom\nruntime" as cruntime
 }

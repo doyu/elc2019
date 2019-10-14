@@ -100,7 +100,7 @@ Let's introduce Edge computing:
 - Cloud is expanding towards more Edge.
 - This solved some latency issues.
 - But not yet perfect.
----
+???
 background-image: url(images/ecosystem_003.png)
 ???
 There's some boudary.
@@ -109,7 +109,7 @@ There's some boudary.
  - where data is generated.
 ???
 background-image: url(images/ecosystem_004.png)
-#<span class="red">FIXME:</span>  squash into the following
+squashed into the following
 ???
 - Privacy
  - customer doesn't want raw data leaving beyond their premises.
@@ -121,7 +121,7 @@ background-image: url(images/ecosystem_004.png)
  - cars & ships can go beyond cellur coverage.
 ???
 background-image: url(images/ecosystem_005.png)
-#<span class="red">FIXME:</span>  squash into the following
+squashed into the following
 ???
 - Without power cable,
  - it's easy to mange battery powered devices.
@@ -134,11 +134,11 @@ To summarize
 - 5 Edge problems
 ---
 background-image: url(images/ecosystem_007.png)
+FIXME: better fig to explain collaboration
 ???
 - Devices should compute in place.
  - Good for battery powered IoT devices.
 - Neighbours should help each otehr.
-FIXME: better fig to explain collaboration
 ---
 class: middle
 # Outline
@@ -160,9 +160,9 @@ There are 3 areas:
 - Cloud
 - Edge
 - Embedded
----
+???
 background-image: url(images/ecosystem_008.png)
-#<span class="red">FIXME:</span>  squash into the following
+squashed into the following
 ???
 In Cloud and Edge belong to web development.
 - where Linux runs
@@ -171,9 +171,9 @@ In Cloud and Edge belong to web development.
 - including Edge servers
 - x86_64 / ARM64
 - GB RAM / TB storage
----
+???
 background-image: url(images/ecosystem_009.png)
-#<span class="red">FIXME:</span>  squash into the following
+squashed into the following
 ???
 OTOH, in embedded,
 - there are variety of MCUs
@@ -198,9 +198,9 @@ class: middle
 5. Foreseen Opportunities
 ???
 Next, let's look at ML environment.
----
+???
 background-image: url(images/ecosystem_011.png)
-#<span class="red">FIXME:</span>  squash into the following
+squash into the following
 ???
 From ML perspective,
 - in Web,
@@ -229,7 +229,7 @@ class: middle
 - We defined a problem.
 - Next, we'll propose our solution.
 ---
-background-image: url(images/ecosystem_012.png)
+background-image: url(images/ecosystem_013.png)
 ???
 - In Embedded,
  - No Linux
@@ -245,8 +245,7 @@ model & runtime
 ???
 - Like online piza order
 ---
-background-image: url(images/ecosystem_013.png)
-#<span class="red">FIXME:</span>  OS_image in Yellow?
+background-image: url(images/ecosystem_014.png)
 ???
 TinyML as-a-Service squeezes:
 - model
@@ -305,10 +304,10 @@ specialization
 ---
 ## Internal
 .top[![](images/Selection_186.png)]
-#<span class="red">FIXME:</span>  simpler?
 .footnote[http://rumpkernel.org/]
 ???
 hypercall implementation could adapt different backend easily
+- feedback: simpler?
 ---
 background-image: url(images/unikernel-mindmap.png)
 #Type of Unikernel
@@ -466,7 +465,7 @@ background-image: url(images/training-uc_001.png)
 - it's a federated learning.
 ---
 background-image: url(images/training-uc_002.png)
-.footnote[[sequence diagram](#training_sq)]
+.footnote[[ref: sequence diagram](#training_sq)]
 ???
 - local raw data isn't leaked beyond premises.
 ---
@@ -492,6 +491,7 @@ class: middle
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/convert-uc.png)
+#FIXME: size of cgraphs
 ???
 - TFLM runtime is called via OCaml FFI.
  - FFI=Foreign Function Interface
@@ -511,13 +511,6 @@ class: middle
 background-image: url(images/demo-uc.png)
 ---
 background-image: url(images/demo-sq.png)
----
-class: center, middle
-<video width="560" height="420" controls>
-    <source src="fmnist.mp4" type="video/mp4">
-</video>
-# [Fashion MNIST from Zalando](https://play.ericsson.net/media/t/0_tdu20gt3)
-.footnote[https://youtu.be/nl9rATQGB8Y]
 ---
 background-image: url(images/size-comp.png)
 # Result
@@ -543,9 +536,16 @@ Demonstrated End-to-End **TinyML as-a-Service**
 background-image: url(images/elc.png)
 ---
 class: center, middle
-Appendix
+# Appendix
 ---
 name: training_sq
 background-image: url(images/ps-sq.png)
+---
+class: center, middle
+<video width="560" height="420" controls>
+    <source src="fmnist.mp4" type="video/mp4">
+</video>
+# [Fashion MNIST from Zalando](https://play.ericsson.net/media/t/0_tdu20gt3)
+.footnote[https://youtu.be/nl9rATQGB8Y]
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
