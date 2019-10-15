@@ -10,6 +10,9 @@ file TFLite_cgraph
 Owl_cgraph -down-> TF_cgraph : conversion
 Owl_cgraph .> (ONNX)
 (ONNX) .> TF_cgraph
+model .> (TensorFlow)
+data .> (TensorFlow) : training
+(TensorFlow) -> TF_cgraph
 TF_cgraph -down-> TFLite_cgraph : optimization
 TFLite_cgraph -down-> (TFL micro\nruntime) : built-in
 (TFL micro\nruntime) -right-> (MirageOS) : built-in
