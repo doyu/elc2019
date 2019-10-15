@@ -310,6 +310,9 @@ class: middle
 ---
 background-image: url(https://zdnet1.cbsistatic.com/hub/i/r/2016/02/01/71e041f1-addd-4a9c-bc81-f73297f2dc6a/resize/770xauto/fffb0419c01c018b37d50605bdf341a3/dockerunikernel.jpg)
 #Unikernel
+
+FIXME: better resolution
+
 .footnote[http://unikernel.org/files/2014-cacm-unikernels.pdf]
 ???
 smaller than VM && Container
@@ -335,7 +338,7 @@ background-image: url(images/unikernel-mindmap.png)
 - language specific could be smaller
  - based of its packaging system
 ---
-# Ocaml
+# OCaml
 .bottom[![](images/ocaml.png)]
 ???
 Just feeling of abstructed API
@@ -389,7 +392,7 @@ background-image: url(images/cgraph.png)
 - flow of operators with type info
 - JSON <-> binary representation
 ---
-# generate smaller Runtime
+# Generate smaller runtimes
 - A general purpose runtime is too big. (#<span class="red">FIXME:</span>  size info)
  - all ops built-in
 - A model is optimized per some HWAs.
@@ -400,6 +403,11 @@ background-image: url(images/cgraph.png)
   - build only those ops in
 
 .footnote[<span class="red">FIXME:</span>  insert ops selection fig]
+???
+About squashing model,
+I remember there is a paper
+“On-Demand Deep Model Compression for Mobile Devices: A Usage-Driven Model Selection Framework”
+from MobiSys18 that summarises various techniques quite well.
 ---
 background-image: url(images/summary-mlcompiler.png)
 # Summary: ML compiler
