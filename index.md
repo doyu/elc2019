@@ -254,7 +254,7 @@ background-image: url(images/ecosystem_014.png)
 ---
 # Squeeze ML
 model & runtime
-- per RAM / ROM / MCU
+- per RAM / ROM / MCU / HWA
 - per RTOS
 - per connectivity
 .right[![](images/pizzaonline.png)]
