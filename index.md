@@ -400,10 +400,7 @@ background-image: url(images/cgraph.png)
 
 .footnote[<span class="red">FIXME:</span>  insert ops selection fig]
 ???
-About squashing model,
-I remember there is a paper
-“On-Demand Deep Model Compression for Mobile Devices: A Usage-Driven Model Selection Framework”
-from MobiSys18 that summarises various techniques quite well.
+https://tik-old.ee.ethz.ch/file//79a7dd6f6370f809e6180c0746232283/mobisys18-liu.pdf
 ---
 background-image: url(images/summary-mlcompiler.png)
 # Summary: ML compiler
