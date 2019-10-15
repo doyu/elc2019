@@ -6,16 +6,22 @@ database data
 file Owl_cgraph
 file TF_cgraph
 file TFLite_cgraph
+file ONNX_cgraph
+folder MirageOS {
+        folder custom_runtime {
+        	file "custom\nmodel"
+	}
+}
 
 Owl_cgraph -down-> TF_cgraph : conversion
-Owl_cgraph .[dotted]> (ONNX)
-(ONNX) .[dotted]> TF_cgraph
+Owl_cgraph .[dotted]> ONNX_cgraph
+ONNX_cgraph .[dotted]> TF_cgraph
 model .[dotted]> (TensorFlow)
 data .[dotted]> (TensorFlow) : training
 (TensorFlow) .[dotted]> TF_cgraph
 TF_cgraph -down-> TFLite_cgraph : optimization
 TFLite_cgraph -down-> (TFL micro\nruntime) : built-in
-(TFL micro\nruntime) -right-> (MirageOS) : built-in
+(TFL micro\nruntime) -> MirageOS : built-in
 
 model -down-> (OCaml\nOwl)
 data -down-> (OCaml\nOwl) : training
