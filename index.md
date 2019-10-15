@@ -306,10 +306,8 @@ class: middle
 5. Foreseen Opportunities
 .right[![](images/summary-3enablers.png)]
 ---
-background-image: url(https://zdnet1.cbsistatic.com/hub/i/r/2016/02/01/71e041f1-addd-4a9c-bc81-f73297f2dc6a/resize/770xauto/fffb0419c01c018b37d50605bdf341a3/dockerunikernel.jpg)
+background-image: url(images/dockerunikernel.jpg)
 #Unikernel
-
-FIXME: better resolution
 
 .footnote[http://unikernel.org/files/2014-cacm-unikernels.pdf]
 ???
