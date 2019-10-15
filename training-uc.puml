@@ -4,7 +4,7 @@ title Training:\nParameter Server (PS)
 file "trained\nmodel" as trained_model
 collections data
 
-data -> (Server\n<<model>>)
+data -[#blue,bold]> (Server\n<<model>>)
 (Server\n<<model>>) -> (Worker1\n<<model>>) : dispatch
 (Server\n<<model>>) -> (Worker2\n<<model>>)
 (Server\n<<model>>) -> (Worker3\n<<model>>)
@@ -32,9 +32,9 @@ collections "local\ndata3" as data3
 (Worker2\n<<model>>) --> (Server\n<<model>>)
 (Worker3\n<<model>>) --> (Server\n<<model>>)
 
-data1 -> (Worker1\n<<model>>)
-data2 -> (Worker2\n<<model>>)
-data3 -> (Worker3\n<<model>>)
+data1 -[#blue,bold]> (Worker1\n<<model>>)
+data2 -[#blue,bold]> (Worker2\n<<model>>)
+data3 -[#blue,bold]> (Worker3\n<<model>>)
 
 (Server\n<<model>>) ---> trained_model : generating
 
@@ -66,9 +66,9 @@ rectangle "on-premises3" {
 (Worker2\n<<model>>) -up-> (Server\n<<model>>)
 (Worker3\n<<model>>) -up-> (Server\n<<model>>)
 
-data1 -> (Worker1\n<<model>>)
-data2 -> (Worker2\n<<model>>)
-data3 -> (Worker3\n<<model>>)
+data1 -[#blue,bold]> (Worker1\n<<model>>)
+data2 -[#blue,bold]> (Worker2\n<<model>>)
+data3 -[#blue,bold]> (Worker3\n<<model>>)
 
 file "trained\nmodel" as trained_model
 (Server\n<<model>>) ---> trained_model : generating
