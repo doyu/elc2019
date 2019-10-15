@@ -72,9 +72,9 @@ class: middle
 # Outline
 0. ~~Demo~~
 1. **Problems**
-   - **Edge Computing**
-   - Web vs Embedded
-   - ML environment
+  - **Edge Computing**
+  - Web vs Embedded
+  - ML environment
 2. Proposal
 3. Three Enablers
 4. PoC

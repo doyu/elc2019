@@ -460,7 +460,7 @@ end note
 'Any inference in place?
 'end note
 
-model -[#blue,bold]> device2 : **NOK**
+model .[#blue,bold]> device2 : **NOK**
 
 AWS <-down- edge
 AWS -> edge
