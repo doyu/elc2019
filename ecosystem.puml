@@ -207,6 +207,37 @@ device1 <-[#blue,bold]down- devices : offloading
 device2 <-[#blue,bold] devices : offloading
 device2 <-[#blue,bold]> device2 : in place
 
+'======================================================
+newpage
+title 3 areas
+
+cloud cloud #e0eeee {
+        cloud AWS
+        cloud Azure
+        cloud GCP
+}
+cloud edge #e0eeee {
+}
+rectangle Embedded #e0eeee {
+        (device1)
+        (device2)
+        collections devices
+        database battery
+	battery -> devices
+        file privacy
+	devices	<-> privacy
+}
+
+AWS <-down- edge : request
+AWS -down-> edge : return
+
+edge <.down.> device1
+edge <.down.> device2
+
+device1 <-> device2
+device1 <-down- devices : offloading
+device2 <- devices : offloading
+device2 <-> device2 : in place
 
 '======================================================
 newpage

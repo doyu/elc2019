@@ -176,10 +176,8 @@ class: middle
 This is about
 - development environment.
 ---
-background-image: url(images/ecosystem_007.png)
-## 3 areas
+background-image: url(images/ecosystem_008.png)
 
-.footnote[IoT **on-prem**ises == Embedded]
 ???
 # There are 3 areas:
 - Cloud
@@ -188,7 +186,7 @@ background-image: url(images/ecosystem_007.png)
 
 # Edge belongs to Cloud
 ---
-background-image: url(images/ecosystem_010.png)
+background-image: url(images/ecosystem_011.png)
 ???
 # In Cloud and Edge belong to web development.
 - Linux runs
@@ -220,7 +218,7 @@ class: middle
 ???
 Next, let's look at ML environment.
 ---
-background-image: url(images/ecosystem_012.png)
+background-image: url(images/ecosystem_013.png)
 ???
 # From ML perspective,
 
@@ -247,7 +245,7 @@ class: middle
 - We defined a problem.
 - Next, we'll propose our solution.
 ---
-background-image: url(images/ecosystem_013.png)
+background-image: url(images/ecosystem_014.png)
 ???
 - In Embedded,
  - No Linux
@@ -263,7 +261,7 @@ model & runtime
 ???
 - Like online piza order
 ---
-background-image: url(images/ecosystem_014.png)
+background-image: url(images/ecosystem_015.png)
 ???
 TinyML as-a-Service squeezes:
 - model
