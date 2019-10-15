@@ -2,18 +2,18 @@
 scale 1.2
 title PoC outline
 + PoC
-++ training
+++ Training
 +++_ Federated Learning (FL)
 +++_ OCaml Owl
 +++_ MirageOS
-++ compile
+++ Compile
 +++_ cgraph
 ++++_ Owl
 ++++_ TensorFlow (TF)
 ++++_ TF Lite (TFL)
 ++++_ TFL for micro (TFLM)
 +++_ TFLM runtime
-++ inference
+++ Inference
 +++_ ESP32 devkit
 +++_ MirageOS
 +++_ TFLM runtime

@@ -17,6 +17,23 @@ Bring ML onto microcontollers seamlessly
 - Some of them succeeded.
 - Some didn't.
 ---
+class: middle
+# Outline
+0. **Demo**
+1. Problems
+2. Proposal
+3. Three Enablers
+4. PoC
+5. Conclusion
+???
+- At first, I will define IoT problems ML faces.
+- Sencodary, I will introduce our proposal
+ - against the problem we defined.
+- Then, 3 enblers construct our proposal.
+- I'll explain our proof of concept.
+- At least, I'll discuss further possibilities
+- Let's start with "Demo".
+---
 class: center, middle
 ### ML on microcontroller
 ![](images/screenshot.png)
@@ -53,56 +70,20 @@ class: center, middle
 ---
 class: middle
 # Outline
-1. IoT Problems
-2. Our Proposal
+0. ~~Demo~~
+1. **Problems**
+   - **Edge Computing**
+   - Web vs Embedded
+   - ML environment
+2. Proposal
 3. Three Enablers
-4. Proof of Concept
-5. Foreseen Opportunities
-...
-???
-- At first, I will define IoT problems ML faces.
-- Sencodary, I will introduce our proposal
- - against the problem we defined.
-- Then, 3 enblers construct our proposal.
-- I'll explain our proof of concept.
-- At least, I'll discuss further possibilities
----
-class: middle
-# Outline
-1. **IoT Problems**
-2. Our Proposal
-3. Three Enablers
-4. Proof of Concept
-5. Foreseen Opportunities
-???
-- Let's start with "IoT problems".
----
-class: middle
-# Outline
-1. IoT Problems
-   + **Edge Computing**
-   + **Web vs Embedded**
-   + **ML environment**
-2. Our Proposal
-3. Three Enablers
-4. Proof of Concept
-5. Foreseen Opportunities
+4. PoC
+5. Conclusion
 ???
 I will take a look a this problem from 3 aspects.
-+ **Edge Computing**
-+ **Web vs Embedded**
-+ **ML environment**
----
-class: middle
-# Outline
-1. IoT Problems
-   + **Edge Computing**
-   + Web vs Embedded
-   + ML environment
-2. Our Proposal
-3. Three Enablers
-4. Proof of Concept
-5. Foreseen Opportunities
++ Edge Computing
++ Web vs Embedded
++ ML environment
 ---
 background-image: url(images/ecosystem.png)
 ???
@@ -164,14 +145,15 @@ background-image: url(images/ecosystem_007.png)
 ---
 class: middle
 # Outline
-1. IoT Problems
-   + Edge Computing
+0. ~~Demo~~
+1. **Problems**
+   + ~~Edge Computing~~
    + **Web vs Embedded**
    + ML environment
-2. Our Proposal
+2. Proposal
 3. Three Enablers
-4. Proof of Concept
-5. Foreseen Opportunities
+4. PoC
+5. Conclusion
 ???
 This is about
 - development environment.
@@ -207,14 +189,15 @@ background-image: url(images/ecosystem_011.png)
 ---
 class: middle
 # Outline
-1. IoT Problems
-   + Edge Computing
-   + Web vs Embedded
+0. ~~Demo~~
+1. **Problems**
+   + ~~Edge Computing~~
+   + ~~Web vs Embedded~~
    + **ML environment**
-2. Our Proposal
+2. Proposal
 3. Three Enablers
-4. Proof of Concept
-5. Foreseen Opportunities
+4. PoC
+5. Conclusion
 ???
 Next, let's look at ML environment.
 ---
@@ -232,15 +215,16 @@ background-image: url(images/ecosystem_013.png)
 - Mainly because of no linux, no ML runtime.
 ---
 background-image: url(images/summary-problem.png)
-# Summary: IoT Problems
+# Summary: Problems
 ---
 class: middle
 # Outline
-1. IoT Problems
-2. **Our Proposal**
+0. ~~Demo~~
+1. ~~Problems~~
+2. **Proposal**
 3. Three Enablers
-4. Proof of Concept
-5. Foreseen Opportunities
+4. PoC
+5. Conclusion
 ???
 - We defined a problem.
 - Next, we'll propose our solution.
@@ -269,42 +253,23 @@ TinyML as-a-Service squeezes:
 - wrap RTOS image
 ---
 background-image: url(images/summary-proposal.png)
-Our Proposal
+Proposal
 # TinyML as-a-Service
 ---
 class: middle
 # Outline
-1. IoT Problems
-2. Our Proposal
-3. **Three Enablers**
-4. Proof of Concept
-5. Foreseen Opportunities
-???
-3 enblers for TinyML as-a-Service
----
-class: middle
-# Outline
-1. IoT Problems
-2. Our Proposal
-3. **Three Enablers**
- - **Unikernel**
- - **ML compiler**
- - **CoAP**
-4. Proof of Concept
-5. Foreseen Opportunities
-.right[![](images/summary-3enablers.png)]
----
-class: middle
-# Outline
-1. IoT Problems
-2. Our Proposal
+0. ~~Demo~~
+1. ~~Problems~~
+2. ~~Proposal~~
 3. **Three Enablers**
  - **Unikernel**
  - ML compiler
  - CoAP
-4. Proof of Concept
-5. Foreseen Opportunities
+4. PoC
+5. Conclusion
 .right[![](images/summary-3enablers.png)]
+???
+3 enblers for TinyML as-a-Service
 ---
 background-image: url(images/dockerunikernel.jpg)
 #Unikernel
@@ -346,14 +311,15 @@ class: middle
 ## Can be a thin **wrapper** over various RTOSes?
 ---
 # Outline
-1. IoT Problems
-2. Our Proposal
+0. ~~Demo~~
+1. ~~Problems~~
+2. ~~Proposal~~
 3. **Three Enablers**
- - Unikernel
+ - ~~Unikernel~~
  - **ML compiler**
  - CoAP
-4. Proof of Concept
-5. Foreseen Opportunities
+4. PoC
+5. Conclusion
 
 .right[![](images/summary-3enablers.png)]
 ---
@@ -407,14 +373,15 @@ background-image: url(images/summary-mlcompiler.png)
 ???
 ---
 # Outline
-1. IoT Problems
-2. Our Proposal
+0. ~~Demo~~
+1. ~~Problems~~
+2. ~~Proposal~~
 3. **Three Enablers**
- - Unikernel
- - ML compiler
+ - ~~Unikernel~~
+ - ~~ML compiler~~
  - **CoAP**
-4. Proof of Concept
-5. Foreseen Opportunities
+4. PoC
+5. Conclusion
 
 .right[![](images/summary-3enablers.png)]
 ---
@@ -431,19 +398,12 @@ background-image: url(images/summary-3enablers.png)
 ---
 class: middle
 # Outline
-1. IoT Problems
-2. Our Proposal
-3. Three Enablers
-4. **Proof of Concept**
-5. Foreseen Opportunities
----
-class: middle
-# Outline
-1. IoT Problems
-2. Our Proposal
-3. Three Enablers
-4. **Proof of Concept**
-5. Foreseen Opportunities
+0. ~~Demo~~
+1. ~~Problems~~
+2. ~~Proposal~~
+3. ~~Three Enablers~~
+4. **PoC**
+5. Conclusion
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/mnist.png)
@@ -467,14 +427,15 @@ background-image: url(images/demo-ac.png)
 ---
 class: middle
 # Outline
-1. IoT Problems
-2. Our Proposal
-3. Three Enablers
-4. **Proof of Concept**
- + **tarining**
- + compile
- + inference
-5. Foreseen Opportunities
+0. ~~Demo~~
+1. ~~Problems~~
+2. ~~Proposal~~
+3. ~~Three Enablers~~
+4. **PoC**
+ - **Training**
+ - Compile
+ - Inference
+5. Conclusion
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/training-uc.png)
@@ -504,14 +465,15 @@ background-image: url(images/training-uc_003.png)
 ---
 class: middle
 # Outline
-1. IoT Problems
-2. Our Proposal
-3. Three Enablers
-4. **Proof of Concept**
- + tarining
- + **compile**
- + inference
-5. Foreseen Opportunities
+0. ~~Demo~~
+1. ~~Problems~~
+2. ~~Proposal~~
+3. ~~Three Enablers~~
+4. **PoC**
+ + ~~Training~~
+ + **Compile**
+ + Inference
+5. Conclusion
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/convert-uc.png)
@@ -523,14 +485,15 @@ background-image: url(images/convert-uc.png)
 ---
 class: middle
 # Outline
-1. IoT Problems
-2. Our Proposal
-3. Three Enablers
-4. **Proof of Concept**
- + tarining
- + compile
- + **inference**
-5. Foreseen Opportunities
+0. ~~Demo~~
+1. ~~Problems~~
+2. ~~Proposal~~
+3. ~~Three Enablers~~
+4. **PoC**
+ + ~~Training~~
+ + ~~Compile~~
+ + **Inference**
+5. Conclusion
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/demo-uc.png)
@@ -542,11 +505,12 @@ background-image: url(images/size-comp.png)
 ---
 class: middle
 # Outline
-1. IoT Problems
-2. Our Proposal
-3. Three Enablers
-4. Proof of Concept
-5. **Foreseen Opportunities**
+0. ~~Demo~~
+1. ~~Problems~~
+2. ~~Proposal~~
+3. ~~Three Enablers~~
+4. ~~PoC~~
+5. **Conclusion**
 ---
 Demonstrated End-to-End **TinyML as-a-Service**
 ### Next
