@@ -10,8 +10,8 @@ cloud cloud {
 
 node device
 
-AWS <-down- device : request
-AWS -> device : return
+AWS <-down- device : raw\ndata
+AWS -> device : control
 
 '======================================================
 newpage
@@ -26,10 +26,10 @@ cloud cloud {
 node device1
 node device2
 
-AWS <---- device1 : request
-AWS ----> device1 : return
-AWS <---- device2 : request
-AWS ----> device2 : return
+AWS <---- device1 : raw\ndata
+AWS ----> device1 : control
+AWS <---- device2 : raw\ndata
+AWS ----> device2 : control
 
 '======================================================
 newpage
@@ -47,10 +47,10 @@ node device2
 AWS <-down- edge : request
 AWS -down-> edge : return
 
-edge <- device1 : request
-edge -down-> device1 : return
-edge <- device2 : request
-edge -down-> device2 : return
+edge <- device1 : raw\ndata
+edge -down-> device1 : control
+edge <- device2 : raw\ndata
+edge -down-> device2 : control
 
 '======================================================
 newpage
@@ -70,10 +70,10 @@ rectangle on_prem {
 AWS <-down- edge : request
 AWS -down-> edge : return
 
-edge <- device1 : request
-edge -down-> device1 : return
-edge <- device2 : request
-edge -down-> device2 : return
+edge <- device1 : raw\ndata
+edge -down-> device1 : control
+edge <- device2 : raw\ndata
+edge -down-> device2 : control
 
 '======================================================
 newpage
@@ -152,8 +152,8 @@ rectangle on_prem {
 AWS <-down- edge : request
 AWS -down-> edge : return
 
-edge <.down. devices : request
-edge .down.> devices : return
+edge <.down. devices : raw\ndata
+edge .down.> devices : control
 
 legend
 Privacy
