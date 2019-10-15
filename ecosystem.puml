@@ -485,7 +485,8 @@ device2 <-> device2 : in place
 
 '======================================================
 newpage
-title Proposal\nTinyML as-a-Service
+skinparam titleFontSize 24
+title \nProposal: TinyML as-a-Service\n
 
 cloud "Web/linux\n" #eeeeee {
         cloud cloud {
