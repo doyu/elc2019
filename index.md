@@ -133,6 +133,9 @@ squashed into the following
 - processing data in place is better.
 ---
 background-image: url(images/ecosystem_006.png)
+
+
+.footnote[ref: [energy costly Tx](#costlytx)]
 ???
 To summarize
 - 5 Edge problems
@@ -363,7 +366,7 @@ background-image: url(images/cgraph.png)
 
 .right[![](images/runtime.png)]
 
-.footnote[Ref: [OpenISA, RISC-V && Arm](https://staceyoniot.com/why-arm-opened-up-its-instruction-set-and-what-it-means-for-iot/)]
+.footnote[ref: [OpenISA](#openisa)]
 ???
 https://tik-old.ee.ethz.ch/file//79a7dd6f6370f809e6180c0746232283/mobisys18-liu.pdf
 ---
@@ -449,7 +452,7 @@ background-image: url(images/training-uc_001.png)
 - it's a federated learning.
 ---
 background-image: url(images/training-uc_002.png)
-.footnote[Ref: [sequence diagram](#training_sq)]
+.footnote[ref: [sequence diagram](#training_sq)]
 ???
 - local raw data isn't leaked beyond premises.
 ---
@@ -510,21 +513,31 @@ class: middle
 4. ~~PoC~~
 5. **Conclusion**
 ---
-Demonstrated End-to-End **TinyML as-a-Service**
+[Done] Demonstrated End-to-End **TinyML as-a-Service**
 ### Next
-+ Add **frontend**(as-a-Service)?
-+ Supprt **other** MCUs && more **complicated** models?
-+ Add **orchestration** with CoAP?
-+ (Distributed) training **on MCU**???
-+ <span class="red">**Distributed** inference (on MCU?) on demand?</span>
+1. Add **frontend**(as-a-Service)?
+2. Supprt **other** MCUs && **complicated** models?
+3. Add **orchestration** with CoAP?
+4. (Distributed) training **on HWAs**???
+5. <span class="red">ML compiler for **multi-node HWAs?**</span>
 .right[![](images/chainmodels.png)]
-
 ## Any suggestions?
 ---
 background-image: url(images/elc.png)
 ---
 class: center, middle
 # Appendix
+---
+name: costlytx
+![](images/costlytx.png)
+
+.footnote[http://slides.cabo.space]
+---
+name: openisa
+background-image: url(https://i1.wp.com/staceyoniot.com/wp-content/uploads/2019/10/Screen-Shot-2019-10-08-at-7.28.24-AM.png)
+## Custom ISA, RISC-V && Arm
+
+.footnote[https://staceyoniot.com/why-arm-opened-up-its-instruction-set-and-what-it-means-for-iot/]
 ---
 name: training_sq
 background-image: url(images/ps-sq.png)
