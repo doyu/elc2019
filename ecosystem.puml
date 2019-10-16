@@ -551,12 +551,12 @@ rectangle Embedded #99f1ff {
 	devices	<-> privacy
 }
 
-file OS_image #FFF44F {
+file OS_image #FFFbbF {
         file "custom\nmodel" as cmodel
         file "custom\nruntime" as cruntime
+	cmodel #=# cruntime
 }
 
-cmodel <.> cruntime
 osimage -[#blue,bold]down- OS_image : downloading
 device2 .[#blue,bold,dashed]up.> SaaS : info
 device2 <-[#blue,bold]up- OS_image : installing

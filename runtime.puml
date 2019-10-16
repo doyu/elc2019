@@ -5,7 +5,7 @@ cloud Compiler
 folder image2 {
         file model2 <<OPs2>>
         (runtime2) <<OPs2>>
-	model2 . runtime2 : pair
+	model2 #=# runtime2 : pair
 }
 
 rectangle device {
@@ -15,7 +15,7 @@ rectangle device {
 	                (runtime1) <<OPs1>>
                 }
 	}
-	model1 . runtime1 : pair
+	model1 #=# runtime1 : pair
 }
 
 Compiler <-down- (runtime2) : update
