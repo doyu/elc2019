@@ -354,17 +354,17 @@ background-image: url(images/cgraph.png)
 - flow of operators with type info
 - JSON <-> binary representation
 ---
-# Generate smaller runtimes
-- A general purpose runtime is too big. (#<span class="red">FIXME:</span>  size info)
- - all ops built-in
-- A model is optimized per some HWAs.
- - not all HWAs
-- A runtime should have only ops
- - which a model uses.
-  - inspect a model ops
-  - build only those ops in
+Runtime
+# **General purpose** vs **Specialized**
+- General purpose is too big
+ - All OPs built-in
+ - <span class="red">FIXME</span>: size of OCaml Owl inference?
+- Model could be optimized per HWAs' OPs
+- Runtime should have only OPs
+ - which the model uses.
 
-.footnote[<span class="red">FIXME:</span>  insert ops selection fig]
+.right[![](images/runtime.png)]
+
 ???
 https://tik-old.ee.ethz.ch/file//79a7dd6f6370f809e6180c0746232283/mobisys18-liu.pdf
 ---
