@@ -4,8 +4,11 @@ title ML compiler: computation graph conversion
 database model
 database data
 file Owl_cgraph
+note right of Owl_cgraph : 3MB?
 file TF_cgraph
+note right of TF_cgraph : 1,372KB
 file TFLite_cgraph
+note right of TFLite_cgraph : 429KB\n111KB?
 file ONNX_cgraph
 folder MirageOS {
         folder custom_runtime {

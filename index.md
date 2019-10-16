@@ -35,7 +35,7 @@ class: middle
 - Let's start with "Demo".
 ---
 class: center, middle
-### ML on microcontroller
+### ML on microcontroller with Unikernel
 ![](images/screenshot.png)
 ---
 background-image: url(images/demo.png)
@@ -478,7 +478,6 @@ class: middle
 ---
 background-image: url(images/convert-uc.png)
 
-.footnote[FIXME: size of cgraphs]
 ???
 - TFLM runtime is called via OCaml FFI.
  - FFI=Foreign Function Interface
