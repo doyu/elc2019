@@ -18,8 +18,8 @@ rectangle device {
 	model1 . runtime1 : pair
 }
 
-Compiler <-down- (runtime2) : install
-Compiler -down-> (runtime1) : update
+Compiler <-down- (runtime2) : update
+Compiler -down-> (runtime1) : replace
 HWA .> Compiler : info
 
 @enduml

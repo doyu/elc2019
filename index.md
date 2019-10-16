@@ -349,7 +349,7 @@ background-image: url(images/nnvm_compiler_stack.png)
 ---
 background-image: url(images/cgraph.png)
 ## Computational graph (cgraph)
-.footnote[serialization: protobuf, flatbuf]
+.footnote[serialization: [protobuf](https://developers.google.com/protocol-buffers), [flatbuf](https://google.github.io/flatbuffers/)]
 ???
 - flow of operators with type info
 - JSON <-> binary representation
@@ -363,6 +363,7 @@ background-image: url(images/cgraph.png)
 
 .right[![](images/runtime.png)]
 
+.footnote[Ref: [OpenISA, RISC-V && Arm](https://staceyoniot.com/why-arm-opened-up-its-instruction-set-and-what-it-means-for-iot/)]
 ???
 https://tik-old.ee.ethz.ch/file//79a7dd6f6370f809e6180c0746232283/mobisys18-liu.pdf
 ---
@@ -448,7 +449,7 @@ background-image: url(images/training-uc_001.png)
 - it's a federated learning.
 ---
 background-image: url(images/training-uc_002.png)
-.footnote[[ref: sequence diagram](#training_sq)]
+.footnote[Ref: [sequence diagram](#training_sq)]
 ???
 - local raw data isn't leaked beyond premises.
 ---
