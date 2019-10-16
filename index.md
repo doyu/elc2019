@@ -354,14 +354,12 @@ background-image: url(images/cgraph.png)
 - flow of operators with type info
 - JSON <-> binary representation
 ---
-Runtime
-# **General purpose** vs **Specialized**
+# **General** vs **Special** purpose runtime
 - General purpose is too big
  - All OPs built-in
  - <span class="red">FIXME</span>: size of OCaml Owl inference?
 - Model could be optimized per HWAs' OPs
-- Runtime should have only OPs
- - which the model uses.
+- Runtime should implement only OPs, which model uses.
 
 .right[![](images/runtime.png)]
 
