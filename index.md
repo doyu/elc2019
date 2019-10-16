@@ -35,8 +35,11 @@ class: middle
 - Let's start with "Demo".
 ---
 class: center, middle
-### ML on microcontroller with Unikernel
+### ML on microcontroller
 ![](images/screenshot.png)
+???
+I will show demo.
+It's easier to see to get a feeling of ML on MCU.
 ---
 background-image: url(images/demo.png)
 ???
@@ -64,9 +67,9 @@ class: center, middle
 
 .footnote[https://youtu.be/6tJVtMrYGzA]
 ???
-# Left upper: device console
-# Left bottom: my laptop, sending a bitmap
-# Right side: device screen
+- Left upper: device console
+- Left bottom: my laptop, sending a bitmap
+- Right side: device screen
 ---
 class: middle
 # Outline
