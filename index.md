@@ -358,8 +358,8 @@ background-image: url(images/cgraph.png)
 - General purpose is too big
  - All OPs built-in
  - <span class="red">FIXME</span>: size of OCaml Owl inference?
-- Model could be optimized per HWAs' OPs
-- Runtime should implement only OPs, which model uses.
+- Model could be optimized **per** HWAs' OPs
+- Runtime should implement **only** OPs, which model uses.
 
 .right[![](images/runtime.png)]
 

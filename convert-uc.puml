@@ -1,8 +1,10 @@
 @startuml
 title ML compiler: computation graph conversion
 
-database model
-database data
+rectangle resource {
+        database model
+        database data
+}
 file Owl_cgraph
 note bottom of Owl_cgraph : 456KB
 file TF_cgraph
@@ -20,15 +22,13 @@ folder MirageOS {
 Owl_cgraph -down-> TF_cgraph : conversion
 Owl_cgraph .[dotted]> ONNX_cgraph
 ONNX_cgraph .[dotted]> TF_cgraph
-model .[dotted]> (TensorFlow)
-data .[dotted]> (TensorFlow) : training
+resource .[dotted]> (TensorFlow) : training
 (TensorFlow) .[dotted]> TF_cgraph
 TF_cgraph -down-> TFLite_cgraph : optimization
 TFLite_cgraph -down-> (TFL micro\nruntime) : built-in
 (TFL micro\nruntime) -> MirageOS : built-in
 
-model -down-> (OCaml\nOwl)
-data -down-> (OCaml\nOwl) : training
+resource -down-> (OCaml\nOwl) : training
 (OCaml\nOwl) -> Owl_cgraph : generated
 (OCaml\nOwl) <- Owl_cgraph
 (OCaml\nOwl) -> TF_cgraph : conversion
