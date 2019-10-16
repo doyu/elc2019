@@ -4,7 +4,7 @@ title ML compiler: computation graph conversion
 database model
 database data
 file Owl_cgraph
-note right of Owl_cgraph : 3MB?
+note right of Owl_cgraph : 456KB
 file TF_cgraph
 note right of TF_cgraph : 1,372KB
 file TFLite_cgraph
