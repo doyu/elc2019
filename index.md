@@ -369,7 +369,7 @@ background-image: url(images/cgraph.png)
 
 .right[![](images/runtime.png)]
 
-.footnote[ref: [OpenISA](#openisa)]
+.footnote[ref: [Trend of OpenISA](#openisa)]
 ???
 https://tik-old.ee.ethz.ch/file//79a7dd6f6370f809e6180c0746232283/mobisys18-liu.pdf
 ---
@@ -516,13 +516,12 @@ class: middle
 4. ~~PoC~~
 5. **Conclusion**
 ---
-[Done] Demonstrated End-to-End **TinyML as-a-Service**
-### Next
-1. Add **frontend**(as-a-Service)?
-2. Supprt **other** MCUs && **complicated** models?
-3. Add **orchestration** with CoAP?
-4. (Distributed) training **on HWAs**???
-5. <span class="red">ML compiler for **multi-node HWAs?**</span>
+**Done:** Demonstrated End-to-End **TinyML as-a-Service**
+#### Next:
+2. Add **orchestration** with CoAP?
+3. Supprt **other** MCUs and/or **complicated** models?
+4. (Distributed) training **on HWAs**?
+5. <span class="red">ML compiler for **multi-node HWAs**</span>
 .right[![](images/chainmodels.png)]
 ## Any suggestions?
 ---
