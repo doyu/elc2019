@@ -11,33 +11,16 @@ Bring ML onto microcontollers seamlessly
 #### TinyML as-a-Service
 .footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 17th/OCT/2019]
 
+TinyML == ML on constrint IoT device
+
 - How I tried to bring:
  - ML training & inference
  - in IoT environment.
 - Some of them succeeded.
 - Some didn't.
 ---
-class: middle
-# Outline
-0. **Demo**
-1. Problems
-2. Proposal
-3. Three Enablers
-4. PoC
-5. Conclusion
-???
-- At first, I'll show demo.
-- Then, define problems
- - when you try to bring ML in IoT.
-- Then, I will introduce our proposal
- - against the problem which we defined.
-- Then, 3 enblers construct our proposal.
-- Then, proof of concept.
-- At Conclusion, we'll discuss further possibilities
-- Let's start with "Demo".
----
 class: center, middle
-# **No ML in IoT ?**
+# **Why no ML in IoT ?**
 ![](images/screenshot.png)
 ???
 - I'll show ML inference running on MCU.
@@ -94,7 +77,16 @@ class: middle
 4. PoC
 5. Conclusion
 ???
-Next,
+- We've done with demo.
+- I'll define problems.
+ - when you try to bring ML in IoT.
+- Then, I will introduce our proposal
+ - against the problem which we defined.
+- Then, 3 enblers construct our proposal.
+- Then, proof of concept.
+- At Conclusion, we'll discuss further possibilities
+- Let's start with "Demo".
+# Next,
 I will take a look at this problem from 3 aspects.
 + Edge Computing
 + Web vs Embedded
@@ -305,7 +297,7 @@ class: middle
 # Summary: Unikernel
 .top[![](images/summary-unikernel.png)]
 ## Can be a thin **wrapper** over various RTOSes?
-.footnote[ref: [highlevel language](#ocaml)]
+.footnote[ref: 2 types, [highlevel language](#ocaml)]
 ---
 # Outline
 0. ~~Demo~~
