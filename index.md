@@ -116,7 +116,7 @@ Let's introduce Edge computing:
 background-image: url(images/ecosystem_006.png)
 
 
-.footnote[ref: [energy costly Tx](#costlytx)]
+.footnote[ref: [energy costly transmission](#costlytx)]
 ???
 There's some boudary, "On-premises"
 - where devices reside,
@@ -346,7 +346,6 @@ background-image: url(images/cgraph.png)
 # **General** vs **Special** purpose runtime
 - General purpose is too big
  - All OPs built-in
- - <span class="red">FIXME</span>: size of OCaml Owl inference?
 - Model could be optimized **per** HWAs' OPs
 - Runtime should implement **only** OPs, which model uses.
 

@@ -9,18 +9,19 @@ folder image2 {
 }
 
 rectangle device {
-        folder HWA {
+        folder HWA1 {
 		folder image1 {
 	                file model1 <<OPs1>>
 	                (runtime1) <<OPs1>>
                 }
 	}
 	model1 #=# runtime1 : pair
+	(runtime1) #-[dotted]# HWA1
 }
 
 Compiler <-down- (runtime2) : update
 Compiler -down-> (runtime1) : replace
-HWA .> Compiler : info
+HWA1 .> Compiler : info
 
 newpage
 scale 0.9
