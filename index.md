@@ -504,10 +504,8 @@ class: middle
 2. Add **orchestration** with CoAP?
 3. Supprt **other** MCUs and/or **complicated** models?
 4. (Distributed) training **on HWAs**?
-5. <span class="red">ML compiler for **multi-node, multi-HWA**</span>
- - Distributed inference
-.right[![](images/chainmodels.png)]
-## Any suggestions?
+5. <span class="red">Distributed inference</span>
+.right[![](images/runtime_001.png)]
 ---
 background-image: url(images/elc.png)
 ---
