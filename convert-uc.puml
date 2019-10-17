@@ -5,34 +5,34 @@ rectangle resource {
         database model
         database data
 }
-file Owl_cgraph
-note bottom of Owl_cgraph : 456KB
-file TF_cgraph
-note right of TF_cgraph : 1,372KB
-file TFLite_cgraph
-note right of TFLite_cgraph : 429KB\n111KB?
-file ONNX_cgraph
-note right of ONNX_cgraph : ???KB
+file Owl.cgraph #aaaaaa
+note bottom of Owl.cgraph : 456KB
+file TF.cgraph #aaaaaa
+note right of TF.cgraph : 1,372KB
+file TFLite.cgraph #aaaaaa
+note right of TFLite.cgraph : 429KB\n111KB?
+file ONNX.cgraph #aaaaaa
+note right of ONNX.cgraph : ???KB
 folder MirageOS {
         folder custom_runtime {
         	file "custom\nmodel"
 	}
 }
 
-Owl_cgraph -down-> TF_cgraph : conversion
-Owl_cgraph .[dotted]> ONNX_cgraph
-ONNX_cgraph .[dotted]> TF_cgraph
+Owl.cgraph -down-> TF.cgraph : conversion
+Owl.cgraph .[dotted]> ONNX.cgraph
+ONNX.cgraph .[dotted]> TF.cgraph
 resource .[dotted]> (TensorFlow) : training
-(TensorFlow) .[dotted]> TF_cgraph
-TF_cgraph -down-> TFLite_cgraph : optimization
-TFLite_cgraph -down-> (TFL micro\nruntime) : built-in
+(TensorFlow) .[dotted]> TF.cgraph
+TF.cgraph -down-> TFLite.cgraph : optimization
+TFLite.cgraph -down-> (TFL micro\nruntime) : built-in
 (TFL micro\nruntime) -> MirageOS : built-in
 
 resource -down-> (OCaml\nOwl) : training
-(OCaml\nOwl) -> Owl_cgraph : generated
-(OCaml\nOwl) <- Owl_cgraph
-(OCaml\nOwl) -> TF_cgraph : conversion
-(TFLite) <- TF_cgraph
-(TFLite) -> TFLite_cgraph : conversion
+(OCaml\nOwl) -> Owl.cgraph : generated
+(OCaml\nOwl) <- Owl.cgraph
+(OCaml\nOwl) -> TF.cgraph : conversion
+(TFLite) <- TF.cgraph
+(TFLite) -> TFLite.cgraph : conversion
 
 @enduml
