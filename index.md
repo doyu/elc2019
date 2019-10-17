@@ -11,13 +11,16 @@ Bring ML onto microcontollers seamlessly
 #### TinyML as-a-Service
 .footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 17th/OCT/2019]
 
-TinyML == ML on constrint IoT device
-
 - How I tried to bring:
  - ML training & inference
  - in IoT environment.
 - Some of them succeeded.
 - Some didn't.
+---
+background-image: url(images/area.png)
+# This talk
+???
+TinyML == ML inference on constrint IoT device
 ---
 class: center, middle
 # **Why no ML in IoT ?**
@@ -26,7 +29,7 @@ class: center, middle
 - RPI != IoT
 - IoT device just sends raw sensor data to Edge.
 - No ML running on microcontroller.
-- Let's see ML inference running on MCU.
+- Let's see actual ML inference running on MCU.
 - You'll get some feeling of what it's about.
 ---
 background-image: url(images/demo.png)
@@ -67,6 +70,9 @@ class: center, middle
  - my laptop, sending a bitmap
 - Right side
  - device screen
+
+To run this demo, a lot of effort was needed.
+For further detail, in PoC.
 ---
 class: middle
 # Outline
@@ -86,15 +92,14 @@ class: middle
 - Then, I will introduce our proposal
  - against the problem which we defined.
 - Then, 3 enblers construct our proposal.
-- Then, proof of concept.
+- Then, proof of concept, inc Training && Compiling
 - At Conclusion, we'll discuss further possibilities
-- Let's start with "Demo".
 # Next,
 I will take a look at this problem from 3 aspects.
 + Edge Computing
 + Web vs Embedded
 + ML environment
-Let's start with Edge computing.
+Let's start with Edge computing problems.
 ---
 background-image: url(images/ecosystem.png)
 ???
@@ -300,7 +305,7 @@ class: middle
 # Summary: Unikernel
 .top[![](images/summary-unikernel.png)]
 ## Can be a thin **wrapper** over various IoT RTOS mess?
-.footnote[2 types: [highlevel language](#ocaml)]
+.footnote[2 types: [highlevel languages](#ocaml)]
 ---
 # Outline
 0. ~~Demo~~
@@ -501,14 +506,16 @@ class: middle
 4. ~~PoC~~
 5. **Conclusion**
 ---
+# FIXME: fulfil, audience remembers the last slide ;)
+
 **Done:** Demonstrated End-to-End **TinyML as-a-Service**
 #### Next:
-2. Add **orchestration** with CoAP?
+2. Add **Orchestration** with CoAP?
 3. Supprt **other** MCUs and/or **complicated** models?
-4. (Distributed) training **on HWAs**?
-5. <span class="red">Distributed inference</span>
+4. (Distributed) training on **heterogeneous** HWAs?
+5. <span class="red">Distributed inference on **heterogeneous** HWAs?</span>
 .right[![](images/runtime_001.png)]
-.footnote[[Ref](#openisa)]
+.footnote[[ref](#openisa)]
 ---
 background-image: url(images/elc.png)
 ---
