@@ -23,7 +23,9 @@ class: center, middle
 # **Why no ML in IoT ?**
 ![](images/screenshot.png)
 ???
-- I'll explain the reason later.
+- RPI != IoT
+- IoT device just sends raw sensor data to Edge.
+- No ML running on microcontroller.
 - Let's see ML inference running on MCU.
 - You'll get some feeling of what it's about.
 ---
@@ -117,7 +119,7 @@ Let's introduce Edge computing:
 background-image: url(images/ecosystem_006.png)
 
 
-.footnote[ref: [energy costly transmission](#costlytx)]
+.footnote[[energy costly transmission](#costlytx)]
 ???
 There's some boudary, "On-premises"
 - where devices reside,
@@ -297,8 +299,8 @@ hypercall implementation could adapt different backend easily
 class: middle
 # Summary: Unikernel
 .top[![](images/summary-unikernel.png)]
-## Can be a thin **wrapper** over various RTOSes?
-.footnote[ref: 2 types, [highlevel language](#ocaml)]
+## Can be a thin **wrapper** over various IoT RTOS mess?
+.footnote[2 types: [highlevel language](#ocaml)]
 ---
 # Outline
 0. ~~Demo~~
@@ -352,7 +354,7 @@ background-image: url(images/cgraph.png)
 
 .right[![](images/runtime.png)]
 
-.footnote[ref: [Trend of OpenISA](#openisa)]
+.footnote[[Trend of OpenISA](#openisa)]
 ???
 https://tik-old.ee.ethz.ch/file//79a7dd6f6370f809e6180c0746232283/mobisys18-liu.pdf
 ---
@@ -438,7 +440,7 @@ background-image: url(images/training-uc_001.png)
 - it's a federated learning.
 ---
 background-image: url(images/training-uc_002.png)
-.footnote[ref: [sequence diagram](#training_sq)]
+.footnote[[sequence diagram](#training_sq)]
 ???
 - local raw data isn't leaked beyond premises.
 ---
@@ -506,6 +508,7 @@ class: middle
 4. (Distributed) training **on HWAs**?
 5. <span class="red">Distributed inference</span>
 .right[![](images/runtime_001.png)]
+.footnote[[Ref](#openisa)]
 ---
 background-image: url(images/elc.png)
 ---
