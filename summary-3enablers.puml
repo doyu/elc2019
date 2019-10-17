@@ -9,8 +9,8 @@
 ***_ Small runtime
 ***_ HWA optimization
 ** CoAP
+***_ Expose resources
 ***_ FOTA update
-***_ Monitoring
 ***_ Orchestration
 
 @endmindmap
