@@ -26,34 +26,42 @@ class: middle
 4. PoC
 5. Conclusion
 ???
-- At first, I will define IoT problems ML faces.
-- Sencodary, I will introduce our proposal
- - against the problem we defined.
+- At first, I'll show demo.
+- Then, define problems
+ - when you try to bring ML in IoT.
+- Then, I will introduce our proposal
+ - against the problem which we defined.
 - Then, 3 enblers construct our proposal.
-- I'll explain our proof of concept.
-- At least, I'll discuss further possibilities
+- Then, proof of concept.
+- At Conclusion, we'll discuss further possibilities
 - Let's start with "Demo".
 ---
 class: center, middle
-### ML on microcontroller
+# **No ML in IoT ?**
 ![](images/screenshot.png)
 ???
-I will show demo.
-It's easier to see to get a feeling of ML on MCU.
+- I'll show ML inference running on MCU.
+- You'll get some feeling of what it's about.
 ---
 background-image: url(images/demo.png)
 ???
-# MNIST
-- ML hello world
-- handwriting digit recognition
+This is my setup.
 
+Left top side:
+# MNIST
+- handwriting digit recognition
+- ML hello world
+
+Left middle && bottom:
 # ESP32
 - microcontroller
 - backside LCD
 - 520KB RAM
 - 4MB FLASH ROM
-- Linux cannot fit in but Unikernl can.
+- Linux cannot fit in
+ - but Unikernl can.
 
+Right side:
 # DEMO
 - Connected via WiFi
 - send a bitmap
@@ -67,9 +75,12 @@ class: center, middle
 
 .footnote[https://youtu.be/6tJVtMrYGzA]
 ???
-- Left upper: device console
-- Left bottom: my laptop, sending a bitmap
-- Right side: device screen
+- Left upper
+ - device console
+- Left bottom
+ - my laptop, sending a bitmap
+- Right side
+ - device screen
 ---
 class: middle
 # Outline
@@ -83,10 +94,12 @@ class: middle
 4. PoC
 5. Conclusion
 ???
-I will take a look a this problem from 3 aspects.
+Next,
+I will take a look at this problem from 3 aspects.
 + Edge Computing
 + Web vs Embedded
 + ML environment
+Let's start with Edge computing.
 ---
 background-image: url(images/ecosystem.png)
 ???
@@ -107,17 +120,17 @@ Let's introduce Edge computing:
 - Cloud is expanding towards more Edge.
 - This solved some latency issues.
 - But not yet perfect.
+---
+background-image: url(images/ecosystem_006.png)
+
+
+.footnote[ref: [energy costly Tx](#costlytx)]
 ???
-background-image: url(images/ecosystem_003.png)
-???
-There's some boudary.
-- On-premises
- - where devices reside,
- - where data is generated.
-???
-background-image: url(images/ecosystem_004.png)
-squashed into the following
-???
+There's some boudary, "On-premises"
+- where devices reside,
+- where data is generated.
+
+# 5 Edge problems
 - Privacy
  - customer doesn't want raw data leaving beyond their premises.
 - Bandwidth
@@ -126,28 +139,18 @@ squashed into the following
  - autonomous driving is a good example.
 - Reliability
  - cars & ships can go beyond cellur coverage.
-???
-background-image: url(images/ecosystem_005.png)
-squashed into the following
-???
-- Without power cable,
- - it's easy to mange battery powered devices.
-- trasmitting data consumes more energy than computation, in place.
-- processing data in place is better.
----
-background-image: url(images/ecosystem_006.png)
 
+# Battery powered devices
+- trasmitting data consumes more energy
+ - than computation in place.
+- processing data in place is cheaper.
 
-.footnote[ref: [energy costly Tx](#costlytx)]
-???
-To summarize
-- 5 Edge problems
 ---
 background-image: url(images/ecosystem_007.png)
 ???
-- Devices should compute in place.
- - Good for battery powered IoT devices.
-- Neighbours should help each otehr.
+- More battery powered devices.
+- Device would compute in place.
+- Device would help each otehr by offloading tasks.
 ---
 class: middle
 # Outline
@@ -168,27 +171,27 @@ background-image: url(images/ecosystem_008.png)
 
 ???
 # There are 3 areas:
-- Cloud
-- Edge
-- Embedded
+- Cloud computing
+- Edge computing
+- Embedded / IoT
 
-# Edge belongs to Cloud
 ---
 background-image: url(images/ecosystem_011.png)
 ???
-# In Cloud and Edge belong to web development.
+# In Cloud
 - Linux runs
 - Container
 - microservies are dynamically deployed
-- including Edge servers
 - x86_64 / ARM64
 - GB RAM / TB storage
 
+From computer architecture perspective, same as Edge computing
+
 # In Embedded
-- there are variety of MCUs
-- there are variety of RTOSes.
-- 500kB SRAM / 2MB FLASH
-- Linux cannot run on 1MB RAM.
+- variety of MCUs
+- variety of RTOSes.
+- 500KB SRAM / 2MB FLASH
+- Linux cannot run on 500KB RAM.
 
 ## Embedded is totally different from Web.
 ## There are many dirversities in Embedded.
@@ -298,23 +301,11 @@ specialization
 hypercall implementation could adapt different backend easily
 - feedback: simpler?
 ---
-background-image: url(images/unikernel-mindmap.png)
-#Type of Unikernel
-???
-- Safer not to use C
-- language specific could be smaller
- - based of its packaging system
----
-# OCaml
-.bottom[![](images/ocaml.png)]
-???
-Just feeling of abstructed API
-- TCP listener
----
 class: middle
 # Summary: Unikernel
 .top[![](images/summary-unikernel.png)]
 ## Can be a thin **wrapper** over various RTOSes?
+.footnote[ref: [highlevel language](#ocaml)]
 ---
 # Outline
 0. ~~Demo~~
@@ -505,7 +496,7 @@ background-image: url(images/demo-uc.png)
 background-image: url(images/demo-sq.png)
 ---
 background-image: url(images/size-comp.png)
-# Result
+# Binary Size
 ---
 class: middle
 # Outline
@@ -521,7 +512,8 @@ class: middle
 2. Add **orchestration** with CoAP?
 3. Supprt **other** MCUs and/or **complicated** models?
 4. (Distributed) training **on HWAs**?
-5. <span class="red">ML compiler for **multi-node HWAs**</span>
+5. <span class="red">ML compiler for **multi-node, multi-HWA**</span>
+ - Distributed inference
 .right[![](images/chainmodels.png)]
 ## Any suggestions?
 ---
@@ -550,5 +542,19 @@ class: center, middle
 </video>
 # [Fashion MNIST from Zalando](https://play.ericsson.net/media/t/0_tdu20gt3)
 .footnote[https://youtu.be/nl9rATQGB8Y]
+---
+name: ocaml
+background-image: url(images/unikernel-mindmap.png)
+#Type of Unikernel
+???
+- Safer not to use C
+- language specific could be smaller
+ - based of its packaging system
+---
+# MirageOS in OCaml
+.bottom[![](images/ocaml.png)]
+???
+Just feeling of abstructed API
+- TCP listener
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
