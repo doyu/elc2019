@@ -23,7 +23,8 @@ class: center, middle
 # **Why no ML in IoT ?**
 ![](images/screenshot.png)
 ???
-- I'll show ML inference running on MCU.
+- I'll explain the reason later.
+- Let's see ML inference running on MCU.
 - You'll get some feeling of what it's about.
 ---
 background-image: url(images/demo.png)
@@ -516,22 +517,6 @@ name: costlytx
 
 .footnote[http://slides.cabo.space]
 ---
-name: openisa
-background-image: url(https://i1.wp.com/staceyoniot.com/wp-content/uploads/2019/10/Screen-Shot-2019-10-08-at-7.28.24-AM.png)
-## Custom ISA, RISC-V && Arm
-
-.footnote[https://staceyoniot.com/why-arm-opened-up-its-instruction-set-and-what-it-means-for-iot/]
----
-name: training_sq
-background-image: url(images/ps-sq.png)
----
-class: center, middle
-<video width="560" height="420" controls>
-    <source src="fmnist.mp4" type="video/mp4">
-</video>
-# [Fashion MNIST from Zalando](https://play.ericsson.net/media/t/0_tdu20gt3)
-.footnote[https://youtu.be/nl9rATQGB8Y]
----
 name: ocaml
 background-image: url(images/unikernel-mindmap.png)
 #Type of Unikernel
@@ -545,5 +530,24 @@ background-image: url(images/unikernel-mindmap.png)
 ???
 Just feeling of abstructed API
 - TCP listener
+---
+name: openisa
+background-image: url(https://i1.wp.com/staceyoniot.com/wp-content/uploads/2019/10/Screen-Shot-2019-10-08-at-7.28.24-AM.png)
+## Custom ISA, RISC-V && Arm
+
+.footnote[https://staceyoniot.com/why-arm-opened-up-its-instruction-set-and-what-it-means-for-iot/]
+---
+name: training_sq
+background-image: url(images/ps-sq.png)
+???
+
+---
+class: center, middle
+<video width="560" height="420" controls>
+    <source src="fmnist.mp4" type="video/mp4">
+</video>
+# [Fashion MNIST from Zalando](https://play.ericsson.net/media/t/0_tdu20gt3)
+
+.footnote[https://youtu.be/nl9rATQGB8Y]
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
