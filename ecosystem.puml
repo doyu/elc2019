@@ -571,4 +571,51 @@ device1 <-down- devices : offloading
 device2 <- devices : offloading
 device2 <-> device2 : ML in place
 
+newpage
+cloud "Web/linux\n" #eeeeee {
+        cloud cloud {
+                cloud AWS
+                cloud Azure
+                cloud GCP
+        }
+        cloud edge
+	database Zoo {
+	        collections "model"
+		AWS -> model
+	}
+}
+
+
+cloud "\nTinyMLaaS\n" #FFF44F {
+        folder SaaS {
+                (Build\nService) as TBS
+        	file "OS image" as osimage
+		osimage <-TBS
+        }
+}
+
+TBS <-[#blue,bold]up- model : downloading
+rectangle Embedded #99f1ff {
+        (device1)
+        (device2)
+        collections devices
+        database battery
+	battery -> devices
+        file privacy
+	devices	<-> privacy
+}
+
+device2 .[#blue,bold,dashed]up.> SaaS : info
+device2 <-[#blue,bold]up- osimage : installing
+
+AWS <-down- edge
+AWS -> edge
+
+edge <.down.> device1
+edge <.down.> device2
+device1 <-right-> device2
+device1 <-down- devices : offloading
+device2 <- devices : offloading
+device2 <-> device2 : ML in place
+
 @enduml

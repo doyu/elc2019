@@ -1,16 +1,12 @@
 class: center, middle
-# **TinyML** as-a-Service
-Bring ML onto microcontollers seamlessly
-
-.footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 17th/OCT/2019]
-???
 # Distributed Machine Learning
 # on
 # Unikernel for IoT
+ -----
+### **TinyML** as-a-Service
 
-#### TinyML as-a-Service
-.footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com) 17th/OCT/2019]
-
+.footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com)]
+???
 - How I tried to bring:
  - ML training & inference
  - in IoT environment.
@@ -506,8 +502,6 @@ class: middle
 4. ~~PoC~~
 5. **Conclusion**
 ---
-# FIXME: fulfil, audience remembers the last slide ;)
-
 **Done:** Demonstrated End-to-End **TinyML as-a-Service**
 #### Next:
 2. Add **Orchestration** with CoAP?
@@ -517,10 +511,16 @@ class: middle
 .right[![](images/runtime_001.png)]
 .footnote[[ref](#openisa)]
 ---
-background-image: url(images/elc.png)
+class: bottom, right
+background-image: url(images/ecosystem_last.png)
+# **TinyMLaaS**
+## **brings ML**
+## **onto IoT.**
+---
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
 ---
 class: center, middle
-# Appendix
+# **Appendix**
 ---
 name: costlytx
 ![](images/costlytx.png)
@@ -559,5 +559,3 @@ class: center, middle
 # [Fashion MNIST from Zalando](https://play.ericsson.net/media/t/0_tdu20gt3)
 
 .footnote[https://youtu.be/nl9rATQGB8Y]
----
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
