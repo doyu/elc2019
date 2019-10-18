@@ -1,4 +1,5 @@
 all: png
+	convert -resize %70 ecosystem_016.png images/ecosystem_last.png
 	mv -v *.png images/
 
 utxt: $(patsubst %.puml,%.utxt,$(shell ls *.puml))
