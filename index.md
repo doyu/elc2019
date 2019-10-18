@@ -13,7 +13,10 @@ class: center, middle
 - Some of them succeeded.
 - Some didn't.
 ---
-background-image: url(images/area.png)
+background-image: url(images/venn1.png)
+# TinyML
+---
+background-image: url(images/venn2.png)
 # This talk
 ???
 TinyML == ML inference on constrint IoT device
