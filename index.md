@@ -3,9 +3,10 @@ class: center, middle
 # on
 # Unikernel for IoT
  -----
-### **TinyML** as-a-Service
-.right.bottom[Hiroshi Doyu]
-.right.bottom[<hiroshi.doyu@ericsson.com>]
+### _TinyML as-a-Service_
+ -----
+Hiroshi Doyu
+[&lt;hiroshi.doyu@ericsson.com&gt;](hiroshi.doyu@ericsson.com)
 ???
 - How I tried to bring:
  - ML training & inference
@@ -244,9 +245,9 @@ background-image: url(images/ecosystem_014.png)
 ---
 # Squeeze ML
 model & runtime
-- per RAM / ROM / MCU / HWA
 - per RTOS
-- per connectivity
+- per HWA
+--
 .right[![](images/pizzaonline.png)]
 ???
 - Like online piza order
@@ -268,14 +269,24 @@ class: middle
 1. ~~Problems~~
 2. ~~Proposal~~
 3. **Three Enablers**
+4. PoC
+5. Conclusion
+---
+background-image: url(images/summary-3enablers.png)
+# Three enblers
+---
+# Outline
+0. ~~Demo~~
+1. ~~Problems~~
+2. ~~Proposal~~
+3. **Three Enablers**
  - **Unikernel**
  - ML compiler
  - CoAP
 4. PoC
 5. Conclusion
+
 .right[![](images/summary-3enablers.png)]
-???
-3 enblers for TinyML as-a-Service
 ---
 background-image: url(images/dockerunikernel.jpg)
 #Unikernel
@@ -334,7 +345,7 @@ back propagation
 - training & inference are done on the same framework.
 ---
 background-image: url(images/nnvm_compiler_stack.png)
-# Unified IR
+# Compiling
 .footnote[https://tvm.ai]
 ???
 - each has its own computational graph.
@@ -350,9 +361,12 @@ background-image: url(images/cgraph.png)
 ---
 # **General** vs **Special** purpose runtime
 - General purpose is too big
- - All OPs built-in
-- Model could be optimized **per** HWAs' OPs
-- Runtime should implement **only** OPs, which model uses.
+ - **all** OPs built-in
+- Model could be optimized,
+ - **per** HWAs' OPs,
+ - smaller than CPU's OPs(?)
+- Runtime should implement **only** OPs,
+ - which model uses.
 
 .right[![](images/runtime.png)]
 
@@ -504,20 +518,25 @@ class: middle
 4. ~~PoC~~
 5. **Conclusion**
 ---
-**Done:** Demonstrated End-to-End **TinyML as-a-Service**
-#### Next:
-2. Add **Orchestration** with CoAP?
-3. Supprt **other** MCUs and/or **complicated** models?
-4. (Distributed) training on **heterogeneous** HWAs?
-5. <span class="red">Distributed inference on **heterogeneous** HWAs?</span>
-.right[![](images/runtime_001.png)]
-.footnote[[ref](#openisa)]
+# Done
+Demonstrated End-to-End **TinyML as-a-Service**
+
+.right[![](images/demo-sq0.png)]
 ---
-class: bottom, right
+# Next
+1. Add **Orchestration** with CoAP?
+2. Supprt **other** MCUs and/or **complicated** models?
+3. **Heterogeneous** (distributed) training?
+4. Distributed inference on **heterogeneous** HWAs?
+.right[![](images/runtime_001.png)]
+.footnote[[OpenISA](#openisa)]
+---
+class: bottom,left
 background-image: url(images/ecosystem_last.png)
-# **TinyMLaaS**
-## **brings ML**
-## **onto IoT.**
+
+# _**TinyML as-a-Service**_
+# _**could bring ML**_
+# _**onto IoT.**_
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
 ---
