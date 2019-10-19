@@ -4,8 +4,8 @@ class: center, middle
 # Unikernel for IoT
  -----
 ### **TinyML** as-a-Service
-
-.footnote[**Hiroshi Doyu [&lt;hiroshi.doyu@ericsson.com&gt;](hiroshi.doyu@ericsson.com)**]
+.right.bottom[Hiroshi Doyu]
+.right.bottom[<hiroshi.doyu@ericsson.com>]
 ???
 - How I tried to bring:
  - ML training & inference
@@ -14,7 +14,7 @@ class: center, middle
 - Some didn't.
 ---
 background-image: url(images/venn1.png)
-# TinyML
+# TinyML?
 ---
 background-image: url(images/venn2.png)
 # Our focus
@@ -22,7 +22,7 @@ background-image: url(images/venn2.png)
 TinyML == ML inference on constrint IoT device
 ---
 class: center, middle
-# **Demo**
+# Demo
 ![](images/screenshot.png)
 ???
 - RPI != IoT
