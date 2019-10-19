@@ -519,7 +519,7 @@ class: middle
 5. **Conclusion**
 ---
 # Done
-Demonstrated End-to-End **TinyML as-a-Service**
+Demonstrated End-to-End **TinyML** (as-a-Service?)
 
 .right[![](images/demo-sq0.png)]
 ---
