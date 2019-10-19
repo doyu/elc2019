@@ -17,7 +17,7 @@ background-image: url(images/venn1.png)
 # TinyML
 ---
 background-image: url(images/venn2.png)
-# This talk
+# Our focus
 ???
 TinyML == ML inference on constrint IoT device
 ---
