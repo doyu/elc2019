@@ -5,7 +5,7 @@ class: center, middle
  -----
 ### **TinyML** as-a-Service
 
-.footnote[[Hiroshi Doyu](hiroshi.doyu@ericsson.com)]
+.footnote[**Hiroshi Doyu [&lt;hiroshi.doyu@ericsson.com&gt;](hiroshi.doyu@ericsson.com)**]
 ???
 - How I tried to bring:
  - ML training & inference
@@ -22,7 +22,7 @@ background-image: url(images/venn2.png)
 TinyML == ML inference on constrint IoT device
 ---
 class: center, middle
-# **Why no ML in IoT ?**
+# **Demo**
 ![](images/screenshot.png)
 ???
 - RPI != IoT
@@ -59,9 +59,7 @@ class: center, middle
 <video width="560" height="420" controls>
     <source src="mnist.mp4" type="video/mp4">
 </video>
-# [MNIST inference on ESP32](https://play.ericsson.net/media/t/1_m56q17x5)
-
-.footnote[https://youtu.be/6tJVtMrYGzA]
+# [MNIST inference on ESP32](https://youtu.be/6tJVtMrYGzA)
 ???
 - Left upper
  - device console
@@ -303,7 +301,7 @@ hypercall implementation could adapt different backend easily
 class: middle
 # Summary: Unikernel
 .top[![](images/summary-unikernel.png)]
-## Can be a thin **wrapper** over various IoT RTOS mess?
+## Can be a thin **wrapper** of different RTOSes?
 .footnote[2 types: [highlevel languages](#ocaml)]
 ---
 # Outline
@@ -398,7 +396,6 @@ class: middle
 3. ~~Three Enablers~~
 4. **PoC**
 5. Conclusion
-.right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/mnist.png)
 ## **MNIST**: Handwriting digits recognition
@@ -412,6 +409,8 @@ background-image: url(images/esp32-wrover.png)
 - Xtensa, 32bit
 - 512kB SRAM
 - 4MB FLASH
+---
+background-image: url(images/demo-sq0.png)
 ---
 background-image: url(images/demo-ac.png)
 ???
@@ -559,6 +558,4 @@ class: center, middle
 <video width="560" height="420" controls>
     <source src="fmnist.mp4" type="video/mp4">
 </video>
-# [Fashion MNIST from Zalando](https://play.ericsson.net/media/t/0_tdu20gt3)
-
-.footnote[https://youtu.be/nl9rATQGB8Y]
+# [Fashion MNIST from Zalando](https://youtu.be/nl9rATQGB8Y)
