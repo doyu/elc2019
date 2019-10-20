@@ -17,14 +17,15 @@ Hiroshi Doyu
 background-image: url(images/venn1.png)
 # TinyML?
 ---
+exclude: true
 background-image: url(images/venn2.png)
 # Our focus
 ???
 TinyML == ML inference on constrint IoT device
 ---
-class: center, middle
+background-image: url(images/screenshot.png)
 # Demo
-![](images/screenshot.png)
+.footnote[[MNIST](#mnist)]
 ???
 - RPI != IoT
 - IoT device just sends raw sensor data to Edge.
@@ -33,6 +34,7 @@ class: center, middle
 - You'll get some feeling of what it's about.
 ---
 background-image: url(images/demo.png)
+## **ML on MCU**
 ???
 This is my setup.
 
@@ -60,7 +62,7 @@ class: center, middle
 <video width="560" height="420" controls>
     <source src="mnist.mp4" type="video/mp4">
 </video>
-# [MNIST inference on ESP32](https://youtu.be/6tJVtMrYGzA)
+# [MNIST on ESP32](https://youtu.be/6tJVtMrYGzA)
 ???
 - Left upper
  - device console
@@ -122,7 +124,7 @@ Let's introduce Edge computing:
 background-image: url(images/ecosystem_006.png)
 
 
-.footnote[[energy costly transmission](#costlytx)]
+.footnote[[expensive transmission](#costlytx)]
 ???
 There's some boudary, "On-premises"
 - where devices reside,
@@ -411,6 +413,7 @@ class: middle
 4. **PoC**
 5. Conclusion
 ---
+name: mnist
 background-image: url(images/mnist.png)
 ## **MNIST**: Handwriting digits recognition
 ### 60K images for training, 10K for testing

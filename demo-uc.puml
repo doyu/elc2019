@@ -19,7 +19,7 @@ rectangle ESP32 {
 newpage
 skinparam TitleFontSize 24
 skinparam legendFontSize 20
-title \nPoC DEMO\nML inference on MCU
+'title \nML inference on MCU
 
 actor laptop
 note "TCP/IP" as tcpip
