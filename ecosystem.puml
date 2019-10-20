@@ -523,8 +523,8 @@ device2 <-> device2 : in place
 
 '======================================================
 newpage
-skinparam titleFontSize 24
-title \nProposal: TinyML as-a-Service\n
+'skinparam titleFontSize 24
+'title \nProposal: TinyML as-a-Service\n
 
 cloud "Web/linux\n" #eeeeee {
         cloud cloud {
@@ -560,14 +560,15 @@ rectangle Embedded #99f1ff {
 }
 
 file OS_image #FFFbbF {
-        file "custom\nmodel" as cmodel
-        file "custom\nruntime" as cruntime
+        file "**custom**\nmodel" as cmodel
+        file "**custom**\nruntime" as cruntime
 	cmodel #=# cruntime
 }
 
-osimage -[#blue,bold]down- OS_image : downloading
+osimage .. OS_image
+
 device2 .[#blue,bold,dashed]up.> SaaS : info
-device2 <-[#blue,bold]up- OS_image : installing
+device2 <-[#blue,bold]up- osimage : installing
 
 AWS <-down- edge
 AWS -> edge

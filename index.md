@@ -259,12 +259,14 @@ model & runtime
 ???
 - Like online piza order
 ---
-background-image: url(images/ecosystem_015.png)
+background-image: url(images/ecosystem_016.png)
 ???
 TinyML as-a-Service squeezes:
 - model
 - runtime
 - wrap RTOS image
+---
+background-image: url(images/ecosystem_015.png)
 ---
 background-image: url(images/summary-proposal.png)
 Proposal
