@@ -1,9 +1,7 @@
 class: center, middle
-# Distributed Machine Learning
-# on
-# Unikernel for IoT
+### Distributed ML on Unikernel for IoT
  -----
-### _TinyML as-a-Service_
+# TinyML as-a-Service
  -----
 Hiroshi Doyu
 [&lt;hiroshi.doyu@ericsson.com&gt;](hiroshi.doyu@ericsson.com)
