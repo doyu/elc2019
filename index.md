@@ -321,7 +321,7 @@ hypercall implementation could adapt different backend easily
 # Summary: Unikernel
 .right[![](images/summary-unikernel.png)]
 ## Can be a thin **wrapper** of different RTOSes?
-.footnote[2 types: [highlevel programming languages](#ocaml)]
+.footnote[2 types: [high level programming languages](#ocaml)]
 ---
 # Outline
 0. ~~Demo~~
@@ -352,6 +352,13 @@ back propagation
 - they were incompatible
 - training & inference are done on the same framework.
 ---
+background-image: url(images/cgraph.png)
+## Computational graph (cgraph)
+.footnote[serialization: [protobuf](https://developers.google.com/protocol-buffers), [flatbuf](https://google.github.io/flatbuffers/)]
+???
+- flow of operators with type info
+- JSON <-> binary representation
+---
 background-image: url(images/nnvm_compiler_stack.png)
 # Compiling
 .footnote[https://tvm.ai]
@@ -359,13 +366,6 @@ background-image: url(images/nnvm_compiler_stack.png)
 - each has its own computational graph.
 - ONNX is considered as standard exchange format between frameworks.
 - Compiler generates optimized code per backend.
----
-background-image: url(images/cgraph.png)
-## Computational graph (cgraph)
-.footnote[serialization: [protobuf](https://developers.google.com/protocol-buffers), [flatbuf](https://google.github.io/flatbuffers/)]
-???
-- flow of operators with type info
-- JSON <-> binary representation
 ---
 # **General** vs **Special** purpose runtime
 - General purpose is too big
@@ -400,7 +400,7 @@ background-image: url(images/summary-mlcompiler.png)
 .right[![](images/summary-3enablers.png)]
 ---
 background-image: url(images/coap.png)
-.footnote[[Ref](#ipso)]
+.footnote[[detail](#ipso)]
 ???
 - poor man's RESTful API
 - expose a node info
