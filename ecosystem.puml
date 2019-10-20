@@ -209,16 +209,16 @@ device2 <-[#blue,bold]> device2 : in place
 
 '======================================================
 newpage
-title 3 areas
+'title 3 areas
 
-cloud cloud #e0eeee {
+cloud cloud {
         cloud AWS
         cloud Azure
         cloud GCP
 }
-cloud edge #e0eeee {
-}
-rectangle Embedded #e0eeee {
+cloud edge
+
+rectangle Embedded {
         (device1)
         (device2)
         collections devices
@@ -238,6 +238,13 @@ device1 <-> device2
 device1 <-down- devices : offloading
 device2 <- devices : offloading
 device2 <-> device2 : in place
+
+'legend top right
+'Clud
+'Edge
+'Embedded
+'end legend
+
 
 '======================================================
 newpage

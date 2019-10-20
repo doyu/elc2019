@@ -168,7 +168,13 @@ This is about
 - development environment.
 ---
 background-image: url(images/ecosystem_008.png)
+#.right[3 areas]
 
+.right[Cloud]
+
+.right[Edge]
+
+.right[Embedded]
 ???
 # There are 3 areas:
 - Cloud computing
