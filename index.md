@@ -255,7 +255,6 @@ background-image: url(images/ecosystem_014.png)
 model & runtime
 - per RTOS
 - per HWA
---
 .right[![](images/pizzaonline.png)]
 ???
 - Like online piza order
@@ -321,7 +320,7 @@ class: middle
 # Summary: Unikernel
 .top[![](images/summary-unikernel.png)]
 ## Can be a thin **wrapper** of different RTOSes?
-.footnote[2 types: [highlevel languages](#ocaml)]
+.footnote[2 types: [highlevel programming languages](#ocaml)]
 ---
 # Outline
 0. ~~Demo~~
@@ -436,6 +435,8 @@ background-image: url(images/esp32-wrover.png)
 background-image: url(images/demo-sq0.png)
 ---
 background-image: url(images/demo-ac.png)
+# PoC
+## sequence
 ???
 - Distributed Training on Unikernel
 - Compilation on host

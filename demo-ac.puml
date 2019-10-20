@@ -1,21 +1,21 @@
 @startuml
-title PoC sequence
-|TF Lite\nTensorFlow\nHost(x86)|
+'title PoC sequence
+|TensorFlow\nTF Lite\nHost(x86)\n|
 start
 if (Federated Learning?) then
-|TF Lite\nTensorFlow\nHost(x86)|
+|TensorFlow\nTF Lite\nHost(x86)\n|
 :train with Keras/TF;
 else
-|#AntiqueWhite|OCaml Owl\nMirageOS\nKVM(x86)|
-:train a model;
+|#AntiqueWhite|OCaml Owl\nMirageOS\nKVM(x86)\n|
+:train with Owl;
 :generate cgraph;
 :convert cgraph;
 endif
-|TF Lite\nTensorFlow\nHost(x86)|
+|TensorFlow\nTF Lite\nHost(x86)\n|
 :compile cgraph;
 :build runtime\nwith cgraph;
 :build unikernel\nwith runtime;
-|MirageOS\nFreeRTOS\nESP32(Xtensa)|
+|MirageOS\nFreeRTOS\nESP32(Xtensa)\n|
 :run inference;
 :show result;
 stop
