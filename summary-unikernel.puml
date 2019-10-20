@@ -1,14 +1,15 @@
 @startmindmap
+scale 1.2
 * Unikernel
 ** Based on Library OS
 ** Simple && Concise
-** 2 types
-***_ posix compatible
-***_ language specific
 ** Configurable backend
 ***_ Unix
 ***_ Xen
 ***_ KVM
 ***_ RTOS
 ***_ JS/browser
+** 2 types
+***_ posix compatible
+***_ language specific
 @endmindmap

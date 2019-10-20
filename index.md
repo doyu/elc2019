@@ -318,9 +318,8 @@ specialization
 hypercall implementation could adapt different backend easily
 - feedback: simpler?
 ---
-class: middle
 # Summary: Unikernel
-.top[![](images/summary-unikernel.png)]
+.right[![](images/summary-unikernel.png)]
 ## Can be a thin **wrapper** of different RTOSes?
 .footnote[2 types: [highlevel programming languages](#ocaml)]
 ---
