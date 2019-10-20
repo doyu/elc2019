@@ -168,7 +168,7 @@ This is about
 - development environment.
 ---
 background-image: url(images/ecosystem_008.png)
-#.right[3 areas]
+#.right[3 areas?]
 
 .right[Cloud]
 

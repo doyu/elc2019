@@ -329,7 +329,7 @@ device2 <-> device2 : in place
 
 '======================================================
 newpage
-skinparam noteFontSize 18
+skinparam noteFontSize 20
 title Gap between Web and Embedded
 cloud Web #eeeeee {
         cloud cloud {
@@ -341,12 +341,12 @@ cloud Web #eeeeee {
 	AWS <-down- edge
 	AWS -> edge
 }
-note right of cloud
-Linux
-Container
-microservices
-Orchestration
-x86/ARM
+note right of Web
+OS: Linux
+CPU: x86/ARM64
+RAM: GB
+Storage: TB
+Container: Yes
 end note
 
 rectangle Embedded #99f1ff {
@@ -359,11 +359,11 @@ rectangle Embedded #99f1ff {
 	devices	<-> privacy
 }
 note right of Embedded
-RTOSes
-Firmware
-MCUs
-SRAM
-FLASH
+OS: RTOSes
+CPU: MCUs
+SRAM: 500KB
+FLASH: 2MB
+Container: No
 end note
 
 edge <.down.> device1
