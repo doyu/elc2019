@@ -401,7 +401,7 @@ background-image: url(images/summary-mlcompiler.png)
 .right[![](images/summary-3enablers.png)]
 ---
 background-image: url(images/coap.png)
-.footnote[https://jaime.win/slides/IPSO2019.pdf]
+.footnote[[Ref](#ipso)]
 ???
 - poor man's RESTful API
 - expose a node info
@@ -577,6 +577,16 @@ background-image: url(https://i1.wp.com/staceyoniot.com/wp-content/uploads/2019/
 ## Custom ISA, RISC-V && Arm
 
 .footnote[https://staceyoniot.com/why-arm-opened-up-its-instruction-set-and-what-it-means-for-iot/]
+---
+name: ipso
+background-image: url(images/IPSO20190.png)
+.footnote[https://jaime.win/slides/IPSO2019.pdf]
+---
+background-image: url(images/IPSO20192.png)
+.footnote[https://jaime.win/slides/IPSO2019.pdf]
+---
+background-image: url(images/IPSO20193.png)
+.footnote[https://jaime.win/slides/IPSO2019.pdf]
 ---
 name: training_sq
 background-image: url(images/ps-sq.png)
