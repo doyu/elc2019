@@ -344,8 +344,8 @@ cloud Web #eeeeee {
 note right of Web
 OS: Linux
 CPU: x86/ARM64
-RAM: GB
-Storage: TB
+RAM: ~GB
+Storage: ~TB
 Container: Yes
 end note
 
@@ -361,8 +361,8 @@ rectangle Embedded #99f1ff {
 note right of Embedded
 OS: RTOSes
 CPU: MCUs
-SRAM: 500KB
-FLASH: 2MB
+SRAM: ~500KB
+FLASH: ~2MB
 Container: No
 end note
 
@@ -375,7 +375,7 @@ device2 <-> device2 : in place
 
 '======================================================
 newpage
-skinparam noteFontSize 18
+skinparam noteFontSize 20
 title ML environment
 
 cloud "Web/linux\n" #eeeeee {
@@ -388,8 +388,8 @@ cloud "Web/linux\n" #eeeeee {
 }
 
 note right of cloud
-python
-heavy training
+Python frameworks
+Heavy ML training
 GPUs
 end note
 
@@ -426,7 +426,7 @@ device2 <-> device2 : in place
 
 '======================================================
 newpage
-skinparam noteFontSize 18
+skinparam noteFontSize 20
 title ML Problem
 
 cloud Web #eeeeee {
@@ -436,15 +436,16 @@ cloud Web #eeeeee {
                 cloud GCP
         }
         cloud edge
-	database Zoo {
+	database Zoo #ffffff {
 	        collections "model"
 		AWS -> model
 	}
 }
 note right of Web
-python
-heavy training
+Python
+Training
 GPUs
+model Zoo
 end note
 
 rectangle Embedded #99f1ff {
@@ -491,7 +492,7 @@ cloud Web #eeeeee {
                 cloud GCP
         }
         cloud edge
-	database Zoo {
+	database Zoo #ffffff {
 	        collections "model"
 		AWS -> model
 	}
@@ -532,7 +533,7 @@ cloud "Web/linux\n" #eeeeee {
                 cloud GCP
         }
         cloud edge
-	database Zoo {
+	database Zoo #ffffff {
 	        collections "model"
 		AWS -> model
 	}
@@ -586,7 +587,7 @@ cloud "Web/linux\n" #eeeeee {
                 cloud GCP
         }
         cloud edge
-	database Zoo {
+	database Zoo #ffffff {
 	        collections "model"
 		AWS -> model
 	}
