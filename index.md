@@ -514,9 +514,7 @@ class: middle
 5. Conclusion
 .right[![](images/demo-sq0.png)]
 ---
-background-image: url(images/demo-uc.png)
----
-background-image: url(images/demo-sq.png)
+background-image: url(images/inference.png)
 ---
 background-image: url(images/size-comp.png)
 # Binary Size
