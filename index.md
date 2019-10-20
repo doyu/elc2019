@@ -435,10 +435,11 @@ background-image: url(images/esp32-wrover.png)
 - 4MB FLASH
 ---
 background-image: url(images/demo-sq0.png)
+# PoC Outline
 ---
 background-image: url(images/demo-ac.png)
 # PoC
-## sequence
+## Sequence
 ???
 - Distributed Training on Unikernel
 - Compilation on host

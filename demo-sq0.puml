@@ -1,11 +1,12 @@
 @startmindmap
 scale 1.2
-title PoC outline
+'title PoC outline
 + PoC
 ++ Training
 +++_ Federated Learning (FL)
 +++_ OCaml Owl
 +++_ MirageOS
++++_ KVM (x86)
 ++ Compile
 +++_ cgraph
 ++++_ Owl
@@ -14,7 +15,8 @@ title PoC outline
 ++++_ TFL for micro (TFLM)
 +++_ TFLM runtime
 ++ Inference
-+++_ ESP32 devkit
-+++_ MirageOS
 +++_ TFLM runtime
++++_ MirageOS
++++_ FreeRTOS
++++_ ESP32 (Xtensa)
 @endmindmap
