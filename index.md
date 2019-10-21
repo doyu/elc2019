@@ -530,7 +530,7 @@ Demonstrated End-to-End **TinyML** (as-a-Service?)
 # Next
 1. Add **Orchestration** with CoAP?
 2. Supprt **other** MCUs and/or **complicated** models?
-3. **Heterogeneous** (distributed) training?
+3. **Heterogeneous** (distributed) training on MCU?
 4. Distributed inference on **heterogeneous** HWAs?
 .right[![](images/runtime_001.png)]
 .footnote[ref: [OpenISA](#openisa)]
