@@ -14,16 +14,11 @@ Hiroshi Doyu
 ---
 background-image: url(images/venn1.png)
 # TinyML?
----
-exclude: true
-background-image: url(images/venn2.png)
-# Our focus
-???
-TinyML == ML inference on constrint IoT device
+.footnote[[ref:unikernel](#venn2)]
 ---
 background-image: url(images/screenshot.png)
 # Demo
-.footnote[[MNIST](#mnist)]
+.footnote[[ref:MNIST](#mnist)]
 ???
 - RPI != IoT
 - IoT device just sends raw sensor data to Edge.
@@ -122,7 +117,7 @@ Let's introduce Edge computing:
 background-image: url(images/ecosystem_006.png)
 
 
-.footnote[[expensive transmission](#costlytx)]
+.footnote[[ref:expensive transmission](#costlytx)]
 ???
 There's some boudary, "On-premises"
 - where devices reside,
@@ -319,7 +314,7 @@ hypercall implementation could adapt different backend easily
 # Summary: Unikernel
 .right[![](images/summary-unikernel.png)]
 ## Can be a thin **wrapper** of different RTOSes?
-.footnote[2 types: [high level programming languages](#ocaml)]
+.footnote[ref:types:[high level programming languages](#ocaml)]
 ---
 # Outline
 0. ~~Demo~~
@@ -376,7 +371,7 @@ background-image: url(images/nnvm_compiler_stack.png)
 
 .right[![](images/runtime.png)]
 
-.footnote[[Trend of OpenISA](#openisa)]
+.footnote[[ref:Trend of OpenISA](#openisa)]
 ???
 https://tik-old.ee.ethz.ch/file//79a7dd6f6370f809e6180c0746232283/mobisys18-liu.pdf
 ---
@@ -398,7 +393,7 @@ background-image: url(images/summary-mlcompiler.png)
 .right[![](images/summary-3enablers.png)]
 ---
 background-image: url(images/coap.png)
-.footnote[[detail](#ipso)]
+.footnote[[ref:detail](#ipso)]
 ???
 - poor man's RESTful API
 - expose a node info
@@ -467,7 +462,7 @@ background-image: url(images/training-uc_001.png)
 - it's a federated learning.
 ---
 background-image: url(images/training-uc_002.png)
-.footnote[[sequence diagram](#training_sq)]
+.footnote[[ref:sequence diagram](#training_sq)]
 ???
 - local raw data isn't leaked beyond premises.
 ---
@@ -537,7 +532,7 @@ Demonstrated End-to-End **TinyML** (as-a-Service?)
 3. **Heterogeneous** (distributed) training?
 4. Distributed inference on **heterogeneous** HWAs?
 .right[![](images/runtime_001.png)]
-.footnote[[OpenISA](#openisa)]
+.footnote[[ref:OpenISA](#openisa)]
 ---
 class: bottom,left
 background-image: url(images/ecosystem_last.png)
@@ -550,6 +545,13 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/
 ---
 class: center, middle
 # **Appendix**
+---
+name: unikernel
+exclude: false
+background-image: url(images/venn2.png)
+# Our focus
+???
+TinyML == ML inference on constrint IoT device
 ---
 name: costlytx
 ![](images/costlytx.png)
