@@ -15,7 +15,7 @@ endif
 :compile cgraph;
 :build runtime\nwith cgraph;
 :build unikernel\nwith runtime;
-|MirageOS\nFreeRTOS\nESP32(Xtensa)\n|
+|TFLM runtime\nMirageOS\nESP32(Xtensa)\n|
 :run inference;
 :show result;
 stop

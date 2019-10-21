@@ -247,6 +247,7 @@ background-image: url(images/ecosystem_014.png)
 # Squeeze ML
 model & runtime
 - per RTOS
+- per MCU / ROM / RAM
 - per HWA
 .right[![](images/pizzaonline.png)]
 ???
@@ -262,8 +263,7 @@ TinyML as-a-Service squeezes:
 background-image: url(images/ecosystem_015.png)
 ---
 background-image: url(images/summary-proposal.png)
-Proposal
-# TinyML as-a-Service
+# Proposal
 ---
 class: middle
 # Outline
@@ -371,7 +371,7 @@ background-image: url(images/nnvm_compiler_stack.png)
 
 .right[![](images/runtime.png)]
 
-.footnote[[ref:Trend of OpenISA](#openisa)]
+.footnote[[ref:trend of OpenISA](#openisa)]
 ???
 https://tik-old.ee.ethz.ch/file//79a7dd6f6370f809e6180c0746232283/mobisys18-liu.pdf
 ---
@@ -393,7 +393,7 @@ background-image: url(images/summary-mlcompiler.png)
 .right[![](images/summary-3enablers.png)]
 ---
 background-image: url(images/coap.png)
-.footnote[[ref:detail](#ipso)]
+.footnote[[ref:LwM2M](#ipso)]
 ???
 - poor man's RESTful API
 - expose a node info
@@ -432,6 +432,7 @@ background-image: url(images/demo-sq0.png)
 background-image: url(images/demo-ac.png)
 # PoC
 ## Sequence
+.footnote[[ref:img](images/demo-ac.png)]
 ???
 - Distributed Training on Unikernel
 - Compilation on host
