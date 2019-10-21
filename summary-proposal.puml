@@ -4,7 +4,7 @@
 ***_ model Zoo
 ***_ distributed training
 ** Squash a ML model
-***_ fuse ops
+***_ prune / fuse ops
 ***_ quantization
 ** Tailor made runtime
 ***_ per model

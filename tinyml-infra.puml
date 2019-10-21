@@ -7,7 +7,7 @@
 ** ML compiler
 ***_ flatbuf
 ***_ quantization
-***_ fuse
+***_ prune / fuse
 ***_ HWA
 ** CoAP
 ***_ FOTA update

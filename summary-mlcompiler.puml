@@ -4,7 +4,7 @@
 ***_ <s>protobuf</s> => flatbuf
 ** Squash a model
 ***_ quantization
-***_ fuse ops
+***_ prune / fuse ops
 ** Tailor made runtime
 ***_ per ops used
 ***_ per HW(A)
