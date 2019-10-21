@@ -14,11 +14,11 @@ Hiroshi Doyu
 ---
 background-image: url(images/venn1.png)
 # TinyML?
-.footnote[[ref:unikernel](#venn2)]
+.footnote[ref: [unikernel](#venn2)]
 ---
 background-image: url(images/screenshot.png)
 # Demo
-.footnote[[ref:MNIST](#mnist)]
+.footnote[ref: [MNIST](#mnist)]
 ???
 - RPI != IoT
 - IoT device just sends raw sensor data to Edge.
@@ -117,7 +117,7 @@ Let's introduce Edge computing:
 background-image: url(images/ecosystem_006.png)
 
 
-.footnote[[ref:expensive transmission](#costlytx)]
+.footnote[ref: [expensive transmission](#costlytx)]
 ???
 There's some boudary, "On-premises"
 - where devices reside,
@@ -314,7 +314,7 @@ hypercall implementation could adapt different backend easily
 # Summary: Unikernel
 .right[![](images/summary-unikernel.png)]
 ## Can be a thin **wrapper** of different RTOSes?
-.footnote[ref:types:[high level programming languages](#ocaml)]
+.footnote[ref: [high level programming languages](#ocaml)]
 ---
 # Outline
 0. ~~Demo~~
@@ -371,7 +371,7 @@ background-image: url(images/nnvm_compiler_stack.png)
 
 .right[![](images/runtime.png)]
 
-.footnote[[ref:trend of OpenISA](#openisa)]
+.footnote[ref: [trend of OpenISA](#openisa)]
 ???
 https://tik-old.ee.ethz.ch/file//79a7dd6f6370f809e6180c0746232283/mobisys18-liu.pdf
 ---
@@ -393,7 +393,7 @@ background-image: url(images/summary-mlcompiler.png)
 .right[![](images/summary-3enablers.png)]
 ---
 background-image: url(images/coap.png)
-.footnote[[ref:LwM2M](#ipso)]
+.footnote[ref: [LwM2M](#ipso)]
 ???
 - poor man's RESTful API
 - expose a node info
@@ -432,7 +432,7 @@ background-image: url(images/demo-sq0.png)
 background-image: url(images/demo-ac.png)
 # PoC
 ## Sequence
-.footnote[[ref:img](images/demo-ac.png)]
+.footnote[ref: [image](images/demo-ac.png)]
 ???
 - Distributed Training on Unikernel
 - Compilation on host
@@ -463,7 +463,7 @@ background-image: url(images/training-uc_001.png)
 - it's a federated learning.
 ---
 background-image: url(images/training-uc_002.png)
-.footnote[[ref:sequence diagram](#training_sq)]
+.footnote[ref: [sequence diagram](#training_sq)]
 ???
 - local raw data isn't leaked beyond premises.
 ---
@@ -533,7 +533,7 @@ Demonstrated End-to-End **TinyML** (as-a-Service?)
 3. **Heterogeneous** (distributed) training?
 4. Distributed inference on **heterogeneous** HWAs?
 .right[![](images/runtime_001.png)]
-.footnote[[ref:OpenISA](#openisa)]
+.footnote[ref: [OpenISA](#openisa)]
 ---
 class: bottom,left
 background-image: url(images/ecosystem_last.png)
