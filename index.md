@@ -27,7 +27,6 @@ background-image: url(images/screenshot.png)
 - You'll get some feeling of what it's about.
 ---
 background-image: url(images/demo.png)
-## **ML on MCU**
 ???
 This is my setup.
 
@@ -117,7 +116,7 @@ Let's introduce Edge computing:
 background-image: url(images/ecosystem_006.png)
 
 
-.footnote[ref: [expensive transmission](#costlytx)]
+.footnote[ref: [Tx is expensive.](#costlytx)]
 ???
 There's some boudary, "On-premises"
 - where devices reside,

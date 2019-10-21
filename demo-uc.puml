@@ -17,9 +17,9 @@ rectangle ESP32 {
 (MirageOS/\nFreeRTOS) -down-> (display): "show result"
 
 newpage
-skinparam TitleFontSize 24
+skinparam TitleFontSize 32
 skinparam legendFontSize 20
-'title \nML inference on MCU
+title \n**ML inference on MCU**\n
 
 actor laptop
 note "TCP/IP" as tcpip
@@ -34,7 +34,7 @@ rectangle ESP32 #b8cecd {
         }
         (Unikernel)
         (WiFi\nAccess\nPoint) <.down.> (Unikernel)
-        (Unikernel) -up-> (runtime): "ask\nprediction"
+        (Unikernel) -up-> (runtime): "ask\ninference"
         (runtime) -down-> (Unikernel): "return\nresult"
 }
 
