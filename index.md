@@ -549,7 +549,7 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/
 class: center, middle
 # **Appendix**
 ---
-name: unikernel
+name: venn2
 exclude: false
 background-image: url(images/venn2.png)
 # Our focus
