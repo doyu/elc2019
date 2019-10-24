@@ -1,0 +1,47 @@
+* Conf Plan for TinyML as-a-Service
+
+** Which conference?
+TBD
+
+** Split TinyML as-a-Service and LwAE?
+*** Distributed Training on MirageOS with LwAE on KVM
+*** Inference on MirageOS with TFLM
+
+** What's missing?
+*** Owl -> TF converter
+*** Size Data
+
+** Worksplit, who does what?
+*** hiroshi
+- Publish slides repo
+- Pack reproducile dockerization of software
+
+*** roberto
+- Write E/// blog based on ELC2019 slides
+ - 4 articles, to be published bi-weekly
+  + Background
+  + 3 prolems
+   + Edge
+   + Web vs Embedded
+   + ML environment
+  + 3 enablers
+  + Futher possibilities
+   + heterogeneous trainig/inference
+   + demo
+
+*** jianxin
+- Owl -> TF
+
+*** liang
+- LwAE
+- Owl -> ONNX?
+
+*** mort
+- weekly review?
+
+** Schedule
+- Check weekly progress on slack on FRI
+
+** Resources
+- talk: https://osseu19.sched.com/event/TLCJ
+- slides: https://static.sched.com/hosted_files/osseu19/5a/elc2019-tinymlaas.pdf
