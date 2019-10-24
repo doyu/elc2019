@@ -1,0 +1,66 @@
+#+TITLE: Conference Plan for TinyML as-a-Service
+
+* TODO Which conference?
+Any suggestion?
+* TODO Split TinyMLaaS & LwAE?
+2 Topics included:
+** Training
+- 100MB RAM / ??? MB storage
+*** Federate Learning (FL)
+- Based on homogeneous Parameter Server (PS)
+
+*** Lightweight Actor Engine (LwAE)
+*** MirageOS
+- Currently with read-only storage
+*** KVM
+- With tap devices
+** Inference
+500KiB SRAM / 2MB FLASH ROM
+*** TensorFlow Lite for Micro (TFLM)
+ML compiler
+*** MirageOS
+On the top of FreeRTOS
+*** ESP32
+- Xtensa 32bit MCU
+- Devkit costs $40
+* TODO What are missing?
+** Owl -> TF converter
+** Size Data
+*** LwAE
+*** ESP32
+* TODO Worksplit, who does what?
+** hiroshi
+*** TODO Publish slides repo
+    SCHEDULED: <2019-10-25 Fri>
+*** TODO Pack reproducile dockerization of software
+    SCHEDULED: <2019-11-08 Fri>
+
+** roberto
+*** Write E/// blog based on ELC2019 slides
+    SCHEDULED: <2019-11-22 Fri>
+- 4 articles, to be published bi-weekly
+ + Background
+ + 3 prolems
+  + Edge
+  + Web vs Embedded
+  + ML environment
+ + 3 enablers
+ + Futher possibilities
+  + heterogeneous trainig/inference
+  + demo
+
+** jianxin
+Owl -> TF
+LwAE?
+** liang
+Owl -> ONNX?
+** mort
+weekly review?
+* TODO Schedule
+Check weekly progress on slack on FRI?
+* TODO Resources
+** talk
+https://osseu19.sched.com/event/TLCJ
+** slides
+https://static.sched.com/hosted_files/osseu19/5a/elc2019-tinymlaas.pdf
+
