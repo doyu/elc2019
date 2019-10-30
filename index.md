@@ -5,6 +5,7 @@ class: center, middle
  -----
 Hiroshi Doyu
 [&lt;hiroshi.doyu@ericsson.com&gt;](hiroshi.doyu@ericsson.com)
+.footnote[[\#tinymlaas](https://twitter.com/hashtag/tinymlaas)]
 ???
 - How I tried to bring:
  - ML training & inference
@@ -289,7 +290,7 @@ background-image: url(images/summary-3enablers.png)
 
 .right[![](images/summary-3enablers.png)]
 ---
-background-image: url(images/dockerunikernel.jpg)
+background-image: url(https://lcom.static.linuxfound.org/images/stories/41373/unikernel-illustration.png)
 #Unikernel
 
 .footnote[http://unikernel.org/files/2014-cacm-unikernels.pdf]
@@ -305,7 +306,7 @@ specialization
 ## Internal
 .top[![](images/Selection_186.png)]
 
-.footnote[http://rumpkernel.org/]
+.footnote[http://rumpkernel.org/ ref [hypervisor interface](#hypervisor)]
 ???
 hypercall implementation could adapt different backend easily
 - feedback: simpler?
@@ -560,6 +561,11 @@ name: costlytx
 ![](images/costlytx.png)
 
 .footnote[http://slides.cabo.space]
+---
+name: hypervisor
+background-image: url(http://dtrace.org/blogs/brendan/files/2013/01/virtualization_xen_kvm.png)
+## Hypervisor interface
+.footnote[http://dtrace.org/blogs/brendan/2013/01/11/virtualization-performance-zones-kvm-xen/]
 ---
 name: ocaml
 background-image: url(images/unikernel-mindmap.png)

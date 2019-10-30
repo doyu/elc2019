@@ -2,8 +2,19 @@
 
 * TODO Which conference?
 Any suggestion?
+- ATC Jan 15th
+- Eurosys Nov 4th
+- OSDI
 
 * TODO Split TinyMLaaS & LwAE?
+  "split -> 2"
+  - LwAE with sync
+  - TinyML with ML compiler
+   - DNN
+   - non DNN?
+     - type of Edge analytics
+
+
   2 Topics included:
 
 ** Training
@@ -31,7 +42,7 @@ On the top of FreeRTOS
 * TODO What are missing?
 ** Owl inference size
 ** Owl -> TF converter
-** Owl -> TF converter
+** Owl -> ONNX converter
 ** more size data?
 * TODO Worksplit, who does what?
 ** hiroshi
@@ -64,7 +75,7 @@ On the top of FreeRTOS
 * TODO How to collaborate?
   Github limitation?
 * TODO Schedule
-- Sync-up weekly progress on slack on FRI?
+- Sync-up weekly progress on slack <nsdi>? on FRI?
 * TODO Resources
 ** talk
 https://osseu19.sched.com/event/TLCJ
