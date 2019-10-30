@@ -347,7 +347,7 @@ back propagation
 ---
 background-image: url(images/nnvm_compiler_stack.png)
 # Compiling
-.footnote[https://tvm.ai]
+.footnote[[TVM](https://tvm.ai), [MLIR](https://github.com/tensorflow/mlir), [ONNC](https://onnc.ai/)]
 ???
 - each has its own computational graph.
 - ONNX is considered as standard exchange format between frameworks.
