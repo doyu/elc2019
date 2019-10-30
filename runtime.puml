@@ -24,8 +24,6 @@ Compiler -down-> (runtime1) : replace
 HWA1 .> Compiler : info
 
 newpage
-scale 0.9
-title multi-node, multi-HWA, scheduling
 
 cloud Compiler
 

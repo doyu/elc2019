@@ -347,7 +347,7 @@ back propagation
 ---
 background-image: url(images/nnvm_compiler_stack.png)
 # Compiling
-.footnote[[TVM](https://tvm.ai), [MLIR](https://github.com/tensorflow/mlir), [ONNC](https://onnc.ai/)]
+.footnote[compilers: [TVM](https://tvm.ai), [MLIR](https://github.com/tensorflow/mlir), [ONNC](https://onnc.ai/)]
 ???
 - each has its own computational graph.
 - ONNX is considered as standard exchange format between frameworks.
@@ -525,25 +525,23 @@ class: middle
 4. ~~PoC~~
 5. **Conclusion**
 ---
-# Done
-Demonstrated End-to-End **TinyML** (as-a-Service?)
+class: bottom,left
+background-image: url(images/ecosystem_last.png)
+# **Done:**
+# **Proposed**
+# **TinyML as-a-Service**
 
-.right[![](images/demo-sq0.png)]
----
-# Next
-1. Add **Orchestration** with CoAP?
-2. Supprt **other** MCUs and/or **complicated** models?
-3. **Heterogeneous** (distributed) training on MCU?
-4. Distributed inference on **heterogeneous** HWAs?
-.right[![](images/runtime_001.png)]
-.footnote[ref [OpenISA](#openisa)]
 ---
 class: bottom,left
 background-image: url(images/ecosystem_last.png)
 
-# _**TinyML as-a-Service**_
-# _**could bring ML**_
-# _**onto IoT.**_
+# **TinyML as-a-Service**
+# **could bring ML**
+# **onto IoT.**
+---
+background-image: url(images/runtime_001.png)
+# **FUTURE: more HWAs && Compilers**
+.footnote[ref [OpenISA](#openisa)]
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
 ---
