@@ -1,18 +1,21 @@
 @startmindmap
 * TinyML as-a-Service\n(TinMLaaS)
-** Find a ML model
+** Collect device info
+***_ RTOS
+***_ CPU / RAM / ROM
+** Find ML model
 ***_ model Zoo
 ***_ distributed training
-** Squash a ML model
+** Squash ML model
 ***_ prune / fuse ops
 ***_ quantization
 ** Tailor made runtime
 ***_ per model
 ***_ per HW(A)
-** Build a service image
+** Build image
 ***_ runtime
 ***_ model
-** Deploy a service image
+** Deploy image
 ***_ on demand
 ***_ device orchestration
 @endmindmap
