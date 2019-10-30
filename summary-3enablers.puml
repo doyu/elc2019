@@ -14,3 +14,27 @@
 ***_ Orchestration
 
 @endmindmap
+
+
+newpage
+
+
+@startmindmap
+
+scale 1.8
+* TinyML\naaS
+** Unikernel
+***_ Thin wrapper of RTOSes
+***_ Unified (hyper)calls
+** ML compiler
+***_ Small model
+***_ Small runtime
+***_ HWA optimization
+** CoAP
+***_ Expose resources
+***_ FOTA update
+***_ Orchestration
+
+@endmindmap
+
+

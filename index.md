@@ -274,7 +274,7 @@ class: middle
 4. PoC
 5. Conclusion
 ---
-background-image: url(images/summary-3enablers.png)
+background-image: url(images/summary-3enablers_001.png)
 # Three enblers
 ---
 # Outline
@@ -400,7 +400,7 @@ background-image: url(images/coap.png)
  - needed to customise a model/runtime
 - standard mechanism of updating firmware
 ---
-background-image: url(images/summary-3enablers.png)
+background-image: url(images/summary-3enablers_001.png)
 # Summary: Three Enablers
 ---
 class: middle
