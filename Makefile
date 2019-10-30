@@ -18,3 +18,7 @@ png: $(patsubst %.puml,%.png,$(shell ls *.puml))
 
 pdf:
 	markdown-pdf elc2019.md
+
+tweet:
+	pdftk elc2019-tinymlaas.pdf burst output slide%02d.pdf compress
+	./pdf2png
