@@ -1,0 +1,73 @@
+@startuml
+
+title TinyMLaaS: device vendor specific plugins
+
+cloud cloud {
+        collections "ML\nframeworks" as mlf
+        database model\nzoo {
+                collections models
+        }
+        mlf -> models
+}
+
+Cloud TinyMLaaS #yellow {
+        rectangle build_service {
+                collections ML_compiler1 <<vendor>> #Aqua
+        }
+        rectangle coap_client {
+                collections image1
+        }
+        ML_compiler1 -[#blue,bold]> image1 : **(3)pass**
+}
+
+build_service <-[#blue,bold]up- models : **(2)download**
+
+rectangle device1 {
+        rectangle RTOS1 {
+                (CoAP\nserver1) as coap_server1 <<vendor>> #Aqua
+        	rectangle inference1 {
+        	        file model1
+        	        file runtime1
+                        runtime1 .right. model1
+        	}
+        }
+	usecase device1 as "CPU1
+                ..
+	        RAM1
+                ..
+	        ROM1
+                ..
+		HWA1"
+}
+
+coap_server1 -[#blue,bold]up-> ML_compiler1 : **(1)CoAP**
+image1 -[#blue,bold]down-> coap_server1 : **(4a)FOTA**
+coap_server1 -[#blue,bold]> runtime1 : **(5a)install**
+
+rectangle device2 {
+        rectangle RTOS2 {
+        	rectangle inference2 {
+        	        file model2
+        	        file runtime2
+                        runtime2 .right. model2
+        	}
+        }
+	usecase device2 as "CPU2
+                ..
+	        RAM2
+                ..
+	        ROM2
+                ..
+		HWA2"
+}
+
+image1 .[#blue]down.> inference2 : **(4b)manual install**
+
+legend top right
+device vendor1
+device vendor2
+ericsson
+end legend
+
+
+@enduml

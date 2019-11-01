@@ -5,7 +5,7 @@ class: center, middle
  -----
 Hiroshi Doyu
 [&lt;hiroshi.doyu@ericsson.com&gt;](hiroshi.doyu@ericsson.com)
-.footnote[[\#tinymlaas](https://twitter.com/hashtag/tinymlaas)]
+.footnote[[\#tinymlaas](https://twitter.com/hashtag/tinymlaas) [@doyu](https://twitter.com/doyu)]
 ???
 - How I tried to bring:
  - ML training & inference
