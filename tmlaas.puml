@@ -1,10 +1,12 @@
 @startuml
 
-title TinyMLaaS: device vendor specific plugins
+'skinparam legendFontSize 28
+skinparam titleFontSize 28
+title LFAI Collaboration
 
 cloud cloud {
         collections "ML\nframeworks" as mlf
-        database model\nzoo {
+        database model\nzoo #yellow {
                 collections models
         }
         mlf -> models
@@ -22,51 +24,88 @@ Cloud TinyMLaaS #yellow {
 
 build_service <-[#blue,bold]up- models : **(2)download**
 
-rectangle device1 {
-        rectangle RTOS1 {
-                (CoAP\nserver1) as coap_server1 <<vendor>> #Aqua
-        	rectangle inference1 {
-        	        file model1
-        	        file runtime1
-                        runtime1 .right. model1
-        	}
-        }
-	usecase device1 as "CPU1
+rectangle IoT_device {
+	usecase device1 as "MCU1
                 ..
 	        RAM1
                 ..
 	        ROM1
                 ..
 		HWA1"
+        rectangle RTOS1 {
+                (CoAP\nserver1) as coap_server1 <<vendor>> #Aqua
+        	rectangle inference1 #yellow {
+        	        file model1
+        	        file runtime1
+                        runtime1 .right. model1
+        	}
+        }
 }
 
 coap_server1 -[#blue,bold]up-> ML_compiler1 : **(1)CoAP**
 image1 -[#blue,bold]down-> coap_server1 : **(4a)FOTA**
 coap_server1 -[#blue,bold]> runtime1 : **(5a)install**
 
-rectangle device2 {
-        rectangle RTOS2 {
-        	rectangle inference2 {
+note bottom of IoT_device
+TYPE: CoAP IoT device
+(1) device info via CoAP
+(2) download a model
+(3) squeeze model + runtime
+(4a) FOTA downloads image via CoAP
+(5a) CoAP server installs image
+end note
+
+rectangle Amazon_Alexa {
+        rectangle "Always on\nRTOS" #aqua {
+		usecase device2 as "MCU
+	                ..
+		        100KB SRAM
+	                ..
+		        1MB FLASH
+	                ..
+			custom ISA"
+        	rectangle inference2 #yellow {
         	        file model2
         	        file runtime2
                         runtime2 .right. model2
         	}
         }
-	usecase device2 as "CPU2
-                ..
-	        RAM2
-                ..
-	        ROM2
-                ..
-		HWA2"
+	rectangle "Sleeping\nLinux" {
+		usecase device3 as "CPU
+	                ..
+		        ~GB RAM
+	                ..
+		        ~TB HDD
+	                ..
+			GPU"
+		rectangle Container {
+        		rectangle inference3 #yellow {
+        		        file "**onnx**\nmodel"
+        		        file "**onnx**\nruntime"
+        		}
+		}
+	}
+	inference2 .[#red,bold]down.> inference3 : **(5b)Cascade inference**
 }
 
-image1 .[#blue]down.> inference2 : **(4b)manual install**
+image1 .[#red,bold]down.> inference2 : **(4b)factory install**
+
+note top of Amazon_Alexa
+TYPE: consumer enclave chip
+(1) upload info
+(2) download a model
+(3) squeeze model + runtime
+(4b) install image via flashing
+(5b) if needed, trigger next inference
+end note
+
 
 legend top right
-device vendor1
-device vendor2
-ericsson
+|= |= who does? |
+|<back:yellow>        </back>|    TinMLaaS framework    |
+|<back:aqua>        </back>|    HW vendor provides    |
+|<back:blue>        </back>|    IoT scenario    |
+|<back:red>        </back>|    Smart speaker    |
 end legend
 
 

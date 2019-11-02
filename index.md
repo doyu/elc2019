@@ -74,7 +74,7 @@ class: middle
 2. Proposal
 3. Three Enablers
 4. PoC
-5. Collaboration
+5. [LFAI Collaboration](#collaboration)
 ???
 - We've done with demo.
 - I'll define problems.
@@ -152,7 +152,7 @@ class: middle
 2. Proposal
 3. Three Enablers
 4. PoC
-5. Collaboration
+5. [LFAI Collaboration](#collaboration)
 ???
 This is about
 - development environment.
@@ -202,7 +202,7 @@ class: middle
 2. Proposal
 3. Three Enablers
 4. PoC
-5. Collaboration
+5. [LFAI Collaboration](#collaboration)
 ???
 Next, let's look at ML environment.
 ---
@@ -229,7 +229,7 @@ class: middle
 2. **Proposal**
 3. Three Enablers
 4. PoC
-5. Collaboration
+5. [LFAI Collaboration](#collaboration)
 ???
 - We defined a problem.
 - Next, we'll propose our solution.
@@ -269,7 +269,7 @@ class: middle
 2. ~~Proposal~~
 3. **Three Enablers**
 4. PoC
-5. Collaboration
+5. [LFAI Collaboration](#collaboration)
 ---
 background-image: url(images/summary-3enablers_001.png)
 # Three enblers
@@ -283,7 +283,7 @@ background-image: url(images/summary-3enablers_001.png)
  - ML compiler
  - CoAP
 4. PoC
-5. Collaboration
+5. [LFAI Collaboration](#collaboration)
 
 .right[![](images/summary-3enablers.png)]
 ---
@@ -322,7 +322,7 @@ hypercall implementation could adapt different backend easily
  - **ML compiler**
  - CoAP
 4. PoC
-5. Collaboration
+5. [LFAI Collaboration](#collaboration)
 
 .right[![](images/summary-3enablers.png)]
 ---
@@ -385,7 +385,7 @@ background-image: url(images/summary-mlcompiler.png)
  - ~~ML compiler~~
  - **CoAP**
 4. PoC
-5. Collaboration
+5. [LFAI Collaboration](#collaboration)
 
 .right[![](images/summary-3enablers.png)]
 ---
@@ -407,7 +407,7 @@ class: middle
 2. ~~Proposal~~
 3. ~~Three Enablers~~
 4. **PoC**
-5. Collaboration
+5. [[LFAI Collaboration](#collaboration)](#collaboration)
 ---
 name: mnist
 background-image: url(images/mnist.png)
@@ -445,7 +445,7 @@ class: middle
  - **Training**
  - Compile
  - Inference
-5. Collaboration
+5. [LFAI Collaboration](#collaboration)
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/training-uc.png)
@@ -486,7 +486,7 @@ class: middle
  + ~~Training~~
  + **Compile**
  + Inference
-5. Collaboration
+5. [LFAI Collaboration](#collaboration)
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/convert-uc.png)
@@ -505,7 +505,7 @@ class: middle
  + ~~Training~~
  + ~~Compile~~
  + **Inference**
-5. Collaboration
+5. [LFAI Collaboration](#collaboration)
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/inference.png)
@@ -520,7 +520,11 @@ class: middle
 2. ~~Proposal~~
 3. ~~Three Enablers~~
 4. ~~PoC~~
-5. **Collaboration**
+5. **[LFAI Collaboration](#collaboration)**
+---
+name: collaboration
+background-image: url(images/tmlaas.png)
+.footnote[[image](images/tmlaas.png)]
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
 ---
