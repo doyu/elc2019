@@ -1,11 +1,8 @@
 class: center, middle
-### Distributed ML on Unikernel for IoT
- -----
 # TinyML as-a-Service
  -----
-Hiroshi Doyu
-[&lt;hiroshi.doyu@ericsson.com&gt;](hiroshi.doyu@ericsson.com)
-.footnote[[\#tinymlaas](https://twitter.com/hashtag/tinymlaas) [@doyu](https://twitter.com/doyu)]
+7th Nov 2019 [@LFAI](https://lfai.foundation/)
+.center[.footnote[Hiroshi Doyu[&lt;hiroshi.doyu@ericsson.com&gt;](hiroshi.doyu@ericsson.com)]]
 ???
 - How I tried to bring:
  - ML training & inference
@@ -77,7 +74,7 @@ class: middle
 2. Proposal
 3. Three Enablers
 4. PoC
-5. Conclusion
+5. Collaboration
 ???
 - We've done with demo.
 - I'll define problems.
@@ -155,7 +152,7 @@ class: middle
 2. Proposal
 3. Three Enablers
 4. PoC
-5. Conclusion
+5. Collaboration
 ???
 This is about
 - development environment.
@@ -205,7 +202,7 @@ class: middle
 2. Proposal
 3. Three Enablers
 4. PoC
-5. Conclusion
+5. Collaboration
 ???
 Next, let's look at ML environment.
 ---
@@ -232,7 +229,7 @@ class: middle
 2. **Proposal**
 3. Three Enablers
 4. PoC
-5. Conclusion
+5. Collaboration
 ???
 - We defined a problem.
 - Next, we'll propose our solution.
@@ -272,7 +269,7 @@ class: middle
 2. ~~Proposal~~
 3. **Three Enablers**
 4. PoC
-5. Conclusion
+5. Collaboration
 ---
 background-image: url(images/summary-3enablers_001.png)
 # Three enblers
@@ -286,7 +283,7 @@ background-image: url(images/summary-3enablers_001.png)
  - ML compiler
  - CoAP
 4. PoC
-5. Conclusion
+5. Collaboration
 
 .right[![](images/summary-3enablers.png)]
 ---
@@ -325,7 +322,7 @@ hypercall implementation could adapt different backend easily
  - **ML compiler**
  - CoAP
 4. PoC
-5. Conclusion
+5. Collaboration
 
 .right[![](images/summary-3enablers.png)]
 ---
@@ -388,7 +385,7 @@ background-image: url(images/summary-mlcompiler.png)
  - ~~ML compiler~~
  - **CoAP**
 4. PoC
-5. Conclusion
+5. Collaboration
 
 .right[![](images/summary-3enablers.png)]
 ---
@@ -410,7 +407,7 @@ class: middle
 2. ~~Proposal~~
 3. ~~Three Enablers~~
 4. **PoC**
-5. Conclusion
+5. Collaboration
 ---
 name: mnist
 background-image: url(images/mnist.png)
@@ -448,7 +445,7 @@ class: middle
  - **Training**
  - Compile
  - Inference
-5. Conclusion
+5. Collaboration
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/training-uc.png)
@@ -489,7 +486,7 @@ class: middle
  + ~~Training~~
  + **Compile**
  + Inference
-5. Conclusion
+5. Collaboration
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/convert-uc.png)
@@ -508,7 +505,7 @@ class: middle
  + ~~Training~~
  + ~~Compile~~
  + **Inference**
-5. Conclusion
+5. Collaboration
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/inference.png)
@@ -523,25 +520,7 @@ class: middle
 2. ~~Proposal~~
 3. ~~Three Enablers~~
 4. ~~PoC~~
-5. **Conclusion**
----
-class: bottom,left
-background-image: url(images/ecosystem_last.png)
-# **Done:**
-# **Proposed**
-# **TinyML as-a-Service**
-
----
-class: bottom,left
-background-image: url(images/ecosystem_last.png)
-
-# **TinyML as-a-Service**
-# **could bring ML**
-# **onto IoT.**
----
-background-image: url(images/runtime_001.png)
-# **FUTURE: more HWAs && Compilers**
-.footnote[ref [OpenISA](#openisa)]
+5. **Collaboration**
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
 ---
@@ -605,3 +584,22 @@ class: center, middle
     <source src="fmnist.mp4" type="video/mp4">
 </video>
 # [Fashion MNIST from Zalando](https://youtu.be/nl9rATQGB8Y)
+
+---
+class: bottom,left
+background-image: url(images/ecosystem_last.png)
+# **Done:**
+# **Proposed**
+# **TinyML as-a-Service**
+
+---
+class: bottom,left
+background-image: url(images/ecosystem_last.png)
+
+# **TinyML as-a-Service**
+# **could bring ML**
+# **onto IoT.**
+---
+background-image: url(images/runtime_001.png)
+# **FUTURE: more HWAs && Compilers**
+.footnote[ref [OpenISA](#openisa)]
