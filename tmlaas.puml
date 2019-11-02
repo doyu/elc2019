@@ -17,7 +17,7 @@ Cloud TinyMLaaS #yellow {
         rectangle coap_client {
                 collections image1
         }
-        ML_compiler1 -[#blue,bold]> image1 : **(3)pass**
+        ML_compiler1 -[#blue,bold]> image1 : **(3)squeeze**
 }
 
 build_service <-[#blue,bold]up- models : **(2)download**
