@@ -1,0 +1,109 @@
+@startuml
+
+title TinyMLaaS in MXE
+
+cloud Cloud {
+        collections "ML\nframeworks" as mlf
+        database model\nzoo {
+                collections models
+        }
+        database "container\nrepository" as container_repository
+        mlf -left-> models : register
+
+actor tool_vendor1
+actor tool_vendor2
+
+       Rectangle MXE #lightgreen {
+		database build {
+                	rectangle TinyMLaaS #yellow {
+                	        collections ML_compiler1 <<vendor>> #Aqua
+
+				tool_vendor1 -[#blue,bold]down-> ML_compiler1
+                	}
+		}
+                rectangle Orchestrator {
+                        collections image1
+                }
+                ML_compiler1 -[#blue,bold]> container_repository : register
+	        ML_compiler1 <-up- models : download
+        }
+
+}
+
+note top of MXE
+MXE:
+- Build server
+- Orchestrator
+- Container registory?
+end note
+
+cloud Edge {
+	Actor HWA_vendor1
+
+        container_repository -down-> image1 : pull
+
+        rectangle edge1 {
+                rectangle host1 {
+                        (Container\nRuntime) as containerd
+                        rectangle inference1 {
+                                file model1
+                                file runtime1
+                                runtime1 .right. model1
+                        }
+                }
+                usecase HW1 as "CPU1
+                        ..
+                        RAM1
+                        ..
+                        ROM1
+                        ..
+                        **HWA1**"
+
+		HWA_vendor1 -> HW1
+        }
+
+        containerd -[#blue,bold]up-> ML_compiler1 : **info**
+        image1 -down-> containerd : pull
+        containerd -> runtime1 : run
+
+        rectangle edge2 {
+                rectangle host2 {
+                        rectangle inference2 {
+                                file model2
+                                file runtime2
+                                runtime2 .right. model2
+                        }
+                }
+                usecase HW2 as "CPU2
+                        ..
+                        RAM2
+                        ..
+                        ROM2
+                        ..
+                        **HWA2**"
+        }
+
+        image1 -down-> inference2
+}
+
+node device1
+node device2
+collections devices
+
+device1 -up-> inference1 : ask\ninference
+device1 <-up-- inference1 : return\nresult
+
+device2 -up-> inference2
+device2 <-up-- inference2
+
+devices -up-> inference2
+devices <-up-- inference2
+
+legend top right
+device vendor1
+device vendor2
+ericsson
+end legend
+
+
+@enduml
