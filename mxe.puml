@@ -68,11 +68,11 @@ devices -up-> inference1 : ask\ninference
 devices <-up-- inference1 : return\nresult
 
 
-legend bottom right
-device vendor1
-device vendor2
-ericsson
+legend left
+|= |= who does? |
+|<back:lightgreen>        </back>|    MXE    |
+|<back:yellow>        </back>|    TinMLaaS framework    |
+|<back:aqua>        </back>|    HW vendor provides    |
 end legend
-
 
 @enduml
