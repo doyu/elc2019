@@ -2,7 +2,7 @@
 
 'skinparam legendFontSize 28
 skinparam titleFontSize 28
-title LFAI Collaboration
+'title LFAI Collaboration
 
 cloud cloud {
         collections "ML\nframeworks" as mlf
