@@ -69,6 +69,11 @@ class: center, middle
 To run this demo, a lot of effort was needed.
 For further detail, in PoC.
 ---
+background-image: url(images/ecosystem_015.png)
+---
+background-image: url(images/nnvm_compiler_stack.png)
+# ML Compiler
+---
 # Question
 
 1. How much in MB does a simple **inference** take in MXE?
@@ -80,7 +85,8 @@ For further detail, in PoC.
    - RAM
    - ROM
    - HWA / DLA
-4. Any **customer** requirement for **on-device** inference?
+4. Ever any **customer** requirement for **on-device** inference?
+4. Ever any **customer** requirement for AI chip on Edge?
 
 ---
 background-image: url(images/mxe.png)
