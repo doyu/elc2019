@@ -1,84 +1,61 @@
-#+TITLE: Conference Plan for TinyML as-a-Service
+#+TITLE: Conference Plan for TinyMLaaS
+#+AUTHOR: Hiroshi Doyu
 
-* TODO Which conference?
-Any suggestion?
-- ATC Jan 15th
-- Eurosys Nov 4th
-- OSDI
+* Split TinyMLaaS into LwAE && TinyMLaaS
+  TinyMLaaS includes 2 topics
+  1) LwAE
+     - PS on LwAE on MirageOS on KVM at ML training
+  2) TinyML as-a-Service
+     - ML compiler && TFLM on MirageOS on ESP32 at ML inference
 
-* TODO Split TinyMLaaS & LwAE?
-  "split -> 2"
-  - LwAE with sync
-  - TinyML with ML compiler
-   - DNN
-   - non DNN?
-     - type of Edge analytics
+* What are missing?
+  1) LwAE
+     - Squeeze NN size? 100MB
+     - Owl inference on KVM
+  2) TinyMLaaS
+     - Use Owl -> TF converter
+     - Owl inference on ESP32?
 
+* Which conference?
+  Any suggestion?
+  1) ATC Jan 15th
+  2) Eurosys Nov 4th
+  3) OSDI
+  4) [[https://www.comsoc.org/publications/magazines/ieee-network/cfp/emerging-intelligent-systems-and-smart-computational][Emerging Intelligent Systems and Smart Computational Technologies for Future IoT]]
 
-  2 Topics included:
+* Participants
+  - [X] Hiroshi
+  - [ ] Jianxin
+  - [ ] Roberto
+  - [ ] Joel
+  - [ ] Liang
+  - [ ] Mort
 
-** Training
-- 100MB RAM / ??? MB storage
+* Worksplit
+  7.5H per day
+  1) TinyMLaaS
+     | name    | hours | OCaml | data | paper | role |
+     |---------+-------+-------+------+-------+------|
+     | Hiroshi |    15 | OK    | OK   | OK    | lead |
+     |         |       |       |      |       |      |
 
-*** Federate Learning (FL)
-- Based on homogeneous Parameter Server (PS)
-*** Lightweight Actor Engine (LwAE)
-*** MirageOS
-- Currently with read-only storage
-*** KVM
-- With tap devices
+  2) LwAE
+     | name    | hours | OCaml | data | paper | role |
+     |---------+-------+-------+------+-------+------|
+     | Hiroshi |    15 | OK    | OK   | OK    | lead |
+     |         |       |       |      |       |      |
 
-** Inference
-500KiB SRAM / 2MB FLASH ROM
+* How to collaborate?
+  - public gitlab?
+  - [[http://plantuml.com/][plantuml]]
+  - slack, nsdi or email?
 
-*** TensorFlow Lite for Micro (TFLM)
-ML compiler
-*** MirageOS
-On the top of FreeRTOS
-*** ESP32
-- Xtensa 32bit MCU
-- Devkit costs $40
-
-* TODO What are missing?
-** Owl inference size
-** Owl -> TF converter
-** Owl -> ONNX converter
-** more size data?
-* TODO Worksplit, who does what?
-** hiroshi
-*** TODO Publish slides repo
-    SCHEDULED: <2019-10-25 Fri>
-*** TODO Pack reproducile dockerization of software
-    SCHEDULED: <2019-11-08 Fri>
-
-** roberto
-*** Write E/// blog based on ELC2019 slides
-    SCHEDULED: <2019-11-15 Fri>
-**** 4 articles, to be published bi-weekly [0/4]
- + [ ] Background
- + [ ] 3 prolems
-   + Edge
-   + Web vs Embedded
-   + ML environment
- + [ ] 3 enablers
- + [ ] Futher possibilities
-   + heterogeneous trainig/inference
-   + demo
-
-** jianxin
-- Owl -> TF
-- LwAE?
-** liang
-- Owl -> ONNX?
-** mort
-- weekly review?
-* TODO How to collaborate?
-  Github limitation?
-* TODO Schedule
-- Sync-up weekly progress on slack <nsdi>? on FRI?
-* TODO Resources
-** talk
-https://osseu19.sched.com/event/TLCJ
-** slides
-https://static.sched.com/hosted_files/osseu19/5a/elc2019-tinymlaas.pdf
-
+* Action
+  - Hiroshi
+    1) Docker Devkit for LwAE
+    2) Docker Devkit for TinyMLaaS
+    3) Publish them on public gitlab
+    4) Scheudle next sync-up on 13th Dec
+    5) Away 4 weeks during Xmas && new year
+  - All
+    1) Verify devkit
