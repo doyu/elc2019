@@ -1,7 +1,7 @@
 class: center, middle
 # TinyML as-a-Service
  -----
-7th Nov 2019 [@LFAI](https://lfai.foundation/)
+30th Oct 2019 [@OSS && ELC](https://sched.co/TLCJ)
 .center[.footnote[Hiroshi Doyu[&lt;hiroshi.doyu@ericsson.com&gt;](hiroshi.doyu@ericsson.com)]]
 ???
 - How I tried to bring:
@@ -74,7 +74,7 @@ class: middle
 2. Proposal
 3. Three Enablers
 4. PoC
-5. [LFAI Collaboration](#collaboration)
+5. [Conclusion](#collaboration)
 ???
 - We've done with demo.
 - I'll define problems.
@@ -152,7 +152,7 @@ class: middle
 2. Proposal
 3. Three Enablers
 4. PoC
-5. [LFAI Collaboration](#collaboration)
+5. [Conclusion](#collaboration)
 ???
 This is about
 - development environment.
@@ -202,7 +202,7 @@ class: middle
 2. Proposal
 3. Three Enablers
 4. PoC
-5. [LFAI Collaboration](#collaboration)
+5. [Conclusion](#collaboration)
 ???
 Next, let's look at ML environment.
 ---
@@ -229,7 +229,7 @@ class: middle
 2. **Proposal**
 3. Three Enablers
 4. PoC
-5. [LFAI Collaboration](#collaboration)
+5. [Conclusion](#collaboration)
 ???
 - We defined a problem.
 - Next, we'll propose our solution.
@@ -269,7 +269,7 @@ class: middle
 2. ~~Proposal~~
 3. **Three Enablers**
 4. PoC
-5. [LFAI Collaboration](#collaboration)
+5. [Conclusion](#collaboration)
 ---
 background-image: url(images/summary-3enablers_001.png)
 # Three enblers
@@ -283,7 +283,7 @@ background-image: url(images/summary-3enablers_001.png)
  - ML compiler
  - CoAP
 4. PoC
-5. [LFAI Collaboration](#collaboration)
+5. [Conclusion](#collaboration)
 
 .right[![](images/summary-3enablers.png)]
 ---
@@ -322,7 +322,7 @@ hypercall implementation could adapt different backend easily
  - **ML compiler**
  - CoAP
 4. PoC
-5. [LFAI Collaboration](#collaboration)
+5. [Conclusion](#collaboration)
 
 .right[![](images/summary-3enablers.png)]
 ---
@@ -385,7 +385,7 @@ background-image: url(images/summary-mlcompiler.png)
  - ~~ML compiler~~
  - **CoAP**
 4. PoC
-5. [LFAI Collaboration](#collaboration)
+5. [Conclusion](#collaboration)
 
 .right[![](images/summary-3enablers.png)]
 ---
@@ -407,7 +407,7 @@ class: middle
 2. ~~Proposal~~
 3. ~~Three Enablers~~
 4. **PoC**
-5. [[LFAI Collaboration](#collaboration)](#collaboration)
+5. [[Conclusion](#collaboration)](#collaboration)
 ---
 name: mnist
 background-image: url(images/mnist.png)
@@ -445,7 +445,7 @@ class: middle
  - **Training**
  - Compile
  - Inference
-5. [LFAI Collaboration](#collaboration)
+5. [Conclusion](#collaboration)
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/training-uc.png)
@@ -486,7 +486,7 @@ class: middle
  + ~~Training~~
  + **Compile**
  + Inference
-5. [LFAI Collaboration](#collaboration)
+5. [Conclusion](#collaboration)
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/convert-uc.png)
@@ -505,7 +505,7 @@ class: middle
  + ~~Training~~
  + ~~Compile~~
  + **Inference**
-5. [LFAI Collaboration](#collaboration)
+5. [Conclusion](#collaboration)
 .right[![](images/demo-sq0.png)]
 ---
 background-image: url(images/inference.png)
@@ -520,7 +520,25 @@ class: middle
 2. ~~Proposal~~
 3. ~~Three Enablers~~
 4. ~~PoC~~
-5. **[LFAI Collaboration](#collaboration)**
+5. **[Conclusion](#collaboration)**
+---
+class: bottom,left
+background-image: url(images/ecosystem_last.png)
+# **Done:**
+# **Proposed**
+# **TinyML as-a-Service**
+
+---
+class: bottom,left
+background-image: url(images/ecosystem_last.png)
+
+# **TinyML as-a-Service**
+# **could bring ML**
+# **onto IoT.**
+---
+background-image: url(images/runtime_001.png)
+# **FUTURE: more HWAs && Compilers**
+.footnote[ref [OpenISA](#openisa)]
 ---
 name: collaboration
 background-image: url(images/tmlaas.png)
@@ -588,22 +606,3 @@ class: center, middle
     <source src="fmnist.mp4" type="video/mp4">
 </video>
 # [Fashion MNIST from Zalando](https://youtu.be/nl9rATQGB8Y)
-
----
-class: bottom,left
-background-image: url(images/ecosystem_last.png)
-# **Done:**
-# **Proposed**
-# **TinyML as-a-Service**
-
----
-class: bottom,left
-background-image: url(images/ecosystem_last.png)
-
-# **TinyML as-a-Service**
-# **could bring ML**
-# **onto IoT.**
----
-background-image: url(images/runtime_001.png)
-# **FUTURE: more HWAs && Compilers**
-.footnote[ref [OpenISA](#openisa)]
