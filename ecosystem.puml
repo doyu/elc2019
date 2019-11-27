@@ -628,7 +628,8 @@ device2 <- devices : offloading
 device2 <-> device2 : ML in place
 
 newpage
-title \nmultiple ML chip/compiler support\n
+skinparam titleFontSize 24
+title Multiple ML chip / compiler support
 
 cloud "Web/linux\n" #eeeeee {
         cloud cloud {
@@ -652,10 +653,12 @@ cloud "\nTinyMLaaS\n" #FFF44F {
         }
 }
 
-rectangle 3rd_party {
+rectangle 3rd_parties {
+	file ML_compiler1
+	file ML_compiler2
 	collections ML_compilers
 }
-TBS <-[#blue,bold]right-> ML_compilers : swap
+TBS <-[#blue,bold]right-> ML_compiler2 : swap
 
 
 TBS <-[#blue,bold]up- model : downloading
