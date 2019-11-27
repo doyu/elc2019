@@ -27,4 +27,6 @@ background-image: url(images/ecosystem_017.png)
 background-image: url(images/summary-3enablers_001.png)
 # Three enblers
 ---
+background-image: url(images/demo.png)
+---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
