@@ -31,6 +31,4 @@ background-image: url(https://ltd-docs.readthedocs.io/en/osf-17.10/_images/lesha
 # Update ML model via LwM2M SOTA
 .footnote[ML model orchestration]
 ---
-background-image: url(images/demo.png)
----
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)

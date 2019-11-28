@@ -658,7 +658,7 @@ rectangle 3rd_parties {
 	file ML_compiler2
 	collections ML_compilers
 }
-TBS <-[#blue,bold]right-> ML_compiler2 : swap
+TBS <-[#blue,bold]up-> ML_compiler2 : swap
 
 
 TBS <-[#blue,bold]up- model : downloading
