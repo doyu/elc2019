@@ -28,7 +28,7 @@ background-image: url(images/summary-3enablers_001.png)
 # Three enblers
 ---
 background-image: url(https://ltd-docs.readthedocs.io/en/osf-17.10/_images/leshan-observeupdate1.png)
-# ML model orchestration via **LwM2M**
-
+# Deliver ML model via **LwM2M**
+.footnote[ML model Orchestration]
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
