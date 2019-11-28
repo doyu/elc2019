@@ -9,7 +9,7 @@
 ***_ quantization
 ***_ prune / fuse
 ***_ HWA
-** CoAP
+** LwM2M
 ***_ FOTA update
 ***_ orchestration
 ***_ monitoring

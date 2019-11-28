@@ -281,7 +281,7 @@ background-image: url(images/summary-3enablers_001.png)
 3. **Three Enablers**
  - **Unikernel**
  - ML compiler
- - CoAP
+ - LwM2M
 4. PoC
 5. [Conclusion](#collaboration)
 
@@ -320,7 +320,7 @@ hypercall implementation could adapt different backend easily
 3. **Three Enablers**
  - ~~Unikernel~~
  - **ML compiler**
- - CoAP
+ - LwM2M
 4. PoC
 5. [Conclusion](#collaboration)
 
@@ -383,7 +383,7 @@ background-image: url(images/summary-mlcompiler.png)
 3. **Three Enablers**
  - ~~Unikernel~~
  - ~~ML compiler~~
- - **CoAP**
+ - **LwM2M**
 4. PoC
 5. [Conclusion](#collaboration)
 

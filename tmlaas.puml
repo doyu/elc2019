@@ -33,7 +33,7 @@ rectangle IoT_device {
                 ..
 		HWA1"
         rectangle RTOS1 {
-                (CoAP\nserver1) as coap_server1 <<vendor>> #Aqua
+                (LwM2M\nclient1) as coap_server1 <<vendor>> #Aqua
         	rectangle inference1 #yellow {
         	        file model1
         	        file runtime1
@@ -42,17 +42,17 @@ rectangle IoT_device {
         }
 }
 
-coap_server1 -[#blue,bold]up-> ML_compiler1 : **(1)CoAP**
+coap_server1 -[#blue,bold]up-> ML_compiler1 : **(1)LwM2M**
 image1 -[#blue,bold]down-> coap_server1 : **(4a)FOTA**
 coap_server1 -[#blue,bold]> runtime1 : **(5a)install**
 
 note bottom of IoT_device
-TYPE: CoAP IoT device
-(1) device info via CoAP
+TYPE: LwM2M IoT device
+(1) device info via LwM2M
 (2) download a model
 (3) squeeze model + runtime
-(4a) FOTA downloads image via CoAP
-(5a) CoAP server installs image
+(4a) FOTA downloads image via LwM2M
+(5a) LwM2M client installs image
 end note
 
 rectangle Amazon_Alexa {
