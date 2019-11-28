@@ -4,11 +4,11 @@ class: center, middle
 28th Nov 2019
 .center[.footnote[Hiroshi Doyu[&lt;hiroshi.doyu@ericsson.com&gt;](hiroshi.doyu@ericsson.com)]]
 ---
+background-image: url(images/ruuvitag.png)
+---
 background-image: url(images/venn1.png)
 # Democratize
 # TinyML
----
-background-image: url(images/ruuvitag.png)
 ---
 background-image: url(images/ecosystem_011.png)
 ---
@@ -26,6 +26,10 @@ background-image: url(images/ecosystem_017.png)
 ---
 background-image: url(images/summary-3enablers_001.png)
 # Three enblers
+---
+background-image: url(https://ltd-docs.readthedocs.io/en/osf-17.10/_images/leshan-observeupdate1.png)
+# Update ML model via LwM2M SOTA
+.footnote[ML model orchestration]
 ---
 background-image: url(images/demo.png)
 ---

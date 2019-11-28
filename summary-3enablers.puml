@@ -1,17 +1,17 @@
 @startmindmap
 
 * TinyML\naaS
-** Unikernel
-***_ Thin wrapper of RTOSes
-***_ Unified (hyper)calls
 ** ML compiler
 ***_ Small model
 ***_ Small runtime
 ***_ HWA optimization
-** CoAP
+** LwM2M
 ***_ Expose resources
 ***_ FOTA update
 ***_ Orchestration
+** Unikernel
+***_ Thin wrapper of RTOSes
+***_ Unified (hyper)calls
 
 @endmindmap
 
@@ -23,17 +23,17 @@ newpage
 
 scale 1.5
 * TinyML\naaS
-** Unikernel
-***_ Thin wrapper of RTOSes
-***_ Unified (hyper)calls
 ** ML compiler
 ***_ Small model
 ***_ Small runtime
 ***_ HWA optimization
-** CoAP
+** LwM2M
 ***_ Expose resources
 ***_ FOTA update
 ***_ Orchestration
+** Unikernel
+***_ Thin wrapper of RTOSes
+***_ Unified (hyper)calls
 
 @endmindmap
 
