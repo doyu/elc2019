@@ -629,7 +629,7 @@ device2 <-> device2 : ML in place
 
 newpage
 skinparam titleFontSize 24
-title Multiple ML chip / compiler support
+title TinyML ecosystem
 
 cloud "Web/linux\n" #eeeeee {
         cloud cloud {
@@ -654,11 +654,10 @@ cloud "\nTinyMLaaS\n" #FFF44F {
 }
 
 rectangle 3rd_parties #lightgreen {
-	file ML_compiler1
-	file ML_compiler2
-	collections ML_compilers
+	collections ML_compiler
+	collections AI_chip
 }
-TBS <-[#blue,bold]up-> ML_compiler2 : swap
+TBS <-[#blue,bold]up-> ML_compiler : swap
 
 
 TBS <-[#blue,bold]up- model : downloading
@@ -684,5 +683,7 @@ device1 <-right-> device2
 device1 <-down- devices : offloading
 device2 <- devices : offloading
 device2 <-> device2 : ML in place
+
+AI_chip .[#blue,bold,dotted]. device2
 
 @enduml
