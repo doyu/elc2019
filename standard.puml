@@ -1,0 +1,46 @@
+@startuml
+newpage
+scale 1.5
+title (1/3) compiler plugin interface
+cloud Cloud #gray {
+        database Zoo #ffffff {
+                collections model
+        }
+}
+cloud TinyMLaaS #yellow {
+        database Build
+        model -down-> Build
+}
+rectangle ML_compiler #lightgreen {
+        collections compilers
+}
+Build <--[#blue,bold]right-- compilers : "    compiler plugin    "
+
+newpage
+scale 1.5
+title (2/3) orchestration protocol\nvia LwM2M SOTA or FOTA
+cloud TinyMLaaS #yellow {
+        (LwM2M\nserver) as server
+        file "inference\nmodule" as inference_module
+        (server) .right. inference_module
+}
+node device #skyblue {
+        (LwM2M\nclient) as client
+}
+client ..[#blue,bold,dashed]up..> server : info
+client <-[#blue,bold]- server : install module
+
+newpage
+scale 1.5
+title (3/3) inference module format
+file "inference\nmodule" as inference_module
+node device #skyblue {
+        (LwM2M\nclient) as client
+        rectangle OS #ffffff {
+                (prediction)
+        }
+}
+inference_module -down-> client : LwM2M SOTA
+client -[#blue,bold]> prediction : update
+
+@enduml

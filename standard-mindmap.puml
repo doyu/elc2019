@@ -1,0 +1,25 @@
+@startmindmap
+skinparam TitleFontSize 32
+title Standardizing 3 interfaces for ecosystem
+* TinyMLaaS
+** compiler plugin
+*** input
+**** device info
+**** model
+*** output
+**** compiled\nmodule
+***** model
+***** runtime
+** orchestration\nprotocol
+*** LwM2M
+**** SOTA
+**** FOTA
+** inference\nmodule format
+*** 3 profiles
+**** ONNX
+***** ONNX runtime
+**** embedded
+***** SOTA
+**** baremetal
+***** FOTA
+@endmindmap
