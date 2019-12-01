@@ -653,7 +653,7 @@ cloud "\nTinyMLaaS\n" #FFF44F {
         }
 }
 
-rectangle 3rd_parties {
+rectangle 3rd_parties #lightgreen {
 	file ML_compiler1
 	file ML_compiler2
 	collections ML_compilers
