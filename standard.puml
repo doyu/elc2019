@@ -8,27 +8,29 @@ cloud Cloud #gray {
         }
 }
 cloud TinyMLaaS #yellow {
-        database Build
-        model -down-> Build
+        database Build #ffffff
+        model -down-> Build : download
 }
 rectangle ML_compiler #lightgreen {
         collections compilers
 }
-Build <--[#blue,bold]right-- compilers : "    compiler plugin    "
+Build <-[#blue,bold]right- compilers : " plugin"
 
 newpage
 scale 1.5
-title (2/3) orchestration protocol\nvia LwM2M SOTA or FOTA
+title (2/3) orchestration protocol via LwM2M
 cloud TinyMLaaS #yellow {
         (LwM2M\nserver) as server
-        file "inference\nmodule" as inference_module
-        (server) .right. inference_module
+        database Build #ffffff {
+                file "inference\nmodule" as inference_module
+        }
+        (server) <.right. inference_module
 }
 node device #skyblue {
         (LwM2M\nclient) as client
 }
-client ..[#blue,bold,dashed]up..> server : info
-client <-[#blue,bold]- server : install module
+client .[#blue,bold,dashed]up.> server : device\ninfo
+client <-[#blue,bold]- server :  SOTA\nFOTA
 
 newpage
 scale 1.5
@@ -37,10 +39,10 @@ file "inference\nmodule" as inference_module
 node device #skyblue {
         (LwM2M\nclient) as client
         rectangle OS #ffffff {
-                (prediction)
+                (inference)
         }
 }
 inference_module -down-> client : LwM2M SOTA
-client -[#blue,bold]> prediction : update
+client -[#blue,bold]> inference : update
 
 @enduml

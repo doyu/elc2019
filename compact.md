@@ -20,7 +20,7 @@ model & runtime
 background-image: url(images/ecosystem_017.png)
 .footnote[[image](images/ecosystem_017.png)]
 ---
-background-image: url(images/standard-mindmap.png)
+background-image: url(images/standard-mindmap_001.png)
 ---
 background-image: url(images/standard_001.png)
 ---
@@ -28,6 +28,8 @@ background-image: url(images/standard_002.png)
 .footnote[[OMA LwM2M](#oma)]
 ---
 background-image: url(images/standard_003.png)
+---
+background-image: url(images/standard-mindmap.png)
 ---
 ## **Standardizing 3 interfaces for ecosystem**
 ## 1. compiler plugin .red[(WIP)]
@@ -44,7 +46,7 @@ background-image: url(images/standard_003.png)
  - Working with Skymizer via AITA
 3. ~~baremetal~~
  - FOTA
-
+.footnote[.red[Looking for collaboration partners]]
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
 ---

@@ -2,11 +2,11 @@
 skinparam TitleFontSize 32
 title Standardizing 3 interfaces for ecosystem
 * TinyMLaaS
-** compiler plugin
+** compiler plugin\ninterface
 *** input
 **** device info
 ***** HWAs
-**** model
+**** ML model
 **** quantization
 *** output
 **** compiled\nmodule
@@ -24,4 +24,13 @@ title Standardizing 3 interfaces for ecosystem
 ***** SOTA
 **** baremetal
 ***** FOTA
+@endmindmap
+
+@startmindmap
+scale 1.8
+title Standardizing 3 interfaces for ecosystem
+* TinyMLaaS
+** compiler plugin **interface**
+** orchestration **protocol**
+** inference module **format**
 @endmindmap
