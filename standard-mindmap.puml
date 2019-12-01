@@ -5,7 +5,9 @@ title Standardizing 3 interfaces for ecosystem
 ** compiler plugin
 *** input
 **** device info
+***** HWAs
 **** model
+**** quantization
 *** output
 **** compiled\nmodule
 ***** model

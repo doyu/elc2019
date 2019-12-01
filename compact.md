@@ -28,15 +28,15 @@ background-image: url(images/standard_002.png)
 ---
 background-image: url(images/standard_003.png)
 ---
-## Standardizing 3 interfaces for ecosystem
-## 1. compiler plugin
+## **Standardizing 3 interfaces for ecosystem**
+## 1. compiler plugin .red[(WIP)]
 - input: device info && model
-- output: compiled module, model + runtime
+- output: compiled module (model + runtime)
 
 ## 2. ~~orchestration protocol~~
 - make use of LwM2M SOTA / FOTA
 
-## 3. inference module format
+## 3. inference module format .red[(WIP)]
 1. ~~ONNX~~
  - ONNX runtime
 2. Embedded
