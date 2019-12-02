@@ -21,6 +21,7 @@ background-image: url(images/ecosystem_017.png)
 .footnote[[image](images/ecosystem_017.png)]
 ---
 background-image: url(images/standard-mindmap_001.png)
+# To get partners,
 ---
 background-image: url(images/standard_001.png)
 ---
@@ -32,19 +33,20 @@ background-image: url(images/standard_003.png)
 background-image: url(images/standard-mindmap.png)
 ---
 ## **Standardizing 3 interfaces for ecosystem**
-## 1. compiler plugin .red[(WIP)]
-- input: device info && model
-- output: compiled module (model + runtime)
+### 1. compiler plugin .red[WIP]
+- in: device info && model
+- out: compiled inference module (model + runtime)
 
-## 2. ~~orchestration protocol~~
+### 2. orchestration protocol
 - make use of LwM2M SOTA / FOTA
+ - of current E/// IoT strategy
 
-## 3. inference module format .red[(WIP)]
-1. ~~ONNX~~
+### 3. inference module format
+1. ONNX
  - ONNX runtime
-2. Embedded
+2. Embedded .red[(WIP)]
  - Working with [Skymizer](https://skymizer.com/) ([ONNC](https://onnc.ai/)) via [AITA](https://meet.bnext.com.tw/intl/articles/view/45140)
-3. ~~baremetal~~
+3. baremetal
  - FOTA
 .footnote[.red[Looking for collaboration partners]]
 ---
