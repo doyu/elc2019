@@ -14,7 +14,7 @@ background-image: url(images/ecosystem_011.png)
 model & runtime
 - per RTOS
 - per MCU / ROM / RAM
-- per HWA
+- per AI chip / HardWare Accelerator (HWA)
 .right[![](images/pizzaonline.png)]
 ---
 background-image: url(images/ecosystem_017.png)
@@ -43,7 +43,7 @@ background-image: url(images/standard-mindmap.png)
 1. ~~ONNX~~
  - ONNX runtime
 2. Embedded
- - Working with Skymizer via AITA
+ - Working with [Skymizer](https://skymizer.com/) ([ONNC](https://onnc.ai/)) via [AITA](https://meet.bnext.com.tw/intl/articles/view/45140)
 3. ~~baremetal~~
  - FOTA
 .footnote[.red[Looking for collaboration partners]]
