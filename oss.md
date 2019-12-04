@@ -141,7 +141,7 @@ background-image: url(images/standard_001.png)
 
 ---
 background-image: url(images/standard_002.png)
-.footnote[Making use of E/// IoT strategy, [OMA LwM2M](#oma)]
+.footnote[Making use of existing E/// IoT strategy, [OMA LwM2M](#oma)]
 
 ---
 background-image: url(images/standard_003.png)
@@ -172,9 +172,21 @@ background-image: url(images/standard-mindmap.png)
 Need more hands-on guys. Collaboration with **D15 IoT studio**?
 
 ---
+class: center, middle
+# **How much budget**
+# ** for TinyMLaaS?**
+.footnote[No thesis worker for TinyMLaaS]
+---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
 
 ---
 name: oma
 background-image: url(https://www.researchgate.net/profile/Vishwas_Lakkundi/publication/281524900/figure/fig1/AS:284582764138504@1444861226935/LWM2M-architecture-5.png)
 # OMA LwM2M
+
+---
+class: middle, center
+
+<iframe width="560" height="315" src="https://youtu.be/6tJVtMrYGzA" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+
+### Demo: [MNIST on ESP32](https://play.ericsson.net/media/t/1_m56q17x5)
