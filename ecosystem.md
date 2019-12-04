@@ -32,6 +32,15 @@ background-image: url(images/standard_003.png)
 ---
 background-image: url(images/standard-mindmap.png)
 ---
+background-image: url(images/standard-mindmap_001.png)
+.bold[.red[Looking for collaboration partners]]
+---
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
+---
+name: oma
+background-image: url(https://www.researchgate.net/profile/Vishwas_Lakkundi/publication/281524900/figure/fig1/AS:284582764138504@1444861226935/LWM2M-architecture-5.png)
+# OMA LwM2M
+---
 ## **Standardizing 3 interfaces for ecosystem**
 ### 1. compiler plugin .red[WIP]
 - in: device info && model
@@ -41,17 +50,13 @@ background-image: url(images/standard-mindmap.png)
 - make use of LwM2M SOTA / FOTA
  - of current E/// IoT strategy
 
-### 3. inference module format
+### 3. inference module format (3 profiles)
 1. ONNX
  - ONNX runtime
 2. Embedded .red[(WIP)]
- - Working with [Skymizer](https://skymizer.com/) ([ONNC](https://onnc.ai/)) via [AITA](https://meet.bnext.com.tw/intl/articles/view/45140)
+ - To be specified
 3. baremetal
  - FOTA
-.footnote[.red[Looking for collaboration partners]]
----
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
----
-name: oma
-background-image: url(https://www.researchgate.net/profile/Vishwas_Lakkundi/publication/281524900/figure/fig1/AS:284582764138504@1444861226935/LWM2M-architecture-5.png)
-# OMA LwM2M
+???
+ - Working with [Skymizer](https://skymizer.com/) ([ONNC](https://onnc.ai/)) via [AITA](https://meet.bnext.com.tw/intl/articles/view/45140)
+
