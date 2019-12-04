@@ -1,0 +1,64 @@
+TITLE+: TinyML as-a-Service: Edge isn't enough!
+AUTHOR+: Hiroshi Doyu
+
+* What's TinyML?
+While Machine Learning (ML) has been happening in Cloud and now ML inference on Edge,
+nothing has been happening with on-device ML for microcontrollers.
+This is the intersection of IoT and ML but not Linux.
+We call this category as "TinyML".
+Usually they are ultra low power (ULP) devices, (mW).
+It's because
+(1) ML environment and models are too big to run on constraint IoT environment and also
+(2) the diversity of non-Linux environment. Any single solution can cover all use cases.
+All the pain starts where Linux cannot fit.
+TinyML community is expanding.
+
+* Why TinyML is important?
+There are 2 reasons:
+
+** Edge isn't enough.
+There are 5 reasons:
+1. privacy
+2. latency
+3. bandwidth
+4. reliability
+5. engergy
+
+** Big untouched market
+There are 2 reasons:
+1. Significant data mining and analytics capabilities
+2. Numerous use cases and verticals.
+
+* TinyML as-a-Service
+There are many AI chip startups competing, especially for this inference marcket.
+Inference market is way bigger than training market,
+while training market has been dominated by GPU.
+
+Traditional manufactures cannot start AI business with those AI chips,
+because they cannot apply a trained model in Cloud to their devices/chips directly.
+
+TinyML as-a-Service is a customization service, which does the following 5 steps:
+1. find a appropriate ML model
+2, compile it into small size per AI chip
+3, install it onto their devices
+4, update it if needed
+
+With TinyMLaaS,
+manufactures and SMEs could start their AI business with their devices instantly.
+
+* Ecosystem
+We cannot support all AI chips but ask partners to support theirs running on  TinyMLaaS.
+To get those partners, we'll standardize 3 interfaces:
+1. ML compiler plugin
+2. ML module orchestration protocol
+ - LwM2M SOTA / FOTA
+3. ML inference module format
+
+* Next
+0. Verifying with PoC
+1. Collaboration partners
+ - ML compiler: Skymizer ONNC
+ - AI chip: Greenwaves GAP8
+2. 2020Q1 demo
+3. opensource under LFAI incubation
+ - Qualcom, one of leading TinyML companies
