@@ -97,7 +97,11 @@ model & runtime
 .right[![](images/pizzaonline.png)]
 
 ---
+class: bottom,right
 background-image: url(images/ecosystem_016.png)
+## **LwM2M**
+## **AI chip**
+## **ML compiler**
 ???
 There are many AI chip startups competing, especially for this inference marcket.
 Inference market is way bigger than training market,
@@ -123,7 +127,11 @@ manufactures and SMEs could start their AI business with their devices instantly
 ## **4. Ecosystem**
 ## 5. Next
 ---
+class: bottom,right
 background-image: url(images/ecosystem_017.png)
+## **LwM2M**
+## **AI chip**
+## **ML compiler**
 ???
 We cannot support all AI chips but ask partners to support theirs running on  TinyMLaaS.
 To get those partners, we'll standardize 3 interfaces:
@@ -134,6 +142,7 @@ To get those partners, we'll standardize 3 interfaces:
 ---
 background-image: url(images/standard-mindmap_001.png)
 # To get partners,
+.footnote[Which standardization organization? IETF?]
 
 ---
 background-image: url(images/standard_001.png)
@@ -157,25 +166,30 @@ background-image: url(images/standard-mindmap.png)
 ## 4. Ecosystem
 ## **5. Next**
 ---
-# Next
-
-### 1. Verifying PoC with LwM2M FOTA
-
-### 2. Targetting 2020Q1 demo with partners
-- ML compiler: [Skymizer](https://skymizer.com/) ([ONNC](https://onnc.ai/)) via [AITA](https://meet.bnext.com.tw/intl/articles/view/45140), esp: module format
+## 2020Q1 demo with 4 partners
+- ML compiler: [Skymizer](https://skymizer.com/) ([ONNC](https://onnc.ai/)) via [AITA](https://meet.bnext.com.tw/intl/articles/view/45140)
+ - Agreed on allocation one FAE with NDA
+ - Tiny Pytorch
+ - Collaboration paper / news letter
 - AI chip: [Greenwaves](https://greenwaves-technologies.com/) ([GAP8](https://greenwaves-technologies.com/ai_processor_gap8/))
+ - Started discussion
+- E/// D15 IoT Studio (Santa Clara)
+ - Working on Camera version of TinyMLaaS
+ - Can unifiy our effort?
+- ER Cloud(Mecca) / PDU(Jan)
+ - Are you interested in cloud service part?
 
-### 3. To be opensource'ed under LFAI incubation
-- With Qualcom by Nimish(?)
-
-# Problem
-Need more hands-on guys. Collaboration with **D15 IoT studio**?
+## Opensource under LFAI incubation
+- With Qualcom
+ - Qualcom is leading TinyML community
+ - Nimish Radia can initiate
 
 ---
 class: center, middle
-# **How much budget**
-# ** for TinyMLaaS?**
-.footnote[No thesis worker for TinyMLaaS]
+# **$$$**
+# **Show me the money**
+# **$$$**
+.footnote[How much budget for TinyMLaaS?]
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
 
