@@ -203,8 +203,8 @@ edge <.down.> device1
 edge <.down.> device2
 
 device1 <-[#blue,bold]> device2
-device1 <-[#blue,bold]down- devices : offloading
-device2 <-[#blue,bold] devices : offloading
+device1 <-[#blue,bold]down- devices
+device2 <-[#blue,bold] devices
 device2 <-[#blue,bold]> device2 : in place
 
 '======================================================
@@ -235,8 +235,8 @@ edge <.down.> device1
 edge <.down.> device2
 
 device1 <-> device2
-device1 <-down- devices : offloading
-device2 <- devices : offloading
+device1 <-down- devices
+device2 <- devices
 device2 <-> device2 : in place
 
 'legend top right
@@ -282,8 +282,8 @@ edge <.down.> device1
 edge <.down.> device2
 
 device1 <-> device2
-device1 <-down- devices : offloading
-device2 <- devices : offloading
+device1 <-down- devices
+device2 <- devices
 device2 <-> device2 : in place
 
 '======================================================
@@ -316,8 +316,8 @@ rectangle "on_prem/\nEmbedded" #99f1ff {
 edge <.down.> device1
 edge <.down.> device2
 device1 <-> device2
-device1 <-down- devices : offloading
-device2 <- devices : offloading
+device1 <-down- devices
+device2 <- devices
 device2 <-> device2 : in place
 
 'note right of device2
@@ -369,8 +369,8 @@ end note
 edge <.down.> device1
 edge <.down.> device2
 device1 <-right-> device2
-device1 <-down- devices : offloading
-device2 <- devices : offloading
+device1 <-down- devices
+device2 <- devices
 device2 <-> device2 : in place
 
 '======================================================
@@ -420,8 +420,8 @@ AWS -> edge
 edge <.down.> device1
 edge <.down.> device2
 device1 <-right-> device2
-device1 <-down- devices : offloading
-device2 <- devices : offloading
+device1 <-down- devices
+device2 <- devices
 device2 <-> device2 : in place
 
 '======================================================
@@ -436,7 +436,7 @@ cloud Web #eeeeee {
                 cloud GCP
         }
         cloud edge
-	database Zoo #ffffff {
+	database _ #ffffff {
 	        collections "model"
 		AWS -> model
 	}
@@ -445,7 +445,7 @@ note right of Web
 Python
 Training
 GPUs
-model Zoo
+model _
 end note
 
 rectangle Embedded #99f1ff {
@@ -476,8 +476,8 @@ AWS -> edge
 edge <.down.> device1
 edge <.down.> device2
 device1 <-right-> device2
-device1 <-down- devices : offloading
-device2 <- devices : offloading
+device1 <-down- devices
+device2 <- devices
 device2 <-> device2 : in place
 
 '======================================================
@@ -492,7 +492,7 @@ cloud Web #eeeeee {
                 cloud GCP
         }
         cloud edge
-	database Zoo #ffffff {
+	database _ #ffffff {
 	        collections "model"
 		AWS -> model
 	}
@@ -517,8 +517,8 @@ AWS -> edge
 edge <.down.> device1
 edge <.down.> device2
 device1 <-right-> device2
-device1 <-down- devices : offloading
-device2 <- devices : offloading
+device1 <-down- devices
+device2 <- devices
 device2 <-> device2 : in place
 
 '======================================================
@@ -533,7 +533,7 @@ cloud "Web/linux\n" #eeeeee {
                 cloud GCP
         }
         cloud edge
-	database Zoo #ffffff {
+	database _ #ffffff {
 	        collections "model"
 		AWS -> model
 	}
@@ -576,8 +576,8 @@ AWS -> edge
 edge <.down.> device1
 edge <.down.> device2
 device1 <-right-> device2
-device1 <-down- devices : offloading
-device2 <- devices : offloading
+device1 <-down- devices
+device2 <- devices
 device2 <-> device2 : ML in place
 
 newpage
@@ -588,7 +588,7 @@ cloud "Web/linux\n" #eeeeee {
                 cloud GCP
         }
         cloud edge
-	database Zoo #ffffff {
+	database _ #ffffff {
 	        collections "model"
 		AWS -> model
 	}
@@ -623,13 +623,13 @@ AWS -> edge
 edge <.down.> device1
 edge <.down.> device2
 device1 <-right-> device2
-device1 <-down- devices : offloading
-device2 <- devices : offloading
+device1 <-down- devices
+device2 <- devices
 device2 <-> device2 : ML in place
 
 newpage
 skinparam titleFontSize 24
-title TinyML ecosystem
+title TinyMLaaS ecosystem
 
 cloud "Web/linux\n" #eeeeee {
         cloud cloud {
@@ -638,7 +638,7 @@ cloud "Web/linux\n" #eeeeee {
                 cloud GCP
         }
         cloud edge
-	database Zoo #ffffff {
+	database _ #ffffff {
 	        collections "model"
 		AWS -> model
 	}
@@ -680,8 +680,8 @@ AWS -> edge
 edge <.down.> device1
 edge <.down.> device2
 device1 <-right-> device2
-device1 <-down- devices : offloading
-device2 <- devices : offloading
+device1 <-down- devices
+device2 <- devices
 device2 <-> device2 : ML in place
 
 AI_chip .[#blue,bold,dotted]. device2 : used

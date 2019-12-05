@@ -9,19 +9,19 @@ Enabling ML on IoT sensors
 ## 1. What's TinyML?
 ## 2. Why TinyML?
 ## 3. TinyML as-a-Service
-## 4. Next
+## 4. Next step
 
 ---
 # Outline
 ## **1. What's TinyML?**
 ## 2. Why TinyML?
 ## 3. TinyML as-a-Service
-## 4. Next
+## 4. Next step
 
 ---
 background-image: url(images/venn1.png)
 # TinyML?
-.footnote[emerging general concept of running ML on microcontroller]
+.footnote[TinyML==emerging general concept of running ML on microcontroller & its community]
 ???
 While Machine Learning (ML) has been happening in Cloud and now ML inference on Edge,
 nothing has been happening with on-device ML for microcontrollers.
@@ -43,11 +43,10 @@ TinyML community is expanding.
 ## 1. What's TinyML?
 ## **2. Why TinyML?**
 ## 3. TinyML as-a-Service
-## 4. Next
+## 4. Next step
 
 ---
 background-image: url(images/ecosystem_006.png)
-## Edge isn't enough!
 ???
 ** Edge isn't enough.
 There are 5 reasons:
@@ -74,13 +73,13 @@ background-image: url(images/tinymlusecase.png)
 
 ---
 background-image: url(images/tinymlqualcomaoavision.png)
-
+.footnote[Qualcom has been leading TinyML community and also a member of LF AI]
 ---
 # Outline
 ## 1. What's TinyML?
 ## 2. Why TinyML?
-## **3. TinyML as-a-Service** (our proof-of-concept)
-## 4. Next
+## **3. TinyML as-a-Service** .red[our proposal]
+## 4. Next step
 ---
 background-image: url(images/ecosystem_013.png)
 ???
@@ -116,6 +115,9 @@ TinyML as-a-Service is a customization service, which does the following 5 steps
 With TinyMLaaS,
 manufactures and SMEs could start their AI business with their devices instantly.
 
+---
+background-image: url(images/summary-proposal.png)
+# Automate
 ---
 class: bottom,right
 background-image: url(images/ecosystem_017.png)
@@ -153,9 +155,9 @@ background-image: url(images/standard-mindmap.png)
 ## 1. What's TinyML?
 ## 2. Why TinyML?
 ## 3. TinyML as-a-Service
-## **4. Next**
+## **4. Next step**
 ---
-## 2020Q1 demo with 4 partners
+## 2020Q1 demo with 4 partners(?)
 - ML compiler: [Skymizer](https://skymizer.com/) ([ONNC](https://onnc.ai/)) via [AITA](https://meet.bnext.com.tw/intl/articles/view/45140)
  - Agreed on allocation one FAE with NDA
  - Tiny Pytorch
@@ -173,12 +175,7 @@ background-image: url(images/standard-mindmap.png)
  - Qualcom is leading TinyML community
  - Nimish Radia can initiate
 
----
-class: center, middle
-# **$$$**
-# **Show me the money**
-# **$$$**
-.footnote[How much budget for TinyMLaaS?]
+## We could offer **TinyMLaaS** on IOTA DDM / DMDC
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
 
@@ -188,8 +185,11 @@ background-image: url(https://www.researchgate.net/profile/Vishwas_Lakkundi/publ
 # OMA LwM2M
 
 ---
-class: middle, center
+background-image: url(images/demo.png)
+---
+class: center, middle
+<video width="560" height="420" controls>
+    <source src="mnist.mp4" type="video/mp4">
+</video>
+# [MNIST on ESP32](https://youtu.be/6tJVtMrYGzA)
 
-<iframe width="560" height="315" src="https://youtu.be/6tJVtMrYGzA" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-
-### Demo: [MNIST on ESP32](https://play.ericsson.net/media/t/1_m56q17x5)
