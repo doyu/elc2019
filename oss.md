@@ -10,6 +10,9 @@ Enabling ML on IoT sensors
 ## 2. Why TinyML?
 ## 3. TinyML as-a-Service
 ## 4. Next step
+???
+TinyML is a general term of technology area.
+TinyML as-a-Serice is our proposal and proof-of-concept.
 
 ---
 # Outline
@@ -23,20 +26,18 @@ background-image: url(images/venn1.png)
 # TinyML?
 .footnote[TinyML==emerging general concept of running ML on microcontroller & its community]
 ???
-While Machine Learning (ML) has been happening in Cloud and now ML inference on Edge,
-nothing has been happening with on-device ML for microcontrollers.
-This is the intersection of IoT and ML but not Linux.
-We call this category as "TinyML".
-Usually they are ultra low power (ULP) devices, (mW).
+- While Machine Learning (ML) has been happening in Cloud
+ - and now ML inference on Edge,
+- nothing has been happening with on-device ML for microcontrollers.
+- This is the intersection of IoT and ML but not Linux.
+- We call this category as "TinyML".
+- Usually they are ultra low power (ULP) devices, (mW).
 
 ---
 background-image: url(images/ecosystem_011.png)
 ???
-It's because
-(1) the diversity of non-Linux environment. Any single solution can cover all use cases.
-All the pain starts where Linux cannot fit.
-(2) ML environment and models are too big to run on constraint IoT environment and also
-TinyML community is expanding.
+TinyML is ML inference on microcontroller.
+
 ---
 
 # Outline
@@ -60,6 +61,10 @@ There are 5 reasons:
 background-image: url(images/whytinyml.png)
 ### 95% of data comes from sensors
 .footnote[https://www.yammer.com/ericsson.com/threads/444271866830848]
+???
+- TinyML resides at the boundary of physical world.
+- There are many low energy sensors.
+- TinyML could process directly.
 
 ---
 background-image: url(images/tinymlmarketsize.png)
@@ -70,10 +75,16 @@ background-image: url(images/tinymlmarketsize.png)
 background-image: url(images/tinymlusecase.png)
 ### sensor everywhere
 .footnote[https://www.yammer.com/ericsson.com/threads/444271866830848]
+???
+- virtically
+- horizontally
 
 ---
 background-image: url(images/tinymlqualcomaoavision.png)
 .footnote[Qualcom has been leading TinyML community and also a member of LF AI]
+???
+technically AON camera is possible.
+
 ---
 # Outline
 ## 1. What's TinyML?
@@ -83,6 +94,8 @@ background-image: url(images/tinymlqualcomaoavision.png)
 ---
 background-image: url(images/ecosystem_013.png)
 ???
+- problem is...
+- we want manufactures to start their AI business easily, with TinyMLaaS
 
 ---
 # Squeeze ML
@@ -99,12 +112,12 @@ background-image: url(images/ecosystem_016.png)
 ## **AI chip**
 ## **ML compiler**
 ???
-There are many AI chip startups competing, especially for this inference marcket.
-Inference market is way bigger than training market,
-while training market has been dominated by GPU.
+- There are many AI chip startups competing, especially for this inference marcket.
+- Inference market is way bigger than training market,
+- while training market has been dominated by GPU.
 
-Traditional manufactures cannot start AI business with those AI chips,
-because they cannot apply a trained model in Cloud to their devices/chips directly.
+- Traditional manufactures cannot start AI business with those AI chips,
+- because they cannot apply a trained model in Cloud to their devices/chips directly.
 
 TinyML as-a-Service is a customization service, which does the following 5 steps:
 1. find a appropriate ML model
@@ -112,12 +125,12 @@ TinyML as-a-Service is a customization service, which does the following 5 steps
 3, install it onto their devices
 4, update it if needed
 
-With TinyMLaaS,
-manufactures and SMEs could start their AI business with their devices instantly.
+TinyMLaaS could make use of IOTA DM(LwM2M).
+
 
 ---
 background-image: url(images/summary-proposal.png)
-# Automate
+# TinyMLaaS automates:
 ---
 class: bottom,right
 background-image: url(images/ecosystem_017.png)
@@ -142,7 +155,7 @@ background-image: url(images/standard_001.png)
 
 ---
 background-image: url(images/standard_002.png)
-.footnote[Making use of existing E/// IoT strategy, [OMA LwM2M](#oma)]
+.footnote[Making use of existing E/// IoT strategy, IOTA DM, [OMA LwM2M](#oma)]
 
 ---
 background-image: url(images/standard_003.png)
@@ -157,25 +170,25 @@ background-image: url(images/standard-mindmap.png)
 ## 3. TinyML as-a-Service
 ## **4. Next step**
 ---
-## 2020Q1 demo with 4 partners(?)
-- ML compiler: [Skymizer](https://skymizer.com/) ([ONNC](https://onnc.ai/)) via [AITA](https://meet.bnext.com.tw/intl/articles/view/45140)
- - Agreed on allocation one FAE with NDA
- - Tiny Pytorch
- - Collaboration paper / news letter
-- AI chip: [Greenwaves](https://greenwaves-technologies.com/) ([GAP8](https://greenwaves-technologies.com/ai_processor_gap8/))
+## 2020Q1 demo with 4 collaboration
+1. [Skymizer](https://skymizer.com/) (ML compiler, [ONNC](https://onnc.ai/))
+ - Agreed on allocation one FAE for Q1
+2. [Greenwaves](https://greenwaves-technologies.com/) (AI chip, [GAP8](https://greenwaves-technologies.com/ai_processor_gap8/))
  - Started discussion
-- E/// D15 IoT Studio (Santa Clara)
- - Working on Camera version of TinyMLaaS
- - Can unifiy our effort?
-- ER Cloud / PDU
- - They may be interested in orchestraion of TinyMLaaS
+3. ER Cloud / PDU
+ - They are interested in orchestraion part of TinyMLaaS,
+  - as extension of Cloud / Edge orchestration
+4. D15 IoT Studio
+ - Can CV platform make use of TinyMLaaS?
 
-## Opensource under LFAI incubation
+## Opensource under [LF AI](https://lfai.foundation/) incubation
 - With Qualcom
  - Qualcom is leading TinyML community
  - Nimish Radia can initiate
 
 ## We could offer **TinyMLaaS** on IOTA DDM / DMDC
+.center[.footnote[How could this be accelerated?]]
+
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
 
@@ -192,4 +205,3 @@ class: center, middle
     <source src="mnist.mp4" type="video/mp4">
 </video>
 # [MNIST on ESP32](https://youtu.be/6tJVtMrYGzA)
-
