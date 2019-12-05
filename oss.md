@@ -9,20 +9,19 @@ Enabling ML on IoT sensors
 ## 1. What's TinyML?
 ## 2. Why TinyML?
 ## 3. TinyML as-a-Service
-## 4. Ecosystem
-## 5. Next
+## 4. Next
 
 ---
 # Outline
 ## **1. What's TinyML?**
 ## 2. Why TinyML?
 ## 3. TinyML as-a-Service
-## 4. Ecosystem
-## 5. Next
+## 4. Next
 
 ---
 background-image: url(images/venn1.png)
 # TinyML?
+.footnote[emerging general concept of running ML on microcontroller]
 ???
 While Machine Learning (ML) has been happening in Cloud and now ML inference on Edge,
 nothing has been happening with on-device ML for microcontrollers.
@@ -44,8 +43,7 @@ TinyML community is expanding.
 ## 1. What's TinyML?
 ## **2. Why TinyML?**
 ## 3. TinyML as-a-Service
-## 4. Ecosystem
-## 5. Next
+## 4. Next
 
 ---
 background-image: url(images/ecosystem_006.png)
@@ -81,9 +79,8 @@ background-image: url(images/tinymlqualcomaoavision.png)
 # Outline
 ## 1. What's TinyML?
 ## 2. Why TinyML?
-## **3. TinyML as-a-Service**
-## 4. Ecosystem
-## 5. Next
+## **3. TinyML as-a-Service** (our proof-of-concept)
+## 4. Next
 ---
 background-image: url(images/ecosystem_013.png)
 ???
@@ -119,13 +116,6 @@ TinyML as-a-Service is a customization service, which does the following 5 steps
 With TinyMLaaS,
 manufactures and SMEs could start their AI business with their devices instantly.
 
----
-# Outline
-## 1. What's TinyML?
-## 2. Why TinyML?
-## 3. TinyML as-a-Service
-## **4. Ecosystem**
-## 5. Next
 ---
 class: bottom,right
 background-image: url(images/ecosystem_017.png)
@@ -163,8 +153,7 @@ background-image: url(images/standard-mindmap.png)
 ## 1. What's TinyML?
 ## 2. Why TinyML?
 ## 3. TinyML as-a-Service
-## 4. Ecosystem
-## **5. Next**
+## **4. Next**
 ---
 ## 2020Q1 demo with 4 partners
 - ML compiler: [Skymizer](https://skymizer.com/) ([ONNC](https://onnc.ai/)) via [AITA](https://meet.bnext.com.tw/intl/articles/view/45140)
@@ -176,8 +165,8 @@ background-image: url(images/standard-mindmap.png)
 - E/// D15 IoT Studio (Santa Clara)
  - Working on Camera version of TinyMLaaS
  - Can unifiy our effort?
-- ER Cloud(Mecca) / PDU(Jan)
- - Are you interested in cloud service part?
+- ER Cloud / PDU
+ - They may be interested in orchestraion of TinyMLaaS
 
 ## Opensource under LFAI incubation
 - With Qualcom
