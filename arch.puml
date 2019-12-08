@@ -1,0 +1,94 @@
+@startuml
+
+title Implement TinyMLaaS server
+cloud SwaggerHUB {
+        file "OAS yaml" as yaml
+}
+
+cloud TinyMLaaS #yellow {
+        (REST\nstub server) <<OAS>>
+        (Backend\nin Go?)
+	(REST\nstub server) -right-> (Backend\nin Go?)
+        yaml -down-> (REST\nstub server) : generates
+}
+
+actor client <<OAS>>
+yaml -down-> client : generates
+
+client -down-> (REST\nstub server) : REST or curl
+
+legend
+Backend runs a docker image
+end legend
+
+caption figiure 1
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+newpage
+title Upload OS builder docker image
+
+cloud Cloud {
+        cloud Docker_HUB {
+                collections docker_images
+        }
+	database Zoo {
+		collections models
+	}
+}
+
+cloud TinyMLaaS #yellow {
+	database Build {
+		file docker_image
+	}
+	database {
+		file OS_image
+	}
+	docker_images -down-> docker_image : pull
+	docker_image -down-> OS_image : docker run
+	models -> docker_image : download
+}
+
+actor client
+client -down-> Build : ask build
+
+rectangle Partner #lightgreen {
+       	file Dockerfile
+	file docker_image1
+	Dockerfile -up-> docker_image1 : docker build
+        docker_image1 -up-> docker_images : store
+}
+
+legend
+docker_image takes a model and generates OS image.
+end legend
+
+caption figiure 2
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+newpage
+title Update inference model
+
+cloud TinyMLaaS #yellow {
+	database {
+		collections OS_images
+	}
+}
+
+cloud LwM2M_server {
+        component REST
+	OS_images -down-> REST : download
+}
+actor client
+client -down-> REST : POST model
+
+node device #cyan {
+        component LwM2M_client
+        (OS)
+        LwM2M_server -down-> LwM2M_client : LwM2M\nFOTA
+        LwM2M_client -> (OS) : flash
+}
+
+legend
+Leshan does all
+end legend
+
+caption figiure 3
+@enduml
