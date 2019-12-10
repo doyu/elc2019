@@ -27,7 +27,7 @@ TinyMLaaS includes 4 components:
 1. Web App
 2. API server
 3. device OS builder (+ML compiler)
-4. device OS downloader (LwM2M FOTA)
+4. device OS downloader (LwM2M FOTA protocol)
 
 For partner to implement backend,
 only "3. device OS builder (+ML compiler)" is needed.
@@ -66,10 +66,11 @@ which include a specified ML inference model.
 Those docker images are provided by partner companies.
 Those docker images are stored in [[https://hub.docker.com/][DockerHUB]].
 We'll support a limitted number of target boards.
-OS should support LwM2M client and its FOTA feature to reflash OS image.
+OS should support LwM2M client and its FOTA flashing to re-flash OS image.
 Some of popular RTOSes support LwM2M with FOTA (FreeRTOS?).
-LwM2M FOTA is the specification of CoAP protocol,
+LwM2M FOTA (protocol) is the specification of CoAP packet sequence.
 but it doesn't define how to flash OS image and how to reboot a device.
+We name this **FOTA flashing**.
 Those need to be implemented here.
 A generated OS images are stored in TinyMLaaS.
 It could be downloaded by http from LwM2M server later.
@@ -92,14 +93,36 @@ To summarize, the following 3 needs to be implemented.
 4. OS updator
 "1" and "2" can be in a single docker image.
 
+** Design option
+Implementing FOTA flashing might be too big work.
+Here are 2 workarounds.
+
+1. RPI as LwM2M client with flasher to microcontroller
+Insert RPI between LwM2M server and microcontroller device.
+Let RPI pretend to include microcontroller device.
+It's easy to support LwM2M client (protocol) && FOTA flashing on RPI.
+For demonstration, RPI doesn't look nice,
+but still this could be used as transitional development envornment
+until device support FOTA flushing.
+
+2. LwM2M SOTA
+Inference module could be stored in certain ELF section.
+LwM2M client SOTA would update only this section.
+SOTA doesn't require full flash but only updating a section partially.
+SOTA doesn't stop a working system.
+This may be easier if LwM2M is already supported by the OS you use.
+
+
+
 #+CAPTION: device OS builder
 [[./images/arch_002.png]]
 
 
 * device OS downloader (LwM2M FOTA)
-LwM2M FOTA would replace a whole OS image with updated ML interence model.
-Leshan server(LwM2M server) has published a REST API for FOTA.
-A client would trigger FOTA via the above Leshan REST API for FOTA.
+LwM2M FOTA (protocol) would replace a whole OS image
+with updated ML interence model.
+Leshan server(LwM2M server) has published a REST API for FOTA protocol.
+A client would trigger FOTA protocol via the above Leshan REST API.
 How to flash OS image and how to reboot a device are implemented
 in the previous device OS builder phase.
 There's no implementation work here.
