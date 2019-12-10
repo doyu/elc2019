@@ -1,4 +1,58 @@
 @startuml
+
+scale 1
+title TinyMLaaS components
+
+actor client
+
+cloud WebApp
+client -up-> WebApp : request
+
+cloud TinyMLaaS #yellow {
+        component API_server
+        database "Build\nService" as TBS
+	file "OS image" as osimage
+        WebApp -> API_server : PUT
+        API_server -> TBS
+	TBS -> osimage : generate
+}
+
+cloud LwM2M_server {
+        component REST
+        API_server -down-> REST : PUT
+        API_server <-down- REST : GET
+}
+
+node device #cyan {
+        component LwM2M_client
+        (OS)
+        LwM2M_server -down-> LwM2M_client : FOTA
+        LwM2M_server <-down- LwM2M_client : info
+        osimage -[dotted]-> (OS) : update
+}
+
+rectangle partner #lightgreen {
+        package docker_image {
+                component ML_compiler
+                component OS_builder
+        }
+}
+
+database dockerHuB {
+        collections docker_images
+        docker_image -up-> docker_images : store
+}
+
+
+docker_images -down-> TBS : download to run
+
+database Zoo {
+        collections models
+        models -up-> TBS
+}
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+newpage
 scale 1
 title Implement TinyMLaaS server
 cloud SwaggerHUB {
@@ -18,7 +72,7 @@ yaml -down-> client : generates
 client -down-> (REST\nstub server) : REST or curl
 
 legend
-Backend runs a docker image
+OAS (Open API Specification) = Swagger
 end legend
 
 'caption figiure 1
