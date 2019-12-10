@@ -436,7 +436,7 @@ cloud Web #eeeeee {
                 cloud GCP
         }
         cloud edge
-	database _ #ffffff {
+	database Zoo #ffffff {
 	        collections "model"
 		AWS -> model
 	}
@@ -492,7 +492,7 @@ cloud Web #eeeeee {
                 cloud GCP
         }
         cloud edge
-	database _ #ffffff {
+	database Zoo #ffffff {
 	        collections "model"
 		AWS -> model
 	}
@@ -533,7 +533,7 @@ cloud "Web/linux\n" #eeeeee {
                 cloud GCP
         }
         cloud edge
-	database _ #ffffff {
+	database Zoo #ffffff {
 	        collections "model"
 		AWS -> model
 	}
@@ -588,7 +588,7 @@ cloud "Web/linux\n" #eeeeee {
                 cloud GCP
         }
         cloud edge
-	database _ #ffffff {
+	database Zoo #ffffff {
 	        collections "model"
 		AWS -> model
 	}
@@ -638,7 +638,7 @@ cloud "Web/linux\n" #eeeeee {
                 cloud GCP
         }
         cloud edge
-	database _ #ffffff {
+	database Zoo #ffffff {
 	        collections "model"
 		AWS -> model
 	}

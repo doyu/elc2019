@@ -1,5 +1,5 @@
 @startuml
-
+scale 1
 title Implement TinyMLaaS server
 cloud SwaggerHUB {
         file "OAS yaml" as yaml
@@ -21,9 +21,10 @@ legend
 Backend runs a docker image
 end legend
 
-caption figiure 1
+'caption figiure 1
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 newpage
+scale 1
 title Upload OS builder docker image
 
 cloud Cloud {
@@ -61,9 +62,10 @@ legend
 docker_image takes a model and generates OS image.
 end legend
 
-caption figiure 2
+'caption figiure 2
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 newpage
+scale 1
 title Update inference model
 
 cloud TinyMLaaS #yellow {
@@ -90,5 +92,5 @@ legend
 Leshan does all
 end legend
 
-caption figiure 3
+'caption figiure 3
 @enduml

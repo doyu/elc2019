@@ -22,3 +22,8 @@ pdf:
 tweet:
 	pdftk elc2019-tinymlaas.pdf burst output slide%02d.pdf compress
 	./pdf2png
+
+%.pdf: %.org
+	pandoc --toc --variable urlcolor=blue -s $< -o $@
+
+arch.pdf : arch.org
