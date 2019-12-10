@@ -97,7 +97,7 @@ To summarize, the following 3 needs to be implemented.
 Implementing FOTA flashing might be too big work.
 Here are 2 workarounds.
 
-1. RPI as LwM2M client with flasher to microcontroller
+*** RPI as LwM2M client with flasher to microcontroller
 Insert RPI between LwM2M server and microcontroller device.
 Let RPI pretend to include microcontroller device.
 It's easy to support LwM2M client (protocol) && FOTA flashing on RPI.
@@ -105,7 +105,7 @@ For demonstration, RPI doesn't look nice,
 but still this could be used as transitional development environment
 until device support FOTA flushing.
 
-2. LwM2M SOTA
+*** LwM2M SOTA (Software Over The Air) update
 Inference module could be stored in certain ELF section.
 LwM2M client SOTA would update only this section.
 SOTA doesn't require full flash but only updating a section partially.
