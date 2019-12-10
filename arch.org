@@ -82,7 +82,7 @@ generate OS image with ML inference locally on your host.
 #+BEGIN_SRC shell
 $ docker build -t esp32_wroover .
 $ docker run esp32_wroover mnist.model
-$ docker upload esp32_wroover
+$ docker push esp32_wroover
 #+END_SRC
 
 ** 4 sub-components to implement
