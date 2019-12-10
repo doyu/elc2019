@@ -61,8 +61,8 @@ cloud SwaggerHUB {
 
 cloud TinyMLaaS #yellow {
         (REST\nstub server) <<OAS>>
-        (Backend\nin Go?)
-	(REST\nstub server) -right-> (Backend\nin Go?)
+        (Backend\n"docker run")
+	(REST\nstub server) -right-> (Backend\n"docker run")
         yaml -down-> (REST\nstub server) : generates
 }
 

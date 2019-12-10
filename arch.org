@@ -14,7 +14,7 @@ then generate an device OS image with ML inference in it.
 Pre-trained ML inference models are stored in model **Zoo** archive on Cloud.
 Those OS build docker images are expected to be provided
 by 3rd party partners (AI chip/ML compiler vendors).
-The installation of those generaeted device OS images is done
+The installation of those generaeted device OS images onto devices is done
 via [[https://www.omaspecworks.org/what-is-oma-specworks/iot/lightweight-m2m-lwm2m/][OMA LwM2M]] [[https://foundries.io/insights/2018/01/17/20180117-lwm2m-update/][FOTA]] (Firmware Other The Air) update
 with an URL pointing to an OS image stored on TinyMLaaS,
 as seen in Figure 1.
@@ -89,7 +89,7 @@ A client would trigger FOTA via the above Leshan REST API for FOTA.
 How to flash OS image and how to reboot a device are implemented
 in the previous device OS builder phase.
 There's no implementation work here.
- Please refer to Figure 4.
+Please refer to Figure 4.
 
 #+CAPTION: device OS updator
 [[./images/arch_003.png]]
