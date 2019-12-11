@@ -147,4 +147,27 @@ Leshan does all
 end legend
 
 'caption figiure 3
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+newpage
+scale 1
+'title RPI as LwM2M client with flasher to microcontroller
+
+cloud LwM2M_server {
+	file OS_image
+}
+
+node RPI {
+        component LwM2M_client
+	component Flasher
+	OS_image -down-> LwM2M_client : LwM2M FOTA\ndownloading
+	LwM2M_client -> Flasher : trigger
+}
+
+node device #cyan {
+        (OS)
+	Flasher -[dashed]down-> (OS) : Flasing
+	Flasher -[bold]- device : USB
+}
+
+
 @enduml
