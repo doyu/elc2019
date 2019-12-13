@@ -122,18 +122,17 @@ newpage
 scale 1
 title Update inference model
 
+actor client
 cloud TinyMLaaS #yellow {
+	component REST
+	client -> REST : POST model
 	database {
 		collections OS_images
 	}
+	REST -> OS_images
 }
-
-cloud LwM2M_server {
-        component REST
-	OS_images -down-> REST : download
-}
-actor client
-client -down-> REST : POST model
+cloud LwM2M_server
+OS_images -down-> LwM2M_server : REST
 
 node device #cyan {
         component LwM2M_client
