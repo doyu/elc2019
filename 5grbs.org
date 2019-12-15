@@ -1,0 +1,135 @@
+#+TITLE: 5G RBS meets TinyMLaaS
+#+AUTHOR: [[hiroshi.doyu@ericsson.com][Hiroshi Doyu]] <hiroshi.doyu@ericsson.com>
+#+EMAIL: hiroshi.doyu@ericsson.com
+
+* What's TinyML?
+Emerging concept(and community) to run ML inferences on ultra low-power microcontroller(<< 1mA),
+where Linux cannot fit to run.
+
+[[./images/venn1.png][TinyML?]]
+
+** references
+- Eericsson Blog
+- TinyML community
+- TinyML book
+
+* What's TinyMLaaS?
+- TinyML as-a-Service (TinyMLaaS) is a cloud service to build and orchestrate ML inference onto microcontrollers.
+- TinyMLaaS accomodates multiple ML compilers as its backend.
+- TinyMLaaS core / frontend is API server to handle model, backend and gateway (GW).
+- Which ML inference to be installed can be specified via API.
+- ML inferences running on a device can be replaced / updated.
+- ML compiler/AI chip vendors can provide a docker image to build a full OS image (FOTA).
+ - Inference module interface should be standardized.
+- ML compiler/AI chip vendors can provide a docker image to build ML inference module (SOTA).
+ - Inference module interface can be proprietary.
+- TinyMLaaS internal talk && slides
+
+[[./images/ecosystem_017.png][TinyML as-a-Service ecosystem]]
+
+** 3 standard interfaces to specify
+To support multiple backends, the following interfaces should be standardized.
+
+[[./images/arch.png]]
+
+*** Backend plugin interface
+- Backend implementation is a build system for ML inference (SOTA)
+- Backend implementation is a build system for ML inference and OS (FOTA)
+- Backend implementation is a form of docker container.
+- Which ML inference in use is specified by runtime argument of docker container.
+- docker container image is stored in docker hub.
+- docker container is called via API.
+- docker container is downloaded from docker hub.
+- docker container is run on TinyMLaaS server node.
+- docker container generates output image.
+
+[[./images/standard_001.png][Backend plugin interface]]
+
+*** ML inference orchestration
+- Constraint IoT devices use OMA LwM2M for device management.
+- OMA LwM2M has SOTA and FOTA, which can be used for ML inference orchestration, out-of-box.
+- Non LwM2M device can use their own FOTA or SOTA if any.
+
+[[./images/arch_002.png]]
+
+- Alternatively, LwM2M client can be inserted right before Non LwM2M device just for flashing.
+
+[[./images/arch_004.png][Workaround with LwM2M]]
+
+[[./images/standard_002.png][ML inference orchestration]]
+
+*** ML inference module format
+While FOTA doesn't care about this format at all since it doesn a full OS flashing,
+this format is needed to standardized for SOTA,
+where a ML inference module is updated partially,
+being independely of any OS in use.
+
+[[./images/arch_003.png]]
+
+[[./images/standard_003.png][ML inference module format]]
+
+* What TinyMLaaS provides?
+TinyMLaaS is an API server.
+Its GUI frontend can be implemented by dealing with those API calls.
+Here's some proposal of API calls per target object.
+
+** Backend
+ML compiler / OS builder
+- POST: register
+- GET: list
+- GET: builder info
+- DELETE: unregister
+- POST: build an inference module or OS image
+
+** Gateway
+GW == management server of devices if any
+- POST: register a GW with DNS
+- GET: list GWs
+- GET: GW info
+- DELETE: a GW
+
+** Device
+Devices to install ML inference.
+Do we really want to manage devices directly from TinyMLaaS without GW?
+- GET: list devices
+- GET: device info
+- POST: SOTA or FOTA
+
+** Model
+Model to be installed onto devices
+- POST: register a model with URL
+- GET: list models
+- DELETE: unregister a model
+
+* What backend provovides?
+There are 2 options, SOTA or FOTA.
+
+** SOTA protocol
+- Software Over The Air update, partical update.
+ - Update ML inference module in this case.
+- LwM2M SOTA equivalent protocol if not using LwM2M
+- OS should be able to update ML inference in use.
+
+** FOTA protocol
+- Firmware Over The Air update, Full OS update
+- LwM2M FOTA equivalent protocol if not using LwM2M
+- A full OS build system in docker container
+- OS should be able to update OS itself.
+
+* Actions
+Shall we try some exercise together in 2020Q1?
+We plan some collaboration with some partners, Greenwaves && Skymizer in 2020Q1.
+We also try to opensource TinyMLaaS via LinuxFondation AI incubation project in 2020Q2.
+
+** Hiroshi
+- Schedule a meeting early JAN
+ - Discuss docker calling parameters, REST API params.
+ - ex: model name, OS, CPU, RAM, ROM, bandwidth, e.t.c
+ - Whom to invite?
+
+** 5G RBS
+- Brief EMCA / Flex
+- SOTA(partial Software Update) for inference module?
+ - FOTA if not SOTA, alternatively
+- Dockerfile for build image (SOTA or FOTA)
+- Agree on REST API
