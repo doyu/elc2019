@@ -4,7 +4,7 @@
 
 * What's TinyML?
 TinyML (Tiny Machine Learning) is an emerging concept(and also community)
-to run Machine Learning (ML) inferences on Ultra Low-Power (ULP) microcontrollers(<< 1mA), where Linux cannot fit to run.
+to run Machine Learning (ML) inferences on Ultra Low-Power (ULP) microcontrollers(~1mA), where Linux cannot fit to run.
 It's not a specific implementation but general concept.
 For example, Google's "TensorFlow Lite for micro" is one implementation of ML compiler to enable TinyML for several microcontrollers,
 although it's not highly optimized but it's originally meant generally to lower the barrier to enter.
@@ -14,10 +14,10 @@ Embedded GPU (Nvidia Tegra) could be considered as one general purpose AI chip(H
 [[./images/venn1.png][TinyML?]]
 
 ** References
-- Ericsson Blog
-- TinyML community
-- TinyML book
-- TinyMLaaS internal [[TBD][talk]] && [[TBD][slides]]
+- [[https://www.ericsson.com/en/blog/2019/12/tinyml-as-a-service-iot-edge][Ericsson Blog]]
+- [[https://tinymlsummit.org/][TinyML community]]
+- [[https://www.oreilly.com/library/view/tinyml/9781492052036/][TinyML book]]
+- TinyMLaaS internal [[https://play.ericsson.net/media/t/1_4ubdck6l][talk]] and [[https://sched.co/TLCJ][slides]]
 
 * What's TinyMLaaS?
 TinyML as-a-Service (TinyMLaaS) is our invention to accelerate TinyML adaption in unified manner.
@@ -41,6 +41,7 @@ TinyML as-a-Service (TinyMLaaS) is our invention to accelerate TinyML adaption i
 - ML compiler(+AI chip?) vendors should provide a docker container image to build a full OS image (FOTA).
  - ML inference module interface should be standardized to deal with different OSes.
 
+#+CAPTION: TinyMLaaS
 [[./images/arch.png]]
 
 ** 3 standard interfaces to specify
@@ -64,20 +65,21 @@ the following interfaces should be standardized during this development.
 - A generated output image is installed onto microcontrollers.
 - This can be SOTA or FOTA.
 
-[[./images/standard_001.png][Backend plugin interface]]
+#+CAPTION: Backend plugin interface
+[[./images/standard_001.png]]
 
 *** ML inference orchestration
 - Constraint IoT devices use OMA LwM2M for device management, for example.
 - OMA LwM2M has SOTA and FOTA, which can be used for ML inference orchestration, out-of-box.
 - Non LwM2M device can use their own FOTA or SOTA if any.
 
-[[./images/arch_002.png]]
+#+CAPTION: ML inference orchestration
+[[./images/standard_002.png]]
 
-- Alternatively, LwM2M client can be inserted right before Non LwM2M device just for image flashing.
+- Alternatively, LwM2M client can be inserted right before Non LwM2M device just for image flashing. (Figure 4)
 
-[[./images/arch_004.png][Workaround with LwM2M]]
-
-[[./images/standard_002.png][ML inference orchestration]]
+#+CAPTION: LwM2M workaround
+[[./images/arch_004.png]]
 
 *** ML inference module format
 While FOTA doesn't care about this ML inference module format at all since it doesn't flash a full OS image,
@@ -85,9 +87,11 @@ this format is needed to be standardized in case of SOTA,
 where a ML inference module is updated partially,
 being independently of any OS in use.
 
+#+CAPTION: ML inference module format (1/2)
 [[./images/arch_003.png]]
 
-[[./images/standard_003.png][ML inference module format]]
+#+CAPTION: ML inference module format (2/2)
+[[./images/standard_003.png]]
 
 * What TinyMLaaS provides?
 TinyMLaaS is an API server.
