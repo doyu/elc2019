@@ -1,0 +1,146 @@
+#+TITLE: TinyMLaaS: Backend Porting Guide
+#+AUTHOR: [[hiroshi.doyu@ericsson.com][Hiroshi Doyu]] <hiroshi.doyu@ericsson.com>
+#+EMAIL: hiroshi.doyu@ericsson.com
+
+* What's TinyML?
+TinyML (Tiny Machine Learning) is an emerging concept(and also [[https://tinymlsummit.org/][community]] of it)
+to run Machine Learning (ML) inferences on Ultra Low-Power (ULP) microcontrollers(~1mA), where Linux cannot fit to run.
+It's not a specific implementation but just a general concept.
+For example, Google's "[[http://shop.oreilly.com/product/0636920254508.do][TensorFlow Lite for micro]]" is one implementation of ML compiler to enable TinyML for several microcontrollers,
+although it's not yet highly optimized but it's originally meant generally to lower the barrier to enter.
+Usually every AI chip(HWA) vendor provides a specialized ML compiler to enable (Tiny)ML to run on their AI chip(HWA).
+Embedded GPU (Nvidia Tegra SoC) could be considered as one general purpose AI chip(HWA).
+
+[[./images/venn1.png][TinyML?]]
+
+** References
+- [[https://www.ericsson.com/en/blog/2019/12/tinyml-as-a-service-iot-edge][Ericsson Blog]]
+- [[https://tinymlsummit.org/][TinyML community]]
+- [[https://www.oreilly.com/library/view/tinyml/9781492052036/][TinyML book]]
+- TinyMLaaS internal [[https://play.ericsson.net/media/t/1_4ubdck6l][talk]] and [[https://sched.co/TLCJ][slides]]
+
+* What's TinyMLaaS?
+TinyML as-a-Service (TinyMLaaS) is our invention to accelerate TinyML adaption in unified manner.
+- TinyMLaaS is a cloud service to build and orchestrate ML inference onto microcontrollers.
+- It's assumed that pre-trained models are stored in Model Zoo in Cloud.
+- Pre-trained models cannot be directly downloaded onto microcontrollers.
+- Pre-trained models should be compiled by ML compiler to run on microcontrollers later.
+- TinyMLaaS accommodates multiple ML compilers as its backend.
+- TinyMLaaS backend is composed of ML compiler, and optional OS builder if FOTA.
+ - FOTA (Firmware Over The Air) update is a full OS flashing.
+ - SOTA (Software Over The Air) update is a partial update, one component of SW stack.
+- TinyMLaaS core(frontend) is REST API server to handle:
+ - ML inference model, stored in Model Zoo
+ - Backend: ML compiler + optional OS builder
+ - Gateway (GW): device management server
+- WebApp (GUI) can be implemented by calling those APIs.
+- Which ML inference to be installed can be specified via API parameter.
+- ML inferences running on a device can be replaced / updated via API.
+- ML compiler(+AI chip?) vendors should provide a docker container image to build ML inference module (SOTA).
+ - ML inference module interface (IMI) doesn't matter since it's a full OS update.
+- ML compiler(+AI chip?) vendors should provide a docker container image to build a full OS image (FOTA).
+ - ML inference module interface should be standardized to deal with different OSes.
+
+#+CAPTION: TinyMLaaS
+[[./images/arch.png]]
+
+** 3 standard interfaces to specify
+In order to support multiple backends,
+the following interfaces should be standardized during this development.
+
+*** Backend plugin interface
+- Backend implementation is a build system for ML inference for AI chip in use.
+- Backend implementation may additionally include a OS build system (OS builder) in case of FOTA.
+- Backend implementation is implemented as a form of docker container image.
+- This docker container is standalone to run to generate ML inference and/or OS image independently.
+- Which ML inference in use is specified by runtime argument of docker container.
+ - It's an URL of ML model Zoo.
+- This implemented docker container image is stored in docker Hub.
+- This docker container is downloaded from docker Hub and run later.
+- This docker container is called via API server to be download and run later.
+- This docker container is to run on TinyMLaaS server node.
+- This docker container generates output image.
+ - ML inference module (SOTA), or alternatively
+ - OS image, which includes a ML inference module (FOTA)
+- A generated output image is installed onto microcontrollers.
+- This can be SOTA or FOTA.
+
+#+CAPTION: Backend plugin interface
+[[./images/standard_001.png]]
+
+*** ML inference orchestration
+- Constraint IoT devices use [[https://www.omaspecworks.org/what-is-oma-specworks/iot/lightweight-m2m-lwm2m/][OMA LwM2M]] for device management, for example.
+- OMA LwM2M has SOTA and FOTA, which can be used for ML inference orchestration, out-of-box.
+- Non LwM2M device can use their own FOTA or SOTA if any.
+
+#+CAPTION: ML inference orchestration
+[[./images/standard_002.png]]
+
+- Alternatively, LwM2M client can be inserted right before Non LwM2M device just for image flashing. (Figure 4)
+
+#+CAPTION: LwM2M workaround
+[[./images/arch_004.png]]
+
+*** ML inference module format
+While FOTA doesn't care about this ML inference module format at all since it doesn't flash a full OS image,
+this format is needed to be standardized in case of SOTA,
+where a ML inference module is updated partially,
+being independently of any OS in use.
+
+#+CAPTION: ML inference module format (1/2)
+[[./images/arch_003.png]]
+
+#+CAPTION: ML inference module format (2/2)
+[[./images/standard_003.png]]
+
+* What TinyMLaaS provides?
+TinyMLaaS is an API server.
+Its GUI frontend can be implemented by dealing with those API calls comprehensively.
+Here's some proposal of API calls per target object.
+
+** Backend
+It's almost to run docker image of ML compiler(+OS builder), provided by partner.
+This docker image is to run independently with some command line argument passed to "docker run".
+- POST: register a new backend
+- GET: list all registered backend
+- GET: get backend info: {name,CPU,device OS, FOTA/SOTA}
+- DELETE: unregister a backend
+- POST: build an inference module or OS image
+
+** Gateway
+TinyML itself doesn't manage devices but makes use of device management server (gateway: GW).
+For now this just follows LwM2M management server with its REST API.
+This interface may depend on implementation.
+- POST: register a new GW with its DNS
+- GET: list GWs
+- GET: GW info: URL?
+- DELETE: a registered GW
+
+** Device
+Target devices to install ML inference.
+Do we really want to manage devices directly from TinyMLaaS without GW?
+- GET: list devices
+- GET: device info: {CPU, RAM, ROM, network bandwidth}
+- POST: SOTA or FOTA
+
+** Model
+ML inference model, stored in Model Zoo, to be installed onto devices
+- POST: register a new model with URL
+- GET: list models
+- GET: model info: {size,summary,???}
+- DELETE: unregister a model
+
+* What backend need to provide?
+It's a stand alone docker container image to build ML inference module (SOTA) and OS optionally (FOTA).
+
+** SOTA protocol
+- Software Over The Air update, partial update.
+ - Update ML inference module in this case.
+- LwM2M SOTA equivalent protocol if not using LwM2M
+- OS should be able to update only ML inference in use.
+
+** FOTA protocol
+- Firmware Over The Air update, Full OS update
+- LwM2M FOTA equivalent protocol if not using LwM2M
+- A full OS build system in docker container
+- OS should be able to update OS itself.
