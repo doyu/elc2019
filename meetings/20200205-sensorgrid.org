@@ -1,0 +1,50 @@
+#+TITLE: TinyMLaaS: sync-up with Sensor Grid
+#+AUTHOR: Péter Hága, Hiroshi Doyu
+#+DATE: 05/FEB/2020
+
+[[../images/arch.png][TinyMLaaS]]
+
+* Schedule
+
+| week # | task                                         | status |
+|--------+----------------------------------------------+--------|
+| w06    | this week, implementing [[http://136.225.130.103:3000/][API server]]           | WIP    |
+| w07    | API server with dummy backend                |        |
+| w08    | API server with dummy docker backend         |        |
+| w09    | MNIST/ dockerization of build system         |        |
+| w10    | MNIST/ dockerization of install system       |        |
+| w11    | MNIST/ integration with API server           |        |
+| w12    | MNIST/ swapping inferences with API server.  |        |
+| w13    | Visiting Budapest for [[https://bud20.sched.com/event/ZZEM][Linaro Connect]]         |        |
+| w14    | Sensor grid/ LwM2M FOTA support (1/2)        |        |
+| w15    | Sensor grid/ LwM2M FOTA support (2/2)        |        |
+| w16    | Sensor grid/ dockerization of build system   |        |
+| w17    | Sensor grid/ dockerization of install system |        |
+| w18    | Sensor grid/ integration with API server     |        |
+| w19    | Releasing demo                               |        |
+
+* Device upgrade
+- Can run inference on the current device?
+ - with INFXL?
+ - Any plan to upgrade a device?
+- FOTA support?
+- LwM2M support
+Preferably LwM2M client(inc. FOTA) should be supported in a sensor device.
+
+#+CAPTION: fig:normal
+[[../images/arch_003.png][FOTA: Flashing via LwM2M server]]
+
+We could work around this effort of implementing LwM2M client in a device,
+with running LwM2M client externally outside of a device
+but connected via USB for flasing.
+
+#+NAME: fig:workaround
+[[../images/arch_004.png][FOTA: external LwM2M client on RPI as workaround]]
+
+
+* Demo usecase
+- Requirement: swap inference per condition
+- Any suggestion?
+
+* Workshop
+- 20/MAR/2020 at Budapest

@@ -1,0 +1,47 @@
+#+TITLE: TinyMLaaS: sync-up with Skymizer
+#+AUTHOR: Peter Chang, Luba Tang, Hiroshi Doyu
+#+DATE: 05 FEB 2020
+
+[[../images/arch.png][TinyMLaaS]]
+
+* Which devices to buy?
+- (Skymizer) Skymizer will ask Andes and Altery whether they could provide development board for free.
+
+* LwM2M interface support
+- (Ericsson) Ericsson will provide lightweight M2M support as the interface between Skymizer and Ericsson
+
+[[../images/arch_003.png][FOTA: LwM2M server]]
+
+[[../images/arch_004.png][FOTA: LwM2M server on RPI as workaround]]
+
+* Which demo?
+- We will discuss this after choosing development boards.
+ - requirements: swap inferences per condition (e.g. day -> night)
+- (Skymizer) Make sure model test set.
+ - It depends on which kinds of development boards that we choose.
+
+* Schedule
+
+| week # | task                                        | status |
+|--------+---------------------------------------------+--------|
+| w06    | this week, implementing [[http://136.225.130.103:3000/][API server]]          | WIP    |
+| w07    | API server with dummy backend               |        |
+| w08    | API server with dummy docker backend        |        |
+| w09    | MNIST/ dockerization of build system        |        |
+| w10    | MNIST/ dockerization of install system      |        |
+| w11    | MNIST/ integration with API server          |        |
+| w12    | MNIST/ swapping inferences with API server. |        |
+| w13    | Visiting Budapest for [[https://bud20.sched.com/event/ZZEM][Linaro Connect]]        |        |
+| w14    | Replacing MNIST with demo usecases          |        |
+| w15    |                                             |        |
+| w16    |                                             |        |
+| w17    |                                             |        |
+| w18    |                                             |        |
+| w19    | Releasing demo                              |        |
+
+* When can we meet next time?
+- Skymizer will shutdown from 1/23 to 1/29 due to Lunar New Year.
+- To Hiroshi-san, Please arrange a meeting to avoid this period. Thank
+
+* collaboration announcement
+WIP
