@@ -16,6 +16,7 @@ title Standardizing 3 interfaces for ecosystem
 *** LwM2M
 **** SOTA
 **** FOTA
+*** Custom
 ** inference\nmodule format
 *** 3 profiles
 **** ONNX
