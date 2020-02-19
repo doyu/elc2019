@@ -1,0 +1,34 @@
+- TinyMLaaS, what is it and why (you already have that with nice figures), added with what it means for us, portfolio perspective (how it can augment our offering)
+** TinyML?
+- venn diagram
+** TinyML as-a-Service (TinyMLaaS)?
+- architecture diagram
+** Why?
+- 90% raw sensor data isn't used
+** What does this mean for E///?
+- With E/// IoT infrastructure(e.g. LwM2M)
+- TinyMLaaS enables SMEs to start their AI business
+- with sensor devices
+
+* Partners
+- List of interesting companies you have contact with, and have on the candidate list
+** 3 Types
+- AI chip vendor
+- ML compiler vendor
+- AI service provider
+** With NDA
+- Skymizer, ML compiler (ONNC)
+- Greenwaves, IoT AI chip (GAP8/9)
+** Negotiating
+- LeapMind, lightweight NN on FPGA
+- INFXL, lightweight NN on MCU
+** Potential
+- Qualcom, LinuxFoundation AI (LFAI) member. LFAI wants to incubate TinyMLaaS
+- Arm/NXP/STM, Cortex-M55 with Ethos-M55 (NN accelerator) in 2021
+
+* Our target
+What the purpose is for working with these companies and how they could be "used" for us
+- AI chip war
+ - Diversed hardware evolution(e.g. AI chip) with ML compiler
+ - homogeneous cloud/edge vs heterogeneous (AI) IoT
+- E/// as a HUB to accomodate them to connect to service providers.
