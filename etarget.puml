@@ -1,0 +1,36 @@
+@startuml
+scale 2048 width
+
+(end\nusers) -down-> (CSP1)
+(end\nuser0) -down-> (CSP1)
+(end\nuser1) -down-> (CSP1)
+(end\nuser2) -down-> (CSP1)
+
+(end\nuser3) -down-> (CSP2)
+(end\nuser4) -down-> (CSP2)
+
+(end\nuser5) -down-> (CSP3)
+
+cloud "**Ericsson**\n**service HUB**\n" {
+        (TinyMLaaS) #yellow
+        (IoT\naccelerator) #lightblue
+        (TinyMLaaS) <-[#blue,bold,dotted]> (IoT\naccelerator) : optional
+}
+
+(CSP1) -down-> (IoT\naccelerator)
+(CSP2) -down-> (IoT\naccelerator)
+
+(CSP3) .down-> (IoT\naccelerator) : "AI service\nonboarding"
+
+collections devices
+(IoT\naccelerator) -down-> (AI_chip)
+(IoT\naccelerator) -down-> (GPU)
+(IoT\naccelerator) -down-> (CPU)
+(IoT\naccelerator) -down-> (MCU) : NB-IoT
+(IoT\naccelerator) -down-> (sensors) : inference
+(IoT\naccelerator) -down-> devices : LwM2M
+
+collections ML_compilers #lightgreen
+(TinyMLaaS) <-[#blue,bold]up-> ML_compilers : "backend/\necosystem\npartners"
+
+@enduml
