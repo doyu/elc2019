@@ -1,0 +1,187 @@
+> How can we democratize machine learning on IoT devices?
+>
+> Making tiny machine learning widely available on edge IoT devices
+> could prove to be a major leap in smart sensing across industries.
+> Below, we plot the technical milestones to making that happen as part
+> of our ongoing research into TinyML as-a-service.
+>
+> TinyML, as a concept, concerns the running of ML inference on Ultra
+> Low-Power (ULP ~1mW) microcontrollers found on IoT devices. Yet today,
+> various challenges still limit the effective execution of TinyML in
+> the embedded IoT world. As both a concept and community, it is still
+> under development.
+>
+> Here at Ericsson, the focus of our TinyML as-a-Service (TinyMLaaS)
+> activity is to democratize TinyML, enabling manufacturers to start
+> their AI businesses using TinyML, which runs on 8, 16 and 32 bit
+> microcontrollers.
+>
+> Our goal is to make the execution of ML tasks possible and easy in a
+> specific class of devices. These devices are characterized by very
+> constrained hardware and software resources such as sensor and
+> actuator nodes based on these microcontrollers.
+>
+> Below, we present how we can bind the “as-a-service” model to TinyML.
+> We will provide a high-level technical overview of our concept and
+> introduce the design requirements and building blocks which
+> characterize this emerging paradigm.
+>
+> This is the third instalment in our series on tiny machine learning
+> (TinyML) as-a-service. In our earlier articles, we offer an
+> introduction to TinyML as-a-service and explore the challenges of
+> machine learning at the edge.
+>
+>
+> What is our approach for making TinyMLaaS possible?
+> We propose to build a higher-level abstraction of TinyML software that
+> is as hardware and software agnostic as possible. Furthermore, we will
+> do this in an "as a Service" fashion. Why? The advantages of using
+> specialized hardware for ML must be balanced with the use of dedicated
+> ML compilers that adapt a certain ML model to the targeted hardware
+> platform. This hardware and associated compilers’ heterogeneity (i.e.
+> application of various kinds of special hardware) generates additional
+> fragmentation. It also offers poor flexibility against the possibility
+> of easily switching hardware context due to the need to re-compile the
+> ML inference model for the targeted device. ML compilers are very
+> powerful tools and we don't want to disregard their important role in
+> the ML ecosystem.
+>
+> This software abstraction is the foundation of TinyMLaaS - a cloud or
+> edge service designed to host a wide set of ML compilers. It is the
+> job of these compilers to convert a specific ML inference model into
+> the appropriate format for being executed in the served device.
+>
+> We believe that creating an ecosystem around TinyML, based on our
+> TinyMLaaS concept, is a way forward. Such an ecosystem would enable
+> developers to seamlessly build and compile ML inference models
+> regardless of the underlying hardware platform.
+>
+> To tailor an ML inference model for running in a specific device,
+> TinyMLaaS needs to gather some information about the device itself,
+> such as CPU type, RAM and ROM size, available peripherals, underlying
+> software, and the correct inference model to process.
+>
+> The TinyMLaaS backend will select the most suitable ML compiler and
+> generate the compiled ML inference module on the basis of the above
+> parameters. The generated ML inference module is then downloaded and
+> installed on the designated device.
+>
+> In our work, communication with the end-devices is handled through the
+> LightweightM2M (LwM2M) device management protocol. There are multiple
+> reasons for choosing LwM2M in the context of IoT and embedded systems.
+> To learn why, check out our earlier blog posts from 2017, 2015 and
+> 2014.
+>
+> TinyMLaaS relies on LwM2M also to benefit from Firmware-over-the-air
+> (FOTA) and Software-over-the-air (SOTA) update capabilities. The
+> integration between LwM2M and IPSO Objects is harnessed, with the aim
+> of using a standardized model when end-devices and a TinyMLaaS
+> instance exchange device characteristics information.
+>
+> Expanding the TinyMLaaS ecosystem
+> The approach used in TinyMLaaS can be useful for enhancing ML
+> interoperability between different devices from different
+> manufacturers, allowing small and medium-sized enterprises (SMEs) to
+> easily join the game along with bigger firms. Our idea is to serve as
+> many devices as possible and break the existing interoperability
+> barrier between different AI chips and related compilers. In order to
+> unlock this interoperability, there are three essential components
+> which characterize TinyMLaaS: compiler plugin interface, orchestration
+> protocol, and inference module format.
+>
+> Figure 1: Standardizing three components for the TinyMLaaS ecosystem
+>
+> Supporting these three components represents the basic requirement for
+> embedding a hardware platform to the TinyMLaaS ecosystem. By defining
+> them, we also offer a foundation for each to work independently and
+> then bind them together to enable AI business. In the figures below,
+> we depict the purpose of each three components.
+>
+> The first component, the compiler plugin interface (below), is the
+> definition of parameters to pass and output format to return from the
+> TinyMLaaS backend (ML compiler). TinyMLaaS is a kind of front-end to
+> accept requests, and it could have multiple backends of ML compilers.
+> A request is sent to an appropriate backend and it returns the output
+> of compilation. As we are aiming to host multiple ML compilers from
+> different vendors, it would be desirable to define a standard for such
+> parameters rather than adapt the parameters to the device in use.
+>
+> Figure 2: The purpose of the compiler plugin interface
+>
+> The second component, the orchestration protocol (below), is used to
+> first get device capabilities and then install a generated image onto
+> a device. This element enables explicit interactions between devices
+> and TinyMLaaS on the basis of well-defined APIs. In this respect,
+> LwM2M has the appropriate characteristics for taking advantage of a
+> standardized protocol, particularly suitable for the embedded IoT
+> context.
+>
+> Figure 3: The purpose of the orchestration protocol via LwM2M
+>
+> The third component, the inference module format (below), is needed at
+> SOTA, which is a partial software update, to support multiple types of
+> real time operating systems with a single format. This is basically
+> the ML inference application itself as well as the "output" processed
+> by the ML compiler. The output format of such an application is
+> tailored by the ML compiler according to the underlying software and
+> hardware characteristics of the device that is using it. The large
+> number of heterogenous devices and the lack of a consistent inference
+> format model means that this process remains fragmented. In this
+> respect, we look forward for a step toward a process of standardizing
+> the inference format model, so as to ensure an easier ML software
+> portability between devices.
+>
+> Figure 4: The purpose of the inference module format
+>
+> Mapping the lifecycle process of the TinyMLaaS ecosystem
+> In figure 5 (below), we depict how these interfaces are employed in a
+> typical cloud-edge-device scenario. The blue arrows indicate how those
+> components interact in this ecosystem.
+>
+> Figure 5: Component interaction across the TinyMLaaS ecosystem
+>
+> From TinyMLaaS to MLCaaS
+> The principles used in TinyMLaaS can represent an important element in
+> tackling the high heterogeneity which characterizes the ML ecosystem.
+> As we explained in the first two articles of this series, there are ML
+> frameworks and ML-optimized hardware showing up more frequently,
+> targeting different execution environments (e.g. cloud, edge, IoT
+> devices).
+>
+> The possibility of relying on ML-based IoT systems, composed of
+> heterogeneous components interacting between each other, is something
+> highly desirable but equally difficult to achieve with the current
+> solutions. TinyMLaaS aims to bridge the gap in this respect.
+>
+> Furthermore, this concept can also be disjoined by the IoT and
+> reformulated, similarly and on a higher level, as ML Compiler
+> as-a-Service (MLCaaS). In fact, as long as a ML framework generates a
+> standardized computational graph (i.e. through ONNX), the ML compiler
+> can more easily generate the ML inference model software suitable for
+> a targeted hardware.
+>
+> This basically represents the rationale of our activity. We are
+> working for building a service platform that can offer seamless
+> migration of a ML application between, for example, cloud computing
+> environments with GPU, edge computing with FPGA or IoT devices with
+> constrained AI chip.
+>
+> Summary
+> We hope that you enjoyed our series about TinyMLaaS.
+>
+> The TinyML community has evolved a lot during the last year. Ecosystem
+> players, like chip vendors, compiler companies, service providers etc.
+> have an opportunity to both influence and accelerate the development
+> of the ecosystem. Here at Ericsson, we very much encourage and invite
+> this level of cross-industry collaboration.
+>
+> Hiroshi Doyu is presenting a talk about "TinyML as-a-Service" at
+> Linaro Connect, Budapest, Hungary at the end of March. Please drop by
+> if you are interested or contact him on LinkedIn.
+>
+> Learn more
+> Read our earlier blog posts where we offer an introduction to TinyML
+> as-a-service and explore the challenges of machine learning at the
+> edge.
+>
+> Learn more about the future IoT ecosystem.
