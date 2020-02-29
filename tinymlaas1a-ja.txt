@@ -1,0 +1,186 @@
+#+TITLE: TinyML as-a-Service : Bring ML onto Deepest IoT Edge devices
+#+AUTHOR: Hiroshi Doyu
+
+* Preface
+The power of machine learning (ML) can have a remarkable technological
+impact on the core of constrained and embedded Internet of Things
+(IoT). Yet various technological barriers have so far made it
+challenging to realize the full value of ML-driven IoT at the edge.
+Could tiny Machine Learning (TinyML) provide a solution? In this
+Ericsson Research series, we explore the possibilities and challenges
+of TinyML and introducethe our new concept of "TinyML as-a-service"
+for the emerging TinyML concept.
+
+* ML and IoT
+ML has profoundly revolutionized and enhanced the last decade of
+computer technologies. By extension, it has impacted several
+application domains and industries ranging across medical, automotive,
+smart cities, smart factories, business, finance, and more. Remarkable
+research efforts are still ongoing today, across both industry and
+academia, to bring the full advantage of the ever-growing number of ML
+algorithms. Here, the aim is to make computing machines, of every size
+factor, smarter and able to deliver sophisticated and reliable services.
+
+ML applied in the context of the IoT is without doubt an application
+domain that has attracted a large amount of interest from across the
+enterprise, industrial and research communities. Today, researchers
+and industry experts are working extensively to advance existing
+ML-driven IoT in order to boost the quality of experience for users of
+smart devices and improvement of industrial processes.
+
+However, it is worth highlighting how there is not a formal and
+uniform view on what de facto ML in IoT means, and this has led to
+multiple opportunities and interpretations. In our view, taking
+advantage of intelligent algorithms in the IoT context translates to
+also having the possibility to equip IoT end-devices (such as sensors,
+actuators and micro-controllers) with functionalities capable of
+unleashing the power of ML algorithms on the IoT device itself. This
+thus extends the use of ML in IoT beyond in the cloud and more capable
+devices running e.g. Linux.
+
+In most cases, many consider ML in IoT as having the possibility to
+provide ML inference capabilities to devices similar to the well-known
+Single-Board Computer "Raspberry Pi", with the latter taking the role
+of IoT device.  The question is then, how can we put ML algorithms on
+constrained devices that are 32-bit MCUs and not capable of running an
+OS like Linux. Usually those MCUs have 256KB of SRAM and a few MB of
+storage(flash memory) at most and they don't have Memory Management
+Unit (MMU).
+
+In order to answer, we first need to come up with a clear idea of what
+can be defined as a "constrained IoT device". In the last decades of
+IoT-related research, there have been countless attempts to converge
+towards a common and coherent definition. To our extent, we accept the
+definition and characterization given by the Internet Engineering Task
+Force (IETF) through the [[https://tools.ietf.org/html/draft-bormann-lwig-7228bis-05][RFC 7228bis]]. We believe that we must consider
+and operate within the world of embedded systems to be able to talk
+about IoT devices at the very deep edge. Embedded can be considered a
+synonym of hardware and software constraints. This, in turn, can be
+considered an antonym of Cloud and Edge – different entities that, in
+this game, can feature big and somehow "unlimited" resources. Embedded
+can also be viewed as embedding the computing, sensing and actuation
+in everyday objects and environments, like a soil sensor in
+agriculture or an appliance in a building.
+
+* What is TinyML?
+Using this explicit definition of a "constrained IoT device" as a
+starting point, it is thus crucial to characterize the distinction
+between "serving" machine learning to IoT devices, and "processing"
+machine learning within IoT devices.
+
+In the first case, all the ML-related tasks are “outsourced” to the
+Edge and Cloud, meaning that an IoT device is somehow "passively"
+waiting to receive the rendered ML model algorithm elaboration. In the
+second case, conversely, an IoT device concretely takes part in the
+execution of intelligent services by "processing", for example, sensor
+data locally.
+
+Figure 1 below illustrates the overlap of the different technology
+areas and enablers, as well as providing a clear overview of our
+research focus. From a technological point of view, we can notice how
+there are several overlapping areas which represent the common ground
+between technological areas and technological enablers. As an example,
+the world of embedded Linux can be considered a rally point between
+"Linux" technologies and "Constrained IoT", thus also acknowledging
+that IoT capabilities stretches across the device-edge-cloud realms.
+"TinyML" represents the connecting point between "IoT devices" and
+"ML". It is worth highlighting how TinyML, however it aims to bring ML
+into the embedded world, does not exclusively overlap with
+technological enablers such as Linux. This feature represents a
+crucial aspect of our research area and this is extensively
+clarified [[https://www.ericsson.com/en/blog/2019/12/tinyml-as-a-service][here]].
+
+Here we define TinyML as the technology area which concerns the
+running of ML inference on Ultra Low-Power (ULP ~1mW) microcontrollers
+found on IoT devices. TinyML is not only a general technical concept,
+but also it has an emerging community of researchers and industory
+experts. [[https://tinymlsummit.org/][tinyML Summit]] is held annually and [[https://www.meetup.com/tinyML-Enabling-ultra-low-Power-ML-at-the-Edge/][tinyML meet-up]] is
+held monthly at Silicon Valley.
+
+* Why TinyML?
+The difference between "serving" and "processing" ML in IoT devices
+presents some significant technical challenges. Lately, efforts to
+focus on the “serving” technologies have been steadily growing in
+R&D, not only at Ericsson but also across other key technology
+players. The aim is to make it easier and straightforward. This
+belongs to "Edge computing". Here's one question, why Edge computing
+cannot solve all problems as "serving" for IoT devices?
+
+We see five areas, which Edge computing may not be solving competely yet.
+(1) data privacy
+(2) network latency
+(3) network bandwidth
+(4) network reliability
+(5) power consumption
+The detail of those 5 points are discussed [[https://www.ericsson.com/en/blog/2019/12/tinyml-as-a-service][here]].
+
+If we see TinyML as local processing of ML inference, TinyML could
+solve the above 5 problems somewhat over traditional Edge computing.
+
+* The challenges of TinyML
+Previously we see TinyML, as local processing, supplementing Edge
+computing nicely. In order to achieve such target, TinyML itself has
+its own challenges to overcome.
+
+1. The gap between Web and Embedded development experience
+It's usually being done on fleet of Linux machines with Gigabyte of
+RAM, Terabyte of storage(Hard disk drive), Giga Hz of many 64bit
+processors at web development, where popular Linux Container
+orchestration is used. On the other hand, in Embedded development,
+it's done on variety of microcontrollers, variety of Real Time
+Operating Systems(RTOS), with 512 Kilobyte of SRAM, a few Megabyte of
+flash memory, without any standard orchestration. Those development
+environment is totally different. We cannot migrate Cloud service onto
+IoT devices.
+
+2. ML demands huge computing resources
+ML has typically 2 phases, one for trainng and another for inference.
+ML training is done on Cloud with popular python based ML
+frameworks(e.g. TensorFlow, Pytoarch, e.t.c) and its output inference
+model is stored on some archive, called model "Zoo". Thanks to the
+latest introduction of ONNX (Open Neural Network eXchange format),
+each ML framework can make use of a model, trained on other framework
+easily. But this cannot be applied to Embedded IoT. Any of those
+frameworks and models are too big to run on IoT devices.
+
+To tackle the above problems, we propose "TinyML as-a-Service",
+explained in the following chapter.
+
+* What is TinyML as-a-Service?
+We described some problems for TinyML previously. Here we'll explain
+what's our TinyML as-a-Service (TinyMLaaS) and how it can solve TinyML
+problems.
+
+A pre-trained ML inference model cannot be run on IoT devices as it is, because
+constrained computing resources of those devices cannot afford. Such
+models have to be converted into appropriate one, fitting into device
+resources, especially in size. ML compiler can convert a pre-trained
+ML inference model into an appropriate one for the IoT device to run
+on. They use some techniques to squeeze model size, for example,
+"quantization", dropping computing bits, sacrificing some accuracy,
+"pruning", removing unimportant parameters, "fusing", combining
+multiple computational operators into one. Since popular ML frameworks
+cannot run on such IoT devices, ML compiler also needs to generate a
+specialized small runtime, optimized per model, per hardware
+accelerators device has. This depends on which accelerator operators
+AI chip has. We consider this as some customization service per device
+features.
+
+TinyML as-a-Service is such customization service on Cloud. It can host
+multiple ML compilers as its backend, fistly gather device information
+from a device, secondly generate approprite ML inference model from
+one in model Zoo, and install it onto devices on-the-fly.
+
+Usually Embedded developers and ML developers have totally different
+skillset. Introducing ML into Embedded is a little bit though for
+Embedded developers. With TinyMLaaS, Embedded developers could easily
+introduce ML capabilities onto his devices. True for vise-vasa.
+TinyMLaaS would enable any service provide to start their AI business
+with devices easily, running ML inference locally on device.
+
+* Conclusion
+The TinyML community has evolved a lot during the last year. Ecosystem
+players, like chip vendors, compiler companies, service providers etc.
+have an opportunity to both influence and accelerate the development
+of the ecosystem. Here at Ericsson, we very much encourage and invite
+this level of cross-industry collaboration.

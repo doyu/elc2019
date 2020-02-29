@@ -1,5 +1,7 @@
 > How can we democratize machine learning on IoT devices?
->
+
+機械学習をIoTデバイスでおこなう
+
 > Making tiny machine learning widely available on edge IoT devices
 > could prove to be a major leap in smart sensing across industries.
 > Below, we plot the technical milestones to making that happen as part

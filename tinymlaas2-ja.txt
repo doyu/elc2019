@@ -1,29 +1,56 @@
 > TinyML as a Service and the challenges of machine learning at the edge
->
+
+TinyML as-a-Service, エッジ機械学習の課題
+
 > The TinyML as-a-Service project at Ericsson Research sets out to
 > address the challenges that today limit the potential of machine
 > learning (ML) paradigms at the edge of the embedded IoT world. In this
 > post, the second post in our TinyML series, we take a closer look at
 > the technical and non-technical challenges on our journey to making
 > that happen. Learn more below.
->
+
+まずはじめに
+Ericsson ResearchにおけるTinyML as-a-Serviceプロジェクトは
+現在、組み込みIoTエッジにおける機械学習(ML)の可能性を制限する
+課題について述べます。
+
+このTinyMLシリーズの第二回において、
+技術的および非技術的な課題の詳細をみていきます。
+でははじめましょう。
+
 > This is the second post in a series about tiny machine learning
 > (TinyML) at the deep IoT edge. Read our earlier introduction to TinyML
 > as-a-Service, to learn how it ranks in respect to traditional
 > cloud-based machine learning or the embedded systems domain.
->
+
+本記事はIoTエッジにおけるTinyMLシリーズの第二回です。
+既存のクラウドにおける機械学習や組み込み(Embedded)に対して
+TinyMLがどのように位置するものか理解するために
+前回のTinyML as-a-Serviceのイントロダクションの記事を参照してください。
+
 > TinyML is an emerging concept (and community) to run ML inference on
 > Ultra Low-Power (ULP ~1mW) microcontrollers. TinyML as a Service will
 > democratize TinyML, allowing manufacturers to start their AI business
 > with TinyML running on microcontrollers.
->
+
+TinyMLは超低消費電力マイクロコントローラ上でML推論を行うという、新しく
+出始めたコンセプトであり、またそのコニュニティを意味することもあります。
+TinyMLaaSはベンダーがマイクロコントローラ上でTinyMLを走らせることでAI
+ビジネスを始めるの助けます。
+
 > In this article, we introduce the challenges behind the applicability
 > of ML concepts within the IoT embedded world. Furthermore, we
 > emphasize how these challenges are not simply due to the constraints
 > added by the limited capabilities of embedded devices but are also
 > evident where the computation capabilities of ML-based IoT deployments
 > are empowered by additional resources confined at the network edge.
->
+
+本記事では機械学習を組み込みIoTに適用する際の課題を紹介します。
+
+更にこれらの課題は
+組み込みデバイス自体のの限られた機能からの制約だけではなく
+IoT ML デプロイがネットワーク・エッジのリソースに制限されることも含みます。
+
 > To summarize the nature of these challenges, we can say:
 >
 > 1. Edge cannot solve everything
@@ -31,16 +58,28 @@
 >    different technological domains
 > 3. The machine learning ecosystem is big and resource demanding. What
 >    ML tasks can be executed in the IoT space?
->
->
+
+以上の課題をまとめると、
+1. エッジ・コンピューティングは万能ではない。
+2. Webと組み込みシステムの構成要素の違い。
+3. 機械学習エコシステムは多大でリソースを多く使います。
+   組み込みIoTで実行可能な機械学習とは？
+
 > Below, we take a closer look at each of these challenges.
->
+
+以下にそれぞれの課題を詳細にみていきます。
+
 > Why edge computing cannot solve everything
->
+
+なぜエッジ・コンピューティングは万能ではないか？
+
 > Edge computing promises higher performing service provisioning, both
 > from a computational and a connectivity point of view.
->
->
+
+エッジ・コンピューティングは
+計算能力およびネットワーク接続の観点から
+高性能なサービスを展開することを保証します。
+
 > Edge nodes support the latency requirements of mission critical
 > communications thanks to their proximity to the end-devices, and
 > enhanced hardware and software capabilities allow execution of
@@ -50,17 +89,31 @@
 > already several ML-dedicated "edge" hardware examples (e.g. Edge TPU
 > by Google, Jetson Nano by Nvidia, Movidius by Intel) which confirm
 > this.
->
+
+エッジ・ノード群はエンド・デバイスに近いということで
+ミッション・クリティカルなレイテンシー条件を満たします。
+エッジ・ノード群のもつ増強されたハードウェアとソフトウェアは
+エッジ・ノード上のより複雑化し多くのリソースを必要とするサービスの実行
+も可能にします。
+
 > Therefore, the question we are asking is: what are the issues that the
 > edge computing paradigm has not been able to completely solve yet? And
 > how can these issues undermine the applicability of ML concepts in IoT
 > and edge computing scenarios?
->
+
+というわけで、ここでのポイントは、
+エッジ・コンピューティングのパラダイムがまだ解決しきれていない問題とは
+何か、そしてどのようにその問題が機械学習をIoTやエッジへの適用を妨げるか、
+ということになります。
+
 > We intend to focus on and analyze five areas in particular: (Note:
 > Some areas we describe below may have solutions through other emerging
 > types of edge computing but are not yet commonly available).
->
->
+
+５つの分野に注目してみていきたいと思います。
+(注: いくつかの分野は先進的なエッジ・コンピューティングが解決しつつあ
+るかもしれませんが、まだ一般的に普及していません)
+
 > Privacy. Data security and user privacy have received much attention
 > in recent years, emphasized further by the recurrent news on public
 > data leaks. Governments have acted to resolve such privacy issues, for
@@ -82,7 +135,12 @@
 > on-premises, by trying to confine the processing of sensitive data
 > only at the IoT device itself (and by consequence avoiding the data
 > flowing towards external services).
->
+
+プライバシー
+データ・セキュリテイとユーザ・プライバシは
+再発するデータ漏洩
+近年、多大な注目を集めています。
+
 > Network bandwidth. In scenarios characterized by the presence of a
 > dense quantity of various IoT end-devices (devices suitable for the
 > execution of a wide variety of heterogeneous tasks), it is reasonable

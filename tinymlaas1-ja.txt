@@ -1,7 +1,8 @@
+# (1/3) https://www.ericsson.com/en/blog/2019/12/tinyml-as-a-service-iot-edge
+
 > TinyML as-a-Service: What is it and what does it mean for the IoT
 > Edge?
-
-TinyML as-a-Serviceとは？ IoTエッジに対してどのような意味を持つのか？
+* TinyML as-a-Serviceとは？ IoT Edgeに対してどのような意味を持つのか？
 
 > The power of machine learning can have a remarkable technological
 > impact at the core of constrained and embedded IoT. Yet various
@@ -11,12 +12,12 @@ TinyML as-a-Serviceとは？ IoTエッジに対してどのような意味を持
 > possibilities and challenges of machine learning for IoT and introduce
 > the concept of TinyML as-a-service. Read on.
 
-機械学習(ML)は組み込みIoT分野において、大きな影響を及ぼす可能性があり
-ます。MLによってもたらされる価値をIoTエッジにおいて実現するには様々な
-技術的課題が立ちはだかっています。TinyMLはそのソリューションとなり得る
-でしょうか？このEricsson Researchの連載で、IoTにおける機械学習の可能性
-と問題点を探り、そしてTinyML as-a-Serviceのコンセプトを紹介していきた
-いと思います。
+機械学習(ML)は組み込みIoT分野において、技術的に大きな影響を及ぼす可能
+性があります。いま現在、IoT EdgeにおいてMLの価値を完全に実現するには様々
+な技術的課題が立ちはだかっています。TinyMLはそれらの課題を解決すること
+ができるでしょうか？このEricsson Researchの連載で、IoTにおける機械学習
+の可能性と課題を探り、そして我々のTinyML as-a-Serviceのコンセプトを紹
+介したいと思います。
 
 > Machine Learning (ML) has profoundly revolutionized and enhanced the
 > last decade of computer technologies. By extension, it has impacted
@@ -28,17 +29,15 @@ TinyML as-a-Serviceとは？ IoTエッジに対してどのような意味を持
 > of every size factor, smarter and able to deliver sophisticated and
 > reliable services.
 
-機械学習(ML)はこの10年間にコンピュータ技術をかなり変革しました。更に医
+機械学習(ML)は過去10年間にコンピュータ技術をかなり変革しました。更に医
 療、自動車、スマート・シティ、スマート・ファクトリ、エンタープライズ、
 金融などを含む派生分野や産業にまで影響を及ぼしました。今日においても、
-産業界と学会の両面にわたり、これまでにわたり増加してきた機械学習アルゴ
-リズムを利用するため、著しい研究の努力は依然として続けられています。こ
-こでの目的は、すべての形態の計算機械をよりスマートにし、洗練されかつ信
-頼性のあるサービスを提供できるようにすることです。
+産業界と学会の両面にわたり、これまでにわたり追加されてきた多大な機械学
+習アルゴリズムを利用するため、著しい研究の努力は依然として続けられてい
+ます。それらの目的は、すべての形態の計算機械をよりスマートにし、洗練さ
+れかつ信頼性のあるサービスを提供できるようにすることです。
 
-> Machine learning and IoT
-
-機械学習とIoT
+* Machine learning and IoT (機械学習とIoT)
 
 > ML applied in the context of the Internet of Things (IoT) is without
 > doubt an application domain that has attracted a large amount of
@@ -47,10 +46,11 @@ TinyML as-a-Serviceとは？ IoTエッジに対してどのような意味を持
 > existing ML-driven IoT in order to boost the quality of experience for
 > users of smart devices and improvement of industrial processes.
 
-機械学習をIoTのコンテキストに適用するということは、確かに産業界および
-研究分野において多大な興味を引き起こす分野です。今日、研究者はスマート
-デバイスのユーザー体験と産業プロセスの改善のために既存のIoT機械学習を
-進展させようと非常に励んでいます。
+機械学習をInternet of Things (IoT) のコンテキストに適用するということ
+は、間違いなくエンタープライズ、産業界および学会において多大な興味を引
+き起こす分野です。今日、研究者はスマート・デバイスのユーザ・エクスペリ
+エンスと産業プロセスの改善のために既存のIoT機械学習を進展させようと励
+んでいます。
 
 > However, it is worth highlighting how there is not a formal and
 > uniform view on what de facto ML in IoT means, and this has led to
@@ -62,18 +62,16 @@ TinyML as-a-Serviceとは？ IoTエッジに対してどのような意味を持
 > thus extends the use of ML in IoT beyond in the cloud and more capable
 > devices running e.g. Linux.
 
-しかし、ここで言っておきたいのは、
-"何がデファクトの組み込みIoT機械学習なのか"に対しての
-公式な見解や単一な見解は存在しないということです。
-これには様々は解釈が存在します。
+しかしながら、ここで注意してほしいのは、
+"何がデ・ファクトのIoT機械学習か"に対しての公式なかつ統一された見解は
+存在しません。そして、これに関して様々は解釈が存在しています。
 
 我々の見解では、
 IoTにおけるインテリジェントなアルゴリズム利用とは、IoTエンドデバイス
 (センサーやアクチュエータといったマイクロコントーラ)での利用も意味しま
-す。それは、IoTデバイス上でMLアルゴリズムのパワーを解き放ちます。これ
-は従来のクラウドやLinuxが動作するデバイスを超えて、IoTにおける機械学習
-を実現するということです。
-
+す。それは、まさにIoTデバイス上で機械学習アルゴリズムのパワーを解き放ちます。
+これがクラウドやLinuxが動作する高機能デバイスという従来の範疇を超えて、
+IoT機械学習を実現するということです。
 
 > In most cases, many consider ML in IoT as having the possibility to
 > provide ML inference capabilities to devices similar to the well-known
@@ -83,10 +81,10 @@ IoTにおけるインテリジェントなアルゴリズム利用とは、IoT�
 > OS like Linux.
 
 ほとんどの場合、IoT機械学習とは、
-有名なラズベリーパイといったシングルボード・コンピュータ上にML推論を載
-せることと考えるかもしれませんが、
-ここでの問題は、どうすればLinuxが動作しないような非力な32bitのマイクロ
-コントローラ上にMLアルゴズムを載せることが可能か？ということになります。
+有名なシングルボード・コンピュータ"ラズベリーパイ"と同様のデバイス上に
+機械学習の推論機能を載せることと思うかもしれませんが、
+ここでの問題は、どうすればLinuxが動作しないような組み込み32bitのマイクロ
+コントローラ上に機械学習アルゴズムを載せることが可能か？ということになります。
 
 > In order to answer, we first need to come up with a clear idea of what
 > can be defined as a constrained IoT device. In the last decades of
@@ -103,29 +101,29 @@ IoTにおけるインテリジェントなアルゴリズム利用とは、IoT�
 > in everyday objects and environments, like a soil sensor in
 > agriculture or an appliance in a building.
 
-これに対して回答するために、まずはじめに"constrained IoT device"の定義
-を明確にする必要があります。過去10年間のIoT関連の研究でこの共通認識を
-形成するためのに数え切れないほどの試みがなされました。我々はIETF RFC
-7228bisでの定義を取り入れます。我々は組み込みの世界のIoTのもっとも深い
-末端にあるデバイスを考慮する必要があると考えます。"組み込み"とはハード
-ウェアとソフトウェアの制約と同義と考えることができます。かわって、これ
-はクラウドやエッジと対称なものと考えれます。クラウドやエッジは強大で無
-尽蔵なりソースを持ちえます。エンベッディドとは、計算装置、センサー、ア
-クチュエータを日常的はデバイスや環境に"組み込む"ということです。例えば、
-土壌センサやビルの備え付け装置など。
+これに対して回答するために、まずはじめに"組み込みIoTデバイス
+"(constrained IoT device)の定義を明確にする必要があります。過去10年間
+のIoT関連の研究でこの共通認識を形成するためのに数え切れないほどの試み
+がなされました。我々はIETF RFC7228bisでの定義を取り入れます。我々は組
+み込みの世界のIoTのもっとも末端にあるデバイスを考慮する必要があると考
+えます。"組み込み"とはハードウェアとソフトウェアの制約と同義と考えるこ
+とができます。かわって、これはクラウドやエッジと対称なものと考えれます。
+クラウドやエッジは強大で無尽蔵なリソースを持ちえます。"組み込み
+"(Embedded)とは、計算装置、センサー、アクチュエータを日常的なデバイス
+や環境に"組み込む"ということです。例えば、土壌センサやビルの備え付け装
+置などといったもののことです。
 
-> What is TinyML as-a-Service?
-
-"TinyML as-a-Service"とは？
+* What is TinyML as-a-Service? (TinyML as-a-Serviceとは？)
 
 > Using this explicit definition of a constrained IoT device as a
 > starting point, it is thus crucial to characterize the distinction
 > between "serving" machine learning to IoT devices, and "developing"
 > machine learning within IoT devices.
 
-この"constrained IoT device"の明確な定義を使うことから始めます。機械学
-習をIoTデバイス向けに"提供(serving)"することと、機械学習をIoTデバイス
-用に"開発(developing)"することを分けて考えることが必要です。
+まずこの"組み込みIoTデバイス"(constrained IoT device)の明確な定義を採用することで、
+機械学習をIoTデバイスのために"提供"(serving)することと、
+(誤) 機械学習をIoTデバイス上で"開発"(developing)することを分けて考えることが必要です。
+(正) 機械学習をIoTデバイス上で"実行"(processing)することを分けて考えることが必要です。
 
 > In the first case, all the ML-related tasks are “outsourced” to the
 > Edge and Cloud, meaning that an IoT device is somehow "passively"
@@ -138,8 +136,8 @@ IoTにおけるインテリジェントなアルゴリズム利用とは、IoT�
 最初のケースでは、すべての機械学習関連のタスクはエッジやクラウドへアウ
 トソースされます。つまりIoTデバイスはMLアルゴリズムの出力を待つという
 意味で受け身なのです。逆に第２のケースでは、IoTデバイスは実際にインテ
-リジェント・サービスに参加します。クラウドやエッジと比較して非力なりソー
-スかどうかにかかわらず、これがTinyML as-a-Serviceと定義されます。
+リジェント・サービスに参加します。これがTinyML as-a-Serviceの定義です。
+クラウドやエッジと比較して非力なリソースであるということは関係ありません。
 
 > Figure 1 below illustrates the overlap of the different technology
 > areas and enablers, as well as providing a clear overview of our
@@ -156,18 +154,17 @@ IoTにおけるインテリジェントなアルゴリズム利用とは、IoT�
 > crucial aspect of our research area and will be extensively clarified
 > in the upcoming articles.
 
-以下のFigure 1はそれぞれ違った技術分野や要素の重なりを示しています。ま
-た我々の研究のフォーカスも示しています。技術的観点から、いくつかの重なっ
-た領域がある共通認識を提示していることがわかります。例えば、"Linux"と
-"IoT"の重なりが"組み込みLinux"です。IoTはデバイス-エッジ-クラウドにま
-たがっています。"TinyML"は"IoT"と"ML"の重なりです。さらにTinyMLはLinux
-を含まずにMLを組み込みの世界へ導入することを意味します。これは我々の研
-究の重要な側面を表しています。今後の続編でさらに明らかになっていきます。
+以下の図1はそれぞれ違った技術分野と構成要素の重なりを示しています。
+そして我々の研究の焦点も示しています。
+技術的観点から、いくつかの重なった領域がある共通認識を提示していることがわかります。
+例えば、"Linux"と"IoT"の重なりが"組み込みLinux"です。
+IoTはデバイス-エッジ-クラウドにまたがっています。
+"TinyML"は"IoT"と"ML"の重なりです。
+さらにTinyMLはLinuxを含まずに機械学習を組み込みの世界へ導入することを意味します。
+これは我々の研究分野の重要な側面を表しています。
+今後の続編でさらに明らかしていきます。
 
-
-> The challenges of TinyML as-a-Service
-
-TinyML as-a-Serviceの課題
+* The challenges of TinyML as-a-Service (TinyML as-a-Serviceの課題)
 
 > The difference between "serving" and "developing" ML in IoT devices
 > presents some significant technical challenges. Lately, efforts to
@@ -175,11 +172,13 @@ TinyML as-a-Serviceの課題
 > R&D, not only at Ericsson but also across other key technology
 > players. The aim is to make it easier and straightforward.
 
-IoTデバイスに対する機械学習の"提供(serving)"と"開発(developing)"の差は
-大きな技術的課題として現れます。IoTデバイスに対する機械学習の"開発
-(developing)"の労力は研究開発において増大してきています。これは
-Ericssonに限った話ではなく、業界の他の主要なテクノロジー会社においても
-同様です。これを用意かつ簡単にする必要があります。
+(誤) IoTデバイスに対する機械学習の"提供"(serving)と"開発"(developing)の差は大きな技術的課題として現れます。
+(正) IoTデバイスに対する機械学習の"提供"(serving)と"実行"(processing)の差は大きな技術的課題として現れます。
+(誤) IoTデバイスに対する機械学習の"開発"(developing)の労力は研究開発において増大してきています。
+(正) IoTデバイスに対する機械学習の"実行"(processing)の労力は研究開発において増大してきています。
+これはEricssonに限った話ではなく、業界の他の主要なテクノロジー企業においても同様です。
+(誤) 目的は機械学習の"開発"(developing)を容易かつシンプルにすることです。
+(正) 目的は機械学習の"実行"(processing)を容易かつシンプルにすることです。
 
 > To this extent, there are three key challenges which we explore:
 
@@ -188,18 +187,18 @@ Ericssonに限った話ではなく、業界の他の主要なテクノロジー
 > 1. the technical challenges within edge computing and how it cannot be
 > applied to solve all problems
 
-1. エッジ・コンピューティングの技術的課題
+1. エッジ・コンピューティングの技術的課題、エッジ・コンピューティングが万能でない理由
 
 > 2. the relevance of technological
 > differences between web-based and embedded worlds, especially from
 > deployment and execution perspectives
 
-Webと組み込みの技術的差異の妥当性。特にデプロイと実行の観点から。
+Webと組み込みの技術的差異、特にデプロイと実行の観点から
 
 > 3. the demand which ML places on
 > computational resources for delivering an accurate and reliable experience
 
-精度と信頼のために機械学習が求める計算リソース
+機械学習に必要な計算リソース、高精度かつ高信頼性を提供するために
 
 
 > In this blog series, we introduce and explain how our TinyML
@@ -210,8 +209,7 @@ Webと組み込みの技術的差異の妥当性。特にデプロイと実行�
 > additional approaches that, along with TinyML as-a-service, could
 > allow to quickly reach a fully ML-driven IoT world.
 
-このシリーズで
-我々は
+* このシリーズで我々は
 TinyML as-a-Serviceがどのように"組み込みIoT"と機械学習をつなげることが
 できるか紹介し説明します。TinyML as-a-Serviceのポイントを紹介し、なぜ
 機械学習を組み込みIoTに持ち込むのが容易でないのかを詳解します。そして
@@ -221,5 +219,4 @@ TinyML as-a-Serviceとともに"組み込みIoT機械学習"を可能する方�
 > Stay tuned in the upcoming weeks to discover more about the
 > fascinating fusion between machine learning and IoT at the edge!
 
-機械学習とエッジIoTの魅惑的な融合を発見するために楽しみにお待ちくださ
-い。
+機械学習とエッジIoTの魅惑的な融合を発見するために楽しみにお待ちください。
