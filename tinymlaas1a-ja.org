@@ -8,7 +8,7 @@ impact on the core of constrained and embedded Internet of Things
 challenging to realize the full value of ML-driven IoT at the edge.
 Could tiny Machine Learning (TinyML) provide a solution? In this
 Ericsson Research series, we explore the possibilities and challenges
-of TinyML and introducethe our new concept of "TinyML as-a-service"
+of TinyML and introduce our new concept of "TinyML as-a-service"
 for the emerging TinyML concept.
 
 * ML and IoT
@@ -90,10 +90,12 @@ technological enablers such as Linux. This feature represents a
 crucial aspect of our research area and this is extensively
 clarified [[https://www.ericsson.com/en/blog/2019/12/tinyml-as-a-service][here]].
 
+[[./images/venn1.png][Figure 1: The overlapping of technological areas and enablers]]
+
 Here we define TinyML as the technology area which concerns the
-running of ML inference on Ultra Low-Power (ULP ~1mW) microcontrollers
+running of ML inference on Ultra Low-Power (ULP ~1mW) micro-controllers
 found on IoT devices. TinyML is not only a general technical concept,
-but also it has an emerging community of researchers and industory
+but also it has an emerging community of researchers and industry
 experts. [[https://tinymlsummit.org/][tinyML Summit]] is held annually and [[https://www.meetup.com/tinyML-Enabling-ultra-low-Power-ML-at-the-Edge/][tinyML meet-up]] is
 held monthly at Silicon Valley.
 
@@ -106,13 +108,13 @@ players. The aim is to make it easier and straightforward. This
 belongs to "Edge computing". Here's one question, why Edge computing
 cannot solve all problems as "serving" for IoT devices?
 
-We see five areas, which Edge computing may not be solving competely yet.
+We see five areas, which Edge computing may not be solving completely yet.
 (1) data privacy
 (2) network latency
 (3) network bandwidth
 (4) network reliability
 (5) power consumption
-The detail of those 5 points are discussed [[https://www.ericsson.com/en/blog/2019/12/tinyml-as-a-service][here]].
+The detail of those 5 points are explained [[https://www.ericsson.com/en/blog/2019/12/tinyml-as-a-service][here]].
 
 If we see TinyML as local processing of ML inference, TinyML could
 solve the above 5 problems somewhat over traditional Edge computing.
@@ -127,14 +129,16 @@ It's usually being done on fleet of Linux machines with Gigabyte of
 RAM, Terabyte of storage(Hard disk drive), Giga Hz of many 64bit
 processors at web development, where popular Linux Container
 orchestration is used. On the other hand, in Embedded development,
-it's done on variety of microcontrollers, variety of Real Time
+it's done on variety of micro-controllers, variety of Real Time
 Operating Systems(RTOS), with 512 Kilobyte of SRAM, a few Megabyte of
 flash memory, without any standard orchestration. Those development
 environment is totally different. We cannot migrate Cloud service onto
 IoT devices.
 
+[[./images/webvsembedded.png][Figure 2: Web vs Embedded]]
+
 2. ML demands huge computing resources
-ML has typically 2 phases, one for trainng and another for inference.
+ML has typically 2 phases, one for training and another for inference.
 ML training is done on Cloud with popular python based ML
 frameworks(e.g. TensorFlow, Pytoarch, e.t.c) and its output inference
 model is stored on some archive, called model "Zoo". Thanks to the
@@ -142,6 +146,8 @@ latest introduction of ONNX (Open Neural Network eXchange format),
 each ML framework can make use of a model, trained on other framework
 easily. But this cannot be applied to Embedded IoT. Any of those
 frameworks and models are too big to run on IoT devices.
+
+[[./images/mlwebvsembedded.png][Web vs Embedded in ML]]
 
 To tackle the above problems, we propose "TinyML as-a-Service",
 explained in the following chapter.
@@ -151,36 +157,40 @@ We described some problems for TinyML previously. Here we'll explain
 what's our TinyML as-a-Service (TinyMLaaS) and how it can solve TinyML
 problems.
 
-A pre-trained ML inference model cannot be run on IoT devices as it is, because
-constrained computing resources of those devices cannot afford. Such
-models have to be converted into appropriate one, fitting into device
-resources, especially in size. ML compiler can convert a pre-trained
-ML inference model into an appropriate one for the IoT device to run
-on. They use some techniques to squeeze model size, for example,
-"quantization", dropping computing bits, sacrificing some accuracy,
-"pruning", removing unimportant parameters, "fusing", combining
+A pre-trained ML inference model cannot be run on IoT devices as it
+is, because constrained computing resources of those devices cannot
+afford. Such models have to be converted into appropriate size,
+fitting into device resources. ML compiler can convert a pre-trained
+model into an appropriate one for the IoT device to run on. They use
+some techniques to squeeze model size, for example, "quantifying" with
+fewer computing bits, "pruning" unimportant parameters, "fusing"
 multiple computational operators into one. Since popular ML frameworks
 cannot run on such IoT devices, ML compiler also needs to generate a
 specialized small runtime, optimized per model, per hardware
-accelerators device has. This depends on which accelerator operators
-AI chip has. We consider this as some customization service per device
-features.
+accelerators a device has. This depends on which accelerator operators
+AI chip on a device has. We consider those steps as some customization
+service per device features.
 
-TinyML as-a-Service is such customization service on Cloud. It can host
-multiple ML compilers as its backend, fistly gather device information
-from a device, secondly generate approprite ML inference model from
-one in model Zoo, and install it onto devices on-the-fly.
+TinyML as-a-Service is such on-demand customization service on Cloud.
+It can host multiple ML compilers as its backends, firstly gather
+device information from a device(e.g. LwM2M), secondly generate
+appropriate ML inference model from model Zoo, and install it onto
+devices on-the-fly(e.g. LwM2m SOTA/Software Other The air) update.
 
 Usually Embedded developers and ML developers have totally different
-skillset. Introducing ML into Embedded is a little bit though for
-Embedded developers. With TinyMLaaS, Embedded developers could easily
-introduce ML capabilities onto his devices. True for vise-vasa.
-TinyMLaaS would enable any service provide to start their AI business
-with devices easily, running ML inference locally on device.
+skill sets. Introducing ML into Embedded is a little bit tough for
+Embedded developers for the first time. With making use of TinyMLaaS,
+Embedded developers could easily introduce ML capabilities onto their
+devices, vise-vasa. TinyMLaaS would enable any service providers to
+start their AI business with devices easily, running ML inference
+locally on devices, without much help from Edge computing.
+
+[[./images/ecosystem_017.png][TinyMLaaS ecosystem]]
 
 * Conclusion
-The TinyML community has evolved a lot during the last year. Ecosystem
-players, like chip vendors, compiler companies, service providers etc.
-have an opportunity to both influence and accelerate the development
-of the ecosystem. Here at Ericsson, we very much encourage and invite
-this level of cross-industry collaboration.
+The TinyML community has evolved a lot during the last year. TinyMLaaS
+is an ecosystem around TinyML. Ecosystem players, like chip vendors,
+compiler companies, service providers etc. have an opportunity to both
+influence and accelerate the development of the ecosystem. Here at
+Ericsson, we very much encourage and invite this level of
+cross-industry collaboration.
