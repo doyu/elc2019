@@ -138,8 +138,31 @@ IoT ML デプロイがネットワーク・エッジのリソースに制限さ�
 
 プライバシー
 データ・セキュリテイとユーザ・プライバシは
-再発するデータ漏洩
+頻発する公的データ漏洩ニュースによりさらに
 近年、多大な注目を集めています。
+政府は
+例えば新しい規制や、既存のセキュリティとプライバシ法律の強化を通して
+そういったプライバシー問題の解決に乗り出しました。
+わかりやすい例は、EUで2018年に施行されたGDPRです。
+これらのより厳しい規制に関わらず
+多くのデータ保持者は警戒心を強めています。
+たびたび第三者であるクラウド、エッジ・サービス・プロバイダが
+自分たちのデータを蓄積し管理することに
+不本意であることを示しています。
+簡単に言えば、
+自分たちの生成するデータを保持するために
+物理的オンプレミス境界を設定するエンドユーザからの増加する要求
+からわかります。
+これはデータが全エコシステムの重要要素である機械学習に大変関係しています。
+幅広い業種において、
+この問題を解決するための
+"federated learning"といった、いくつかの手法が定義されました。
+Ericssonはセキュリティとプライバシの重要性を理解し、
+幅広い関連事項に活動しています。
+TinyMLaaSも
+機密情報処理をIoTデバイス上に制限することで
+データをオンプレミスに保持することで
+同様の方針を取っています。
 
 > Network bandwidth. In scenarios characterized by the presence of a
 > dense quantity of various IoT end-devices (devices suitable for the
@@ -152,7 +175,16 @@ IoT ML デプロイがネットワーク・エッジのリソースに制限さ�
 > in order to reduce the amount of data to offload at the edge, as well
 > as avoid network bottlenecks between end-devices and edge with
 > consequent performance degradation.
->
+
+ネットワーク帯域
+高密度かつ大量のIoTエンドデバイス(様々な異種のタスク実行用のデバイス)が存在する状況において
+当然、これらのデバイスが生成する生データは非常に大量です。
+一方、これらのデバイスの大多数は低帯域インターフェース(例えば、NB-IoTかCat-M1)を備えていると思われます。
+この限られた転送性能のため、オンプレミスにてデータを前処理する必要があると言えます。
+なぜならエッジへオフロードするデータ量の削減するため、
+また同様に結果としてネットワーク性能の低減を伴う
+エンドデバイスとエッジ間のネットワークのボトルネックを避けるためでもあります。
+
 > Latency. The ability to ensure bounded latency communications to
 > deliver high-performance services is a major design requirement for
 > emerging mobile networks. This blog has already hosted several
@@ -167,7 +199,25 @@ IoT ML デプロイがネットワーク・エッジのリソースに制限さ�
 > possible through our approach, it is worth clarifying that we still
 > cannot prescind from the support of the network edge and the rest of
 > the mobile network.
->
+
+ネットワーク遅延
+高性能サービスを届けるための
+限界遅延コニュニケーションを保証する能力は
+新しいモバイルネットワークの重要なデザイン要件です。
+このサイトではすでに
+５Gがどのように重要な低遅延IoTアプリケーションに必要か
+超高信頼低遅延コニュニケーションを保証するか
+といったいくつかの記事を掲載しています。
+さらに
+大量で重要なマシン・タイプ・コミュニケーションのユースケースで
+ミリセカンドの遅延を保証しながら
+エッジネットワークが重要な役割を果していることを強調しておきます。
+TinyMLaaSの狙いはさらなる遅延短縮のために
+MLタスク(推論)実行をデバイス自身へ持っていくことです。
+ほぼゼロ遅延が望ましく、我々のアプローチで可能ですが
+ネットワーク・エッジのサポートや残りのモバイル・ネットワークから
+切り離すことはできないということは重要です。
+
 > Reliability. In scenarios where cellular coverage cannot always be
 > ensured such as in the case of limited or no connectivity in rural
 > areas or on the open sea, neither the cloud nor the edge can extend
@@ -177,7 +227,16 @@ IoT ML デプロイがネットワーク・エッジのリソースに制限さ�
 > certain ML operations locally that were previously executed at the
 > edge or in the cloud, as TinyML as-a-Service aims to do, inevitably
 > produces several advantages.
->
+
+信頼性
+地方や海上で制限された、もしくはまったくコネクティビティないような
+セルラーの受信がが保証されないシナリオにおいて
+クラウドやエッジはエンドデバイスの計算能力や接続能力を拡張することができません。
+その結果、
+TinyMLaasが処理しようとする
+以前はエッジかクラウドで実行されてたような
+あるML処理をその場で実行できることは間違いなく有利です。
+
 > Energy efficiency. It is a well-known fact that one main design
 > requirement of IoT networks is energy efficiency, especially
 > considering the high probability that IoT devices are battery powered.
@@ -189,13 +248,32 @@ IoT ML デプロイがネットワーク・エッジのリソースに制限さ�
 > as-a-Service has been designed to enable local processing in the IoT
 > device itself, along with data transmission and ML computation in the
 > edge and cloud.
->
+
+エネルギー効率
+よく知られているように
+特に高確率でIoTデバイスがバッテリー駆動であるとこと考えれば、
+IoTネットワークの一つの設計要件はエネルギー効率です。
+しかしながら
+無視されがちだが
+実際には非常に影響を及ぼすさらなるエネルギー効率の特徴があります。
+これは次の事実に関連しています。
+あるケースでは
+ネットワーク転送はローカルでの計算処理よりもエネルギーを消費する
+ということです。
+この要素とほとんどのIoTデバイスがバッテリー駆動であることを考えて
+エッジとクラウドにおけるデータ転送、ML処理とともに
+TinyMLaaSは
+IoTデバイス上のローカルでの計算処理を可能にするように設計されています。
+
 > Technological differences between web and embedded
->
+
+Webと組み込みの技術的差異
+
 > High heterogeneity is characterized
 > Figure 1
->
->
+
+高多種性が特徴づけられます。
+
 > The web and the embedded worlds feature very heterogeneous
 > characteristics. Figure 1 (above) depicts how this high heterogeneity
 > is characterized, by comparing qualitatively and quantitively the
@@ -205,8 +283,17 @@ IoT ML デプロイがネットワーク・エッジのリソースに制限さ�
 > software perspective, web technologies can be designed to choose and
 > benefit from a multitude of sophisticated operating systems (OS) and
 > complex software tools.
->
->
+
+Webと組み込みはまったく違う特徴を持ちます。
+上記の図１は
+ハードウェア、ソフトウェアの両方の観点から定量的、定性的比較で
+この違いを示しています。
+Webサービスは強力なCPU、高いメモリーとストレージ容量に基づいています。
+ソフトウェアの観点から
+Webテクノロジーは
+豊富な洗練されたOSと複雑なソフトウェア・ツールを選択し恩恵を受けるように
+設計することができます。
+
 > On the other hand, embedded systems can rely on the limited capacity
 > of microcontroller units (MCUs) and CPUs that are much less powerful
 > when compared with general-purpose and consumer CPUs. The same applies
@@ -216,8 +303,16 @@ IoT ML デプロイがネットワーク・エッジのリソースに制限さ�
 > Linux-based systems into the embedded scenario (e.g. Yocto Project),
 > but nevertheless most 32bit MCU-based devices have the capacity to run
 > real-time operating systems and no more complex distribution.
->
->
+
+一方、組み込みシステムは
+汎用のコンシューマ向けCPUと比較すると非常に非力なMCUとCPUという制限された機能に
+基づいています。
+メモリーとストレージにおいても同様です。
+500KBのSRAM、1-4MBのフラッシュメモリーは高価なリソースと考えられます。
+Linuxベースのシステムを組み込みにという試行は様々なされましたが、
+多数の32bit MCUのデバイスはRTOS向けの容量しかもたず、
+それよりも複雑なディストリビューションには合いませんでした。
+
 > In simple terms, when Linux can run, system deployment is made easier
 > since software portability becomes straightforward. Furthermore, an
 > even higher cross-platform software portability is also made possible
@@ -226,8 +321,15 @@ IoT ML デプロイがネットワーク・エッジのリソースに制限さ�
 > basically ship the same software functionalities between entities
 > operating under Linux distributions, as happens in the case of cloud
 > and edge.
->
->
+
+つまりLinuxが動く限りシステム開発は簡単になります。
+理由はソフトウェアの移植が簡単だからです。
+Webサポートとコンテナといった軽量仮想化技術を使用することで
+更に高度なプラットフォーム非依存なソフトウェアの移植性が可能となります。
+Linux環境でありされすば、
+開発者は労せず基本的に同じソフトウェア機能をリリースすることができます。
+これがクラウドとエッジで起こっていることです。
+
 > The impossibility of running Linux and container-based virtualization
 > in MCUs represents one of the most limiting issues and biggest
 > challenges for current deployments. In fact, it appears clear how in
@@ -235,16 +337,29 @@ IoT ML デプロイがネットワーク・エッジのリソースに制限さ�
 > services are developed and deployed with hardware and software
 > technologies which are fundamentally different and easier to manage
 > compared to embedded technologies.
->
->
+
+MCU上でLinuxとコンテナ仮想化が使えないとうことが、
+現在のデプロイの最大の制限であり最大の課題の一つです。
+実際、明白なことに
+典型的な"クラウド - エッジ - 組み込み機器"の構成において
+組み込み技術と対比して
+クラウドとエッジ・サービスは
+根本的に違うハードウェアとソフトウェア技術で開発されデプロイされ
+容易に管理できます。
+
 > TinyML as-a-Service tries to tackle this issue by taking advantage of
 > alternative (and lightweight) software solutions.
->
->
+
+TinyMLaaS
+違う(かつ軽量な)ソフトウェア・ソリューションを利用することで
+この問題に取り組んでいます。
+
 > The Machine Learning ecosystem is big and resource demanding. What ML
 > tasks can be executed in the IoT space?
->
->
+
+MLエコシステムは大きくてリソースが必要です。
+どのMLタスクがIoTで実行可能でしょうか？
+
 > The Machine Learning ecosystem is big and resource demanding
 > Figure 2
 >
@@ -255,8 +370,17 @@ IoT ML デプロイがネットワーク・エッジのリソースに制限さ�
 > devices. Here, we analyze how a big technological gap exists also in
 > the availability of ML-dedicated hardware and software web, edge, and
 > embedded entities.
->
->
+
+前章において
+Webと組み込みの技術的差異が
+IoTデバイス上でのMLタスクの実行にそれとなく多大な影響を及ぼすのを
+を概観しました。
+ここで
+どのようにして
+Web、エッジ、組み込みにおいて
+ML専用ハードウェア/ソフトウェアの有無という点で
+大きな技術的ギャップ存在しているかを解析します。
+
 > From a hardware perspective, during most of computing history there
 > have been only a few types of processors, mostly available for general
 > use. Recently, the relentless growth of artificial intelligence (AI)
@@ -268,8 +392,18 @@ IoT ML デプロイがネットワーク・エッジのリソースに制限さ�
 > all these new devices is their usage at the edge. In fact, these
 > credit-card sized devices are designed with the idea of operating at
 > the network edge.
->
->
+
+ハードウェアの観点から
+ほとんどのコンピュータの歴史上、
+たった少しの汎用用途のプロセッサーしか存在しませんでした。
+近年、絶え間なく続くAIの成長は
+既存のGPU向けMLタスクの最適化へ続きました。
+同様に
+もっぱら特定のML演算向けに設計されたASICといった
+新しい専用ハードウェアの形態へも続きました。
+これら全ての新しいデバイスの共通点はエッジで使用されるということです。
+事実、これらのクレジットカードサイズのデバイスはエッジで動作するように設計されました。
+
 > At the beginning of this article we mentioned a few examples of this
 > new family of devices (Edge TPU, Jetson Nano, Movidius). We foresee
 > that in the near future even more big and small chip and hardware
@@ -277,8 +411,14 @@ IoT ML デプロイがネットワーク・エッジのリソースに制限さ�
 > production of ML-dedicated hardware. However, it appears clear how, at
 > least so far, there has not been the same effort in the embedded
 > world.
->
->
+
+この記事の最初で
+この新しいデバイスの例(Edge TPU, Jetson Nano, Movidius)を紹介しました。
+近いうちにより多くのハードウェア製造業者がML専用ハードウェアの設計製造に投資すると
+予見します。
+しかしながら
+現時点で明白なのは、組み込みで同様ではなかったということです。
+
 > Such a lack of hardware availability undermines somehow a homogeneous
 > and seamless ML "cloud-to-embedded" deployments. In many scenarios,
 > the software can help compensate for hardware deficiencies. However,
@@ -294,8 +434,22 @@ IoT ML デプロイがネットワーク・エッジのリソースに制限さ�
 > well as the large sizes of the software runtime (intended as both
 > runtime system and runtime program lifecycle phase) are just some of
 > the reasons why software portability is painful, if not impossible.
->
->
+
+ML専用ハードウェアがないことで
+一貫したクラウドから組み込みに向けてのMLデプロイができませんでした。
+多くの場合、
+ソフトウェアはハードウェアの欠如を補う助けとなります。
+しかし
+ハードウェアで見た限界はソフトウェアツールの開発でも同様です。
+今日Webでは
+たくさんのMLアプリケーション・ソフトウェアがあります。
+世界中の熱心な開発者のマージ作業を可能にする様々なオープンソース活動のおかげで
+それらの利用は一定に成長しています。
+その結果はもっと効果的で洗練され、そしてニッチなアプリケーションです。
+しかし
+そういったアプリケーションの移植性は簡単ではありません。
+大きなランタイムとPythonのような高級言語の利用が理由です。
+
 > The main rationale behind the TinyML as-a-Service approach is
 > precisely the one to break the existing wall between cloud/edge and
 > embedded entities. However, to expect exactly the same ML experience
@@ -306,20 +460,39 @@ IoT ML デプロイがネットワーク・エッジのリソースに制限さ�
 > leave all the other cumbersome ML tasks, such as data processing and
 > training, to the more equipped and resourceful side of the scenario
 > depicted in Figure 2.
->
->
+
+TinyMLaaSの根拠はクラウド/エッジと組み込みの壁を破るということです。
+しかし
+Webやエンタープライズと同様のMLエクスペリエンスを期待することは現実的ではありません。
+サイズというのは無視できない問題です。
+ML推論実行だけはIoTデバイス上で実行可能と予見することができます。
+図２に図示されている整備されたリソース豊富なデータの処理とトレーニング
+といった他すべての面倒なMLタスクはおいていってもいいでしょう。
+
 > Read more
 > In the next article, we will go through the different features which
 > characterize TinyML as-a-Service and share the technological approach
 > underlying the TinyML as-a-Service concept.
->
->
+
+次回の記事では
+TinyML as-a-Serviceを特徴づける様々な機能を一覧し、
+TinyML as-a-Serviceのコンセプトの下にある
+技術的アプローチを紹介します。
+
 > In the meantime, if you have not read it yet, we recommend reading our earlier introduction to TinyML as-a-Service.
->
+
+しばしの間、もしお読みでなければ、
+我々の前回の記事をお読みになることをお薦めします。
+introduction to TinyML as-a-Service https://www.ericsson.com/en/blog/2019/12/tinyml-as-a-service-iot-edge
+
 > The IoT world needs a complete ML experience. TinyML as-a-service can
 > be one possible solution for making this enhanced experience possible,
 > as well as expanding potential technology opportunities. Stay tuned!
->
->
-> Want the latest Ericsson Research blog articles sent to your inbox?
-> Subscribe to the Ericsson Blog today.
+
+IoTには一貫した機械学習のエクスペリエンスが必要です。
+
+TinyMLaaSは
+潜在的なテクノロジーの機会を押し広げながら
+一貫した機械学習のエクスペリエンスを可能にする
+ソリューションとなる可能性があります。
+乞うご期待。
