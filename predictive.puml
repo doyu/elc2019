@@ -1,37 +1,37 @@
 @startuml
 newpage
-title Edge base IoT
+'title __Edge based IoT__
 actor maintainer
-cloud "Edge\n" #lightgray {
-        (ML\nprediction) #yellow
+cloud "Edge\n" #gray {
+        (\n**Big ML**\n\n**algorithm**\n) #yellow
 }
 rectangle "machine\n" #cyan {
-        (gateway)
+        collections gateway
         (sensor\n1) #lightgreen
         (sensor\n2) #lightgreen
         (failing\ncomponent)
 }
-(sensor\n1) -[bold]up-> (gateway) : raw\ndata\n1
-(sensor\n2) -[bold]up-> (gateway) : raw\ndata\n2
-(gateway) --[bold]up-> (ML\nprediction) : raw\ndata\n1
-(gateway) --[bold]up-> (ML\nprediction) : raw\ndata\n2
-maintainer -[#blue,bold]down-> (failing\ncomponent) : replace\nbefore\nfailure
-(ML\nprediction) .[dotted]left.> maintainer : notification
+(sensor\n1) -[dotted]up-> gateway : raw\ndata\n1
+(sensor\n2) -[dotted]up-> gateway : raw\ndata\n2
+gateway --[#blue,bold]up-> (\n**Big ML**\n\n**algorithm**\n) : raw\ndata\n1
+gateway --[#blue,bold]up-> (\n**Big ML**\n\n**algorithm**\n) : raw\ndata\n2
+(\n**Big ML**\n\n**algorithm**\n) -[bold]down-> (failing\ncomponent) : stop\nbefore\nfailure
+(\n**Big ML**\n\n**algorithm**\n) .[dotted]right.> maintainer : notify to replace\nbefore failure
 newpage
-title TinyML with NB-IoT
+'title __TinyML as-a-Service__
 actor maintainer
-cloud "Edge\n" #lightgray {
-        (forward)
+cloud Edge #gray {
+        (ping)
 }
 rectangle "machine\n" #cyan {
-        (ML\nprediction) #yellow
+        (Tiny\nML) #yellow
         (sensor\n1) #lightgreen
         (sensor\n2) #lightgreen
         (failing\ncomponent)
 }
-(sensor\n1) -[bold]up-> (ML\nprediction) : raw\ndata\n1
-(sensor\n2) -[bold]up-> (ML\nprediction) : raw\ndata\n2
-(ML\nprediction) --[dotted]up-> (forward) : notification\nNB-IoT
-maintainer -[#blue,bold]right-> (failing\ncomponent) : replace\nbefore\nfailure
-(forward).[dotted]left.> maintainer : notification
+(sensor\n1) -[dotted]up-> (Tiny\nML) : raw\ndata\n1
+(sensor\n2) -[dotted]up-> (Tiny\nML) : raw\ndata\n2
+(Tiny\nML) ..[dotted]up.. (ping) : **optional**\nconnectivity
+(Tiny\nML) -[dotted]right-> (failing\ncomponent) : stop\nbefore\nfailure
+(ping).[dotted]right.> maintainer : notify to replace\nbefore failure
 @enduml
