@@ -5,6 +5,8 @@ title Standardizing 3 interfaces for ecosystem
 ** compiler plugin\ninterface
 *** input
 **** device info
+***** RAM
+***** ROM
 ***** HWAs
 **** ML model
 **** quantization
@@ -15,8 +17,11 @@ title Standardizing 3 interfaces for ecosystem
 ** orchestration\nprotocol
 *** LwM2M
 **** SOTA
+***** live updating
 **** FOTA
+***** rebooting
 *** Custom
+**** OTA
 ** inference\nmodule format
 *** 3 profiles
 **** ONNX
@@ -34,4 +39,44 @@ title Standardizing 3 interfaces for ecosystem
 ** compiler plugin **interface**
 ** orchestration **protocol**
 ** inference module **format**
+@endmindmap
+
+
+
+@startmindmap
+scale 1.8
+* compiler plugin\n**interface**
+** input
+*** device info
+**** RAM
+**** ROM
+**** HWAs
+*** ML model
+*** quantization
+** output
+*** compiled\nmodule
+**** model
+**** runtime
+@endmindmap
+@startmindmap
+scale 1.8
+* orchestration\n**protocol**
+** LwM2M
+*** SOTA
+**** live updating
+*** FOTA
+**** rebooting
+** Custom
+*** OTA
+@endmindmap
+@startmindmap
+scale 1.8
+* inference\n**module format**
+** 3 profiles
+*** ONNX
+**** ONNX runtime
+*** embedded
+**** SOTA
+*** baremetal
+**** FOTA
 @endmindmap
