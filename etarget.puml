@@ -11,24 +11,24 @@ scale 2048 width
 
 (end\nuser5) -down-> (CSP3)
 
-cloud "**Ericsson**\n**service HUB**\n" {
+cloud {
         (TinyMLaaS) #yellow
-        (IoT\naccelerator) #lightblue
-        (TinyMLaaS) <-[#blue,bold,dotted]> (IoT\naccelerator) : optional
+        (IoT\nplatform) #lightblue
+        (TinyMLaaS) <-[#blue,bold,dotted]> (IoT\nplatform) : optional
 }
 
-(CSP1) -down-> (IoT\naccelerator)
-(CSP2) -down-> (IoT\naccelerator)
+(CSP1) -down-> (IoT\nplatform)
+(CSP2) -down-> (IoT\nplatform)
 
-(CSP3) .down-> (IoT\naccelerator) : "AI service\nonboarding"
+(CSP3) .down-> (IoT\nplatform) : "AI service\nonboarding"
 
 collections devices
-(IoT\naccelerator) -down-> (AI_chip)
-(IoT\naccelerator) -down-> (GPU)
-(IoT\naccelerator) -down-> (CPU)
-(IoT\naccelerator) -down-> (MCU) : NB-IoT
-(IoT\naccelerator) -down-> (sensors) : inference
-(IoT\naccelerator) -down-> devices : LwM2M
+(IoT\nplatform) -down-> (AI_chip)
+(IoT\nplatform) -down-> (GPU)
+(IoT\nplatform) -down-> (CPU)
+(IoT\nplatform) -down-> (MCU) : NB-IoT
+(IoT\nplatform) -down-> (sensors) : inference
+(IoT\nplatform) -down-> devices : LwM2M
 
 collections ML_compilers #lightgreen
 (TinyMLaaS) <-[#blue,bold]up-> ML_compilers : "backend/\necosystem\npartners"

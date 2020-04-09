@@ -1,6 +1,6 @@
 @startuml
 newpage
-'title __Edge based IoT__
+title __Edge based IoT__
 actor maintainer
 cloud "Edge\n" #gray {
         (\n**Big ML**\n\n**algorithm**\n) #yellow
@@ -18,7 +18,7 @@ gateway --[#blue,bold]up-> (\n**Big ML**\n\n**algorithm**\n) : raw\ndata\n2
 (\n**Big ML**\n\n**algorithm**\n) -[bold]down-> (failing\ncomponent) : stop\nbefore\nfailure
 (\n**Big ML**\n\n**algorithm**\n) .[dotted]right.> maintainer : notify to replace\nbefore failure
 newpage
-'title __TinyML as-a-Service__
+title __TinyML as-a-Service__
 actor maintainer
 cloud Edge #gray {
         (ping)
