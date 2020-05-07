@@ -1,0 +1,118 @@
+@startmindmap
+title Lightweight DigitalTwin
+* Lightweight\nDigitalTwin
+** TinyML
+***_ rich IPSO out of multiple raw IPSOs
+** composable IPSO
+***_ meta IPSO generated on-the-fly
+** virtual IPSO
+***_ beyond physical device boundary
+** NB-IoT HUB with BT
+***_ aggregating IPSOs via BT
+@endmindmap
+
+
+@startuml
+title Problem of heavy DT
+
+cloud Cloud {
+      node vDevice {
+           (\nBigML\n) #yellow
+           (vSensor1)
+           (vSensor2)
+           (vSensor3)
+           (vSensor4)
+           (vSensor5)
+           (vSensor1) .up.> (\nBigML\n) : sensor fusion
+           (vSensor2) .up.> (\nBigML\n)
+           (vSensor3) .up.> (\nBigML\n)
+           (vSensor4) .up.> (\nBigML\n)
+           (vSensor5) .up.> (\nBigML\n)
+      }
+}
+
+note bottom of Cloud
+Heavy vDevice with
+precise representations
+end note
+
+node Device {
+     (Sensor1)
+     (Sensor2)
+     (Sensor3)
+     (Sensor4)
+     (Sensor5)
+}
+
+Device <..up.> vDevice : pair
+Sensor1 <..up.> vSensor1 : heavy traffic
+Sensor2 <..up.> vSensor2 : pair
+Sensor3 <..up.> vSensor3 : pair
+Sensor4 <..up.> vSensor4 : pair
+Sensor5 <..up.> vSensor5 : pair
+
+
+newpage
+title Lightwight DT
+
+cloud Cloud {
+      node vDevice {
+           (vMeta IPSO)
+      }
+}
+
+node Device {
+     (Meta IPSO)
+     (TinyML) #yellow
+     (Sensor1)
+     (Sensor2)
+     (Sensor3)
+     (Sensor4)
+     (Sensor5)
+     (TinyML) -> (Meta IPSO) : generate Meta info
+     (Sensor1) .up.> (TinyML) : sensor fusion
+     (Sensor2) .up.> (TinyML)
+     (Sensor3) .up.> (TinyML)
+     (Sensor4) .up.> (TinyML)
+     (Sensor5) .up.> (TinyML)
+}
+
+Device <..up.> vDevice : pair
+(Meta IPSO) <..up.> (vMeta IPSO) : low traffic
+@enduml
+
+@startuml
+title NB-IoT HUB with BT
+
+title Virtual Lightweight DT
+
+cloud Cloud {
+      node vDevice {
+           (vMeta IPSO)
+      }
+}
+
+node HUB {
+     (Meta IPSO)
+     (TinyML) #yellow
+     (TinyML) -> (Meta IPSO) : generate Meta info
+}
+
+node Device1 {
+     (Sensor1) .[#blue,bold]up.> (TinyML) : BT
+     (Sensor2) .[#blue,bold]up.> (TinyML) : BT
+}
+
+node Device2 {
+     (Sensor3) .[#blue,bold]up.> (TinyML) : BT
+}
+
+node Device3 {
+     (Sensor4) .[#blue,bold]up.> (TinyML) : BT
+     (Sensor5) .[#blue,bold]up.> (TinyML) : BT
+}
+
+HUB <..up.> vDevice : pair
+(Meta IPSO) <..[#blue,bold]up.> (vMeta IPSO) : NB-IoT
+
+@enduml
