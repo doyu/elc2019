@@ -1,0 +1,60 @@
+@startmindmap
+
+title TinyMLaaS initiatives
+
++ \nTinyMLaaS\n- Component1 (C1)\n- Component2 (C2)\n- Component3 (C3)\n
+-- MilliAI\n- C1\n- C3
+--- Ericsson ONE
+---- Hanieh Chaichi
+-----_ Telia?
+---- Jonas Almeling
+-----_ Electrolux?
+-----_ ABB?
+-----_ Skanska?
+--- Ericsson\nResearch
+---- Hiroshi Doyu\nOwner of project
+-----_ TinyML community
+-----_ Linux Foundation
+-----_ Skymizer (ML compiler)
+-----_ Plumerai (BNN)
+----- Ari Keränen (ER)\nLwM2M standard
+------_ Wolt?
+--- Juho Vieruaho\nService Delivery\nFinland
+---- Patrik Wikberg\nStrategic Product
+-----_ Erillisvekot\nFinnish safe & security
+++ IoT Accelerator\n- C2
++++ Ardesco device
+++++ Joakim Uddenfeldt\nOwner of Ardesco
++++++_ San Jose
+++++ Sigma\nHardware
++++++_ Sweden
++++ BTEB IoT
+++++ John Fornehed
++++++ Mats Alendal
++++++ Erik Kruse
+++++++ Stream Analyze\nSA
++++++ <s>Talfik Lazraq</s>\nIntegrator
++++ BLAB\nIoT Business Lab
+++++ Michael Lee\nDMDC
++++++_ Hong Kong
++++++_ Aachen
++++ GAIA
+++++_ San Jose
++++ Japan
+++++ Riju Rillai\nSolution
++++++_ Softbank
+++++++_ <s>IoT</s>
+++++++_ Device?
++++++_ NTT Docomo?
++++++_ KDDI?
+
+legend left
+Both C1 and C3 depend on C2.
+SA doesn't publish C2.
+John Fornehed is integrating the right entities.
+CSP is preferable as piloting partner.
+endlegend
+
+@endmindmap
+
+
