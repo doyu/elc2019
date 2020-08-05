@@ -1,0 +1,23 @@
+@startuml
+title Demo scenario
+
+cloud "Traditional\nIoT system" {
+      database "Model\nZoo" as MZ
+      database "Elastic\nsearch" as ES
+      (Kibana)
+}
+
+node LwM2M\nclient {
+     (model)
+}
+
+ES -[dotted]> (Kibana) : visualization
+(LwM2M\nserver) <-[dotted]up-> ES : datapath
+(model) <-[dotted]up-> (LwM2M\nserver) : LwM2M
+(model) <-[bold]up- (LwM2M\nserver) : swap models
+
+(TinyML\naaS) <-[dotted]up- MZ : downloading\nmodel
+(TinyML\naaS) -[bold]> (LwM2M\nserver) : model\norchestration
+(TinyML\naaS) <-[dotted] (LwM2M\nserver) : info
+
+@enduml
