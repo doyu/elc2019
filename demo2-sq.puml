@@ -1,0 +1,41 @@
+@startuml
+title TinymlaaS\nSequence\n
+
+database Zoo
+
+actor "REST API" as rapi
+
+box "TinyMLaaS\n"
+participant "API\nserver" as apis
+participant "inference\ndocker" as Inf
+participant "compiler\ndocker" as Comp
+participant "installer\ndocker" as Inst
+end box
+
+participant "LwM2M\nserver" as lwm2ms
+
+rapi -> apis: POST inferences
+rapi -> apis: POST compilers
+rapi -> apis: POST installers
+rapi -> apis: POST devices\nwith above 3 IDs
+rapi -> apis: PATCH devices/1
+Zoo <- Inf: request ONNX model
+Zoo -> Inf: downloading ONNX model
+Inf -[#blue,bold]-> Comp: pass ONNX model
+Comp -> lwm2ms : inquiry
+Comp <- lwm2ms : device info
+activate Comp
+Comp -> Comp: Compiling model
+deactivate Comp
+Comp -[#blue,bold]-> Inst : pass model image
+activate Inst
+Inst -[#blue,bold]-> Inst : Compiling OS
+deactivate Inst
+Inst -[#blue,bold]-> lwm2ms : pass (OS?) image
+lwm2ms -[#blue,bold]-> "LwM2M\ndevice" : SOTA
+lwm2ms <- "LwM2M\ndevice" : OK
+Inst <- lwm2ms : OK
+apis <- Inst : OK
+rapi <- apis : OK
+@enduml
+
