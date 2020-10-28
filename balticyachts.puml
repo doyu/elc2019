@@ -1,0 +1,47 @@
+@startuml
+
+title "System Integration"
+
+database Zoo {
+         collections models
+}
+
+(TinyMLaaS) <- models : downloading
+(TinyMLaaS) <-> (BLE?\ngateway)
+(TinyMLaaS) <-> (Existing\nsystem)
+
+(Existing\nsystem) <..> (BLE?\ngateway) : Wired or Wireless?
+
+rectangle Yacht {
+	rectangle Interior {
+	          (ESP32EYE\n1)
+	          (ESP32EYE\n2)
+	          (ESP32EYE\n3)
+	          (ESP32EYE\nn)
+	}
+
+	rectangle Deck {
+	          (Infrared\n1)
+	          (Infrared\n2)
+	          (Infrared\n3)
+	          (Infrared\nm)
+	}
+        Deck -down-> Interior
+}
+
+(BLE?\ngateway) <..> (ESP32EYE\n1) : BLE
+(BLE?\ngateway) <..> (ESP32EYE\n2) : BLE
+(BLE?\ngateway) <..> (ESP32EYE\n3) : BLE
+(BLE?\ngateway) <..> (ESP32EYE\nn) : BLE or WLAN
+(BLE?\ngateway) <..> (Infrared\n1) : BLE or WLAN
+(BLE?\ngateway) <..> (Infrared\n2) : BLE
+(BLE?\ngateway) <..> (Infrared\n3) : BLE
+(BLE?\ngateway) <..> (Infrared\nm) : BLE
+
+legend
+Infrared: solar powered
+ESP32EYE: battery powered
+end legend
+
+
+@enduml
