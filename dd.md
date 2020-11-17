@@ -11,20 +11,20 @@ Innovation Coach:[Hanieh Chaichi](hanieh.chaichi@ericsson.com)]
 - IoT sensors generates Big data on Premise
 - Big data == Raw (sensor) data
 - IoT platform on Cloud collects Big data from IoT sensors
-- Collecting Big data is expensive
-- IoT sensor/actuator <-> Gateway <-> MBS <-> Cloud <-> IoT platform <-> ML
-- Overloaded IoT platform cannot process more Big data
+- Collecting Big data is expensive all the way
+- IoT sensor <-> Gateway <-> MBS <-> Cloud <-> IoT platform <-> ML
+- Overloaded IoT platforms cannot process exploding Big data
 
-
+.footnote[[Edge Computing cannot solve!!](#gap)]
 ---
 # Problem(2/2) Privacy awareness
-- IoT sensor generates Privacy data on Premise
+- IoT sensor generates Privacy data on Premise (e.g. face images)
 - Privacy data == Raw data
 - ML processes Privacy data on Cloud
 - Customers don't want privacy on Cloud
 - ML cannot run on IoT sensors, too big!!
 
-
+.footnote[[Edge Computing cannot solve!!](#gap)]
 ---
 # Solution: tiny ML on IoT sensors
 - Squeeze plain ML -> tiny ML
@@ -54,8 +54,8 @@ For example,
 - Customize ML per IoT sensor to run
 - Squeeze ML -> tinyML
 - Orchestrate tinyML onto IoT sensor
-- on demend service
-
+- On demend service
+- Establishing ecosystem with [AI chip](#aichip) vendors
 
 ---
 # Business Model
@@ -71,9 +71,8 @@ For example,
 
 ---
 # Market Potential (TAM)
-
-# [**Shipments of TinyML Devices to Reach 2.5 Billion by 2030**](https://www.abiresearch.com/press/global-shipments-tinyml-devices-reach-25-billion-2030/)
-
+- [**Shipments of TinyML Devices to Reach 2.5 Billion by 2030**](https://www.abiresearch.com/press/global-shipments-tinyml-devices-reach-25-billion-2030/)
+- [**AI Chip Landscape**](#aichip)
 
 ---
 # Future Area of Growth
@@ -94,6 +93,8 @@ For example,
 - Husquvarna
 - Baltic Yacht
 - City of Helsinki
+- LinuxFoundation AI wants TinyMLaaS under their incubation.
+- TinyML on Ardesco SDK
 
 ---
 # MVP1: Telia / smart building
@@ -170,10 +171,19 @@ class: center, middle
 # Appendix
 
 ---
-background-image: url(images/mlwebvsembedded.png)
+# FIXME: E/// blogs
 
-???
-Gap between Linux and non-Linux
+---
+name: gap
+background-image: url(images/mlwebvsembedded.png)
+# Gap between Linux and non-Linux
+
+---
+name: aichip
+background-image: url(https://raw.githubusercontent.com/basicmi/AI-Chip/master/resource/AI_Chip_Landscape_v0p7.png)
+### [AI Chip Landscape](https://basicmi.github.io/AI-Chip/)
+
+
 
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ericsson_logo.svg/500px-Ericsson_logo.svg.png)
