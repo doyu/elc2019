@@ -7,6 +7,8 @@ actor "REST API" as rapi
 
 box "TinyMLaaS\n"
 participant "API\nserver" as apis
+end box
+box FaaS
 participant "inference\ndocker" as Inf
 participant "compiler\ndocker" as Comp
 participant "installer\ndocker" as Inst

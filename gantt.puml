@@ -6,42 +6,34 @@ saturday are closed
 sunday are closed
 Project starts the 1st of january 2021
 
--- Common --
-[summer vacation] starts at 2021/7/1
-[summer vacation] ends at 2021/7/31
-[SaaS implementation on Cloud] starts at 2021/2/1
-[SaaS implementation on Cloud] lasts 90 days
-[Pioneer's Nest] happens at 2021/9/16
-[Traxens start] happens at 2021/4/1
-[Traxens end] happens at 2021/6/31
-[Implementation done] happens at 2021/6/31
+-- **(X)** Traxens --
+[**(X)** port TinyML on IoT sensor] starts at 2021/2/15 and lasts 30 days
+[**(X)** acquire IoT sensor data] starts at 2021/4/1 and lasts 7 days
+[**(X)** train ML model] starts at 2021/4/20 and lasts 14 days
+[**(X)** squeeze ML model] starts at 2021/5/1 and lasts 14 days
+[**(X)** field testing] starts at [**(X)** squeeze ML model]'s end and lasts 30 days
 
+-- **(T)** Telia --
+[**(T)** specify requirements] starts at 2021/1/15 and ends at 2021/3/1
+[**(T)** select IoT sensor] starts at 2021/3/1 and lasts 7 days
+[**(T)** port TinyML on IoT sensor] starts at [**(T)** select IoT sensor]'s end and lasts 30 days
+[**(T)** acquire IoT sensor data] starts at 2021/4/1 and lasts 30 days
+[**(T)** train ML model] starts at [**(T)** acquire IoT sensor data]'s end and lasts 14 days
+[**(T)** squeeze ML model] starts at 2021/6/1 and lasts 30 days
+[**(T)** field testing] starts at [**(T)** squeeze ML model]'s end and lasts 30 days
 
--- Traxens --
-[porting TinyML on device] starts at 2021/4/1
-[porting TinyML on device] lasts 30 days
-[data acqusition] starts at 2021/4/1
-[data acqusition] ends at 2021/4/31
-[ML model squeeze] starts at [data acqusition]'s end
-[ML model squeeze] lasts 20 days
+-- **(B)** BalticYachts --
+[**(B)** specify requirements] starts at 2020/12/15 and ends at 2021/1/15
+[**(B)** select IoT sensor] starts at [**(B)** specify requirements]'s end and lasts 7 days
+[**(B)** port TinyML on IoT sensor] starts at [**(B)** select IoT sensor]'s end and lasts 30 days
+[**(B)** acquire IoT sensor data] starts at 2021/3/1 and lasts 30 days
+[**(B)** train ML model] starts at [**(B)** acquire IoT sensor data]'s end and lasts 14 days
+[**(B)** squeeze ML model] starts at [**(B)** train ML model]'s end and lasts 14 days
+[**(B)** field testing] starts at [**(B)** squeeze ML model]'s end and lasts 14 days
 
-[Traxens evaluation] starts at [ML model squeeze]'s end
-[Traxens evaluation] ends at 2021/6/31
-
--- Telia --
-[Telia specification] starts at 2020/12/1
-[Telia specification] ends at 2021/1/15
-[camera selection] starts at [Telia specification]'s end
-[camera selection] ends at 2021/1/31
-[porting TinyML on camera] starts at [camera selection]'s end
-[porting TinyML on camera] ends at 2021/3/30
-[training data collection] starts at [porting TinyML on camera]'s end
-[training data collection] lasts 10 days
-[human detection training] starts at [training data collection]'s end
-[human detection training] lasts 30 days
-[human detection squeezing] starts at [human detection training]'s end
-[human detection squeezing] ends at 2021/6/30
-[Telia evaluation] starts at 2021/8/1
-[Telia evaluation] ends at 2021/9/15
+-- **(C)** common --
+[**(C)** SaaS impl on Azure] starts at 2021/2/1
+[**(C)** SaaS impl on Azure] ends at 2021/5/1
+[**(C)** evaluate commercial deployment] starts at 2021/8/1 and lasts 30 days
 
 @endgantt

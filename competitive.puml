@@ -1,0 +1,61 @@
+@startmindmap
+scale max 2048 width
+
+* potential\nTinyML\nplatformer
+**[#cyan] **Milli**\n **AI**
+*** MVP
+**** Operator
+*****[#cyan] **Telia**
+******_ smart building
+*****_ other use cases coming...
+**** Enterprise
+*****[#cyan] **Tranxens**
+******_ smart logistics
+*** ongoing discussion
+**** ABB
+**** Husquvarna
+**** Assa Abloy
+**** BalticYachts
+*****_ smart cabin
+**** City of Helsinki
+*** partner
+****[#cyan] **Linux Foundation**
+***** AI
+******_ opensource\nincubation
+**** semiconductor
+***** Himax
+***** Greenwaves Technologies
+**** Skymizer
+*****_ tool: ML compiler
+**** Plumerai
+*****_ BNN algorithm
+**** Edge Impulse
+*****_ tool: general
+*** E///
+****[#cyan] **IoT Accelerator**
+***** DMDC
+***** DCP
+**** Ardesco SDK
+*****_ NB-IoT reference
+**** Distributed Cloud
+
+left side
+
+** Microsoft
+*** Azure IoT edge
+****_ Linux based
+** Amazon
+*** IoT greengrass
+****_ Linux based
+** Google
+*** Tensor Flow Lite\nFor Micro
+****_ No orchestration
+** startup
+*** Edge Impulse
+****_ proprietary aaS
+*** Stream Analyze
+****_ single ML compiler
+
+@endmindmap
+
+

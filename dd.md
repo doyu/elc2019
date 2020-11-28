@@ -15,26 +15,28 @@ Innovation Coach:[Hanieh Chaichi](hanieh.chaichi@ericsson.com)]
 - IoT sensor <-> Gateway <-> MBS <-> Cloud <-> IoT platform <-> ML
 - Overloaded IoT platforms cannot process exploding Big data
 
-.footnote[[Edge Computing cannot solve!!](#gap)]
+.footnote[[Edge computing cannot solve everything!!](#gap)]
 ---
 # Problem(2/2) Privacy awareness
 - IoT sensor generates Privacy data on Premise (e.g. face images)
 - Privacy data == Raw data
-- ML processes Privacy data on Cloud
-- Customers don't want privacy on Cloud
+- ML processes Private data on Cloud
+- Customers are concerned about privacy issue on Cloud
 - ML cannot run on IoT sensors, too big!!
 
-.footnote[[Edge Computing cannot solve!!](#gap)]
+.footnote[[Edge computing cannot solve everything!!](#gap)]
+
 ---
+background-image: url(images/edgespectrum.png)
 # Solution: tiny ML on IoT sensors
 - Squeeze plain ML -> tiny ML
 - Run tiny ML on IoT sensors
 - Tiny ML processes Raw data on IoT sensors
-- Size: Raw Big data >> Processed data
-- No privacy in Processed data
+- Size: Raw Big data >> Processed data (e.g. GB vs Byte)
+- No privacy concerns in Processed data
 - No network traffic unless needed (e.g. emergency)
-- Offloading some processing
- - from overloaded IoT platform onto IoT sensors
+- Processing on IoT sensors would offload overloaded IoT platform
+
 
 ???
 For example,
@@ -54,8 +56,13 @@ For example,
 - Customize ML per IoT sensor to run
 - Squeeze ML -> tinyML
 - Orchestrate tinyML onto IoT sensor
-- On demend service
 - Establishing ecosystem with [AI chip](#aichip) vendors
+
+.right[![](images/ecosystem_017s.png)]
+
+???
+FIXME: resize
+Not tied with any specific devices, but ecosystem oriented.
 
 ---
 # Business Model
@@ -66,16 +73,29 @@ For example,
 2. E/// charges Operator && Operator charges Enterprises
  - via IoT platform (e.g. IoT Accelerator)
  - TinyMLaaS == Optional service on IoTA
-3. E/// charges end users via Operator
- - Customer pays for analysis service
+
+???
+1. e.g. What's Tranxes' business, oneline
+2. e.g. Telia case, smart building use
+
+FIXME: Hanieh will provide fig here
 
 ---
 # Market Potential (TAM)
 - [**Shipments of TinyML Devices to Reach 2.5 Billion by 2030**](https://www.abiresearch.com/press/global-shipments-tinyml-devices-reach-25-billion-2030/)
 - [**AI Chip Landscape**](#aichip)
 
+???
+Any IoT devices would be tinyML'rized.
+
+Buy?
+
 ---
+background-image: url(https://player.slideplayer.com/103/17536768/slides/slide_7.jpg)
 # Future Area of Growth
+
+???
+
 - Smart building
  - Human distance under COVID-19
 - Smart Home
@@ -89,14 +109,18 @@ For example,
 
 ---
 # Market Traction
+- Telia
+- Traxens
 - ABB
 - Husquvarna
 - Baltic Yacht
 - City of Helsinki
-- LinuxFoundation AI wants TinyMLaaS under their incubation.
 - TinyML on Ardesco SDK
+- LinuxFoundation AI wants TinyMLaaS under their incubation
 
 ---
+class: bottom
+background-image: url(images/lynred.png)
 # MVP1: Telia / smart building
 - occupancy management
 - w/ smart camera
@@ -105,9 +129,10 @@ For example,
 - network bandwidth
 - w/ battery powered
 
+
 ---
 # MVP2: Tranxens / smart logistics
-- shipping container
+- shipping container management
 - monitor state of a container
  - with temperature
  - with ambient sensor
@@ -115,6 +140,8 @@ For example,
 - monitor door open / closed
 - beyond network coverage (e.g. on Sea)
 - w/ battery powered
+
+.bottom[![](https://www.cma-cgm.com/static/News/ImgNews/CMA-CGM-Traxens-KV-Hor_English2.jpg)]
 
 ---
 # Execution Plan
@@ -176,7 +203,9 @@ class: center, middle
 ---
 name: gap
 background-image: url(images/mlwebvsembedded.png)
-# Gap between Linux and non-Linux
+## .right[Can't Edge computing solve?]
+
+.footnote[Gap between **Edge (Linux)** and **Embedded (non-Linux)**]
 
 ---
 name: aichip

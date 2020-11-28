@@ -32,3 +32,5 @@ ja:
 	pandoc --variable urlcolor=blue -s tinymlaas1-ja.org -o tinymlaas1-ja.docx
 	pandoc --variable urlcolor=blue -s tinymlaas2-ja.org -o tinymlaas2-ja.docx
 	pandoc --variable urlcolor=blue -s tinymlaas3-ja.org -o tinymlaas3-ja.docx
+%.pdf: %.org
+	pandoc --toc --variable urlcolor=blue -s $< -o $@
