@@ -1,0 +1,74 @@
+@startuml
+
+newpage
+
+database "main\ncontrol\nsystem" as main
+rectangle PC {
+         (ML)
+}
+rectangle "IoT\nsensor\ndevices" as sens {
+          (camera)
+}
+database power
+
+(ML) -up-> main : Wi-Fi
+sens -up-> (ML) : Wi-Fi
+power -> sens : wired
+newpage
+
+database "main\ncontrol\nsystem" as main
+
+rectangle "BLE GW" as ble
+rectangle "IoT\nsensor\ndevices" as sens {
+            (TinyML)
+}
+database power
+
+(PLC) -up-> main : Wi-Fi
+ble -up-> (PLC) : modbus over IP
+sens -up-> ble : BLE
+power -> sens : wired
+
+newpage
+
+database "main\ncontrol\nsystem" as main
+
+rectangle "BLE GW" as ble
+rectangle "IoT\nsensor\ndevices" as sens {
+            (TinyML)
+            collections sensors
+            sensors -> (TinyML)
+            (Lithium\nion\nbattery)
+}
+
+
+(PLC) -up-> main : Wi-Fi
+ble -up-> (PLC) : modbus over IP
+sens -up-> ble : BLE
+(MillAI) -down-> (TinyML) : install
+
+newpage
+
+database "main\ncontrol\nsystem" as main
+
+rectangle "BLE GW" as ble {
+          (ML)
+}
+rectangle holder {
+rectangle "IoT\nsensor\ndevices" as sens {
+            (TinyML)
+            (Lithium\nion\nbattery)
+            collections sensors
+            (infrared)
+}
+}
+
+sensors -> TinyML
+(infrared) -> TinyML
+
+(PLC) -up-> main : Wi-Fi
+ble -up-> (PLC) : modbus over IP
+sens -up-> ble : BLE
+(MillAI) -down-> (TinyML) : install
+
+@enduml
