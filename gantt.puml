@@ -1,21 +1,21 @@
 @startgantt
 
+scale 2048 width
+
 title MVP execution plan
 
 scale 5
 printscale weekly
 Project starts the 1st of january 2021
 
-[evaluate commercializing] starts at 2021/8/1 and lasts 35 days
-
--- common task --
+-- SaaS --
 [Implement SaaS on Azure] starts at 2021/3/1
 [Implement SaaS on Azure] ends at 2021/6/1
 
 
 -- **T:** Telia, smart building, occupancy management --
-[**T:** Specify requirements] starts at 2021/1/15 and ends at 2021/3/1
-[**T:** Select IoT sensor] starts at 2021/3/1 and lasts 7 days
+[**T:** Specify requirements] starts at 2021/1/15 and ends at 2021/2/28
+[**T:** Select IoT sensor] starts at [**T:** Specify requirements]'s end and lasts 7 days
 [**T:** Port TinyML on IoT sensor] starts at [**T:** Select IoT sensor]'s end and lasts 30 days
 [**T:** Acquire IoT sensor data] starts at 2021/4/1 and lasts 30 days
 [**T:** Train ML model] starts at [**T:** Acquire IoT sensor data]'s end and lasts 14 days
@@ -23,21 +23,24 @@ Project starts the 1st of january 2021
 [**T:** Field testing] starts at [**T:** Squeeze ML model]'s end and lasts 45 days
 
 -- **X:** Traxens, smart logistics, monitoring shipping containers--
-[**X:** Port TinyML on IoT sensor] starts at 2021/2/15 and lasts 30 days
-[**X:** Acquire IoT sensor data] starts at 2021/4/1 and lasts 7 days
-[**X:** Train ML model] starts at 2021/4/20 and lasts 14 days
-[**X:** Squeeze ML model] starts at 2021/5/1 and lasts 14 days
+[**X:** Port TinyML on IoT sensor] starts at 2021/4/1 and lasts 30 days
+[**X:** Acquire IoT sensor data] starts at [**X:** Port TinyML on IoT sensor]'s end and lasts 30 days
+[**X:** Train ML model] starts at [**X:** Acquire IoT sensor data]'s end and lasts 21 days
+[**X:** Squeeze ML model] starts at [**X:** Train ML model]'s end and lasts 14 days
 [**X:** Field testing] starts at [**X:** Squeeze ML model]'s end and lasts 45 days
 
 -- **B:** BalticYachts, smart cabing, human flow control --
-[**B:** Specify requirements] starts at 2020/12/15 and ends at 2021/1/15
+[**B:** Specify requirements] starts at 2021/3/7 and ends at 2021/3/15
 [**B:** Select IoT sensor] starts at [**B:** Specify requirements]'s end and lasts 7 days
 [**B:** Port TinyML on IoT sensor] starts at [**B:** Select IoT sensor]'s end and lasts 30 days
-[**B:** Acquire IoT sensor data] starts at 2021/3/1 and lasts 30 days
+[**B:** Acquire IoT sensor data] starts at [**B:** Port TinyML on IoT sensor]'s end and lasts 30 days
 [**B:** Train ML model] starts at [**B:** Acquire IoT sensor data]'s end and lasts 14 days
 [**B:** Squeeze ML model] starts at [**B:** Train ML model]'s end and lasts 14 days
-[**B:** Field testing] starts at 2021/5/15 and lasts 45 days
+[**B:** Field testing] starts at [**B:** Squeeze ML model]'s end and lasts 45 days
 
+
+-- Commercial  --
+[evaluate commercializing] starts at 2021/8/1 and lasts 35 days
 
 
 

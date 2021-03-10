@@ -1,6 +1,7 @@
 @startmindmap
 skinparam TitleFontSize 32
-title Standardizing 3 interfaces for ecosystem
+scale 2048 width
+'title Standardizing 3 interfaces for ecosystem
 * TinyMLaaS
 ** compiler plugin\ninterface
 *** input

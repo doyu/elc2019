@@ -628,8 +628,9 @@ device2 <- devices
 device2 <-> device2 : ML in place
 
 newpage
+scale 2048 width
 skinparam titleFontSize 24
-title TinyMLaaS ecosystem
+'title TinyMLaaS ecosystem
 
 cloud "Web/linux\n" #eeeeee {
         cloud cloud {

@@ -1,0 +1,115 @@
+#+TITLE: EP232U Deep Neural Networks: Projects I
+#+AUTHOR: [[hiroshi.doyu@ericsson.com][Hiroshi Doyu]] <hiroshi.doyu@ericsson.com>
+#+EMAIL: hiroshi.doyu@ericsson.com
+
+* Task
+Write a short essay of around 1000 words about one or several topics of the course that you found most
+interesting. Start by describing the existing challenges that you have faced in your area, then explaining
+classical techniques that you have already used and finally which of the machine learning techniques (that
+you have learned so far) has the potential to address your problems and how. Try to explicitly define
+your problem formulation, data structure, and the corresponding approach.
+
+* Essay
+Tiny Machine Learning ([[https://www.tinyml.org/][TinyML]]) is an emerging
+concept that concerns the execution of ML tasks on very constrained
+IoT devices. Although TinyML has generated a strong
+R&D interest around it, various challenges limit its effective
+execution in the constrained devices world, with the result of
+slowing down the development of a complete ecosystem around
+it. Espeically in IoT,
+there is diversity of execution environment (e.g. CPU type, frameworks)
+and also strong limitation of resources (e.g. RAM / ROM size).
+ML, especially DNN, needs to satisfy such requirements to run ML on such IoT devices,
+which is called TinyML.
+
+** Challenges
+Historically major Machine Learning (ML) frameworks have been started on Cloud
+with 64 bit CPU, Giga byte of memory, Tegra byte of storage, GPU and Linux Container virtualization.
+Especially the current ML popularity comes from DNN with the above powerful machine environment.
+If you look at IoT space, most of IoT devices just send raw sensor data to Cloud,
+where Cloud ML on powerful machine processes raw IoT sensor data.
+IOW, the current IoT ML highly depends on Cloud and network connectivity.
+Here are some problems:
+
+1, network bandwidth
+Usually there are huge amount of IoT devices install in a field at once.
+Once all of them starts to send raw sensor data, which would occupy network bandwidth.
+Especially often such IoT devices come with narrow band netowrk connections (NB-IoT, CAT-M).
+There might not be enough bandwidth for such IoT devices.
+
+2, network throughput
+IoT device sends raw sensor data, and Cloud ML processes and send back its outcome.
+In some cases, this round trip time has to be within a certain deadline.
+For example, autonomous driving, its renspose time is quite critial to decide on its move.
+
+3, network coverage
+Ships can be beyond network coverage easily. But still ML processing is needed without network connectivity.
+
+4, privacy concern
+Currently accmulated data in IoT devices has to be uploaded on Cloud where powerful ML environment resides.
+People are concerned about their private data leak on Cloud environment, especially in public Cloud use case.
+
+5, power consumption
+Transmitting data from IoT device consumes more energy than computing in place.
+This would affect battey powered IoT devices.
+If power is supplied via physical power cable, installation of IoT devices cost more.
+
+
+** Classical techniques
+The current TinyML solution is to introduce a new concept of Machine Learning Compiler (ML compiler).
+A model is expected to be trained in advance on Cloud with powerful computing environment (e.g. GPU).
+Then, such model would be fed into ML compiler and ML compiler optimizes it into smaller and customized to a IoT device to run.
+Nowadays, there's some standard format of ML model, Open Neural Network eXchange format (ONNX).
+ML compiler has several tasks:
+1, Take execution environment into its account
+The characteristic of IoT is diversity.
+There are variety of microcontrollers, hardware accelerators and smaller SRAM and flash memory.
+When ML compiler generates a model, those information is put into account.
+2, Squeeze a model
+There are several techniques to squeeze a model,
+quantization of computational bits,
+fusing multiple operators,
+ pruning unused connections,
+ making using of hardeare accelerator operator
+3, Build a custom runtime
+In popular ML frameworks, they support all ML operators. We consider this as general purpose ML runtime.
+We cannot use this general purpose ML runtime in constrained IoT environment because of its size limiation.
+Now we have a model and we know which operators used in that model
+so that we could dynamically generate a tailr-made runtime which supports
+only those operators used in that model.
+4, Build an installable image
+Now we have a model and a tailor-made runtime. Still IoT environment differs per IoT device.
+A model and a runtime would be statically compiled into an installalbe image to save some space,
+compared with dynimic loading of them.
+
+This is how the current TinyML is used in IoT environment.
+
+
+** Potential techniques
+TinyML may help to bring DNN onto IoT devices to some extent.
+But still exchaning a full big DNN model would drain its battery
+because it's trasfered over network and it consumes more energy than local computation.
+
+In this DNN course, I learned Transfer Learning, especially Incremental Learning (IL).
+With IL, a full model doesn't have to be replaced but using the basic model everywhere,
+and local tuning could be done per deivce with additional layer on a basic model.
+This seems quite suitable for TinyML use cases
+with such resource constrained IoT devices installed everywhere.
+IL could solve the problems list in the previous section.
+
+Once a model is generated, you can automatically convert it into optimized format.
+
+#+BEGIN_SRC python
+# Convert the model to the TensorFlow Lite format
+converter = tf.lite.TFLiteConverter.from_keras_model(model)
+tflite_model = converter.convert()
+
+# Save the model to disk
+open("gesture_model.tflite", "wb").write(tflite_model)
+#+END_SRC
+
+model could be dumped and statically linked into a runtime image as below.
+
+#+BEGIN_SRC shell
+$ cat gesture_model.tflite | xxd -i > model.cc
+#+END_SRC
