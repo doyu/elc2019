@@ -1,0 +1,48 @@
+* Intro
+Hi, I'm Hiroshi Doyu, from Ericsson, IoT research.
+Today I'm going to talk about:
+- TinyML,
+- TinyMLaaS,
+- Ecosystem,
+- Challenges,
+
+* TinyML
+** History
+We started with IoT.
+IoT sensors were installed on business field.
+Those IoT sensors generate big data.
+But we were overwhelmed with big data.
+We didn't know how to deal with such big data.
+Then, ML was introduced on Cloud to process such big data.
+We had to bring big data from the very end of IoT sensors to Cloud.
+Compared with big data and ML inferences,
+moving ML inference itself closer to data source is easier than sucking data all the way,
+because the volume of ML inference is smaller than total of big data.
+So we put ML inference on microcontrollers in IoT sensors.
+
+** Computation spectrum
+Let's look at computation spectrum from Cloud to IoT sensors.
+It's getting resource constrained towards sensors.
+Also the number of computational entites are getting more towards sensors.
+But this computation spectrum is 
+
+** Hardware diversity
+** Benefit of TinyML
+
+* TinyMLaaS
+** E/// IoT research's outcome
+** What's TinyMLaaS
+
+* Ecosystem
+** Why ecosystem matters?
+** Standard interfaces
+
+* Challenges
+** Optimization {model, runtime}
+** Distributed execution
+** Security & Privacy
+
+* Conclusion
+We have reviewed TinyMLaaS ecosystem and challenges.
+I hope that this was useful for semiconductors,
+who's worked on TinyML chipset.
