@@ -61,23 +61,27 @@ A model is expected to be trained in advance on Cloud with powerful computing en
 Then, such model would be fed into ML compiler and ML compiler optimizes it into smaller and customized to a IoT device to run.
 Nowadays, there's some standard format of ML model, Open Neural Network eXchange format (ONNX).
 ML compiler has several tasks:
-1, Take execution environment into its account
+
+*** Take execution environment into its account
 The characteristic of IoT is diversity.
 There are variety of microcontrollers, hardware accelerators and smaller SRAM and flash memory.
 When ML compiler generates a model, those information is put into account.
-2, Squeeze a model
+
+*** Squeeze a model
 There are several techniques to squeeze a model,
 quantization of computational bits,
 fusing multiple operators,
  pruning unused connections,
  making using of hardeare accelerator operator
-3, Build a custom runtime
+
+*** Build a custom runtime
 In popular ML frameworks, they support all ML operators. We consider this as general purpose ML runtime.
 We cannot use this general purpose ML runtime in constrained IoT environment because of its size limiation.
 Now we have a model and we know which operators used in that model
 so that we could dynamically generate a tailr-made runtime which supports
 only those operators used in that model.
-4, Build an installable image
+
+*** Build an installable image
 Now we have a model and a tailor-made runtime. Still IoT environment differs per IoT device.
 A model and a runtime would be statically compiled into an installalbe image to save some space,
 compared with dynimic loading of them.
@@ -86,9 +90,23 @@ This is how the current TinyML is used in IoT environment.
 
 
 ** Potential techniques
-TinyML may help to bring DNN onto IoT devices to some extent.
-But still exchaning a full big DNN model would drain its battery
-because it's trasfered over network and it consumes more energy than local computation.
+*** Autoencoder
+A big DNN model may not fit in small IoT device.
+At most they have 512KB of SRAM and 4MB of Flash memory.
+DNN model has to be split into multiple part.
+Considering sending data out from a device consuming battery,
+the fewer transmission of data preferable.
+There are many data compression algorithm,
+but we could consider autoencoder as content-aware compression.
+An IoT device would generate latent variables with autoencoder,
+and those variables would be sent to more powerful Edge / Cloud server.
+This could be one way of cascading multiple small DNN replacing one big DNN.
+
+
+*** Transfer Learning
+Although TinyML may help to bring DNN onto IoT devices to some extent,
+often exchaning a full big DNN model would drain its battery
+because it needs to be trasfered over network and it consumes battery.
 
 In this DNN course, I learned Transfer Learning, especially Incremental Learning (IL).
 With IL, a full model doesn't have to be replaced but using the basic model everywhere,
@@ -96,20 +114,3 @@ and local tuning could be done per deivce with additional layer on a basic model
 This seems quite suitable for TinyML use cases
 with such resource constrained IoT devices installed everywhere.
 IL could solve the problems list in the previous section.
-
-Once a model is generated, you can automatically convert it into optimized format.
-
-#+BEGIN_SRC python
-# Convert the model to the TensorFlow Lite format
-converter = tf.lite.TFLiteConverter.from_keras_model(model)
-tflite_model = converter.convert()
-
-# Save the model to disk
-open("gesture_model.tflite", "wb").write(tflite_model)
-#+END_SRC
-
-model could be dumped and statically linked into a runtime image as below.
-
-#+BEGIN_SRC shell
-$ cat gesture_model.tflite | xxd -i > model.cc
-#+END_SRC

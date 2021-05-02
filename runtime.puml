@@ -25,7 +25,7 @@ HWA1 .> Compiler : info
 
 newpage
 
-cloud Compiler
+cloud Orchestrator
 
 rectangle device1 {
 	folder image1 {
@@ -57,11 +57,11 @@ rectangle device2 {
 	(runtime2) #=down=# HWA5
 }
 
-device1 .up.> Compiler : info
-device2 .up.> Compiler : info
+device1 .up.> Orchestrator : info
+device2 .up.> Orchestrator : info
 
-Compiler =[#blue]> (runtime1) : **(1)request**
+Orchestrator =[#blue]> (runtime1) : **(1)request**
 device1 =[#blue]> device2 : **(2)pass**
-Compiler <=[#blue] device2 : **(3)return**
+Orchestrator <=[#blue] device2 : **(3)return**
 
 @enduml

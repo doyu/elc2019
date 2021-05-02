@@ -1,48 +1,186 @@
 * Intro
 Hi, I'm Hiroshi Doyu, from Ericsson, IoT research.
-Today I'm going to talk about:
-- TinyML,
-- TinyMLaaS,
-- Ecosystem,
-- Challenges,
+Today I'm going to talk about "TinyML as-a-Service Ecosystem for Machine Learning in IoT" Overview and Research Challenges
+Here's today's outline, -What's TinyML, -Our proposal, -TinyMLaaS, -Its Ecosystem, -Research Challenges, and -summary.
+Let's get started!
 
 * TinyML
 ** History
-We started with IoT.
-IoT sensors were installed on business field.
-Those IoT sensors generate big data.
-But we were overwhelmed with big data.
-We didn't know how to deal with such big data.
-Then, ML was introduced on Cloud to process such big data.
-We had to bring big data from the very end of IoT sensors to Cloud.
-Compared with big data and ML inferences,
-moving ML inference itself closer to data source is easier than sucking data all the way,
-because the volume of ML inference is smaller than total of big data.
-So we put ML inference on microcontrollers in IoT sensors.
+Historically, we started IoT by installing sensors in evey corner of our business field. These IoT sensors generate big data.
+We were overwhelmed by those big data, since we did not know how to deal with big data at scale.
+
+Then, ML was introduced on Cloud to process such big data. We had to bring big data from the very end of IoT sensors to Cloud.
+
+Comparing moving big data with moving ML inferences,
+distributing ML inferences closer to data source is easier than moving big data all the way to Cloud.
+The size of ML inference is smaller than total amount of big data.
+
+So TinyML is getting into the picture.
+
+TinyML is running ML inferences on microcontrollers in IoT sensors.
 
 ** Computation spectrum
-Let's look at computation spectrum from Cloud to IoT sensors.
-It's getting resource constrained towards sensors.
-Also the number of computational entites are getting more towards sensors.
-But this computation spectrum is 
+Next, let's look at computation spectrum from Cloud to IoT sensors.
+
+In computing spectrum, it's getting resource constrained from Cloud towards sensors.
+
+Also the number of computational devices are getting more towards sensors.
+
+This computing spectrum is NOT contiguous. There's a gap between Cloud and IoT devices.
+Edge and Web belongs to Cloud computing.
+On Cloud, .....
+In Embedded, .....
+Compared with homogeneous x86 based Cloud environment,
+One of the characteristic of IoT is *hardware diversity*.
+
+Here are 3 technical areas.
+The intersection of Linux and IoT is "Embedded Linux".
+The intersection of Linux and ML is "Cloud".
+It's been growing towards "Edge computing".
+TinyML is the intersection of "IoT" and "ML", but Linux doesn't fit.
+All ML tools developed on Cloud Linux cannot be applied to TinyML at all.
 
 ** Hardware diversity
+As said, with those gap, TinyML needs its special tools, especially for hardware diversity,
+ML compiler was introduced to convert pre-trained ML inference model to appropriate format
+for devices to run.
+
 ** Benefit of TinyML
+There are 5 advantages in TinyML. For example, here's some example of smart camera.
+
+
+
 
 * TinyMLaaS
+We've just reviewed what TinyML is.
+
+Next, we'll introduce our proposal, TinyML as-a-Service.
+
 ** E/// IoT research's outcome
-** What's TinyMLaaS
+As connectivity provider,
+this is our answer for the emerging TinyML technology.
+
+
+There are 2 reasons why TinyML is needed.
+
+First off,
+there's a gap between Cloud vs IoT or Web vs Embedded.
+This is mainly because of IoT diversity.
+
+Secondary,
+originally ML has been developed on powerful Cloud environment.
+Traditional ML environment is too big for IoT.
+
+So we always need to optimize and customize configurations for TinyML.
+It's like Pizza online.
+We need to optimize and customize before delivery.
+
+TinyML as-a-Service does:
+- collect device info
+- find ML inference model to run
+- squash ML model
+- squash ML runtime as well, since general purpose runtime is big
+- build install-able image
+- send and install that image
+
+Here's a block diagram of TinyML as-a-Service.
+At the above of diagram, there's Cloud environment.
+At the bottom of diagram, there's Embedded environment.
+TinyMLaaS resides between Cloud and Embedded to fill the gap between them.
+We assume that pre-trained models are stored in model zoo.
+Those model cannot be used by IoT devices directly.
+TinyMLaaS will optimize and customize such model into appropriate format to a device to run.
+And then it will be installed.
+
+
+This is our proof-of-concept implementation.
+It's composed of web frontend and compiler backend.
+It exposes API server to call RESTful API.
+It could accomodate any ML compilers as backedn via plugin interface.
+
+
+Basically it should be optionally added onto any existing IoT platforms.
+
+We use OMA LwM2M protocol to orchestrate TinyML.
+LwM2M is an application protocol for IoT device management.
+The requirements are:
+
+It should be able to update software.
+
+It should be able to expose device information in standard way.
+It's IPSO in this case.
+
+
+Here's RESTful API web interface.
+You can issue POST/PATCH/GET/DELETE against {device, compiler, installer, inference}
 
 * Ecosystem
-** Why ecosystem matters?
-** Standard interfaces
+Why ecosystem matters?
+There are handreds of AI HW accelerators to be shipped next 5-10 years.
+
+Any compay cannot support all of them.
+We need to collaborate.
+
+For prompt integration,
+
+We need these 3 standard interfaces.
+- C..
+-
+-
+
+Compiler plugin: AI HWA comes with its specialized compiler.
+This kind of parameters could be standardized as compiler plugin.
+
+Orchestration protocol.
+The requirements are:
+- OTA
+- standard way of exposing its functionality
+
+We use LwM2M but others could be used.
+
+There's some workaround to support non-compatible device via running dummy client.
+
+Module format
+Currently this depends on Realtime OS and its OTA implementation.
+Standard format would reduce the amount to transfer.
+
+Here are 3 module format class.
+
+This is some example of standard interfaces.
+
 
 * Challenges
-** Optimization {model, runtime}
-** Distributed execution
-** Security & Privacy
+Research challenges
+
+It could be categorized into these 3.
+
+Optimizing model and runtime
+It's trade-off between performance and resource consumption.
+While Cloud ML can pursue its maxium performance,
+IoT devices are always limitted by its SRAM size.
+We need to find out sweet spot dynamically with the requirements at times.
+
+
+Distributed execution
+If ML doesn't fit completely in one single IoT device.
+We need to consider how to distirubte those computation among multiple IoT devices.
+As mentioned in the begining, there are a lot of IoT devices deployed in the field.
+There are 2 ways of distribution, (1)parallelising execution and (2)cascading execution.
+
+At first, in parallelization, there are data parallel and model parallel.
+Data is send back and forth so that network bandwidth and latecy needs to be considered at desgin.
+
+Secondary, in cascading, each execution could be distributed either on Cloud, Edge and IoT devices.
+We need to consider machine power in addition to network performance for smart task scheduling.
+
+Security & Privacy
+In Cloud ML, some security HW is getting popular. For example, Intel SGX to protect ML model.
+Similar feature is expected to come into IoT AI chip but with smaller size limitation.
+Probably some further techniqs are needed to achive such goals.
+
 
 * Conclusion
 We have reviewed TinyMLaaS ecosystem and challenges.
 I hope that this was useful for semiconductors,
 who's worked on TinyML chipset.
+
