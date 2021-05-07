@@ -1,0 +1,56 @@
+#+TITLE: edx: TinyML as-a-Service
+#+AUTHOR: [[hiroshi.doyu@ericsson.com][Hiroshi Doyu]] <hiro@ninjalabo.com>
+
+* Introduction to MLaaS
+What is machine learning as a service?
+How does it tie to MLaaS?
+MLaaS vs TinyMLaaS?
+- Why can't traditional **MLOps** cover TinyMLaaS?
+ - MLOps has been originally developed on Cloud.
+ - MLOps is supposed to deploy artifacts onto Linux via **Linux Containers**.
+ - This won't be applied for Embedded/IoT because of IoT diversity.
+** Gap between Embedded vs Cloud/Edge?
+- Cloud and Edge use homogeneous Linux based environment.
+ - Monotoneous hardware / software environment on Cloud.
+- Embedded/IoT == diversity of execution environment
+ - variety of MCU, HWA, RTOS, sensors
+ - No Linux Container in Embedded/IoT for orchestration
+** ML infrastructure is too big
+- Historicaly it's been being developed on Cloud as Big data evolves.
+
+* What's TinyMLaaS?
+What is TinyMLaaS. Explain how it is more than just the endpoint.
+We are expanding outward into connecting the endpoint with a bunch of servers.
+Does this mean, Lightweight M2M bootstrap protocol?
+
+** ML compiler centric architecture to accomodate SW/HW diversity
+** IoT application protocol to standardize communication
+*** Lightweight M2M
+**** Bootstrap protocol
+**** Device registration
+**** IPSO
+**** SOTA / FOTA
+
+* The cost of communication
+What do we have to do to enable TinyMLaaS?
+What are the challenges that we have to address (computation versus communication)?
+
+* Over The Air (OTA) updates
+- LwM2M SOTA / FOTA
+
+
+* A conceptual system design
+Use Ericsson’s TinyMLaaS example as a proof-point.
+- 3 standard interface to accomodate multiple backends
+- LwM2M
+ - IPSO
+ - Bootstrap protocol
+ - SOTA / FOTA
+- OpenFaaS
+ - ML compiler in Docker as backend
+
+
+* Security
+- BSS
+- OSCORE
+- Secure Enclave for MCU
