@@ -1,0 +1,44 @@
+#+TITLE: Extra: My story and my future
+#+AUTHOR: Hiroshi Doyu <hiroshi.doyu@gmail.com>
+#+EMAIL: hiroshi.doyu@gmail.com
+#+DATE:
+
+
+* Excercise 1: My story up to now
+** Part 1: Describe freely
+I have grown up surround by many relatives, but not being taken care of by my mother since she was too busy with her job as a teacher so that I was kinda a boy who had to fix something by myself in some way in my childhood.
+Then, I joined hard study competition in our generation to enter good universities while I struggled to enter, although I always liked to tackle with math exercises. I started to work in Japan after univ graduation, pursuing my curiosity in that area.
+With some years of experience in that area, I moved to Finland as a specialist since I had wanted to see the outside of Japan.
+I struggled to commucate verbally but I survived with email communication at early days.
+Often I encountered some difficult situations where I wasn't recognized as useful, considering the importance of my postion, where I needed to prove myself competent explicitly against others/management.
+Luckily I've overcome such situations mostly but in some cases, it didn't work where I lost, but I survived and I've got stronger, anyway.
+Basically my motivation comes from curiosity and I hate people behave politically unnecesarilly in general.
+
+** Part 2: Now, explore
+1. Which events or experiences up to now have been the most significant or inspiring for you?
+   - In any companies, I was pushed into such position that I needed to prove my competence against others to survice at the first place. I may guess that this is partially because of my relatively high salary, my poort english and/or my pushy attitude?
+2. Where can you recognise moments of growth or success?
+   - I've successfuly brought the final delivery (product), which shut up those who had have some doubt of my competence, and eventually they started to support me.
+3. In which parts of your story do you play a key role? What kind of an impact have you been able to have on the development of your story?
+   - Implementation (programming), presenting academic papers, acquiring funding for my intra-preneurship project
+4. Which parts of your story involve some external factor, like an event in the surrounding world, related to the people near you or the society you live in? How have these factors affected your story?
+   - Usually management were against me at the first place. I needed to prove my competency with the outcome. Eventuall they would support me.
+5. What is interesting and good in the current stage of your life?
+   - I've overcome such situations several times, which has made me stronger, but I don't want to pay such effort again, which is inefficient to move on the next stage of my career.
+6. What would you like to change?
+   - Less traction to move onto the next stage of my career
+7. Is there something specific you would like to find out, know or learn right now?
+   - How to fit myself efficiently into the best role in the team / organization.
+
+
+* Excercise 2: My Future
+1. How would you live your kind of life from now on? How would your typical day start and then continue? What would you do during different parts of the day, on different weekdays or seasons of the year or what would otherwise provide rhythm and structure to your life?
+   - I want to keep my daily routines to be more productive while I'd love to live 2 different countries.
+2. What kind of things and people would you like to engage with?
+   - smart and honest without politics
+3. And what kind of events or activities would you prefer to participate in?
+   - making products impacting on the world to be a better place
+4. What would be great to achieve?
+   - Having a small sustainable own business, which is appreciated by customers
+5. What would be so great that you don’t almost even dare to dream about it? Your greatest dream if, for some strange reason, all of a sudden everything would be possible, and you could not fail?
+   - My cutting edge tech company would be acquired by Google, which would be a key component to improve this world in some way.
